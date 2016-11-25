@@ -140,7 +140,8 @@ class CourseModel extends BaseModel {
 		//var_dump($sqla);
 		//exit;
 		$pages = $this->pageQuery($sqla, $pcurr, 30);
-		
+		//var_dump($pages );
+		//exit;
 		//$rs["maxPrice"] = $maxPrice;
 		//$brands = array();
 		//$sql = "SELECT b.brandId, b.brandName FROM __PREFIX__brands b, __PREFIX__course_cat_brands cb WHERE b.brandId = cb.brandId AND b.brandFlag=1 ";
