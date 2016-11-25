@@ -1,0 +1,717 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>   
+    <link type="text/css" href="css/base.css-v=1.10.1.css"  rel="stylesheet"/>
+    <link type="text/css" href="css/common.css-v=1.10.1.css" rel="stylesheet"/>
+    <link type="text/css" href="css/style.css-v=1.10.1.css" rel="stylesheet"/>
+    <link type="text/css" href="css/buy.css-v=1.10.1.css" rel="stylesheet" />
+    <link type="text/css" href="css/style.css" rel="stylesheet" /> 
+    <script type="text/javascript" src="js/jquery-1.9.0.js" ></script>
+</head>
+<script>
+	$(function(){
+		$("#billing").click(function(){
+			$(".cart_container1").addClass('hide');
+			$(".cart_container2").removeClass('hide');
+		});
+	})
+</script>
+<body>
+<div id="main">
+    <div class="container shopping-cart cart-box cart_container1 ">
+        <div class="cart-header">
+            <span class="title">购物车</span><span class="small">快速购买，开启在线学习之旅</span>
+        </div>
+        <div class="cart-body">
+            <div class="cart-table">
+                <div class="cart-table-header">
+                    <div class="cart-table-col">                  	                   	               	
+                    	<input type="checkbox" id="select-all"   class="select-all" >
+                    	<label for="select-all" class="label-fr">全选</label>
+                    </div>
+                    <div class="cart-table-col pic-txt">课程信息</div>
+                    <div class="cart-table-col">数量</div>
+                    <div class="cart-table-col">单价（元）</div>
+                    <div class="cart-table-col">小计（元）</div>
+                    <div class="cart-table-col">有效期</div>
+                    <div class="cart-table-col">操作</div>
+                </div>
+                <div class="cart-table-body">
+                    <div class="cart-table-row" data-price="49.00" data-original-price="49.00" data-id="3166" data-product-id="104">
+                        <div class="cart-table-col">
+                            <label><input type="checkbox" name="checkcart" id="checkcart1"></label>
+                        </div>
+                        <div class="cart-table-col pic-txt">
+                            <span>
+                            	<em class="tag-discount">有优惠</em>
+                            	<span>此课程打包到专题购买，即可享受超值优惠</span>
+	                            <a href="zhuanti_kc_list.html" target="_blank">去看看>></a>
+                            </span>                           
+                            <a href="shuiwuguanli_chouhua.html" target="_blank" class="pic">
+                            	<img src="img/cart_/cart_img.jpg" height="68" width="120" alt="">
+                            </a>
+                            <div class="txt">
+                                <a href="" target="_blank" class="c-title">企业会计准则解释第7号（三）</a>
+                            </div>
+                        </div>
+                        <div class="cart-table-col"><span class="course-number">1</span></div>
+                        <div class="cart-table-col">￥49.00</div>
+                        <div class="cart-table-col xiaojib"><b class="xiaoji">￥49.00</b></div>
+                        <div class="cart-table-col">365天</div>
+                        <div class="cart-table-col">
+                            <a href="javascript:" class="del">删除</a>
+                            <div class="deleted hide">删除成功</div>
+                        </div>
+                    </div>
+                    <div class="cart-table-row" data-price="49.00" data-original-price="49.00" data-id="3166" data-product-id="104">
+                        <div class="cart-table-col">
+                            <label><input type="checkbox" name="checkcart" id="checkcart2"></label>
+                        </div>
+                        <div class="cart-table-col pic-txt">
+                            <span>
+                            	<em class="tag-discount">有优惠</em>
+                            	<span>此课程打包到专题购买，即可享受超值优惠</span>
+	                            <a href="zhuanti_kc_list.html" target="_blank">去看看>></a>
+                            </span>                           
+	                            <a href="shuiwuguanli_chouhua.html" target="_blank" class="pic">
+	                            	<img src="img/cart_/cart_img.jpg" height="68" width="120" alt="">
+	                            </a>
+                            <div class="txt">
+                                <a href="" target="_blank" class="c-title">企业会计准则解释第7号（三）</a>
+                            </div>
+                        </div>
+                        <div class="cart-table-col"><span class="course-number">1</span></div>
+                        <div class="cart-table-col">￥49.00</div>
+                        <div class="cart-table-col xiaojib"><b class="xiaoji">￥49.00</b></div>
+                        <div class="cart-table-col">365天</div>
+                        <div class="cart-table-col">
+                            <a href="javascript:" class="del">删除</a>
+                            <div class="deleted hide">删除成功</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-table-footer">
+                    <div class="left">
+                        <input type="checkbox" id="select-all-2" class="select-all" ><label for="select-all-2">全选</label>
+                    </div>
+                    <div class="left">
+                        <a href="javascript:" class="c-title del">删除</a>
+                    </div>
+                    <div class="right">
+                        <a href="javascript:" class="btn-default" id="billing">去结算</a>
+                        <span class="count">已选<em id="checkedcourse">1</em>门课程  总价：<b id="zongjia">￥49</b>&nbsp;<i></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dialog-board dialog-board-m hide" id="confirmDeleteDiv">
+        <div class="dialog-board-bar">
+            <a href="javascript:;" class="close-dialog-board closeConfirmDeleteDiv"></a>
+        </div>
+        <div class="c-text-btn">
+            <p class="txt-tips">删除后将不再享受专题优惠价格<br/>确定吗？</p>
+            <div class="btn-col2 clearfix">
+                <a class="fr globe-btn50 deleted">删除</a>
+                <a href="javascript:;" class="fl globe-btn50 globe-btn50-nobg closeConfirmDeleteDiv">取消</a>
+            </div>
+        </div>
+    </div>
+    <div class="container shopping-cart cart-box order-page cart_container2 hide">
+	    <div class="cart-header">
+	        <span class="title">确认订单</span>
+	        <ul class="buy-step">
+	            <li class="first selected">1、确认订单</li>
+	            <li class="second">2、支付订单</li>
+	            <li class="end">3、支付成功</li>
+	        </ul>
+	    </div>
+	    <div class="cart-body">
+	        <div class="order-table-div">
+	            <div class="order-table-header">
+	                <div class="order-table-col">课程信息</div>
+	                <div class="order-table-col">数量</div>
+	                <div class="order-table-col">小计（元）</div>
+	                <div class="order-table-col">有效期</div>
+	            </div>
+	            <div class="order-table-body">
+	                <div class="order-table-row">
+	                    <div class="order-table-col">
+	                        <a href="/course/248/" class="pic">
+	                        	<img src="http://assets.xiucai.com/assets/uploads/pic/2015/1225/cae8729c-4a69-6c6a-c818-6e669093dbe5.jpg" height="68" width="120" alt="企业会计准则解释第7号（三）">
+	                        </a>
+	                        <div class="txt">
+	                            <a href="/course/248/" target="_blank" class="c-title">企业会计准则解释第7号（三）</a>
+	                            <p></p>
+	                        </div>
+	                    </div>
+	                    <div class="order-table-col"><b>1</b></div>
+	                    <div class="order-table-col "><b>￥49.00</b></div>
+	                    <div class="order-table-col">365天</div>
+	                </div>
+	                <div class="order-table-footer">
+	                    <div class="order-table-row">
+	                        <div class="right">
+	                            <a href="http://www.xiucai.com/cart/" class="back-cart">返回购物车修改</a>
+	                        </div>
+	                    </div>
+	                    <div class="order-table-row">
+	                        <div class="left">
+	                            <div class="member-link">
+	                                <a target="_blank" href="vip.html" >
+	                                	<span>开通会员</span> 
+	                                	即刻畅享全部优质课程、知识技能和岗位特训专题  >>
+	                                </a>
+	                            </div>                                                                                                          
+	                        </div>
+	                        <div class="right">
+	                            <a href="tijiaodd.html" class="btn-default" id="submit-order" >提交订单</a>
+	                            <span class="count">已选<em>1</em>门课程  订单总额：<b>￥49.00</span>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>  
+</div>
+
+<div id="footer">
+    <div class="footer-context">
+    <div class="f-c-detail">
+        <div class="f-c-box">
+            <div class="footer-content clearfix">
+                <div class="footer-link clearfix">
+                    <dl>
+                        <dt>新手指南</dt>
+                        <dd><a href="/help/7/#q29" target="_blank">如何注册</a></dd>
+                        <dd><a href="/help/7/#q30" target="_blank">找回密码</a></dd>
+                        <dd><a href="/help/7/#q31" target="_blank">APP下载</a></dd>
+                        <dd><a href="/help/8/#q32" target="_blank">开通会员</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>听课指南</dt>
+                        <dd><a href="/help/5/#q38" target="_blank">如何听录播课</a></dd>
+                        <dd><a href="/help/4/#q39" target="_blank">如何听直播课</a></dd>
+                        <dd><a href="/help/7/#q40" target="_blank">课程类型说明</a></dd>
+                        <dd><a href="/help/7/#q37" target="_blank">用听课码听课</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>售后服务</dt>
+                        <dd><a href="/help/8/#q33" target="_blank">会员听课说明</a></dd>
+                        <dd><a href="/help/8/#q34 " target="_blank">课程资料说明</a></dd>
+                        <dd><a href="/help/8/#q35" target="_blank">单课购买说明</a></dd>
+                        <dd><a href="/help/8/#q35" target="_blank">专题购买说明</a></dd>
+                        <dd><a href="/help/8/#q36" target="_blank">企业购买说明</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>秀财指南</dt>
+                        <dd><a href="http://www.xiucai.com/lector/recruit/" target="_blank">讲师招募</a></dd>
+                        <dd><a href="http://www.xiucai.com/contact/" target="_blank">联系我们</a></dd>
+                        <dd><a href="http://www.xiucai.com/terms/" target="_blank">服务协议</a></dd>
+                        <dd><a href="http://www.xiucai.com/feedback/" target="_blank">意见反馈</a></dd>
+                        <dd><a href="http://www.xiucai.com/help/" target="_blank">帮助中心</a></dd>
+                    </dl>
+                </div>
+                <div class="footer-login-way">
+                    <div class="l-w-bottom">
+                        <p class="f18">客服：<b>021-51855362</b></p>
+                        <p>（周一至周五 8:30-17:30）</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="f-c-copyright">
+        <span>&copy;&nbsp;2016 上海达哈那网络科技有限公司</span><i>|</i><span>沪ICP备15048176号</span><i>|</i><span>友情链接：<a href="http://www.gaodun.cn/" target="_blank">高顿财经</a><a href="http://www.gaodun.com/" target="_blank">高顿网校</a><a href="http://www.goldenfinance.com.cn/" target="_blank">高顿财务培训</a></span>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="http://assets.xiucai.com/assets/js/jquery.cookie.js?v=1.10.5"></script>
+<script type="text/javascript">
+    $(function(){
+        // 滚动下拉固定导航
+        $(window).scroll(function(){           
+            var $this=$(this);
+            var scrollTop=$(document).scrollTop();
+            var headTop=$(".idx-header").length!=0?($(".idx-nav").offset().top+$(".idx-nav").height()):$("#header").height();
+            var animateTop=$(".idx-header").length!=0?$(".idx-header").height():$("#header").height();
+
+            if(scrollTop > headTop || scrollTop>=$(document).height()-$(window).height()){ if(!$(".header-wrap").hasClass("fixed-head")){
+                    if($(".idx-header").length!=0){
+                        $(".header-wrap").find("#header").show();
+
+                        $(".header-wrap").addClass("fixed-head").css('top',-animateTop+'px');
+                        setTimeout(function(){$(".header-wrap").animate({top:0},300);},100);
+                    }              
+                }
+            }
+            else if(scrollTop < headTop || scrollTop==0){
+                if($(".header-wrap").hasClass("fixed-head")){
+                    if($(".idx-header").length!=0){
+                        $(".header-wrap").find("#header").hide();
+
+                        $(".header-wrap").removeClass("fixed-head");
+                        $(".header-wrap").css('top','');
+                    }                                     
+                }
+            }            
+        })
+
+
+        
+    })
+</script>
+<script type="text/javascript">
+    jQuery(function(){
+        $.fn.hoverDelay = function(options){
+            var defaults = {
+                hoverDuring: 200,
+                outDuring: 200,
+                hoverEvent: function(){
+                    $.noop();
+                },
+                outEvent: function(){
+                    $.noop();
+                }
+            };
+            var sets = $.extend(defaults,options || {});
+            var hoverTimer, outTimer;
+            return $(this).each(function(){
+                $(this).hover(function(){
+                    clearTimeout(outTimer);
+                    hoverTimer = setTimeout(sets.hoverEvent, sets.hoverDuring);
+                },function(){
+                    clearTimeout(hoverTimer);
+                    outTimer = setTimeout(sets.outEvent, sets.outDuring);
+                });
+            });
+        }
+    });
+</script>
+<script type="text/javascript">
+    $(function(){
+        // header导航
+        $('.nav-item > li').each(function(){
+            var that=$(this);
+            that.hoverDelay({
+                hoverEvent: function(){
+                    if(that.find("ul").hasClass('second-nav-item')){
+                        that.children('a').addClass('focus');
+                    }
+                    $('.second-nav-item',that).addClass("pop-up");
+                },
+                outEvent: function(){
+                    $('.second-nav-item',that).removeClass("pop-up");
+                    that.children('a').removeClass('focus');
+                }
+            })
+        })
+
+        // header头像hover
+        $(".logined ul li.user").each(function(){
+            var that=$(this);
+            that.hoverDelay({
+                hoverEvent: function(){
+                    that.children("a").addClass("user-head-hover");
+                    that.children('div').addClass("pop-up");;
+                },
+                outEvent: function(){
+                    that.children("a").removeClass("user-head-hover");
+                    that.children('div').removeClass("pop-up");;
+                }
+            })
+        })
+
+        // 消息hover
+        $(".logined ul li.li-msg").each(function(){
+            var that=$(this);
+            that.hoverDelay({
+                hoverEvent: function(){
+                    that.children('a').find('i').addClass('message-highlight');
+                    that.children('.message-board').addClass("pop-up");
+
+                    // tab默认高亮
+                    // $('.orange-nav>span').each(function(){
+                    //     if($(this).children("em").length>0){
+                    //         $(this).addClass('curr').siblings().removeClass("curr");
+                    //         $('.message-tab-content>div:eq('+$(this).index()+')').show().siblings().hide();
+                    //         return false;
+                    //     }
+                    // })
+                },
+                outEvent: function(){
+                    that.children('a').find('i').removeClass('message-highlight');
+                    that.children('.message-board').removeClass("pop-up");
+                }
+            })
+        })
+
+        // 消息面板tab切换
+        $(".li-msg .orange-nav span").hover(function(){
+            $(this).addClass('curr').siblings().removeClass('curr');           
+            $(this).parents(".message-content").find('.message-tab-content>div:eq('+$(this).index()+')').show().siblings().hide();
+        })
+
+
+        // 搜索按钮动效
+        $(".search-block").each(function(){
+            var that=$(this);
+            // that.hoverDelay({
+            //     hoverEvent: function(){
+            //         that.addClass("search-block-active");
+            //         $("#search_content").focus(function(event) {
+            //             that.addClass("search-block-focus");
+            //         });
+            //         if($.trim($("#topSearchContent").html())==''){
+            //             $("#search_content").val('');
+            //         }else{
+            //             if($.trim($("#search_content").val())!=''){
+            //                 $("#topSearchContent").show();
+            //             }
+            //         }
+            //         if(that.find("#search_content").prev("div").length==0){
+            //             that.find("#search_content").placeholder({isUseSpan:true,onInput:true});
+            //         }
+            //     },
+            //     outEvent: function(){
+            //         $("#search_content").prev(".wrap-placeholder").remove();
+            //         if($("#topSearchContent").is(":hidden")){
+            //             that.removeClass("search-block-active");
+            //             if(that.hasClass("search-block-focus")){
+            //                 that.removeClass("search-block-focus");
+            //                 that.find("#search_content").blur();
+            //             }
+            //         }
+            //     }
+            // })
+            // $("#search_content").focus(function(event) {
+            //     that.addClass("search-block-focus");
+            // });
+            if($.trim($("#topSearchContent").html())==''){
+                $("#search_content").val('');
+            }else{
+                if($.trim($("#search_content").val())!=''){
+                    $("#topSearchContent").show();
+                }
+            }
+            if(that.find("#search_content").prev("div").length==0){
+                that.find("#search_content").placeholder({isUseSpan:true,onInput:true});
+            }
+        })
+        $(".idx-search-block").each(function(){
+            var that=$(this);
+            if(that.find("#search_content_index").prev("div").length==0){
+                that.find("#search_content_index").placeholder({isUseSpan:true,onInput:true});
+            }
+        })
+
+        // 点击空白区域搜索区域隐藏
+        $(document).click(function(e){
+          var _con = $(".search-block");   // 设置目标区域
+          if(!_con.is(e.target) && _con.has(e.target).length === 0){
+            $("#topSearchContent").hide();
+            // $(".search-block").removeClass("search-block-active search-block-focus").find("#search_content").blur();
+            // $(".search-block").removeClass("search-block-focus").find("#search_content").val('');
+            $(".search-block").find("#search_content").val('');
+            // $("#search_content").prev(".wrap-placeholder").remove();
+          }
+        });
+
+        // 购物车
+        $(".n-cart-wrap").each(function(){
+            var that=$(this);
+            that.hoverDelay({
+                hoverEvent: function(){
+                    that.children('.n-cart').find('i').addClass('cart-highlight');
+                    that.children('.n-cart-board').addClass("pop-up");
+                    $.post("/order/top/cart",{},
+                            function(result){                                
+                                if(result.code == 200){                                    
+                                    that.children('.n-cart-board').html(result.html);
+                                    
+                                }else{
+                                    dialog_alert(result.msg);
+                                    return false;
+                                }
+                            }
+                    );
+
+                },
+                outEvent: function(){
+                    
+                    that.children('.n-cart-board').removeClass("pop-up");
+                    that.children('.n-cart').find('i').removeClass('cart-highlight');
+                }
+            })
+        })
+
+        // footer二维码
+        $(".footer-login-way a").hover(
+            function(){
+                $(this).find(".tooltip-erweima").addClass("pop-up");
+            },
+            function(){
+                $(this).find(".tooltip-erweima").removeClass("pop-up");
+            }
+        )
+    })
+    
+    // 改版ad
+    $(".revision-wrap span").click(function(event) {
+        $(".revision-wrap").removeClass("revision-wrap-active");
+        $("#header").removeClass("header-bg");
+    });
+    $(window).scroll(function(){
+        if($(window).scrollTop() >0){
+            $(".revision-wrap").removeClass("revision-wrap-active");
+            $("#header").removeClass("header-bg");
+        }
+    })    
+</script>
+<!-- <script type="text/javascript">
+    var firefox = navigator.userAgent.indexOf('Firefox') != -1;
+    function MouseWheel(e) {
+        e = e || window.event;
+        if (e.stopPropagation) e.stopPropagation();
+        else e.cancelBubble = true;
+        if (e.preventDefault) e.preventDefault();
+        else e.returnValue = false;
+       document.title=(e.wheelDelta + '|' + e.detail)
+   }
+</script> -->
+<script type="text/javascript" src="http://assets.xiucai.com/assets/js/searchTop.js?v=1.10.5"></script>
+    <div style="display: none;">
+        <input type="hidden" id="viewState" value="{&quot;user&quot;:{&quot;id&quot;:&quot;318438&quot;},&quot;source&quot;:0}">
+        <script>
+            var _hmt = _hmt || [];
+            (function () {
+                var hm = document.createElement("script");
+                hm.src = "//hm.baidu.com/hm.js?91160bbefe44a83344f37eaff05da524";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+
+            })();
+
+            $(function () {
+                //事件跟踪
+                $(document).on('click', "[data-trackEvent]", function () {
+                    var category = $(this).data('category') || '';
+                    var action = $(this).data('action') || '';
+                    var opt_label = $(this).data('opt_label') || '';
+                    var opt_value = $(this).data('opt_value') || document.location.href;
+                    _hmt.push(['_trackEvent', category, action, opt_label, opt_value]);
+                });
+            });
+        </script>
+
+        <script type="text/javascript" src="http://assets.xiucai.com/assets/js/jquery-json.js?v=1.10.5"></script>
+        <script type="text/javascript">
+            document.write("<script src='http://tongji.xiucai.com/BIAnalyticsService/asset/js/staticutils.js'><\/script>");
+            $(function () {
+                staticConfig.apiBaseUrl = "http://tongji.xiucai.com/BIAnalyticsService/r/service/statistic/";
+                viewCount(null);
+            });
+        </script>
+    </div>
+
+<script type="text/javascript" src="http://assets.xiucai.com/assets/js/checkonline.js?v=1.10.5"></script>
+
+</div>
+
+<div id="allsccren">
+ 	<div class="login" style="display: none;border-radius: 6px;margin:15% auto;z-index: 9999;"> 
+        <div class="close_icon" style="cursor: pointer;"><img src="img/login/close_icon.png"/></div>
+        <div id="all_login"style="display: none;">       		       	
+            	<div class="header"> 
+	                <div class="switch" id="switch">
+	                    <a class="switch_btn_focus" id="switch_qlogin" href="javascript:void(0);" tabindex="7">普通登录</a> 
+	                    <a class="switch_btn" id="switch_login" href="javascript:void(0);" tabindex="8">短信登录</a>
+	                    <div class="switch_bottom" id="switch_bottom" style="position: absolute; width: 64px; left: 0px;"></div> 
+	                </div> 
+	            </div> 
+            	<div class="web_qr_login" id="web_qr_login" style="display: block;"> 
+	                <!--登录--> 
+	                <div class="web_login" id="web_login"> 
+	                    <div class="login-box"> 
+	                        <div class="login_form"> 
+	                        	<form action="" method="">
+	                        		<table class="login_table">
+	                        			<tr>
+	                        				<td>
+	                        					<input type="text" placeholder="手机/邮箱" value="" name="username"/>
+	                        				</td>
+	                        			</tr>
+	                        			<tr>
+	                        				<td>
+	                        					<input type="password" placeholder="密码" value="" name="passwd" style="width: 70%;"/>
+	                        					<a href="#" class="floatright fontcolor_999">忘记密码？</a>
+	                        				</td>                     				
+	                        			</tr>
+	                        		</table>                      		
+	                        	</form>
+	                        	<input type="submit" value="登录" class="login_btn" name="mobile_login" onclick="logined();"/>
+	                        	<div class="login_bottom">
+	                        		<font color="#999">新用户？</font><a href="#" onclick="zhuce();">快速注册</a>
+	                        		<div class="floatright">
+	                        			<font color="#999" class="floatleft">一键登录&nbsp;&nbsp;</font>
+	                        			<a href="#">
+	                        				<img src="img/login/weixin.png" />
+	                        			</a>
+	                        			<a href="#">
+	                        				<img src="img/login/qq.png" />
+	                        			</a>                     			                       			
+	                        		</div>
+	                        		
+	                        	</div>
+	                        </div> 
+	                    </div> 
+	                </div> 
+	                <!--登录end--> 
+	            </div> 
+           		<!--短信登录--> 
+            	<div class="qlogin" id="qlogin" style="display: none; "> 
+	                <div class="web_login">
+	                	 <div class="login-box"> 
+	                        <div class="login_form"> 
+	                        	<form action="" method="">
+	                        		<table class="login_table">
+	                        			<tr>
+	                        				<td>
+	                        					<input type="text" placeholder="手机" value="" name="usermobile"/>
+	                        				</td>
+	                        			</tr>
+	                        			<tr>
+	                        				<td style="height: 38px;">
+	                        					<input type="text" placeholder="图片验证码" value="" name="img_yzm" style="width: 60%;"/>
+	                        					<a href="#" class="floatright fontcolor_999" style="height: 38px;overflow: hidden;" >
+	                        						<img src="img/login/yzm_xc.png" name="yzm"  />
+	                        					</a><!---->
+	                        				</td>                     				
+	                        			</tr>
+	                        			<tr>
+	                        				<td>
+	                        					<input type="password" placeholder="手机验证码" value="" name="mobile_yzm" style="width: 70%;"/>
+	                        					<a href="#" class="floatright fontcolor_999">获取验证码&nbsp;&nbsp;</a>
+	                        				</td>                     				
+	                        			</tr>
+	                        		</table>                      		
+	                        	</form>
+	                        	<input type="submit" value="登录" class="login_btn" name="sms_login"/>
+	                        </div> 
+	                   </div> 
+	                </div> 
+	            </div> 
+            	<!--短信登录end-->               
+        	</div> 
+        <div id="register_">
+        		<div class="web_qr_login"  > 
+	                <div class="web_login">
+	                	 <div class="login-box"> 
+	                        <div class="login_form"> 
+	                        	<div class="zhuce_top">
+	                        		<font>注册</font>
+	                        		<span class="floatright">已有账号，<font onclick="login();">去登录</font></span>
+	                        	</div>
+	                        	<form action="" method="">
+	                        		<table class="login_table">
+	                        			<tr>
+	                        				<td>
+	                        					<input type="text" placeholder="手机" value="" name="zc_usermobile"/>
+	                        				</td>
+	                        			</tr>
+	                        			<tr>
+	                        				<td>
+	                        					<input type="text" placeholder="图片验证码" value="" name="zc_img_yzm" style="width: 60%;"/>
+	                        					<a href="#" class="floatright fontcolor_999">
+	                        						<img src="img/login/yzm_xc.png" name="yzm"  />
+	                        					</a>
+	                        				</td>                     				
+	                        			</tr>
+	                        			<tr>
+	                        				<td>
+	                        					<input type="password" placeholder="短信验证码" value="" name="zc_sms_yzm" style="width: 70%;"/>
+	                        					<a href="#" class="floatright fontcolor_999">获取验证码&nbsp;&nbsp;</a>
+	                        				</td>                     				
+	                        			</tr>
+	                        			<tr>
+	                        				<td>
+	                        					<input type="text" placeholder="姓名" value="" name="zc_username"/>
+	                        				</td>
+	                        			</tr>
+	                        			<tr>
+	                        				<td>
+	                        					<input type="password" placeholder="密码6-18位" value="" name="zc_userpasswd"/>
+	                        				</td>
+	                        			</tr>
+	                        		</table>                      		
+	                        	</form>
+	                        	<input type="submit" value="注册" class="login_btn" name="register_btn"/>
+	                        </div> 
+	                   </div> 
+	                </div> 
+	            </div>  
+        	</div>
+   </div>        
+</div>
+
+<div class="overlay hide"></div>
+<div class="overlay-transparent hide"></div>
+
+<!--[if IE]>
+<script>
+    $(".xc-regist ul input").placeholder({isUseSpan:true,onInput:true});
+</script>
+<![endif]-->
+ <script type="text/javascript" src="js/jquery-1.9.0.js" ></script>
+  <script>
+        $(document).ready(function(){
+            $("body").on('click', ".closeConfirmDeleteDiv",function(){
+                $(this).parents(".dialog-board-m").remove();
+                $('.overlay').hide();
+
+            });
+            $(".select-all").click(function(){
+            	$(".cart-table-body input[name='checkcart']").each(function () {
+					if ($(this).is(':checked')) {						
+						$(this).prop("checked", false);
+					} else {
+						$(this).prop("checked",true);											
+					} 
+				});
+				GetCount()
+            });
+            //点击所有复选框
+            // 所有复选(:checkbox)框点击事件
+			$(".cart-table-body input[name='checkcart']").click(function () {
+				var len =$(".cart-table-body input[name='checkcart']").length;
+				var checked = $(".cart-table-body input[name='checkcart']:checked").length;
+				if(len==checked){
+					$(".select-all").prop("checked",true);
+				}
+				else {
+					$(".select-all").prop("checked",false);
+				}
+				GetCount();
+			});						
+			function GetCount() {
+				var conts = 0;
+				var aa = 0;
+				var checkedcourse = $(".cart-table-body input[name='checkcart']:checked").length;
+				$("#checkedcourse").text(checkedcourse);
+				$(".cart-table-body input[name='checkcart']").each(function () {
+					if ($(this).is(':checked')) {
+						aa += parseInt($(this).parent().parent().parent('.cart-table-row').attr('data-original-price'));
+						conts++;
+					}
+				});
+				$("#zongjia").text("￥"+aa);
+			}
+        });
+    </script>
+</body>
+</html>

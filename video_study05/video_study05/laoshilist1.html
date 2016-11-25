@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta property="qc:admins" content="271536151160153116375711747716765216160454" />
+    <meta name="keywords" content="豫尚网,豫尚,秀才网,财税圈,财务培训,财务在线学习,财务视频,财务网络教育,会计培训,会计视频,会计学习,税务课程,税务培训,税务教程,企业会计培训"/>
+    <meta name="description" content="豫尚网是上海达哈那网络科技有限公司旗下在线教育网站，专注于高端财税领域提供在线互动课程和社区圈子交流。具有独家特色的课程且皆由业界权威教师授课；社区圈子里不仅提供内容干货，感受财税知识的同时，并发现交流之美"/>
+    <meta itemprop="image" content="http://assets.xiucai.com/assets/img/logo-hide.png?v=1.10.1" />
+    <meta name="keywords" content="">
+	<meta name="description" content="">
+    <title>豫尚网 - 成就财务职业梦</title>
+    <link type="text/css" href="css/base.css-v=1.10.1.css"  rel="stylesheet"/>
+    <link rel="stylesheet" href="iconfont/iconfont.css-v=1.10.1.css"/>
+    <link type="text/css" href="css/common.css-v=1.10.1.css" rel="stylesheet"/>
+    <link type="text/css" href="css/style.css-v=1.10.1.css" rel="stylesheet"/>
+    <link type="text/css" href="css/minimal.css-v=1.10.1.css"rel="stylesheet"/>
+    <link type="text/css" href="css/ui-dialog.css-v=1.10.1.css" rel="stylesheet"/>
+    <link type="text/css" href="css/bottom-register.css-v=1.10.1.css" rel="stylesheet" />
+    <link type="text/css" href="css/quaner.css-v=1.10.1.css"   rel="stylesheet"/>   
+    <link type="text/css" href="//at.alicdn.com/t/font_3fb0jubxgi5ghkt9.css" rel="stylesheet" /><!---->
+    <link type="text/css" href="css/buy.css-v=1.10.1.css" rel="stylesheet" />
+    <link type="text/css" href="css/login2.css" rel="stylesheet" /> 
+    <link type="text/css" href="css/style.css" rel="stylesheet" />   
+    <script src="js/jquery-1.9.0.js"></script>
+    <style>
+    	.laoshi_tx{
+    		padding: 10px 0;
+    	}	 	
+		.con4 .btn{
+		     width: 50%;
+		     height: 30px;
+		     line-height:30px;
+		     text-align: center;
+		     background: #ff8860;
+		     display: block;
+		     font-size: 14px;
+		     border-radius: 5px;
+		     margin: 20px auto 0;
+		     display: block;
+		     color: #fff;
+		}
+		.upload{
+		     position: relative;
+		}
+		.upload_pic{
+		     display: block;
+		     width: 100%;
+		     height: 30px;
+		     position: absolute;
+		     left: 0;
+		     top: 0;
+		     opacity: 0;
+		     border-radius: 5px;
+		}
+		#cvs{
+			border-radius: 45px;
+			display: block;
+			margin: 0 auto;
+			z-index: 9555;
+		}
+		.laoshiinfotable{
+			width: 80%;
+			text-align: left;
+		}
+		.laoshiinfotable td{
+			padding: 5px;
+		}
+		.laoshiinfotable td:first-child{
+			font-size: 18px;
+			text-align: right;
+			width: 100px;
+		}
+		.laoshiinfotable input[type='text']{
+			width: 100%;
+			padding: 8px 10px ;
+			box-sizing: border-box;
+			border: 1px solid #ccc;
+		}
+		.laoshiinfotable input[type='radio']{
+			width: 15px;
+			height: 15px;
+			margin-right: 5px;
+		}
+		.laoshiinfotable select{
+			padding: 8px 10px;
+			width: 100%;
+		}
+		.shanchang>div{
+			float: left;
+		}
+		.shanchang input[type='checkbox']{
+			width: 15px;
+			height: 15px;
+			margin-right: 5px;
+			margin-top: 6px;
+		}
+		.shanchang span{
+			display: inline-block;
+			margin-right: 15px;
+		}
+		.shanchang .neirongxianshi{
+			max-width: 300px;
+			width: 70%;
+			min-height: 65px;
+			height: auto;
+			float: left;
+			border: 1px solid #ccc;
+			color: #0ff;
+		}
+		.shanchang .neirongxianshi>span{
+			display: block;
+			padding: 5px 10px;
+			margin: 10px;
+			position: relative;			
+			word-wrap: break-word;
+			color: #000;
+			border: 1px solid #d8d8d8;
+		}
+		.shanchang .neirongxianshi>span>span{
+			display: inline-block;
+			width: 15px;
+			height: 15;
+			position: absolute;
+			right: -10px;
+			top: -15px;
+			display: none;
+			color: #f00;
+		}
+		.shanchang .neirongxianshi>span:hover span{
+			display: inline-block;
+			cursor: pointer;
+		}
+		.shanchang .shuru-right{
+			width: 30%;	
+			float: right;
+		}
+		.shanchang .shuru-right input[type='button']{
+			border-style: none;
+			padding: 5px 20px;
+			display: block;
+			margin: 10px auto;
+			background: #ff8860;
+			color: #fff;
+			border-radius: 5px;
+		}
+		.jianjietext{
+			width: 100%;
+			padding: 10px;
+			box-sizing: border-box;
+			min-height:100px;
+			max-width: 534px;
+		}
+		.tijiaobtn{
+			border-style: none;
+			padding: 8px 50px;
+			color: #fff;
+			border-radius: 5px;
+			background: #ff8860;
+			display: block;
+			margin: 0 auto;
+		}
+		#uploadvideo{cursor: pointer;}
+		.up_progress{
+			width: 95%;
+			margin: 0 auto;
+		}
+		.up_progress table{
+			width: 100%;
+		}
+		.up_progress table thead{
+			color: #424242;
+		}
+		.up_progress table td{
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		.up_progress table td:first-child{
+			width: 150px;
+		}
+		.up_progress table tbody{
+			font-size:16px;
+			color: #737373;
+		}
+		.up_progress table textarea,.up_progress table input,.up_progress table select{
+			width: 70%;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		.up_progress_img{
+			width: 74.5%;
+			border: 1px solid #b5b5b5;
+			border-radius: 5px;
+			position: relative;
+			display: inline-block;
+			float: left;
+			padding: 10px;
+			margin: 15px 0 13px 0;
+			box-sizing: border-box;
+		}
+		.up_progress_img>div{
+			background: -moz-linear-gradient(left, #fdac91 0%, #ff8860 100%); 
+			background: -webkit-gradient(linear, left left, left right, color-stop(0%,#fdac91), color-stop(100%,#ff8860)); 
+			background: -webkit-linear-gradient(left, #fdac91 0%,#ff8860 100%); 
+			background: -o-linear-gradient(left, #fdac91 0%,#ff8860 100%);
+		    background: -ms-linear-gradient(left, #fdac91 0%,#ff8860 100%);
+		    background: linear-gradient(to right, #fdac91 0%,#ff8860 100%);
+			width: 100%;
+			height: 20px;
+		}
+		.info_progress{
+			margin: 20px 0 13px 0;
+			float: left;
+			width: 20%;					
+		}
+		.info_progress>span{
+			padding: 5px 20px;
+		}
+		.info_progress>span:first-child{
+			font-size: 20px;
+			color: #a4a4a4;
+			
+		}
+		.info_progress span a{
+			color: #3f9cfc;
+		}
+		.info_M{
+			width: 74.5%;
+			text-align: right;
+			color: #a4a4a4;
+		}
+		.fb_video{
+			/*display: block;*/
+			float: left;
+			width: 120px !important;
+			padding: 10px 35px !important;
+			border-style: none;
+			margin-right: 10%;
+			background: #FF8860;
+			border-radius: 6px;
+			color: #fff;
+		}
+		
+		.uploadvideo{
+			padding: 8px 40px;
+			border-radius: 6px;
+			background: #FF8860;
+			color: #fff;
+		}
+		
+    </style>
+    <script>
+    	$(function(){
+    		$(".ulli-item li").click(function(){
+    			var aitem = $(this).attr('data-href');
+    			$(this).children('a').addClass('curr');
+    			$(this).children('div').addClass('vertical');
+    			$(this).siblings().children('a,div').removeClass('curr').removeClass('vertical');
+    			$(aitem).removeClass('hide');
+    			$(aitem).siblings().addClass('hide');
+    		});		
+    		//点击取消订单的时候获取该订单的id   		
+    		$(".dingdantabletd .quxiaodd").click(function(){
+    			var dataorderid = $(this).parent().parent().attr('data-order-id');
+    			$(".overlay").removeClass('hide');
+    			$(".cancel-order-layer").removeClass('hide');
+    			
+    			$(".cancel-order-btn").click(function(){
+	    			$(".overlay").addClass('hide');
+	    			$(".cancel-order-layer").addClass('hide');
+	    			$("#order-status-"+dataorderid+"  .pay-txt").text('订单已取消');
+	    			$('#order-option-'+dataorderid).html('--');
+	    		});
+    		});
+    		$(".close-dialog-board,.not-cancel-order").click(function(){
+    			$(".overlay").addClass('hide');
+    			$(".cancel-order-layer").addClass('hide');
+    		});    
+    		
+    		//点击上传视频
+    		$("#uploadvideo").click(function(){
+    			$('.ulliitem2_1').addClass('hide');
+    			$('.ulliitem2_2').removeClass('hide');
+    		});
+    		$(".fb_video_fanhui").click(function(){
+    			$('.ulliitem2_2').addClass('hide');
+    			$('.ulliitem2_1').removeClass('hide');
+    		});
+    		
+    		//点击上传视频
+    		$("#videofile").click(function(){
+    			//var videofile = $(this).files[0];
+    			//alert(videofile);
+    		});
+    		//点击发布视频(获取视频信息)
+    		$('#fabuvideo').click(function(){
+    			var videobiaoti = $("#videobiaoti").val();//标题
+    			var courseexpress = $("#courseexpress").val();//课程简介
+    			var typetext = $("#typetext").val();// 分类
+    			var videofile = $("#videofile").files[0];
+    			//alert(videofile);
+    			//var videofile = $("#videofile").val();//视频文件
+    		});
+    		
+    	})
+    </script>
+<body>
+        <div class="h50"></div>       
+        <div class="header-wrap  fixed-head" >
+	    	<div id="header" >
+		   		<div class="container">
+		        	<div class="nav clearfix">
+			           	<a href="index.htm"  title="首页" class="logo" >
+			           		<img src="img/logo_.png" />
+			           	</a>
+			            <a href="javascript:" class="nav-menu-btn"><i class="iconfont">&#xe67b;</i></a>
+			            <ul class="nav-item">
+			                <li><a class="notCard font-color-white" href="index_new.html" >首页</a></li>
+			                <li class="parent-nav-item">
+			                    <a href="course/index.htm" >课程 </a>
+			                    <ul class="second-nav-item">
+			                        <li><a href="course/-from=nav.htm" >课程大厅</a></li>
+			                        <li><a href="course/zt/-from=nav.htm" >专题课程</a></li>
+			                        <li><a href="-url=-user--from=nav-login.htm">我的课程</a></li>
+			                    </ul>
+			                </li>
+			                <li>
+			                	<a href="#"  >直播间</a>
+			                </li>
+			                <li class="beta">
+			                	<a href="#" >专家问答</a>
+			                </li>
+			                <li class="parent-nav-item">
+			                    <a href="#" >财税论坛 </a>
+			                    <ul class="second-nav-item">
+			                        <li>
+			                        	<a href="#" >圈子首页</a></li>
+			                        <li class="none-border">
+			                        	<a href="#">我的圈子</a></li>
+			                    </ul>
+			                </li>
+			                <li>
+			                	<a href="#">开通会员</a>
+			                </li>
+			                <li>
+			                    <a href="#" >APP</a>
+			                </li>
+			                <li>
+			                    <a href="#" >线下</a>
+			                </li>
+			            </ul>
+			            <!-- 用户未登录状态 -->	
+			            <!--<div id="wei_denglu" class="hide">
+			            	<div class="login-block " id="user_nodl" style="border: #fff;">
+				                <a href="javascript:;" id="a-login"  class="a-login" onclick="login();">登录</a>
+				                <a href="javascript:;" id="a-register" class="a-register" onclick="zhuce();">注册</a>
+				            </div>	
+				            <div class="change-entrance head_dhzx" >
+				            	<a href="task/mall/index.htm"  title="兑换中心" ><i></i></a>
+				            </div>
+			            </div>-->			            
+			            <!-- -->
+			           	<!--用户已登录状态-->
+			            <div class="login-block logined  clearfix login_zh_  " style="height: 36px;">
+    						<ul>
+    							<li><a href="#"><i class="iconfont">&#xe615;</i></a></li>
+			            		<li><a href="#"><i class="iconfont">&#xe69c;</i></a></li>
+			            		<li><a href="#"><i class="iconfont">&#xe9c5;</i></a></li>
+			            		<li><a href="#"><i class="iconfont">&#xe625;</i></a></li>	
+                				<li class="user-head_ user " style="height: 100%;padding: 0 10px 0 0;">
+						            <a  href="#" class="user-head notCard" style="padding:0;height: 10px;">
+						               <img src="img/login/touxaing.png" style="margin-top:0 ;"/>
+						                <b></b>  
+						            </a>
+						            <div class="user-nav-list user_info " style="top:35px;right: 0px;">
+						                <div class="top-info">
+						                    <div class="clearfix mt-6">
+						                        <a class="card-avatar fl" href="#">
+						                        	<img width="63" height="63" alt="" src="http://assets.xiucai.com/assets/img/caiduoduo.png?v=1.10.5">
+						                        </a>
+						                        <div class="card-user">
+						                            <p>
+						                            	<a class="user-name" href="#">到汉多少次了</a>
+						                            	<a title="了解豫尚会员" class="vip" target="_blank" href="/vip/">
+						                            		<img width="20" height="14" border="0" alt="会员特权" src="http://assets.xiucai.com/assets/img/vip.png?v=1.10.5">
+						                            	</a>
+						                            </p>
+						                            <ol class="user-level" style="width: 100%; text-align: center;">
+						                                <li style="width: 33.3%;">
+						                                    <span class="time-left">会员还剩<em>2</em>天</span>                                   
+						                                </li>
+						                                <li>
+						                                	<a class="currency" title="了解豫尚圈币" target="_blank" href="#">
+						                                		<img width="19" height="14" alt="圈币" src="http://assets.xiucai.com/assets/img/quan/qb.png?v=1.10.5"><span>5</span>
+						                                	</a>
+						                                </li>
+						                                <li>
+						                                    <a title="了解经验值等级" class="" target="_blank" href="#">
+											                    <span class="tag-level tag-level-LV1">
+											                    <i>LV1</i></span>
+						                                    </a>
+						                                </li>
+						                            </ol>                                                                                                                                                                                                                                                       
+						                        </div>
+						                    </div>
+						                    <a class="exchange" href="#" style="position: absolute;right: 6px;top: 10px;">兑换中心</a>
+						                </div>
+						                <div class="recent">
+						                    <a href="#">
+						                    	<i class="iconfont"></i>
+						                    	<span>企业如何建立和完善成本核算制度</span>
+						                    </a>
+						                </div>
+						                <div class="user-link-boxer" style="height: 80px;">
+						                    <ul class="user-link-to clearfix">
+						                        <li>
+						                        	<a href="#"><i class="iconfont"></i>我的课程</a>
+						                        </li>
+						                        <li>
+						                        	<a href="#"><i class="iconfont"></i>我的问答</a>
+						                        </li>
+						                        <li>
+						                        	<a href="#"><i class="iconfont"></i>购物车</a>
+						                        </li>
+						                        <li>
+						                        	<a href="#"><i class="iconfont"></i>我的订单</a>
+						                        </li>
+						                        <li>
+						                        	<href="#"><i class="iconfont msg"></i>我的消息<em>2</em></a>
+						                        </li>
+						                        <li>
+						                        	<a href="#"><i class="iconfont"></i>我的圈子</a>
+						                        </li>
+						                    </ul>
+						                </div>
+							            <div class="user-board-b clearfix" style="height: auto;">
+						                    <a onclick="exit();" class="fr" href="#">退出</a>
+						                    <a class="fl" href="http://www.xiucai.com/user/set_pass/">
+						                    <i class="iconfont"></i>账号设置<em>（修改密码）</em></a>
+						                </div>
+						            </div>
+						        </li>
+						    </ul>
+						</div>		            
+			            <div class="search-block search-block-active search-block-focus">
+			                <div class="search-form clearfix">
+			                    <input type="button" class="fl search-btn" id="search_button"/>
+			                    <input type="text" class="fl search_content_input" id="search_content" name="search_content" placeholder="找到你想要的课程或帖子" maxlength="15"/>
+			                </div>
+			
+			                <!-- 关键字搜索面板 默认隐藏 -->
+			                <div class="search-board search-result-board" id="topSearchContent"></div>
+			                <input id="search_from" type="hidden" value="course">
+			            </div>
+			        </div>
+		        	<div class="drop-down-menu">
+			            <div class="pd">
+			                <div class="down-menu-row">
+			                    <div class="classify-nav">
+			                        <p class="title"><em></em>热门课程</p>
+			                        <dl>
+			                            <dt>
+			                            	<a href="course/zt/ygzxx/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">营改增</a>
+			                            </dt>
+			                            <dd>
+			                                <a href="course/zt/fcygz/index.htm"   target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">房地产业</a>
+			                                <a href="zt/ygzsc/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">建筑业</a>
+			                                <a href="course/zt/shygz/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">生活服务业</a>
+			                                <a href="zt/ygzsc/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">金融业</a>
+			                            </dd>
+			                        </dl>
+			                        <dl>
+			                            <dt>
+			                            	<a href="course/zt/hsqj/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">汇算清缴</a>
+			                            </dt>
+			                            <dd>
+			                                <a href="search/course/result/-word=纳税调整.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">纳税调整</a>
+			                                <a href="search/course/result/-word=弥补亏损.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">弥补亏损</a>
+			                            </dd>
+			                        </dl>
+			                        <dl>
+			                            <dt>
+			                            	<a href="course/cate/85/-cid=377.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">Excel</a>
+			                            </dt>
+			                            <dd>
+			                                <a href="course/zt/excelxb/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">入门必备</a>
+			                                <a href="search/course/result/-word=函数.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">函数</a>
+			                                <a href="search/course/result/-word=数据透视表.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">数据透视表</a>
+			                                <a href="course/zt/excelxs/index.htm" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">图表</a>
+			                            </dd>
+			                        </dl>
+			                        <dl>
+			                            <dt>
+			                            	<a href="course/zt/cwfx/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">财务报表分析</a>
+			                            </dt>
+			                            <dd>
+			                                <a href="search/course/result/-word=报表解读.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">报表解读</a>
+			                                <a href="search/course/result/-word=报表案例.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">报表案例</a>
+			                            </dd>
+			                        </dl>
+			                    </div>
+			                    <div class="classify-nav">
+			                        <p class="title"><em></em>税务实操</p>
+			                        <dl>
+			                            <dt>
+			                            	<a href="course/zt/grsds/index.htm" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">个人所得税</a>
+			                            </dt>
+			                            <dd>
+			                                <a href="search/course/result/-word=高管.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">高管个税</a>
+			                                <a href="search/course/result/-word=外籍.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">外籍人员</a>
+			                                <a href="search/course/result/-word=福利.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">员工福利</a>
+			                            </dd>
+			                        </dl>
+			                        <dl>
+			                            <dt>
+			                            	<a href="course/zt/qysds/index.htm" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">企业所得税</a>
+			                            </dt>
+			                            <dd>
+			                                <a href="search/course/result/-word=纳税申报.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">纳税申报</a>
+			                                <a href="search/course/result/-word=税前扣除.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">税前扣除</a>
+			                                <a href="search/course/result/-word=视同销售.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">视同销售</a>
+			                            </dd>
+			                        </dl>
+			                        <dl>
+			                            <dt>
+			                            	<a href="course/cate/82/-cid=84&tid=288.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">增值税</a>
+			                            </dt>
+			                            <dd>
+			                                <a href="search/course/result/-word=发票.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">发票管理</a>
+			                                <a href="search/course/result/-word=进项.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">进项抵扣</a>
+			                                <a href="search/course/result/-word=出口.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">出口退税</a>
+			                            </dd>
+			                        </dl>
+			                        <dl>
+			                            <dt>
+			                            	<a href="course/zt/swjc/index.htm" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">税务稽查</a>
+			                            </dt>
+			                            <dd>
+			                                <a href="search/course/result/-word=稽查.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">稽查应对</a>
+			                                <a href="search/course/result/-word=争议.htm" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">税务争议</a>
+			                            </dd>
+			                        </dl>
+			                        <dl>
+			                            <dt>
+			                            	<a href="course/cate/82/-cid=294.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">税务筹划</a>
+			                            </dt>
+			                            <dd>
+			                                <a href="search/course/result/-word=高新技术.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">高新技术</a>
+			                                <a href="search/course/result/-word=研发费用.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">研发费用</a>
+			                                <a href="search/course/result/-word=BEPS.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">BEPS</a>
+			                                <a href="search/course/result/-word=转让定价.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">转让定价</a>
+			                                <a href="search/course/result/-word=非贸.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">非贸付汇</a>
+			                            </dd>
+			                        </dl>
+			                    </div>
+			                    <div class="classify-nav">
+			                        <p class="title"><em></em>会计核算</p>
+			                        <dl>
+			                            <dt>
+			                            	<a href="course/zt/ndgz/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">财务关账</a>
+			                            </dt>
+			                            <dd>
+			                                <a href="course/zt/ndgz/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">年底关账</a>
+			                            </dd>
+			                        </dl>
+			                        <dl>
+			                            <dt>
+			                            	<a href="search/course/result/-word=合并报表.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">合并报表</a>
+			                            </dt>
+			                            <dd>
+			                                <a href="search/course/result/-word=合并报表.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">合并报表</a>
+			                            </dd>
+			                        </dl>
+			                        <dl>
+			                            <dt>
+			                            	<a href="course/cate/63/-cid=65.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">会计准则</a>
+			                            </dt>
+			                            <dd>
+			                                <a href="course/zt/kjzz/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">企业会计准则解释</a>
+			                                <a href="search/course/result/-word=财务报表列报.htm" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">财务报表列报</a>
+			                                <a href="course/zt/gdzc/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">固定资产</a>
+			                                <a href="search/course/result/-word=售后回租.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">售后回租</a>
+			                                <a href="search/course/result/-word=递延税.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">递延所得税</a>
+			                            </dd>
+			                        </dl>
+			                    </div>
+			                </div>
+			                <div class="down-menu-row">
+			                    <div class="classify-nav">
+			                        <p class="title"><em></em>管理会计</p>
+			                        <dl>
+			                            <dt>
+			                            	<a href="course/cate/69/-cid=74.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gl" data-opt_label="navigation_course_category_gl" data-opt_value="导航课程分类">财务分析</a>
+			                            </dt>
+			                            <dd>
+			                                <a href="course/zt/cwfx/index.htm" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gl" data-opt_label="navigation_course_category_gl" data-opt_value="导航课程分类">财务报表分析</a>
+			                            </dd>
+			                        </dl>
+			                        <dl>
+			                            <dt>
+			                            	<a href="search/course/result/-word=业财融合.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gl" data-opt_label="navigation_course_category_gl" data-opt_value="导航课程分类">业财融合</a>                              	
+			                            </dt>
+			                            <dd>
+			                                <a href="course/zt/xmtz/index.htm" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gl" data-opt_label="navigation_course_category_gl" data-opt_value="导航课程分类">项目投资决策</a>
+			                                <a href="course/zt/jyjc/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gl" data-opt_label="navigation_course_category_gl" data-opt_value="导航课程分类">经营决策</a>
+			                            </dd>
+			                        </dl>
+			                        <dl>
+			                            <dt>
+			                            	<a href="search/course/result/-word=预算管理.htm" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gl" data-opt_label="navigation_course_category_gl" data-opt_value="导航课程分类">预算管理</a>
+			                            </dt>
+			                            <dd>
+			                                <a href="course/cate/69/-cid=73&tid=165.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gl" data-opt_label="navigation_course_category_gl" data-opt_value="导航课程分类">预算编制</a>
+			                                <a href="course/cate/69/-cid=73&tid=170.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gl" data-opt_label="navigation_course_category_gl" data-opt_value="导航课程分类">预算博弈</a>
+			                            </dd>
+			                        </dl>
+			                    </div>
+			                    <div class="classify-nav">
+			                        <p class="title"><em></em>财务管理</p>
+			                            <dl>
+			                                <dt>
+			                                	<a href="course/cate/75/-cid=81.htm" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">资金管理</a>
+			                                </dt>
+			                                <dd>
+			                                    <a href="course/zt/zj/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">现金管理</a>
+			                                    <a href="search/course/result/-word=信用控制.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">信用控制</a>
+			                                </dd>
+			                            </dl>
+			                            <dl>
+			                                <dt>
+			                                	<a href="course/cate/75/-cid=77.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">内部控制</a>
+			                                </dt>
+			                                <dd>
+			                                    <a href="course/zt/nbkz/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">采购内控</a>
+			                                    <a href="course/zt/nkxx/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">内控案例</a>
+			                                </dd>
+			                            </dl>
+			                            <dl>
+			                                <dt>
+			                                	<a href="course/cate/75/-cid=79.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">上市融资</a>
+			                                </dt>
+			                                <dd>
+			                                    <a href="zt/xsb/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">新三板</a>
+			                                    <a href="course/zt/xdrz/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">银行信贷融资</a>
+			                                    <a href="search/course/result/-word=融资租赁.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">融资租赁</a>
+			                                </dd>
+			                            </dl>
+			                            <dl>
+			                                <dt>
+			                                	<a href="search/course/result/-word=财务共享.htm" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">财务共享</a>
+			                                </dt>
+			                                <dd>
+			                                    <a href="search/course/result/-word=财务共享.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">财务共享中心</a>
+			                                </dd>
+			                            </dl>
+			                        </div>
+			                    <div class="classify-nav">
+			                        <p class="title"><em></em>工具软技能</p>
+			                        <dl>
+			                            <dt>
+			                            	<a href="course/cate/85/-cid=377.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gj" data-opt_label="navigation_course_category_gj" data-opt_value="导航课程分类">Excel</a>
+			                            </dt>
+			                            <dd>
+			                                <a href="course/zt/excelxb/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gj" data-opt_label="navigation_course_category_gj" data-opt_value="导航课程分类">入门必备</a>
+			                                <a href="search/course/result/-word=函数.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gj" data-opt_label="navigation_course_category_gj" data-opt_value="导航课程分类">函数</a>
+			                                <a href="search/course/result/-word=数据透视表.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gj" data-opt_label="navigation_course_category_gj" data-opt_value="导航课程分类">数据透视表</a>
+			                                <a href="course/zt/excelxs/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gj" data-opt_label="navigation_course_category_gj" data-opt_value="导航课程分类">图表</a>
+			                            </dd>
+			                        </dl>
+			                        <dl>
+			                            <dt>
+			                            	<a href="search/course/result/-word=PPT.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gj" data-opt_label="navigation_course_category_gj" data-opt_value="导航课程分类">PPT</a>
+			                            </dt>
+			                            <dd>
+			                                <a href="course/362/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gj" data-opt_label="navigation_course_category_gj" data-opt_value="导航课程分类">PPT制作七宗罪</a>
+			                            </dd>
+			                        </dl>
+			                        <dl>
+			                            <dt>
+			                            	<a href="search/course/result/-word=财务英语提升.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gj" data-opt_label="navigation_course_category_gj" data-opt_value="导航课程分类">财务英语</a>
+			                            </dt>
+			                            <dd>
+			                                <a href="course/141/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gj" data-opt_label="navigation_course_category_gj" data-opt_value="导航课程分类">财务英语提升</a>
+			                            </dd>
+			                        </dl>
+			                    </div>
+			                </div>
+			            </div>
+		        	</div>   	
+		   		</div>
+			</div>		
+		</div>       
+	
+   <script type="text/javascript" language="JavaScript">
+       var search_result = "/search/course/result/";
+       var search_result_thread = "/search/thread/result/";
+       var search_ajax = "/search/";
+       var cancel_focus_url = "/user/cancel_focus";
+       var sure_focus_user_url = "/user/focus";
+       var set_read_url = "/message/set_read";
+       var topic_url = "/topic/";
+       var question_url = "/question/";
+       var course_url = "/course/";
+       var profile_url = "/user/";
+       var ajax_load_member_info_dialog_pop = "/user/ajax_load_member_info_dialog_pop";
+       var the_window = "/window/";
+       var task_url = "/task/";
+       var task_invite_url = "/task/invite/";
+       var clear_task_notice_url = "/task/clear_task_notice";
+       var vip_index_url = "../index.htm"/*tpa=http://www.xiucai.com/user/vip/*/;
+       var thread_url = "/quan/thread/";
+       var bottom_sms_reg_sendcode = "/account/sms_login_send_code/";
+       var bottom_sms_reg = "/account/login_sms/";
+       var sms_login_checkVerifycode = "/account/sms_login_checkVerifycode/";
+       var bindPhoneUrl = "../-url=-user-account_safe--login.htm"/*tpa=http://www.xiucai.com/?url=%2Fuser%2Faccount_safe%2F%23login*/;
+       var needBindPhone = "";
+    </script>
+
+<div id="main">
+    <div class="major">
+        <div class="container clearfix">
+            <!-- 右侧内容 begin -->
+            <div class="r about_content">              
+                <div class="about_feedback" id="ulli-item1">
+                	<form action="" method="" name="">
+                		<table class="laoshiinfotable">
+	                    	<tr>
+	                    		<td>姓名：</td>
+	                    		<td><input type="text" class="" name="" placeholder="请输入姓名" value=""/></td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>性别：</td>
+	                    		<td>
+	                    			<input type="radio" value="man" name="sex"/>男
+	                    			<input type="radio" value="woman" name="sex"/>女
+	                    		</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>行业：</td>
+	                    		<td>
+	                    			<select name="hangye">
+	                    				<option value="hy1">制药/医疗</option>
+	                    				<option value="hy2">金融/银行/保险</option>
+										<option value="hy3">房地产/建筑</option>
+										<option value="hy4">计算机/互联网/通信/电子</option>
+										<option value="hy5">物流/运输</option>
+										<option value="hy6">服务业</option>
+										<option value="hy7">贸易/批发/零售/租赁</option>
+										<option value="hy8">专业服务/教育/培训</option>
+										<option value="hy9">制药/医疗</option>
+										<option value="hy10">广告/媒体</option>
+										<option value="hy11">能源/原材料</option>
+										<option value="hy12">政府/非盈利/其他</option>
+										<option value="hy13">生产/加工/制造</option>
+										<option value="hy14">农/林/牧/渔</option>
+	                    			</select>
+	                    		</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>擅长：</td>
+	                    		<td class="shanchang">
+	                    			<div class="neirongxianshi"></div>
+	                    			<div class="shuru-right">
+	                    				<input type="text" name="" id="shanchangtext" value="" placeholder="擅长"/>
+	                    				<input type="button" name="" id="addshanchang" value="添加" />
+	                    			</div>
+	                    		</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>简介：</td>
+	                    		<td class="jianjie">
+	                    			<textarea name="" class="jianjietext"></textarea>
+	                    		</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td colspan="2">
+	                    			<input type="submit" value="提交" class="tijiaobtn" name="" />
+	                    		</td>
+	                    	</tr>
+	                    </table> 
+                	</form>                                                    
+                </div>
+                <div class="course-list hide" id="ulli-item2" style="padding-left: 15px;box-sizing: border-box;">
+					
+					<div class="ulliitem2_1">
+						<div id="uploadvideo" style="padding: 10px 0;">点击此处上传课程视频</div>
+						<ul class="clearfix"  style="width: auto;">
+			                <div id="myCourseListDiv">
+			                    <li>
+									<span class="i-close-del hide" inventory-id="411844"></span>
+									<a href="http://www.xiucai.com/course/288/" target="_blank">
+									    <div class="course-list-img">
+									        <img width="280" height="160" src="img/01a5b1f3-29a2-4e5d-bfb8-3336bd8f84b5.jpg" alt="第1课  建立高效的建表思维">
+									    </div>
+									    <h5>
+									        <span>第1课  建立高效的建表思维</span>
+									    </h5>
+									    <div class="intro clearfix">
+								            <p>打开一张Excel表格，你知道为什么默认出现3张Sheet吗？平时…</p>
+								            <span class="l">1节视频课程</span>
+								            <span class="r">时长0小时10分钟</span>
+								        </div>
+									    <div class="tips tips-schedule clearfix">
+								            <span class="l">初级课程</span>
+								            <em class="l">|</em>
+								            <span class="l">60828人已学</span>
+								            <span class="r">已学<em>0%</em></span>
+								        </div>
+									    <div class="schedule-bar">
+									        <div style="width:0%;"></div>
+									    </div>
+									    <div class="course-free"></div>
+									    <div class="cost">
+						                    <span class="l free">免费</span>
+						                </div>
+									</a>
+								</li>
+								<li>
+								    <span class="i-close-del hide" inventory-id="411846"></span>
+								    <a href="http://www.xiucai.com/course/128/" target="_blank">
+								        <div class="course-list-img">
+								            <img width="280" height="160" src="http://assets.xiucai.com/assets/uploads/pic/2015/0730/aac31864-70e1-334d-669e-99b0bcba24c2.jpg" alt="EXCEL数据透视表与财务数据分类汇总">
+								        </div>
+								        <h5>
+								            <span>EXCEL数据透视表与财务数据分类汇总</span>
+								        </h5>
+								        <div class="intro clearfix">
+							                <p>利用EXCEL的数据透视表功能，可以轻松实现对数据的分类汇总，这比用筛…</p>
+							                <span class="l">7节视频课程</span>
+							                <span class="r">时长2小时4分钟</span>
+							            </div>
+							            <div class="tips tips-schedule clearfix">
+							                <span class="l">高级课程</span>
+							                <em class="l">|</em>
+							                <span class="l">20547人已学</span>
+							                <span class="r">已学<em>0%</em></span>
+							            </div>
+								        <div class="schedule-bar">
+								            <div style="width:0%;"></div>
+								        </div>
+								        <div class="cost"></div>
+								    </a>
+								</li>
+								<li>
+								    <span class="i-close-del hide" inventory-id="411845"></span>
+								    <a href="http://www.xiucai.com/course/147/" target="_blank">
+								        <div class="course-list-img">
+								            <img width="280" height="160" src="http://assets.xiucai.com/assets/uploads/pic/2015/0730/2b642fde-a8b6-f65b-0822-be1c8ee601a7.jpg" alt="EXCEL高级财务函数的功能&amp;应用">
+								        </div>
+								        <h5>
+								            <span>EXCEL高级财务函数的功能&amp;应用</span>
+								        </h5>
+							            <div class="intro clearfix">
+							                <p>财务人员需要每天面对大量数据和信息，EXCEL作为帮助财务人员进行数据…</p>
+							                <span class="l">6节视频课程</span>
+							                <span class="r">时长2小时25分钟</span>
+							            </div>
+							            <div class="tips tips-schedule clearfix">
+							                <span class="l">高级课程</span>
+							                <em class="l">|</em>
+							                <span class="l">38677人已学</span>
+							                <span class="r">已学<em>0%</em></span>
+							            </div>
+								        <div class="schedule-bar">
+								            <div style="width:0%;"></div>
+								        </div>
+								        <div class="cost"></div>
+								    </a>
+								</li>								                               
+			               </div>	                                          
+			            </ul>  			           
+					</div>					
+					<div class="up_progress ulliitem2_2 hide">
+		            	<div class="up_progress_img" >
+		            		<div></div>	            		
+		            	</div>
+		            	<div class="info_progress">
+		            		<span >100%</span>
+		            		<span >
+		            			<a href="#e">
+		            				取消上传
+		            			</a>
+		            		</span>
+		            	</div>
+		            	<div class="info_M">
+		            		小于500M
+		            	</div>
+		            	<form action="" method="" name="">
+		            		<table>
+			            		<thead>
+			            			<tr>
+			            				<td><h2>视频信息</h2></td>
+			            			</tr>
+			            		</thead>
+			            		<tbody>
+			            			<tr>
+			            				<td>标题</td>
+			            				<td>
+			            					<input type="text" value="" id="videobiaoti"/>
+			            				</td>
+			            			</tr>
+			            			<tr>
+			            				<td>课程详情</td>
+			            				<td>
+			            					<textarea value="" id="courseexpress"></textarea>
+			            				</td>
+			            			</tr>
+			            			<tr>
+			            				<td>分类</td>
+			            				<td>
+			            					<select name="" id="typetext">
+			            						<option value="-1">请选择视频分类</option>
+			            						<option value="">学习视频</option>
+			            						<option value="">学习视频</option>
+			            					</select>
+			            				</td>
+			            			</tr>
+			            			<tr>
+			            				<td>上传视频</td>
+			            				<td>		            			
+											<span class="btn upload uploadvideo">上传视频<input type="file" class="upload_pic" id="videofile"/></span>
+			            				</td>
+			            			</tr>
+			            			<tr>
+			            				<td>老师简介</td>
+			            				<td>
+			            					<textarea value="" id="turtorexpress"></textarea>
+			            				</td>
+			            			</tr>
+			            			<tr>
+			            				<td></td>
+			            				<td>
+			            					<input type="submit" value="发布" id="fabuvideo" name="" class="fb_video" />	   
+											<input type="button" value="返回" name="" class="fb_video fb_video_fanhui" />	   	           
+			            				</td>
+			            			</tr>
+			            		</tbody>
+			            	</table>	            
+		            	</form>
+					 </div>
+        
+                </div>  
+				<div id="ulli-item3" class="self_block_none hide">
+					<div class="my-order wodedingdan_content">
+                        <form id="searchForm" action="" method="get" name="searchForm">
+                            <table class="order-tablet operate-tablet">
+                                <colgroup>
+                                    <col width="15%">
+                                    <col width="44%">
+                                    <col width="13%">
+                                    <col width="13%">
+                                    <col width="15%">
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <td class="align-l">订单信息</td>
+                                    <td class="col-l-p">&nbsp;</td>
+                                    <td>订单金额（元）</td>
+                                    <td>操作</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                        
+                        <table class="order-tablet tablet-b order-pr0 dingdantabletd">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="44%">
+                                <col width="13%">
+                                <col width="13%">
+                                <col width="15%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                            		<td colspan="5" class="align-l col-bg">
+                                        <span>
+                                        	下单时间：<em>2016-10-10 10:41:38</em>
+                                        </span>
+                                        <span>
+                                        	订单编号：<em>1476078729</em>
+                                        </span>
+                                        <span>
+                                        	课程数：<em>1门</em>                                                                                                       
+                                        </span>
+                                        <span style="float: right;">购买者</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-l">
+                                    	<a href="/course/248/" target="_blank">
+                                    		<img src="img/5f14963c-b049-2b89-e5ce-202ee850c666.jpg" height="68" width="120" alt=""/>
+                                    	</a>
+                                    </td>
+                                    <td class="align-l valign-t col-l-p pl-20">
+                                        <a href="/course/248/" class="c-title" target="_blank">
+                                        	企业会计准则解释第7号（三）
+                                        </a>
+                                    </td>
+                                    <td rowspan="1" class="col-font"><b>￥49.00</b></td>
+                                    <td rowspan="1" id="order-status-1476078729">
+                                        <p class="a-gap">
+                                            <span class="pay-txt">
+                                                                                                等待付款                                                                                                                                                                                      
+                                            </span>
+                                        </p>
+                                        <p class="a-gap">
+                                        	<a href="#e" class="order-detail">订单详情</a>
+                                        </p>
+                                    </td>
+                                    <td rowspan="1" class="l-td-p" data-order-id="1476078729" id="order-option-1476078729">                                       
+                                        <a href="user_center.html" target="_blank">
+                                        	<div style="width: 80px;height: 80px;margin: 0 auto;border: 1px solid #000;border-radius: 40px;overflow: hidden;">
+	                                        	<img style="width: 100%;" src="img/688cfdfa-eabf-fb66-6e4d-9a02732a9c24.jpg" />
+	                                        </div>
+                                        </a>
+                                       
+                                    </td>
+                                </tr>                                                                                                                                  
+                            </tbody>
+                        </table>                           
+                    	<table class="order-tablet tablet-b order-pr0 dingdantabletd">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="44%">
+                                <col width="13%">
+                                <col width="13%">
+                                <col width="15%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                            		<td colspan="5" class="align-l col-bg">
+                                        <span>
+                                        	下单时间：<em>2016-10-10 10:41:38</em>
+                                        </span>
+                                        <span>
+                                        	订单编号：<em>1476078730</em>
+                                        </span>
+                                        <span>
+                                        	课程数：<em>1门</em>                                                                                                       
+                                        </span>
+                                        <span style="float: right;">购买者</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-l">
+                                    	<a href="/course/248/" target="_blank">
+                                    		<img src="img/5f14963c-b049-2b89-e5ce-202ee850c666.jpg" height="68" width="120" alt=""/>
+                                    	</a>
+                                    </td>
+                                    <td class="align-l valign-t col-l-p pl-20">
+                                        <a href="/course/248/" class="c-title" target="_blank">
+                                        	企业会计准则解释第7号（三）
+                                        </a>
+                                    </td>
+                                    <td rowspan="1" class="col-font"><b>￥49.00</b></td>
+                                    <td rowspan="1" id="order-status-1476078730">
+                                        <p class="a-gap">
+                                            <span class="pay-txt">
+                                                                                                等待付款                                                                                                                                                                                      
+                                            </span>
+                                        </p>
+                                        <p class="a-gap">
+                                        	<a href="#e" class="order-detail">订单详情</a>
+                                        </p>
+                                    </td>
+                                    <td rowspan="1" class="l-td-p" data-order-id="1476078730" id="order-option-1476078730">                                       
+                                        <a href="user_center.html" target="_blank">
+                                        	<div style="width: 80px;height: 80px;margin: 0 auto;border: 1px solid #000;border-radius: 40px;overflow: hidden;">
+	                                        	<img style="width: 100%;" src="img/688cfdfa-eabf-fb66-6e4d-9a02732a9c24.jpg" />
+	                                        </div>
+                                        </a>
+                                       
+                                    </td>
+                                </tr>                                                                                                                                  
+                            </tbody>
+                        </table>                           
+                    
+					</div>
+				</div>
+				<div id="ulli-item4" class="hide">
+					<div class="toppic-bar concern-friends-box clearfix " >
+				        <div class="left-img">
+				        	<a href="user_center.html">
+				        		<img src="img/caiduoduo.png-v=1.10.1.png" height="80" width="80" class="all-border-radius">
+				        	</a>
+				        </div>
+				        <div class="toppic-intro friends-intro">
+				            <p class="toppic-title"> 杨国政</p>
+				            <p class="font-small">生产/加工/制造</p>
+				        </div>
+		            </div>
+				</div>
+				<div id="ulli-item5" class="hide">
+					<div class="instructor-main clearfix">
+						<div class="quan-main">
+							<div class="module qa">
+								<div class="module-body bd">
+			                        <div>
+			                            <div class="answer-list">
+			                                <dl>
+			                                    <dt>
+			                                        <a href="#"  class="photo" target="_blank">
+			                                        	<img src="img/caiduoduo.png-v=1.10.1.png"  />
+			                                        </a>
+			                                        <a href="" class="title" target="_blank">从预缴增值税中抵减应纳税额，会计分录</a>
+			                                    </dt>
+			                                    <dd>
+			                                        <a href="index.htm" class="photo">
+			                                        	<img src="img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" />
+			                                        </a>
+			                                        <p class="answer">
+			                                       		 你好，问题已知悉！这个其实是要各公司具体的情况而定的，对科目的定义不同，就有不同的处理！如果用应交税费－应交增值税这个二级科目的余额借贷方来表示留抵金额的话，那么，贵司这种情况是应交税费－应交增值税月底科目余额是借方300.证明该科目是有留抵税金300.当然，如果你们公司规定以应交税费－未交增值税 为记录是否有留抵税额… 
+			                                       		 <a href="javascript:if(confirm('http://club.xiucai.com/quan/thread/1473663744/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://club.xiucai.com/quan/thread/1473663744/'"  target="_blank">
+			                                       		 	详情>>
+			                                       		 	
+			                                       		 </a>             
+			                                        </p>
+			                                    </dd>
+			                                </dl>
+			                                <dl>
+			                                    <dt>
+			                                        <a href="../../user/257560/index.htm" class="photo" target="_blank">
+			                                        	<img src="img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" />
+			                                        </a>
+			                                        <a href=""  class="title" target="_blank">关于缴纳增值税</a>
+			                                    </dt>
+			                                    <dd>
+			                                        <a href="index.htm"  class="photo">
+			                                        	<img src="img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" />
+			                                        </a>
+			                                        <p class="answer">
+			                                      	  你好，来信已知悉！你所提及的这两项服务内容属于现代服务中的商务辅助服务，属于此次营改增的范畴，必须要确认收入及销售金额；判定是否属于 主营业务内容，这个要跟贵司的营业范围相结合。从你的描述上来看，两者都是可以当作主营业务收入来确定。详见财务[2016]36号文商关于务辅助服务的描述。商务辅助服务，包括企业管理服务、经纪… 
+			                                      	  <a href="javascript:if(confirm('http://club.xiucai.com/quan/thread/1473437615/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://club.xiucai.com/quan/thread/1473437615/'"  target="_blank">
+			                                      	  	详情>>
+			                                      	  </a>                                                 
+			                                        </p>
+			                                    </dd>
+			                                </dl>
+			                                <dl>
+			                                    <dt>
+			                                        <a href="../../user/304367/index.htm"  class="photo" target="_blank">
+			                                        	<img src="img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" />
+			                                        </a>
+			                                        <a href=""  class="title" target="_blank">您好老师，我想请教关于增值税销项小于进项的问题</a>
+			                                    </dt>
+			                                    <dd>
+			                                        <a href="index.htm" class="photo">
+			                                        	<img src="img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" />
+			                                        </a>
+			                                        <p class="answer">
+			                                           	 预缴税费的会计分录：借：应交税费-应交增值税-已交税金 522.52       应交税费-城建税    36.58       应交税费-印花税    8.5贷：银行存款。 566.6 计提当月税金借：应收账款/银行存款   29000贷：主营业务收入  26126.13        应交税费-应交增值税-销项税额…
+			                                           	 <a href=""  target="_blank">
+			                                           	 	详情>>
+			                                           	 </a>                                                  
+			                                        </p>
+			                                    </dd>
+			                                </dl>
+			                                <dl>
+			                                    <dt>
+			                                        <a href="../../user/246193/index.htm"  class="photo" target="_blank">
+			                                        	<img src="img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" />
+			                                        </a>
+			                                        <a href=""  class="title" target="_blank">清算缴税</a>
+			                                    </dt>
+			                                    <dd>
+			                                        <a href="index.htm" class="photo">
+			                                        	<img src="img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" />
+			                                        </a>
+			                                        <p class="answer">
+			                                        	你好！建议分步骤去核算，这样思路会清晰些。一、设定科目，核算清算损益在普通清算中，一般下设清算费用、清算损益两个科目，用以核算清算期间所发生的费用与损益。清算费用：专用于核算企业清算期间的各项费用成本。包括：清算机构成员的工资报酬、公告费用、咨询费用和办公费用、诉讼费用及清算过程中必须支付的其他的清算费用。这些费用从现…
+			                                        	<a href="" target="_blank">
+			                                        		详情>>
+			                                        	</a>     
+			                                        </p>
+			                                    </dd>
+			                                    </dl>
+			                                    <dl>
+			                                        <dt>
+			                                            <a href="../../user/311488/index.htm"  class="photo" target="_blank">
+			                                            	<img src="img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" />
+			                                            </a>
+			                                            <a href=""  class="title" target="_blank">增值税问题：</a>
+			                                        </dt>
+			                                        <dd>
+			                                            <a href="index.htm" class="photo">
+			                                            	<img src="img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" />
+			                                            </a>
+			                                            <p class="answer">
+			                                            	年底结账，可以结转归零 
+			                                            </p>
+			                                        </dd>
+			                                    </dl>
+			                                </div>
+			                            <div style="width: 100%;height: 80px;text-align: center;box-sizing: border-box;">
+							    			<div class="page_course" >
+							    				<a href="#e" class="page_course_a">首页</a>
+							    				<a href="#e" class="page_course_a">＜</a>
+							    				<a href="#e" class="page_course_a">1</a>
+							    				<a href="#e" class="page_course_a">2</a>
+							    				<a href="#e" class="page_course_a">3</a>
+							    				<a href="#e" class="page_course_a">4</a>
+							    				<a href="#e" class="page_course_a">5</a>
+							    				<a href="#e" class="page_course_a">6</a>
+							    				<a href="#e" class="page_course_a">7</a>
+							    				<a href="#e" class="page_course_a">8</a>
+							    				<a href="#e" class="page_course_a">9</a>
+							    				<a href="#e" class="page_course_a">10</a>
+							    				<a href="#e" class="page_course_a">＞</a>
+							    				<a href="#e" class="page_course_a">尾页</a>
+							    			</div>
+							    		</div> 
+			                        </div>
+			                    </div>
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
+             
+            </div>
+            <!-- 左侧列表 begin -->
+            <div class="course-sidebar">
+                <div class="course-sidebar-type">
+                	<div class="quan-block quan-hp-block">			       
+				        <form id="member_editor_form" name="member_editor" action="" enctype="multipart/form-data" method="post" onsubmit="return true;">
+				        <a href="javascript:;" class="user-head" style="border-radius: 50%;overflow: hidden;">
+				            <span class="head90-mask" style="border: 0;"></span>
+				            <img  id="avatar" src="http://assets.xiucai.com/assets/img/caiduoduo.png?v=1.10.5?ver=688442372" height="90" width="90">
+				            <div class="head-mask head-mask90"></div>
+				            <div id="avatarProfileUpload"></div>
+				            <input type="hidden" name="avatar" id="head_pic" value="/assets/img/caiduoduo.png"/>
+				            <input type="hidden" name="avatar_large" id="head_pic_large" value="/assets/img/caiduoduo.png"/>
+				        </a>
+				        </form>
+				        
+				        <div class="hp-user-zone" id="personal-info-div">
+				            <p class="user-name">
+				                <a href="/vip/" target="_blank" class="vip" title="">
+				                	<img src="http://assets.xiucai.com/assets/img/vip.png" width="16" height="12" alt="会员特权" border="0">
+				                </a>
+				                <strong id="nickname-span">到汉多少次了</strong>				               
+				            </p> 
+				            <div class="laoshi_tx">
+		                		<div class="con4">
+									<canvas id="cvs" width="0" height="0" class="hide"></canvas>
+									<span class="btn upload" style="margin: 0 auto;">上传头像<input type="file" class="upload_pic" id="upload"/></span>
+								</div>
+		                		<input type="file" value="修改头像" class="upload_pic tximg-x" id="upload" />
+		                	</div>
+				            <!-- 用户等级展示 -->
+				            <div class="user-level-display border-b-e6 clearfix">
+				                <p class="clearfix">
+				                    <a href="/help/6/#q27" target="_blank" title="" class="fl">
+				                        <span class="tag-qb">
+				                        	<img src="http://assets.xiucai.com/assets/img/quan/qb.png?v=1.10.5" alt="圈币" height="14" width="19">
+				                        	5
+				                        </span>
+				                    </a>
+				                    <span class="fr r-wrap"><a href="/help/6/#q28" target="_blank" class="" title="">
+				                    <span class="tag-level tag-level-LV1">
+				                    <i>LV1</i></span></a></span>
+				                </p>
+				            </div>
+				          
+				        </div>
+				    </div>
+                	
+                    <ul class="ulli-item">                    	
+                        <li class="course-category course-category-more" data-href="#ulli-item1">
+                            <a class="course-category-link curr" href="#r" >
+                            	个人资料
+                            </a>
+                            <div class="vertical"></div>
+                        </li>
+                        <li class="course-category course-category-more" data-href="#ulli-item2">
+                            <a class="course-category-link " href="#r">
+                            	我的课程
+                            </a>
+                            <div class=""></div>
+                        </li>
+                        <li class="course-category course-category-more" data-href="#ulli-item3">
+                            <a class="course-category-link" href="#r">
+                            	我的订单
+                            </a>
+                            <div class=""></div>
+                        </li>
+                        <li class="course-category course-category-more" data-href="#ulli-item4">
+                            <a class="course-category-link" href="#r">
+                            	我的粉丝
+                            </a>
+                            <div class=""></div>
+                        </li>
+                        <li class="course-category course-category-more" data-href="#ulli-item5">
+                            <a class="course-category-link" href="#r">
+                            	我的问答
+                            </a>
+                            <div class=""></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 左侧列表 end -->
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/dialog-plus.js"></script>
+<script type="text/javascript" src="js/common4.0.js"></script>
+<script type="text/javascript" src="js/jquery.enplaceholder.js"></script>
+<script type="text/javascript" src="js/memberInfoDialog.js"></script>
+<script type="text/javascript" src="js/focusUser.js"></script>
+<script type="text/javascript" src="js/icheck.min.js"></script>
+<script type="text/javascript" src="js/login.js"></script> 
+<script type="text/javascript" src="js/login_register.js"></script>
+
+<div id="footer">
+    <div class="footer-context">
+	    <div class="f-c-detail">
+	        <div class="f-c-box">
+	            <div class="footer-content clearfix">
+	                <div class="footer-link clearfix">
+	                    <dl>
+	                        <dt>新手指南</dt>
+	                        <dd><a href="/help/7/#q29" target="_blank">如何注册</a></dd>
+	                        <dd><a href="/help/7/#q30" target="_blank">找回密码</a></dd>
+	                        <dd><a href="/help/7/#q31" target="_blank">APP下载</a></dd>
+	                        <dd><a href="/help/8/#q32" target="_blank">开通会员</a></dd>
+	                    </dl>
+	                    <dl>
+	                        <dt>听课指南</dt>
+	                        <dd><a href="/help/5/#q38" target="_blank">如何听录播课</a></dd>
+	                        <dd><a href="/help/4/#q39" target="_blank">如何听直播课</a></dd>
+	                        <dd><a href="/help/7/#q40" target="_blank">课程类型说明</a></dd>
+	                        <dd><a href="/help/7/#q37" target="_blank">用听课码听课</a></dd>
+	                    </dl>
+	                    <dl>
+	                        <dt>售后服务</dt>
+	                        <dd><a href="/help/8/#q33" target="_blank">会员听课说明</a></dd>
+	                        <dd><a href="/help/8/#q34 " target="_blank">课程资料说明</a></dd>
+	                        <dd><a href="/help/8/#q35" target="_blank">单课购买说明</a></dd>
+	                        <dd><a href="/help/8/#q35" target="_blank">专题购买说明</a></dd>
+	                        <dd><a href="/help/8/#q36" target="_blank">企业购买说明</a></dd>
+	                    </dl>
+	                    <dl>
+	                        <dt>豫尚指南</dt>
+	                        <dd><a href="http://www.xiucai.com/lector/recruit/" target="_blank">讲师招募</a></dd>
+	                        <dd><a href="http://www.xiucai.com/contact/" target="_blank">联系我们</a></dd>
+	                        <dd><a href="http://www.xiucai.com/terms/" target="_blank">服务协议</a></dd>
+	                        <dd><a href="http://www.xiucai.com/feedback/" target="_blank">意见反馈</a></dd>
+	                        <dd><a href="http://www.xiucai.com/help/" target="_blank">帮助中心</a></dd>
+	                    </dl>
+	                </div>
+	                <div class="footer-login-way">
+	                    <div class="l-w-bottom">
+	                        <p class="f18">客服：<b>021-51855362</b></p>
+	                        <p>（周一至周五 8:30-17:30）</p>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="f-c-copyright">
+	        <span>&copy;&nbsp;2016 上海达哈那网络科技有限公司</span><i>|</i><span>沪ICP备15048176号</span><i>|</i><span>友情链接：<a href="http://www.gaodun.cn/" target="_blank">高顿财经</a><a href="http://www.gaodun.com/" target="_blank">高顿网校</a><a href="http://www.goldenfinance.com.cn/" target="_blank">高顿财务培训</a></span>
+	    </div>
+	</div>
+	<script type="text/javascript">
+	    $(function(){
+	        // 滚动下拉固定导航
+	        $(window).scroll(function(){           
+	            var $this=$(this);
+	            var scrollTop=$(document).scrollTop();
+	            var headTop=$(".idx-header").length!=0?($(".idx-nav").offset().top+$(".idx-nav").height()):$("#header").height();
+	            var animateTop=$(".idx-header").length!=0?$(".idx-header").height():$("#header").height();
+	
+	            if(scrollTop > headTop || scrollTop>=$(document).height()-$(window).height()){ if(!$(".header-wrap").hasClass("fixed-head")){
+	                    if($(".idx-header").length!=0){
+	                        $(".header-wrap").find("#header").show();
+	
+	                        $(".header-wrap").addClass("fixed-head").css('top',-animateTop+'px');
+	                        setTimeout(function(){$(".header-wrap").animate({top:0},300);},100);
+	                    }              
+	                }
+	            }
+	            else if(scrollTop < headTop || scrollTop==0){
+	                if($(".header-wrap").hasClass("fixed-head")){
+	                    if($(".idx-header").length!=0){
+	                        $(".header-wrap").find("#header").hide();
+	
+	                        $(".header-wrap").removeClass("fixed-head");
+	                        $(".header-wrap").css('top','');
+	                    }                                     
+	                }
+	            }            
+	       })     
+	    })
+	</script>
+	<script type="text/javascript">
+	    jQuery(function(){
+	        $.fn.hoverDelay = function(options){
+	            var defaults = {
+	                hoverDuring: 200,
+	                outDuring: 200,
+	                hoverEvent: function(){
+	                    $.noop();
+	                },
+	                outEvent: function(){
+	                    $.noop();
+	                }
+	            };
+	            var sets = $.extend(defaults,options || {});
+	            var hoverTimer, outTimer;
+	            return $(this).each(function(){
+	                $(this).hover(function(){
+	                    clearTimeout(outTimer);
+	                    hoverTimer = setTimeout(sets.hoverEvent, sets.hoverDuring);
+	                },function(){
+	                    clearTimeout(hoverTimer);
+	                    outTimer = setTimeout(sets.outEvent, sets.outDuring);
+	                });
+	            });
+	        }
+	    });
+	</script>
+	<script type="text/javascript">
+	    $(function(){
+	        // header导航
+	        $('.nav-item > li').each(function(){
+	            var that=$(this);
+	            that.hoverDelay({
+	                hoverEvent: function(){
+	                    if(that.find("ul").hasClass('second-nav-item')){
+	                        that.children('a').addClass('focus');
+	                    }
+	                    $('.second-nav-item',that).addClass("pop-up");
+	                },
+	                outEvent: function(){
+	                    $('.second-nav-item',that).removeClass("pop-up");
+	                    that.children('a').removeClass('focus');
+	                }
+	            })
+	        })
+	        // header头像hover
+	        $(".logined ul li.user").each(function(){
+	            var that=$(this);
+	            that.hoverDelay({
+	                hoverEvent: function(){
+	                    that.children("a").addClass("user-head-hover");
+	                    that.children('div').addClass("pop-up");;
+	                },
+	                outEvent: function(){
+	                    that.children("a").removeClass("user-head-hover");
+	                    that.children('div').removeClass("pop-up");;
+	                }
+	            })
+	        })
+	        // 消息hover
+	        $(".logined ul li.li-msg").each(function(){
+	            var that=$(this);
+	            that.hoverDelay({
+	                hoverEvent: function(){
+	                    that.children('a').find('i').addClass('message-highlight');
+	                    that.children('.message-board').addClass("pop-up");
+	                },
+	                outEvent: function(){
+	                    that.children('a').find('i').removeClass('message-highlight');
+	                    that.children('.message-board').removeClass("pop-up");
+	                }
+	            })
+	        })
+	        // 消息面板tab切换
+	        $(".li-msg .orange-nav span").hover(function(){
+	            $(this).addClass('curr').siblings().removeClass('curr');           
+	            $(this).parents(".message-content").find('.message-tab-content>div:eq('+$(this).index()+')').show().siblings().hide();
+	        })
+	        // 搜索按钮动效
+	        $(".search-block").each(function(){
+	            var that=$(this);
+	            if($.trim($("#topSearchContent").html())==''){
+	                $("#search_content").val('');
+	            }else{
+	                if($.trim($("#search_content").val())!=''){
+	                    $("#topSearchContent").show();
+	                }
+	            }
+	            if(that.find("#search_content").prev("div").length==0){
+	                that.find("#search_content").placeholder({isUseSpan:true,onInput:true});
+	            }
+	        })
+	        $(".idx-search-block").each(function(){
+	            var that=$(this);
+	            if(that.find("#search_content_index").prev("div").length==0){
+	                that.find("#search_content_index").placeholder({isUseSpan:true,onInput:true});
+	            }
+	        })
+	
+	        // 点击空白区域搜索区域隐藏
+	        $(document).click(function(e){
+	          var _con = $(".search-block");   // 设置目标区域
+	          if(!_con.is(e.target) && _con.has(e.target).length === 0){
+	            $("#topSearchContent").hide();
+	            // $(".search-block").removeClass("search-block-active search-block-focus").find("#search_content").blur();
+	            // $(".search-block").removeClass("search-block-focus").find("#search_content").val('');
+	            $(".search-block").find("#search_content").val('');
+	            // $("#search_content").prev(".wrap-placeholder").remove();
+	          }
+	        });
+	
+	        // 购物车
+	        $(".n-cart-wrap").each(function(){
+	            var that=$(this);
+	            that.hoverDelay({
+	                hoverEvent: function(){
+	                    that.children('.n-cart').find('i').addClass('cart-highlight');
+	                    that.children('.n-cart-board').addClass("pop-up");
+	                    $.post("/order/top/cart",{},
+	                            function(result){                                
+	                                if(result.code == 200){                                    
+	                                    that.children('.n-cart-board').html(result.html);
+	                                    
+	                                }else{
+	                                    dialog_alert(result.msg);
+	                                    return false;
+	                                }
+	                            }
+	                    );
+	
+	                },
+	                outEvent: function(){
+	                    
+	                    that.children('.n-cart-board').removeClass("pop-up");
+	                    that.children('.n-cart').find('i').removeClass('cart-highlight');
+	                }
+	            })
+	        })
+	
+	        // footer二维码
+	        $(".footer-login-way a").hover(
+	            function(){
+	                $(this).find(".tooltip-erweima").addClass("pop-up");
+	            },
+	            function(){
+	                $(this).find(".tooltip-erweima").removeClass("pop-up");
+	            }
+	        )
+	    })   
+	    // 改版ad
+	    $(".revision-wrap span").click(function(event) {
+	        $(".revision-wrap").removeClass("revision-wrap-active");
+	        $("#header").removeClass("header-bg");
+	    });
+	    $(window).scroll(function(){
+	        if($(window).scrollTop() >0){
+	            $(".revision-wrap").removeClass("revision-wrap-active");
+	            $("#header").removeClass("header-bg");
+	        }
+	    })    
+	</script>
+
+</div>
+<div class="overlay hide"></div>
+
+<div class="dialog-board dialog-board-m cancel-order-layer hide">
+    <div class="dialog-board-bar">
+       <a class="close-dialog-board" href="javascript:;"></a>
+    </div>
+    <div class="board-m-gap">
+        <div class="window-bill-form">
+            <div class="middle-box-w">
+                <div class="reset-block-item reset-block-item-industry-one clearfix" style="text-align: center;">
+                   <label>确定要取消订单？</label>
+                   <div class="back-error-tips cancel-order-error hide" style="display: none;">请选择取消订单的原因</div>
+                </div>
+                <div class="btn-col2 clearfix">
+                    <a href="javascript:;" class="fr globe-btn50 cancel-order-btn">确认取消</a>
+                    <a href="javascript:;" class="fl globe-btn50 globe-btn50-nobg not-cancel-order">暂不取消</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="overlay-transparent hide"></div>
+<!--[if IE]>
+<script>
+    $(".xc-regist ul input").placeholder({isUseSpan:true,onInput:true});
+</script>
+<![endif]-->
+<script>
+	$(function(){
+		$("#addshanchang").click(function(){
+			var neirong =$.trim($("#shanchangtext").val());
+			var str = $(".neirongxianshi").html();
+			if(neirong!=""){
+				var sss =  str + "<span data-content='"+neirong+"'>"+neirong+"<span class='icon iconfont removespan'>&#xe60a;<span></span>";
+				$(".neirongxianshi").html(sss);
+			}	
+		});
+		$(document).on('click','.removespan',function(){
+			$(this).parent('span').remove();
+		});
+	})
+</script>
+<script>
+//获取上传按钮
+var input1 = document.getElementById("upload"); 
+if(typeof FileReader==='undefined'){ 
+     //result.innerHTML = "抱歉，你的浏览器不支持 FileReader"; 
+     input1.setAttribute('disabled','disabled'); 
+}else{ 
+     input1.addEventListener('change',readFile,false); 
+}
+function readFile(){ 
+	var file = this.files[0];//获取上传文件列表中第一个文件
+	if(!/image\/\w+/.test(file.type)){
+	//图片文件的type值为image/png或image/jpg
+		alert("文件必须为图片！");
+		return false; 
+	} 
+	// console.log(file);
+	var reader = new FileReader();//实例一个文件对象
+	reader.readAsDataURL(file);//把上传的文件转换成url
+	//当文件读取成功便可以调取上传的接口
+	reader.onload = function(e){ 
+		var image = new Image();
+		// 设置src属性 
+		image.src = e.target.result;
+		$("#avatar").attr('src',image.src);
+		var max=200;
+		// 绑定load事件处理器，加载完成后执行，避免同步问题
+		image.onload = function(){ 
+			// 获取 canvas DOM 对象 
+			var canvas = document.getElementById("cvs"); 
+			// 如果高度超标 宽度等比例缩放 *= 
+			// 获取 canvas的 2d 环境对象, 
+			var ctx = canvas.getContext("2d"); 
+			// canvas清屏 
+			ctx.clearRect(0, 0, canvas.width, canvas.height); 
+			// 重置canvas宽高		
+			ctx.drawImage(image, 0, 0, 200, 200);
+			// 注意，此时image没有加入到dom之中
+		};  
+	}
+};
+</script>
+</body>
+</html>

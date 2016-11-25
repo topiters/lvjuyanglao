@@ -1,0 +1,1803 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta property="qc:admins" content="271536151160153116375711747716765216160454" />
+    <meta name="keywords" content="秀财网,财务会计,管理会计,财务管理,税务筹划,工具软技能,在线财务视频学习,会计视频学习网站,税务学习视频"/>
+    <meta name="description" content="秀财网在线视频课程，提供财务会计，管理会计，财务管理，税务筹划，工具软技能等专业在线学习视频，秀财网-成就财务职业梦"/>
+    <meta itemprop="image" content="http://assets.xiucai.com/assets/img/logo-hide.png?v=1.10.1" />
+    <title></title>
+	<link type="text/css" href="css/base.css-v=1.10.1.css"  rel="stylesheet"/>
+    <link rel="stylesheet" href="iconfont/iconfont.css-v=1.10.1.css"/>
+    <link type="text/css" href="css/common.css-v=1.10.1.css" rel="stylesheet"/>
+    <link type="text/css" href="css/style.css-v=1.10.1.css" rel="stylesheet"/>
+    <link type="text/css" href="css/minimal.css-v=1.10.1.css"rel="stylesheet"/>
+    <link type="text/css" href="css/ui-dialog.css-v=1.10.1.css" rel="stylesheet"/>
+    <link type="text/css" href="css/bottom-register.css-v=1.10.1.css" rel="stylesheet" />
+    <link type="text/css" href="css/quaner.css-v=1.10.1.css"   rel="stylesheet"/>
+    <link type="text/css" href="css/course.css-v=1.10.1.css"   rel="stylesheet"/>
+    <link type="text/css" href="css/buy.css-v=1.10.1.css"   rel="stylesheet"/>
+    <link type="text/css" href="iconfont/iconfont.css" rel="stylesheet" />
+    <link type="text/css" href="css/login2.css" rel="stylesheet" /> 
+    <link type="text/css" href="css/style.css" rel="stylesheet" />      
+    <script type="text/javascript" src="js/jquery-1.9.0.js"></script>
+</head>
+<style>
+</style>
+<script>
+	$(function(){
+		$(".close_icon").click(function(){
+			//alert(0);
+			$(".login").css({"display":"none"});
+			$("body").css({"overflow":"auto"});
+			$("#allsccren").removeClass('allsccren');
+		});
+	});
+	function login(){
+		$("#allsccren").addClass('allsccren');
+		$("body").css({"overflow":"hidden"});
+		$(".login").css({"display":"block"});
+		$("#all_login").css({"display":"block"});
+		$("#register_").css({"display":"none"});
+		
+	}
+	function zhuce(){
+		$("#allsccren").addClass('allsccren');
+		$("body").css({"overflow":"hidden"});
+		$(".login").css({"display":"block"});
+		$("#all_login").css({"display":"none"});
+		$("#register_").css({"display":"block"});
+	}
+</script>
+<script>
+	$(function(){
+		$("input[name='mobile_login']").click(function(){
+			//登录成功之后
+			//先让非导航的右边显示登录之后的样子
+			$("#feinav_dlzq").css({"display":"none"});
+			$("#feinav_dlzh").css({"display":"block"});//显示用户信息
+			//再让黑色导航的右边显示登录之后的样子
+			$(".head_dhzx").css({"display":"none"});
+			$("#user_nodl").css({"display":"none"});
+			$("#login_dl").css({"display":"block"});
+			//
+		});
+	})
+</script>
+
+<script>
+	//点击选择所需分类名称进行筛选   样式为check
+	$(function(){
+		
+		$("#main dl dt a").click(function(){
+			//点击全部时候
+			$(this).addClass('check');
+			$(this).parent().next('dd').children('ul').children('li').children('a').removeClass('check');
+		});
+		$(document).on("click","#main dl>dd ul>li>a",function(){
+			$(this).addClass('check');
+			$(this).parent().siblings().children('a').removeClass('check');
+			$(this).parent().parent().parent().prev('dt').children('a').removeClass('check');
+		});
+		$(".bgc>.filter>.hot-new-tab>a").click(function(){
+			$(this).addClass('cur');
+			$(this).siblings().removeClass('cur');
+		});
+		$(".orientation  dt a").click(function(){
+			//再次选中全部的时候
+			$(".course_zt ul").html('');
+			$(".course_zt ul").html(' <li> <a class="" href="#" >财务报告</a> </li> <li> <a class="" href="#"  >会计准则</a> </li> <li> <a class="" href="#"  >合并报表</a> </li> <li> <a class="" href="#"  >会计处理</a> </li> <li> <a class="" href="#"  >业财融合</a> </li> <li> <a class="" href="#"  >绩效管理</a> </li> <li> <a class="" href="#"  >成本管理</a> </li> <li> <a class="" href="#"  >预算管理</a> </li> <li> <a class="" href="#"  >财务分析</a> </li> <li> <a class="" href="#"  >内控风险</a> </li> <li> <a class="" href="#"  >上市融资</a> </li> <li> <a class="" href="#"  >管理会计体系</a> </li> <li> <a class="" href="#"  >财务管控</a> </li> <li> <a class="" href="#"  >内部审计</a> </li> <li> <a class="" href="#"  >资金管理</a> </li> <li> <a class="" href="#"  >金融证券</a> </li> <li> <a class="" href="#"  >税会差异</a> </li> <li> <a class="" href="#"  >税务筹划</a> </li> <li> <a class="" href="#"  >税务稽查</a> </li> <li> <a class="" href="#"  >税种及政策</a> </li> <li> <a class="" href="#"  >职业发展</a> </li> <li> <a class="" href="#"  >软技能</a></li> <li> <a class="" href="#"  >应用工具</a> </li> <li> <a class="" href="#"  >财务信息化</a> </li> <li> <a class="" href="#"  >Excel应用</a> </li>');
+		});
+		$(".orientation  dd ul li a").click(function(){
+			//获取一级点击时候的内容根据对应的选项改变二级
+			var content = $(this).text();			
+			//点击一级中的其他选项使二级发生变化
+			$(".course_zt ul").html('');
+			$(".course_zt ul").html('<li> <a class="" href="#"  >金融证券</a> </li> <li> <a class="" href="#"  >税会差异</a> </li> <li> <a class="" href="#"  >税务筹划</a> </li> <li> <a class="" href="#"  >税务稽查</a> </li> <li> <a class="" href="#"  >税种及政策</a> </li>');
+		
+		});
+	})
+</script>
+<script>
+	/*$(function(){
+		$(".page_course a").click(function(){
+			//alert(0);
+			$(this).addClass('page_active');
+			$(this).siblings().removeClass('page_active');
+		});
+	})*/
+</script>
+<body>
+    <div class="h50"></div>
+    <div class="header-wrap  fixed-head" >
+    	<div id="header" >
+   		<div class="container">
+        	<div class="nav clearfix">
+	           	<a href="index.htm"  title="首页" class="logo" >
+	           		<img src="img/logo_.png" />
+	           	</a>
+	            <a href="javascript:" class="nav-menu-btn"><i class="iconfont">&#xe67b;</i></a>
+	            <ul class="nav-item">
+	                <li><a class="notCard font-color-white" href="index_new.html" >首页</a></li>
+	                <li class="parent-nav-item">
+	                    <a href="course/index.htm" >课程 </a>
+	                    <ul class="second-nav-item">
+	                        <li><a href="course/-from=nav.htm" >课程大厅</a></li>
+	                        <li><a href="course/zt/-from=nav.htm" >专题课程</a></li>
+	                        <li><a href="-url=-user--from=nav-login.htm">我的课程</a></li>
+	                    </ul>
+	                </li>
+	                <li>
+	                	<a href="#"  >直播间</a>
+	                </li>
+	                <li class="beta">
+	                	<a href="#" >专家问答</a>
+	                </li>
+	                <li class="parent-nav-item">
+	                    <a href="#" >财税论坛 </a>
+	                    <ul class="second-nav-item">
+	                        <li>
+	                        	<a href="#" >圈子首页</a></li>
+	                        <li class="none-border">
+	                        	<a href="#">我的圈子</a></li>
+	                    </ul>
+	                </li>
+	                <li>
+	                	<a href="#">开通会员</a>
+	                </li>
+	                <li>
+	                    <a href="#" >APP</a>
+	                </li>
+	                <li>
+	                    <a href="#" >线下</a>
+	                </li>
+	            </ul>
+	            <!-- 用户未登录状态 -->
+	           <div class="login-block" id="user_nodl" style="border: #fff;">
+	                <a href="javascript:;" id="a-login"  class="a-login" onclick="login();">登录</a>
+	                <a href="javascript:;" id="a-register" class="a-register" onclick="zhuce();">注册</a>
+	           </div>	
+	           <!--用户已登录状态-->
+	           <!--<div class="login-block" id="login_dl" style="border: 1px solid #f00;height: 35px;">
+	                <div class="model_login">
+	                	<span>1</span>
+	                	<span>1</span>
+	                	<span>1</span>
+	                </div>
+	           </div>-->
+	           
+	            <div class="change-entrance head_dhzx" >
+	            	<a href="task/mall/index.htm"  title="兑换中心" ><i></i></a>
+	            </div>
+	            <div class="login-block login_zh" id="login_dl" style="display: none;">
+	            	<ul>
+	            		<li><a href="#"><i class="iconfont">&#xe615;</i></a></li>
+	            		<li><a href="#"><i class="iconfont">&#xe69c;</i></a></li>
+	            		<li><a href="#"><i class="iconfont">&#xe9c5;</i></a></li>
+	            		<li><a href="#"><i class="iconfont">&#xe625;</i></a></li>
+	            		<li><a href="#"><div><img src="img/login/touxaing.png" /></div></a></li>
+	            	</ul>
+	            </div>
+	            
+	            <div class="search-block search-block-active search-block-focus">
+	                <div class="search-form clearfix">
+	                    <input type="button" class="fl search-btn" id="search_button"/>
+	                    <input type="text" class="fl search_content_input" id="search_content" name="search_content" placeholder="找到你想要的课程或帖子" maxlength="15"/>
+	                </div>
+	
+	                <!-- 关键字搜索面板 默认隐藏 -->
+	                <div class="search-board search-result-board" id="topSearchContent"></div>
+	                <input id="search_from" type="hidden" value="course">
+	            </div>
+	        </div>
+        	<div class="drop-down-menu">
+	            <div class="pd">
+	                <div class="down-menu-row">
+	                    <div class="classify-nav">
+	                        <p class="title"><em></em>热门课程</p>
+	                        <dl>
+	                            <dt>
+	                            	<a href="course/zt/ygzxx/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">营改增</a>
+	                            </dt>
+	                            <dd>
+	                                <a href="course/zt/fcygz/index.htm"   target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">房地产业</a>
+	                                <a href="zt/ygzsc/index.htm" tppabs="http://www.xiucai.com/zt/ygzsc/" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">建筑业</a>
+	                                <a href="course/zt/shygz/index.htm" tppabs="http://www.xiucai.com/course/zt/shygz/" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">生活服务业</a>
+	                                <a href="zt/ygzsc/index.htm" tppabs="http://www.xiucai.com/zt/ygzsc/" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">金融业</a>
+	                            </dd>
+	                        </dl>
+	                        <dl>
+	                            <dt>
+	                            	<a href="course/zt/hsqj/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">汇算清缴</a>
+	                            </dt>
+	                            <dd>
+	                                <a href="search/course/result/-word=纳税调整.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E7%BA%B3%E7%A8%8E%E8%B0%83%E6%95%B4" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">纳税调整</a>
+	                                <a href="search/course/result/-word=弥补亏损.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E5%BC%A5%E8%A1%A5%E4%BA%8F%E6%8D%9F" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">弥补亏损</a>
+	                            </dd>
+	                        </dl>
+	                        <dl>
+	                            <dt>
+	                            	<a href="course/cate/85/-cid=377.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">Excel</a>
+	                            </dt>
+	                            <dd>
+	                                <a href="course/zt/excelxb/index.htm" tppabs="http://www.xiucai.com/course/zt/excelxb/" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">入门必备</a>
+	                                <a href="search/course/result/-word=函数.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E5%87%BD%E6%95%B0" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">函数</a>
+	                                <a href="search/course/result/-word=数据透视表.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E6%95%B0%E6%8D%AE%E9%80%8F%E8%A7%86%E8%A1%A8" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">数据透视表</a>
+	                                <a href="course/zt/excelxs/index.htm" tppabs="http://www.xiucai.com/course/zt/excelxs/" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">图表</a>
+	                            </dd>
+	                        </dl>
+	                        <dl>
+	                            <dt>
+	                            	<a href="course/zt/cwfx/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">财务报表分析</a>
+	                            </dt>
+	                            <dd>
+	                                <a href="search/course/result/-word=报表解读.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E6%8A%A5%E8%A1%A8%E8%A7%A3%E8%AF%BB" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">报表解读</a>
+	                                <a href="search/course/result/-word=报表案例.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E6%8A%A5%E8%A1%A8%E6%A1%88%E4%BE%8B" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">报表案例</a>
+	                            </dd>
+	                        </dl>
+	                    </div>
+	                    <div class="classify-nav">
+	                        <p class="title"><em></em>税务实操</p>
+	                        <dl>
+	                            <dt>
+	                            	<a href="course/zt/grsds/index.htm" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">个人所得税</a>
+	                            </dt>
+	                            <dd>
+	                                <a href="search/course/result/-word=高管.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E9%AB%98%E7%AE%A1" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">高管个税</a>
+	                                <a href="search/course/result/-word=外籍.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E5%A4%96%E7%B1%8D" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">外籍人员</a>
+	                                <a href="search/course/result/-word=福利.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E7%A6%8F%E5%88%A9" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">员工福利</a>
+	                            </dd>
+	                        </dl>
+	                        <dl>
+	                            <dt>
+	                            	<a href="course/zt/qysds/index.htm" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">企业所得税</a>
+	                            </dt>
+	                            <dd>
+	                                <a href="search/course/result/-word=纳税申报.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E7%BA%B3%E7%A8%8E%E7%94%B3%E6%8A%A5" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">纳税申报</a>
+	                                <a href="search/course/result/-word=税前扣除.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E7%A8%8E%E5%89%8D%E6%89%A3%E9%99%A4" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">税前扣除</a>
+	                                <a href="search/course/result/-word=视同销售.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E8%A7%86%E5%90%8C%E9%94%80%E5%94%AE" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">视同销售</a>
+	                            </dd>
+	                        </dl>
+	                        <dl>
+	                            <dt>
+	                            	<a href="course/cate/82/-cid=84&tid=288.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">增值税</a>
+	                            </dt>
+	                            <dd>
+	                                <a href="search/course/result/-word=发票.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E5%8F%91%E7%A5%A8" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">发票管理</a>
+	                                <a href="search/course/result/-word=进项.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E8%BF%9B%E9%A1%B9" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">进项抵扣</a>
+	                                <a href="search/course/result/-word=出口.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E5%87%BA%E5%8F%A3" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">出口退税</a>
+	                            </dd>
+	                        </dl>
+	                        <dl>
+	                            <dt>
+	                            	<a href="course/zt/swjc/index.htm" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">税务稽查</a>
+	                            </dt>
+	                            <dd>
+	                                <a href="search/course/result/-word=稽查.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E7%A8%BD%E6%9F%A5" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">稽查应对</a>
+	                                <a href="search/course/result/-word=争议.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E4%BA%89%E8%AE%AE" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">税务争议</a>
+	                            </dd>
+	                        </dl>
+	                        <dl>
+	                            <dt>
+	                            	<a href="course/cate/82/-cid=294.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">税务筹划</a>
+	                            </dt>
+	                            <dd>
+	                                <a href="search/course/result/-word=高新技术.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E9%AB%98%E6%96%B0%E6%8A%80%E6%9C%AF" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">高新技术</a>
+	                                <a href="search/course/result/-word=研发费用.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E7%A0%94%E5%8F%91%E8%B4%B9%E7%94%A8" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">研发费用</a>
+	                                <a href="search/course/result/-word=BEPS.htm" tppabs="http://www.xiucai.com/search/course/result/?word=BEPS" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">BEPS</a>
+	                                <a href="search/course/result/-word=转让定价.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E8%BD%AC%E8%AE%A9%E5%AE%9A%E4%BB%B7" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">转让定价</a>
+	                                <a href="search/course/result/-word=非贸.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E9%9D%9E%E8%B4%B8" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_sw" data-opt_label="navigation_course_category_sw" data-opt_value="导航课程分类">非贸付汇</a>
+	                            </dd>
+	                        </dl>
+	                    </div>
+	                    <div class="classify-nav">
+	                        <p class="title"><em></em>会计核算</p>
+	                        <dl>
+	                            <dt>
+	                            	<a href="course/zt/ndgz/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">财务关账</a>
+	                            </dt>
+	                            <dd>
+	                                <a href="course/zt/ndgz/index.htm" tppabs="http://www.xiucai.com/course/zt/ndgz/" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">年底关账</a>
+	                            </dd>
+	                        </dl>
+	                        <dl>
+	                            <dt>
+	                            	<a href="search/course/result/-word=合并报表.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">合并报表</a>
+	                            </dt>
+	                            <dd>
+	                                <a href="search/course/result/-word=合并报表.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">合并报表</a>
+	                            </dd>
+	                        </dl>
+	                        <dl>
+	                            <dt>
+	                            	<a href="course/cate/63/-cid=65.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">会计准则</a>
+	                            </dt>
+	                            <dd>
+	                                <a href="course/zt/kjzz/index.htm" tppabs="http://www.xiucai.com/course/zt/kjzz/" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">企业会计准则解释</a>
+	                                <a href="search/course/result/-word=财务报表列报.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E8%B4%A2%E5%8A%A1%E6%8A%A5%E8%A1%A8%E5%88%97%E6%8A%A5" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">财务报表列报</a>
+	                                <a href="course/zt/gdzc/index.htm" tppabs="http://www.xiucai.com/course/zt/gdzc/" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">固定资产</a>
+	                                <a href="search/course/result/-word=售后回租.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E5%94%AE%E5%90%8E%E5%9B%9E%E7%A7%9F" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">售后回租</a>
+	                                <a href="search/course/result/-word=递延税.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E9%80%92%E5%BB%B6%E7%A8%8E" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_kj" data-opt_label="navigation_course_category_kj" data-opt_value="导航课程分类">递延所得税</a>
+	                            </dd>
+	                        </dl>
+	                    </div>
+	                </div>
+	                <div class="down-menu-row">
+	                    <div class="classify-nav">
+	                        <p class="title"><em></em>管理会计</p>
+	                        <dl>
+	                            <dt>
+	                            	<a href="course/cate/69/-cid=74.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gl" data-opt_label="navigation_course_category_gl" data-opt_value="导航课程分类">财务分析</a>
+	                            </dt>
+	                            <dd>
+	                                <a href="course/zt/cwfx/index.htm" tppabs="http://www.xiucai.com/course/zt/cwfx/" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gl" data-opt_label="navigation_course_category_gl" data-opt_value="导航课程分类">财务报表分析</a>
+	                            </dd>
+	                        </dl>
+	                        <dl>
+	                            <dt>
+	                            	<a href="search/course/result/-word=业财融合.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gl" data-opt_label="navigation_course_category_gl" data-opt_value="导航课程分类">业财融合</a>                              	
+	                            </dt>
+	                            <dd>
+	                                <a href="course/zt/xmtz/index.htm" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gl" data-opt_label="navigation_course_category_gl" data-opt_value="导航课程分类">项目投资决策</a>
+	                                <a href="course/zt/jyjc/index.htm" tppabs="http://www.xiucai.com/course/zt/jyjc/" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gl" data-opt_label="navigation_course_category_gl" data-opt_value="导航课程分类">经营决策</a>
+	                            </dd>
+	                        </dl>
+	                        <dl>
+	                            <dt>
+	                            	<a href="search/course/result/-word=预算管理.htm" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gl" data-opt_label="navigation_course_category_gl" data-opt_value="导航课程分类">预算管理</a>
+	                            </dt>
+	                            <dd>
+	                                <a href="course/cate/69/-cid=73&tid=165.htm" tppabs="http://www.xiucai.com/course/cate/69/?cid=73&tid=165" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gl" data-opt_label="navigation_course_category_gl" data-opt_value="导航课程分类">预算编制</a>
+	                                <a href="course/cate/69/-cid=73&tid=170.htm" tppabs="http://www.xiucai.com/course/cate/69/?cid=73&tid=170" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gl" data-opt_label="navigation_course_category_gl" data-opt_value="导航课程分类">预算博弈</a>
+	                            </dd>
+	                        </dl>
+	                    </div>
+	                    <div class="classify-nav">
+	                        <p class="title"><em></em>财务管理</p>
+	                            <dl>
+	                                <dt>
+	                                	<a href="course/cate/75/-cid=81.htm" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">资金管理</a>
+	                                </dt>
+	                                <dd>
+	                                    <a href="course/zt/zj/index.htm" tppabs="http://www.xiucai.com/course/zt/zj/" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">现金管理</a>
+	                                    <a href="search/course/result/-word=信用控制.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E4%BF%A1%E7%94%A8%E6%8E%A7%E5%88%B6" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">信用控制</a>
+	                                </dd>
+	                            </dl>
+	                            <dl>
+	                                <dt>
+	                                	<a href="course/cate/75/-cid=77.htm" tppabs="http://www.xiucai.com/course/cate/75/?cid=77" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">内部控制</a>
+	                                </dt>
+	                                <dd>
+	                                    <a href="course/zt/nbkz/index.htm" tppabs="http://www.xiucai.com/course/zt/nbkz/" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">采购内控</a>
+	                                    <a href="course/zt/nkxx/index.htm" tppabs="http://www.xiucai.com/course/zt/nkxx/" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">内控案例</a>
+	                                </dd>
+	                            </dl>
+	                            <dl>
+	                                <dt>
+	                                	<a href="course/cate/75/-cid=79.htm" tppabs="http://www.xiucai.com/course/cate/75/?cid=79" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">上市融资</a>
+	                                </dt>
+	                                <dd>
+	                                    <a href="zt/xsb/index.htm" tppabs="http://www.xiucai.com/zt/xsb/" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">新三板</a>
+	                                    <a href="course/zt/xdrz/index.htm" tppabs="http://www.xiucai.com/course/zt/xdrz/" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">银行信贷融资</a>
+	                                    <a href="search/course/result/-word=融资租赁.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E8%9E%8D%E8%B5%84%E7%A7%9F%E8%B5%81" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">融资租赁</a>
+	                                </dd>
+	                            </dl>
+	                            <dl>
+	                                <dt>
+	                                	<a href="search/course/result/-word=财务共享.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E8%B4%A2%E5%8A%A1%E5%85%B1%E4%BA%AB" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">财务共享</a>
+	                                </dt>
+	                                <dd>
+	                                    <a href="search/course/result/-word=财务共享.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E8%B4%A2%E5%8A%A1%E5%85%B1%E4%BA%AB" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_cw" data-opt_label="navigation_course_category_cw" data-opt_value="导航课程分类">财务共享中心</a>
+	                                </dd>
+	                            </dl>
+	                        </div>
+	                    <div class="classify-nav">
+	                        <p class="title"><em></em>工具软技能</p>
+	                        <dl>
+	                            <dt>
+	                            	<a href="course/cate/85/-cid=377.htm" tppabs="http://www.xiucai.com/course/cate/85/?cid=377" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gj" data-opt_label="navigation_course_category_gj" data-opt_value="导航课程分类">Excel</a>
+	                            </dt>
+	                            <dd>
+	                                <a href="course/zt/excelxb/index.htm" tppabs="http://www.xiucai.com/course/zt/excelxb/" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gj" data-opt_label="navigation_course_category_gj" data-opt_value="导航课程分类">入门必备</a>
+	                                <a href="search/course/result/-word=函数.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E5%87%BD%E6%95%B0" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gj" data-opt_label="navigation_course_category_gj" data-opt_value="导航课程分类">函数</a>
+	                                <a href="search/course/result/-word=数据透视表.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E6%95%B0%E6%8D%AE%E9%80%8F%E8%A7%86%E8%A1%A8" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gj" data-opt_label="navigation_course_category_gj" data-opt_value="导航课程分类">数据透视表</a>
+	                                <a href="course/zt/excelxs/index.htm" tppabs="http://www.xiucai.com/course/zt/excelxs/" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gj" data-opt_label="navigation_course_category_gj" data-opt_value="导航课程分类">图表</a>
+	                            </dd>
+	                        </dl>
+	                        <dl>
+	                            <dt>
+	                            	<a href="search/course/result/-word=PPT.htm" tppabs="http://www.xiucai.com/search/course/result/?word=PPT" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gj" data-opt_label="navigation_course_category_gj" data-opt_value="导航课程分类">PPT</a>
+	                            </dt>
+	                            <dd>
+	                                <a href="course/362/index.htm" tppabs="http://www.xiucai.com/course/362/" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gj" data-opt_label="navigation_course_category_gj" data-opt_value="导航课程分类">PPT制作七宗罪</a>
+	                            </dd>
+	                        </dl>
+	                        <dl>
+	                            <dt>
+	                            	<a href="search/course/result/-word=财务英语提升.htm" tppabs="http://www.xiucai.com/search/course/result/?word=%E8%B4%A2%E5%8A%A1%E8%8B%B1%E8%AF%AD%E6%8F%90%E5%8D%87" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gj" data-opt_label="navigation_course_category_gj" data-opt_value="导航课程分类">财务英语</a>
+	                            </dt>
+	                            <dd>
+	                                <a href="course/141/index.htm" tppabs="http://www.xiucai.com/course/141/" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_gj" data-opt_label="navigation_course_category_gj" data-opt_value="导航课程分类">财务英语提升</a>
+	                            </dd>
+	                        </dl>
+	                    </div>
+	                </div>
+	            </div>
+        	</div>   	
+   		</div>
+	</div>		
+	</div>       
+    <script type="text/javascript" language="JavaScript">
+       var search_result = "/search/course/result/";
+       var search_result_thread = "/search/thread/result/";
+       var search_ajax = "/search/";
+       var cancel_focus_url = "/user/cancel_focus";
+       var sure_focus_user_url = "/user/focus";
+       var set_read_url = "/message/set_read";
+       var topic_url = "/topic/";
+       var question_url = "/question/";
+       var course_url = "/course/";
+       var profile_url = "/user/";
+       var ajax_load_member_info_dialog_pop = "/user/ajax_load_member_info_dialog_pop";
+       var the_window = "/window/";
+       var task_url = "/task/";
+       var task_invite_url = "/task/invite/";
+       var clear_task_notice_url = "/task/clear_task_notice";
+       var vip_index_url = "../index.htm"/*tpa=http://www.xiucai.com/user/vip/*/;
+       var thread_url = "/quan/thread/";
+       var bottom_sms_reg_sendcode = "/account/sms_login_send_code/";
+       var bottom_sms_reg = "/account/login_sms/";
+       var sms_login_checkVerifycode = "/account/sms_login_checkVerifycode/";
+       var bindPhoneUrl = "http://www.xiucai.com/?url=%2Fuser%2Faccount_safe%2F%23login";
+       var needBindPhone = "";
+   </script>
+<div id="main">
+    <div class="course-list-box">
+        <div class="filter-boxs clearfix">
+    		<dl class="orientation">
+		        <dt>类别：</dt>
+		        <dt class="all">
+		        	<a href="#"  class="check">全部</a>
+		        </dt>
+		        <dd>
+		            <ul>
+		                <li>
+		                	<a class="" href="#" >财务管理</a>
+		                </li>
+		                <li>
+		                	<a class="" href="#" >财务会计</a>              	
+		                </li>
+		                <li>
+		                	<a class="" href="#" >管理会计</a>
+		                </li>
+		                <li>
+		                	<a class="" href="#" >税务管理</a>
+		                </li>
+		                <li>
+		                	<a class="" href="#" >工具软技能</a>
+		                </li>
+		                <li>
+		                	<a class="" href="#"  target="_blank">考证认证</a>
+		                </li>
+		            </ul>
+		        </dd>
+		    </dl>
+        	<dl class="positions">
+		        <dt >专业：</dt>
+		        <dt class="all">
+		        	<a href="#"  class="check">全部</a>
+		        </dt>
+		        <dd class="course_zt"> 
+                   
+                    <ul>
+                        <li>
+                        	<a class="" href="#" >财务报告</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >会计准则</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >合并报表</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >会计处理</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >业财融合</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >绩效管理</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >成本管理</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >预算管理</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >财务分析</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >内控风险</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >上市融资</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >管理会计体系</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >财务管控</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >内部审计</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >资金管理</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >金融证券</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >税会差异</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >税务筹划</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >税务稽查</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >税种及政策</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >职业发展</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >软技能</a></li>
+                        <li>
+                        	<a class="" href="#"  >应用工具</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >财务信息化</a>
+                        </li>
+                        <li>
+                        	<a class="" href="#"  >Excel应用</a>
+                        </li>
+                    </ul>
+        		</dd>
+    		</dl>
+	        <dl>
+		        <dt>价格：</dt>
+		        <dt class="all">
+		        	<a href="#"  class="check">全部</a>
+		        </dt>
+		        <dd>
+		            <ul>
+		               <li><a class="" href="#"  >会员课</a></li>
+		               <li><a class="" href="#"  >免费课</a></li>
+		            </ul>
+		        </dd>
+		    </dl>
+		    <dl>
+		        <dt>类型：</dt>
+		        <dt class="all">
+		        	<a href="#" class="check">全部</a>
+		        </dt>
+		        <dd>
+		            <ul>
+		                <li><a class="" href="#"  >录播课</a></li>
+		                <li><a class="" href="#"  >直播课</a></li>
+		            </ul>
+		        </dd>
+		    </dl>
+		</div>
+		
+		<div class="bgc">
+		    <div class="filter">
+		        <span class="first">排序：</span>
+		        <div class="hot-new-tab">
+		            <a href="javascript:" class="cur" data-type="new">最新</a>
+		            <a href="javascript:"  data-type="hot">最热</a>
+		        </div>
+		        <div class="inlet">
+		            <div class="bg"></div>
+		            <div class="txt">
+		                <a href="../zt/course/proposal/index.htm"  target="_blank"></a>
+		            </div>
+		        </div>
+		        <a href="zt/index.htm"   class="zt"></a>		                
+		    </div>
+		</div>
+    </div>
+    <div class="course-list course-list-new">
+    	<div id="course-list-content">
+    		<ul class="clearfix">
+                <li>
+                	<a href="../live/641/index.htm"   target="_blank">
+	                    <div class="course-list-img">
+	                        <img width="280" height="160" src="img/course/freecourse0.jpg"   alt="存货跌价准备实战宝典" />
+	                    </div>
+	                    <h5>
+	                        <span>存货跌价准备实战宝典</span>
+	                    </h5>
+                        <div class="tips clearfix">
+		                    <span class="l">2016年09月19日</span>
+	                        <span class="l null-width"></span>
+	                        <span class="l">14:00~15:00</span><em class="l">|</em><span class="l">415人预约</span>
+	                    </div>
+                        <div class="course-play "></div>
+                        <span class="course-free"></span>
+                        <div class="cost">
+                            <span class="l free">免费</span>
+                        </div>
+                	</a>
+            	</li>
+                <li>
+                	<a href="../live/647/index.htm"   target="_blank">
+	                    <div class="course-list-img">
+	                        <img width="280" height="160" src="img/course/course1.jpg " alt="" />
+	                    </div>
+	                    <h5>
+	                        <span>怎样对成本中心进行业绩评价</span>
+	                    </h5>
+	                    <div class="tips clearfix">
+	                    	<span class="l">2016年09月21日</span>
+	                        <span class="l null-width"></span>
+	                        <span class="l">14:00~15:10</span><em class="l">|</em><span class="l">446人预约</span>
+	                    </div>
+	                	<div class="course-play "></div>
+	                    <span class="course-free"></span>
+	                    <div class="cost">
+	                        <span class="l free">免费</span>
+	                    </div>
+	                </a>
+            	</li>
+                <li>
+                	<a href="../live/647/index.htm"   target="_blank">
+	                    <div class="course-list-img">
+	                        <img width="280" height="160" src="img/course/course1.jpg " alt="" />
+	                    </div>
+	                    <h5>
+	                        <span>怎样对成本中心进行业绩评价</span>
+	                    </h5>
+	                    <div class="tips clearfix">
+	                    	<span class="l">2016年09月21日</span>
+	                        <span class="l null-width"></span>
+	                        <span class="l">14:00~15:10</span><em class="l">|</em><span class="l">446人预约</span>
+	                    </div>
+	                	<div class="course-play "></div>
+	                    <span class="course-free"></span>
+	                    <div class="cost">
+	                        <span class="l free">免费</span>
+	                    </div>
+	                </a>
+            	</li>
+                <li>
+                	<a href="../live/647/index.htm"   target="_blank">
+	                    <div class="course-list-img">
+	                   		<img width="280" height="160" src="img/course/course1.jpg " alt="" />	
+	                    </div>
+	                    <h5>
+	                        <span>怎样对成本中心进行业绩评价</span>
+	                    </h5>
+	                    <div class="tips clearfix">
+	                    	<span class="l">2016年09月21日</span>
+	                        <span class="l null-width"></span>
+	                        <span class="l">14:00~15:10</span><em class="l">|</em><span class="l">446人预约</span>
+	                    </div>
+	                	<div class="course-play "></div>
+	                    <span class="course-free"></span>
+	                    <div class="cost">
+	                        <span class="l free">免费</span>
+	                    </div>
+	                </a>
+            	</li>
+                <li>
+                	<a href="../live/652/index.htm"   target="_blank">
+	                    <div class="course-list-img">
+	                        <img width="280" height="160" src="img/course/course1.jpg " alt="" />
+	                    </div>
+	                    <h5>
+	                        <span>困境中扭亏为盈——看财务分析如何助力决策</span>
+	                    </h5>
+	                    <div class="tips clearfix">
+	                    	<span class="l">2016年09月27日</span>
+	                        <span class="l null-width"></span>
+	                        <span class="l">20:00~21:30</span><em class="l">|</em><span class="l">364人预约</span>
+	                    </div>
+	                    <div class="course-play "></div>
+	                    <div class="cost">
+	                        <span class="l toll">会员免费看</span>
+	                    </div>
+	                </a>
+            	</li>
+                <li>
+                	<a href="../live/653/index.htm"   target="_blank">
+	                    <div class="course-list-img">
+	                        <img width="280" height="160" src="img/course/course1.jpg " alt="" />
+	                    </div>
+	                    <h5>
+	                        <span>客户信用审核中的常见问题及解决方案</span>
+	                    </h5>
+	                    <div class="tips clearfix">
+	                    	<span class="l">2016年09月28日</span>
+	                        <span class="l null-width"></span>
+	                        <span class="l">14:00~15:00</span><em class="l">|</em><span class="l">605人预约</span>
+	                    </div>
+	                    <div class="course-play "></div>
+	                    <span class="course-free"></span>
+	                    <div class="cost">
+	                        <span class="l free">免费</span>
+	                    </div>
+	                </a>
+	            </li>
+                <li>
+                	<a href="../live/653/index.htm"   target="_blank">
+	                    <div class="course-list-img">
+	                       <img width="280" height="160" src="img/course/course1.jpg " alt="" />
+	                    </div>
+	                    <h5>
+	                        <span>客户信用审核中的常见问题及解决方案</span>
+	                    </h5>
+	                    <div class="tips clearfix">
+	                    	<span class="l">2016年09月28日</span>
+	                        <span class="l null-width"></span>
+	                        <span class="l">14:00~15:00</span><em class="l">|</em><span class="l">605人预约</span>
+	                    </div>
+	                    <div class="course-play "></div>
+	                    <span class="course-free"></span>
+	                    <div class="cost">
+	                        <span class="l free">免费</span>
+	                    </div>
+	                </a>
+	            </li>
+                <li>
+	                <a href="703/index.htm"  target="_blank">
+	                    <div class="course-list-img">
+	                        <img width="280" height="160" src="img/course/course1.jpg " alt="" />
+	                    </div>
+	                    <h5>
+	                        <span>预算考核之KPI制定与目标责任书</span>
+	                    </h5>
+	                    <div class="tips">
+	                        <span>中级课程</span>
+	                        <em>|</em>
+	                        <span>126人已学</span>
+	                    </div>
+	                    <div class="cost">
+	                        <span class="l toll">会员免费看</span>
+	                    </div>
+	                </a>
+	            </li>
+                <li>
+	                <a href="702/index.htm" target="_blank">
+	                    <div class="course-list-img">
+	                        <img width="280" height="160" src="img/course/course1.jpg " alt="" />
+	                    </div>
+	                    <h5>
+	                        <span>第10课  动态透视图VS传统图表优劣</span>
+	                    </h5>
+	                    <div class="tips">
+	                        <span>初级课程</span>
+	                        <em>|</em>
+	                        <span>134人已学</span>
+	                    </div>
+	                    <div class="cost">
+	                        <span class="l toll">会员免费看</span>
+	                    </div>
+	                </a>
+	            </li>
+                <li>
+	                <a href="701/index.htm"  target="_blank">
+	                    <div class="course-list-img">
+	                        <img width="280" height="160" src="img/course/course1.jpg " alt="" />
+	                    </div>
+	                    <h5>
+	                        <span>第9课  透视表的条件格式高级应用</span>
+	                    </h5>
+	                    <div class="tips">
+	                        <span>初级课程</span>
+	                        <em>|</em>
+	                        <span>130人已学</span>
+	                    </div>
+	                    <div class="cost">
+	                        <span class="l toll">会员免费看</span>
+	                    </div>
+	                </a>
+	            </li>
+                <li>
+	                <a href="700/index.htm"  target="_blank">
+	                    <div class="course-list-img">
+	                        <img width="280" height="160" src="img/course/course1.jpg " alt="" />
+	                    </div>
+	                    <h5>
+	                        <span>财务人跨界必须掌握的思路与技巧</span>
+	                    </h5>
+	                    <div class="tips">
+	                        <span>高级课程</span>
+	                        <em>|</em>
+	                        <span>466人已学</span>
+	                    </div>
+	                    <div class="cost">
+	                        <span class="l toll">会员免费看</span>
+	                    </div>
+	                </a>
+	            </li>
+                <li>
+	                <a href="699/index.htm"  target="_blank">
+	                    <div class="course-list-img">
+	                        <img width="280" height="160" src="img/course/course1.jpg " alt="" /> 
+	                    </div>
+	                    <h5>
+	                        <span>怎样做对决策有用的财务分析</span>
+	                    </h5>
+	                    <div class="tips">
+	                        <span>中级课程</span>
+	                        <em>|</em>
+	                        <span>165人已学</span>
+	                    </div>
+	                    <div class="cost">
+	                        <span class="l toll">会员免费看</span>
+	                    </div>
+	                </a>
+	            </li>
+            </ul>
+    		<div style="width: 100%;height: 80px;text-align: center;box-sizing: border-box;">
+    			<div class="page_course" >
+    				<a href="#e" class="page_course_a">首页</a>
+    				<a href="#e" class="page_course_a">＜</a>
+    				<a href="#e" class="page_course_a">1</a>
+    				<a href="#e" class="page_course_a">2</a>
+    				<a href="#e" class="page_course_a">3</a>
+    				<a href="#e" class="page_course_a">4</a>
+    				<a href="#e" class="page_course_a">5</a>
+    				<a href="#e" class="page_course_a">6</a>
+    				<a href="#e" class="page_course_a">7</a>
+    				<a href="#e" class="page_course_a">8</a>
+    				<a href="#e" class="page_course_a">9</a>
+    				<a href="#e" class="page_course_a">10</a>
+    				<a href="#e" class="page_course_a">＞</a>
+    				<a href="#e" class="page_course_a">尾页</a>
+    			</div>
+    		</div>   	
+    	</div>
+    </div>
+    </div>
+<script type="text/javascript" src="js/jquery-1.9.0.js"></script>
+<script type="text/javascript" src="js/dialog-plus.js"></script>
+<script type="text/javascript" src="js/common4.0.js"></script>
+<script type="text/javascript" src="js/jquery.enplaceholder.js"></script>
+<script type="text/javascript" src="js/memberInfoDialog.js"></script>
+<script type="text/javascript" src="js/focusUser.js"></script>
+<script type="text/javascript" src="js/icheck.min.js"></script>
+<script type="text/javascript" src="js/login.js"></script> 
+<div id="footer">
+    <div class="footer-context">
+    <div class="f-c-detail">
+        <div class="f-c-box">
+            <div class="footer-content clearfix">
+                <!--<div class="footer-text">
+                    <img src="../../assets.xiucai.com/assets/img/foot-logo.png-v=1.10.1.png" tppabs="http://assets.xiucai.com/assets/img/foot-logo.png?v=1.10.1" height="98" width="237" alt="秀财网，学习是最好的投资">
+                </div>-->
+                <div class="footer-link clearfix">
+                    <dl>
+                        <dt>新手指南</dt>
+                        <dd><a href="../help/7/index.htm#q29" tppabs="http://www.xiucai.com/help/7/#q29" target="_blank">如何注册</a></dd>
+                        <dd><a href="../help/7/index.htm#q30" tppabs="http://www.xiucai.com/help/7/#q30" target="_blank">找回密码</a></dd>
+                        <dd><a href="../help/7/index.htm#q31" tppabs="http://www.xiucai.com/help/7/#q31" target="_blank">APP下载</a></dd>
+                        <dd><a href="../help/8/index.htm#q32" tppabs="http://www.xiucai.com/help/8/#q32" target="_blank">开通会员</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>听课指南</dt>
+                        <dd><a href="../help/5/index.htm#q38" tppabs="http://www.xiucai.com/help/5/#q38" target="_blank">如何听录播课</a></dd>
+                        <dd><a href="../help/4/index.htm#q39" tppabs="http://www.xiucai.com/help/4/#q39" target="_blank">如何听直播课</a></dd>
+                        <dd><a href="../help/7/index.htm#q40" tppabs="http://www.xiucai.com/help/7/#q40" target="_blank">课程类型说明</a></dd>
+                        <dd><a href="../help/7/index.htm#q37" tppabs="http://www.xiucai.com/help/7/#q37" target="_blank">用听课码听课</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>售后服务</dt>
+                        <dd><a href="../help/8/index.htm#q33" tppabs="http://www.xiucai.com/help/8/#q33" target="_blank">会员听课说明</a></dd>
+                        <dd><a href="../help/8/index.htm#q34" tppabs="http://www.xiucai.com/help/8/#q34" target="_blank">课程资料说明</a></dd>
+                        <dd><a href="../help/8/index.htm#q35" tppabs="http://www.xiucai.com/help/8/#q35" target="_blank">单课购买说明</a></dd>
+                        <dd><a href="../help/8/index.htm#q35" tppabs="http://www.xiucai.com/help/8/#q35" target="_blank">专题购买说明</a></dd>
+                        <dd><a href="../help/8/index.htm#q36" tppabs="http://www.xiucai.com/help/8/#q36" target="_blank">企业购买说明</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>秀财指南</dt>
+                        <dd><a href="../lector/recruit/index.htm" tppabs="http://www.xiucai.com/lector/recruit/" target="_blank">讲师招募</a></dd>
+                        <dd><a href="../contact/index.htm" tppabs="http://www.xiucai.com/contact/" target="_blank">联系我们</a></dd>
+                        <dd><a href="../terms/index.htm" tppabs="http://www.xiucai.com/terms/" target="_blank">服务协议</a></dd>
+                        <dd><a href="../feedback/index.htm" tppabs="http://www.xiucai.com/feedback/" target="_blank">意见反馈</a></dd>
+                        <dd><a href="../help/index.htm" tppabs="http://www.xiucai.com/help/" target="_blank">帮助中心</a></dd>
+                    </dl>
+                </div>
+                <div class="footer-login-way">
+                    
+                    <div class="l-w-bottom">
+                        <p class="f18">客服：<b>021-51855362</b></p>
+                        <p>（周一至周五 8:30-17:30）</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="f-c-copyright">
+        <span>&copy;&nbsp;2016 上海达哈那网络科技有限公司</span><i>|</i><span>沪ICP备15048176号</span><i>|</i><span>友情链接：<a href="javascript:if(confirm('http://www.gaodun.cn/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.gaodun.cn/'" tppabs="http://www.gaodun.cn/" target="_blank">高顿财经</a><a href="javascript:if(confirm('http://www.gaodun.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.gaodun.com/'" tppabs="http://www.gaodun.com/" target="_blank">高顿网校</a><a href="javascript:if(confirm('http://www.goldenfinance.com.cn/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.goldenfinance.com.cn/'" tppabs="http://www.goldenfinance.com.cn/" target="_blank">高顿财务培训</a></span>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="../../assets.xiucai.com/assets/js/jquery.cookie.js-v=1.10.1" tppabs="http://assets.xiucai.com/assets/js/jquery.cookie.js?v=1.10.1"></script>
+<script type="text/javascript">
+    $(function(){
+        // 滚动下拉固定导航
+        $(window).scroll(function(){           
+            var $this=$(this);
+            var scrollTop=$(document).scrollTop();
+            var headTop=$(".idx-header").length!=0?($(".idx-nav").offset().top+$(".idx-nav").height()):$("#header").height();
+            var animateTop=$(".idx-header").length!=0?$(".idx-header").height():$("#header").height();
+
+            if(scrollTop > headTop || scrollTop>=$(document).height()-$(window).height()){ if(!$(".header-wrap").hasClass("fixed-head")){
+                    if($(".idx-header").length!=0){
+                        $(".header-wrap").find("#header").show();
+
+                        $(".header-wrap").addClass("fixed-head").css('top',-animateTop+'px');
+                        setTimeout(function(){$(".header-wrap").animate({top:0},300);},100);
+                    }              
+                }
+            }
+            else if(scrollTop < headTop || scrollTop==0){
+                if($(".header-wrap").hasClass("fixed-head")){
+                    if($(".idx-header").length!=0){
+                        $(".header-wrap").find("#header").hide();
+
+                        $(".header-wrap").removeClass("fixed-head");
+                        $(".header-wrap").css('top','');
+                    }                                     
+                }
+            }            
+        })
+
+
+        
+    })
+</script>
+<script type="text/javascript">
+    jQuery(function(){
+        $.fn.hoverDelay = function(options){
+            var defaults = {
+                hoverDuring: 200,
+                outDuring: 200,
+                hoverEvent: function(){
+                    $.noop();
+                },
+                outEvent: function(){
+                    $.noop();
+                }
+            };
+            var sets = $.extend(defaults,options || {});
+            var hoverTimer, outTimer;
+            return $(this).each(function(){
+                $(this).hover(function(){
+                    clearTimeout(outTimer);
+                    hoverTimer = setTimeout(sets.hoverEvent, sets.hoverDuring);
+                },function(){
+                    clearTimeout(hoverTimer);
+                    outTimer = setTimeout(sets.outEvent, sets.outDuring);
+                });
+            });
+        }
+    });
+</script>
+<script type="text/javascript">
+    $(function(){
+        // header导航
+        $('.nav-item > li').each(function(){
+            var that=$(this);
+            that.hoverDelay({
+                hoverEvent: function(){
+                    if(that.find("ul").hasClass('second-nav-item')){
+                        that.children('a').addClass('focus');
+                    }
+                    $('.second-nav-item',that).addClass("pop-up");
+                },
+                outEvent: function(){
+                    $('.second-nav-item',that).removeClass("pop-up");
+                    that.children('a').removeClass('focus');
+                }
+            })
+        })
+
+        // header头像hover
+        $("http://www.xiucai.com/course/.logined ul li.user").each(function(){
+            var that=$(this);
+            that.hoverDelay({
+                hoverEvent: function(){
+                    that.children("a").addClass("user-head-hover");
+                    that.children('div').addClass("pop-up");;
+                },
+                outEvent: function(){
+                    that.children("a").removeClass("user-head-hover");
+                    that.children('div').removeClass("pop-up");;
+                }
+            })
+        })
+
+        // 消息hover
+        $(".logined ul li.li-msg").each(function(){
+            var that=$(this);
+            that.hoverDelay({
+                hoverEvent: function(){
+                    that.children('a').find('i').addClass('message-highlight');
+                    that.children('.message-board').addClass("pop-up");
+
+                    // tab默认高亮
+                    // $('.orange-nav>span').each(function(){
+                    //     if($(this).children("em").length>0){
+                    //         $(this).addClass('curr').siblings().removeClass("curr");
+                    //         $('.message-tab-content>div:eq('+$(this).index()+')').show().siblings().hide();
+                    //         return false;
+                    //     }
+                    // })
+                },
+                outEvent: function(){
+                    that.children('a').find('i').removeClass('message-highlight');
+                    that.children('.message-board').removeClass("pop-up");
+                }
+            })
+        })
+
+        // 消息面板tab切换
+        $(".li-msg .orange-nav span").hover(function(){
+            $(this).addClass('curr').siblings().removeClass('curr');           
+            $(this).parents(".message-content").find('.message-tab-content>div:eq('+$(this).index()+')').show().siblings().hide();
+        })
+
+
+        // 搜索按钮动效
+        $(".search-block").each(function(){
+            var that=$(this);
+            // that.hoverDelay({
+            //     hoverEvent: function(){
+            //         that.addClass("search-block-active");
+            //         $("#search_content").focus(function(event) {
+            //             that.addClass("search-block-focus");
+            //         });
+            //         if($.trim($("#topSearchContent").html())==''){
+            //             $("#search_content").val('');
+            //         }else{
+            //             if($.trim($("#search_content").val())!=''){
+            //                 $("#topSearchContent").show();
+            //             }
+            //         }
+            //         if(that.find("#search_content").prev("div").length==0){
+            //             that.find("#search_content").placeholder({isUseSpan:true,onInput:true});
+            //         }
+            //     },
+            //     outEvent: function(){
+            //         $("#search_content").prev(".wrap-placeholder").remove();
+            //         if($("#topSearchContent").is(":hidden")){
+            //             that.removeClass("search-block-active");
+            //             if(that.hasClass("search-block-focus")){
+            //                 that.removeClass("search-block-focus");
+            //                 that.find("#search_content").blur();
+            //             }
+            //         }
+            //     }
+            // })
+            // $("#search_content").focus(function(event) {
+            //     that.addClass("search-block-focus");
+            // });
+            if($.trim($("#topSearchContent").html())==''){
+                $("#search_content").val('');
+            }else{
+                if($.trim($("#search_content").val())!=''){
+                    $("#topSearchContent").show();
+                }
+            }
+            if(that.find("#search_content").prev("div").length==0){
+                that.find("#search_content").placeholder({isUseSpan:true,onInput:true});
+            }
+        })
+        $(".idx-search-block").each(function(){
+            var that=$(this);
+            if(that.find("#search_content_index").prev("div").length==0){
+                that.find("#search_content_index").placeholder({isUseSpan:true,onInput:true});
+            }
+        })
+
+        // 点击空白区域搜索区域隐藏
+        $(document).click(function(e){
+          var _con = $(".search-block");   // 设置目标区域
+          if(!_con.is(e.target) && _con.has(e.target).length === 0){
+            $("#topSearchContent").hide();
+            // $(".search-block").removeClass("search-block-active search-block-focus").find("#search_content").blur();
+            // $(".search-block").removeClass("search-block-focus").find("#search_content").val('');
+            $(".search-block").find("#search_content").val('');
+            // $("#search_content").prev(".wrap-placeholder").remove();
+          }
+        });
+
+        // 购物车
+        $(".n-cart-wrap").each(function(){
+            var that=$(this);
+            that.hoverDelay({
+                hoverEvent: function(){
+                    that.children('.n-cart').find('i').addClass('cart-highlight');
+                    that.children('.n-cart-board').addClass("pop-up");
+                    $.post("/order/top/cart",{},
+                            function(result){                                
+                                if(result.code == 200){                                    
+                                    that.children('.n-cart-board').html(result.html);
+                                    
+                                }else{
+                                    dialog_alert(result.msg);
+                                    return false;
+                                }
+                            }
+                    );
+
+                },
+                outEvent: function(){
+                    
+                    that.children('.n-cart-board').removeClass("pop-up");
+                    that.children('.n-cart').find('i').removeClass('cart-highlight');
+                }
+            })
+        })
+
+        // footer二维码
+        $(".footer-login-way a").hover(
+            function(){
+                $(this).find(".tooltip-erweima").addClass("pop-up");
+            },
+            function(){
+                $(this).find(".tooltip-erweima").removeClass("pop-up");
+            }
+        )
+    })
+    
+    // 改版ad
+    $(".revision-wrap span").click(function(event) {
+        $(".revision-wrap").removeClass("revision-wrap-active");
+        $("#header").removeClass("header-bg");
+    });
+    $(window).scroll(function(){
+        if($(window).scrollTop() >0){
+            $(".revision-wrap").removeClass("revision-wrap-active");
+            $("#header").removeClass("header-bg");
+        }
+    })    
+</script>
+<!-- <script type="text/javascript">
+    var firefox = navigator.userAgent.indexOf('Firefox') != -1;
+    function MouseWheel(e) {
+        e = e || window.event;
+        if (e.stopPropagation) e.stopPropagation();
+        else e.cancelBubble = true;
+        if (e.preventDefault) e.preventDefault();
+        else e.returnValue = false;
+       document.title=(e.wheelDelta + '|' + e.detail)
+   }
+</script> -->
+<script type="text/javascript" src="../../assets.xiucai.com/assets/js/searchTop.js-v=1.10.1" tppabs="http://assets.xiucai.com/assets/js/searchTop.js?v=1.10.1"></script>
+    <div style="display: none;">
+        <input type="hidden" id="viewState" value="{&quot;user&quot;:{&quot;id&quot;:0},&quot;source&quot;:0}">
+        <script>
+            var _hmt = _hmt || [];
+            (function () {
+                var hm = document.createElement("script");
+                hm.src = "../../hm.baidu.com/hm.js-91160bbefe44a83344f37eaff05da524"/*tpa=http://hm.baidu.com/hm.js?91160bbefe44a83344f37eaff05da524*/;
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+
+            })();
+
+            $(function () {
+                //事件跟踪
+                $(document).on('click', "[data-trackEvent]", function () {
+                    var category = $(this).data('category') || '';
+                    var action = $(this).data('action') || '';
+                    var opt_label = $(this).data('opt_label') || '';
+                    var opt_value = $(this).data('opt_value') || document.location.href;
+                    _hmt.push(['_trackEvent', category, action, opt_label, opt_value]);
+                });
+            });
+        </script>
+
+        <script type="text/javascript" src="../../assets.xiucai.com/assets/js/jquery-json.js-v=1.10.1" tppabs="http://assets.xiucai.com/assets/js/jquery-json.js?v=1.10.1"></script>
+        <script type="text/javascript">
+            document.write("<script src='../../tongji.xiucai.com/BIAnalyticsService/asset/js/staticutils.js'/*tpa=http://tongji.xiucai.com/BIAnalyticsService/asset/js/staticutils.js*/><\/script>");
+            $(function () {
+                staticConfig.apiBaseUrl = "http://tongji.xiucai.com/BIAnalyticsService/r/service/statistic/";
+                viewCount(null);
+            });
+        </script>
+    </div>
+
+<script type="text/javascript" src="../../assets.xiucai.com/assets/js/checkonline.js-v=1.10.1" tppabs="http://assets.xiucai.com/assets/js/checkonline.js?v=1.10.1"></script>
+
+</div>
+
+<div id="allsccren">
+ 	<div class="login" style="display: none;border-radius: 6px;margin:15% auto;z-index: 9999;"> 
+        <div class="close_icon" style="cursor: pointer;"><img src="img/login/close_icon.png"/></div>
+        <div id="all_login"style="display: none;">       		       	
+            	<div class="header"> 
+	                <div class="switch" id="switch">
+	                    <a class="switch_btn_focus" id="switch_qlogin" href="javascript:void(0);" tabindex="7">普通登录</a> 
+	                    <a class="switch_btn" id="switch_login" href="javascript:void(0);" tabindex="8">短信登录</a>
+	                    <div class="switch_bottom" id="switch_bottom" style="position: absolute; width: 64px; left: 0px;"></div> 
+	                </div> 
+	            </div> 
+            	<div class="web_qr_login" id="web_qr_login" style="display: block;"> 
+	                <!--登录--> 
+	                <div class="web_login" id="web_login"> 
+	                    <div class="login-box"> 
+	                        <div class="login_form"> 
+	                        	<form action="" method="">
+	                        		<table class="login_table">
+	                        			<tr>
+	                        				<td>
+	                        					<input type="text" placeholder="手机/邮箱" value="" name="username"/>
+	                        				</td>
+	                        			</tr>
+	                        			<tr>
+	                        				<td>
+	                        					<input type="password" placeholder="密码" value="" name="passwd" style="width: 70%;"/>
+	                        					<a href="#" class="floatright fontcolor_999">忘记密码？</a>
+	                        				</td>                     				
+	                        			</tr>
+	                        		</table>                      		
+	                        	</form>
+	                        	<input type="submit" value="登录" class="login_btn" name="mobile_login"/>
+	                        	<div class="login_bottom">
+	                        		<font color="#999">新用户？</font><a href="#" onclick="zhuce();">快速注册</a>
+	                        		<div class="floatright">
+	                        			<font color="#999" class="floatleft">一键登录&nbsp;&nbsp;</font>
+	                        			<a href="#">
+	                        				<img src="img/login/weixin.png" />
+	                        			</a>
+	                        			<a href="#">
+	                        				<img src="img/login/qq.png" />
+	                        			</a>                     			                       			
+	                        		</div>
+	                        		
+	                        	</div>
+	                        </div> 
+	                    </div> 
+	                </div> 
+	                <!--登录end--> 
+	            </div> 
+           		<!--短信登录--> 
+            	<div class="qlogin" id="qlogin" style="display: none; "> 
+	                <div class="web_login">
+	                	 <div class="login-box"> 
+	                        <div class="login_form"> 
+	                        	<form action="" method="">
+	                        		<table class="login_table">
+	                        			<tr>
+	                        				<td>
+	                        					<input type="text" placeholder="手机" value="" name="usermobile"/>
+	                        				</td>
+	                        			</tr>
+	                        			<tr>
+	                        				<td>
+	                        					<input type="text" placeholder="图片验证码" value="" name="img_yzm" style="width: 60%;"/>
+	                        					<a href="#" class="floatright fontcolor_999">
+	                        						<img src="img/login/yzm_xc.png" name="yzm"  />
+	                        					</a>
+	                        				</td>                     				
+	                        			</tr>
+	                        			<tr>
+	                        				<td>
+	                        					<input type="password" placeholder="手机验证码" value="" name="mobile_yzm" style="width: 70%;"/>
+	                        					<a href="#" class="floatright fontcolor_999">获取验证码&nbsp;&nbsp;</a>
+	                        				</td>                     				
+	                        			</tr>
+	                        		</table>                      		
+	                        	</form>
+	                        	<input type="submit" value="登录" class="login_btn" name="sms_login"/>
+	                        </div> 
+	                   </div> 
+	                </div> 
+	            </div> 
+            	<!--短信登录end-->               
+        	</div> 
+        <div id="register_">
+        		<div class="web_qr_login"  > 
+	                <div class="web_login">
+	                	 <div class="login-box"> 
+	                        <div class="login_form"> 
+	                        	<div class="zhuce_top">
+	                        		<font>注册</font>
+	                        		<span class="floatright">已有账号，<font onclick="login();">去登录</font></span>
+	                        	</div>
+	                        	<form action="" method="">
+	                        		<table class="login_table">
+	                        			<tr>
+	                        				<td>
+	                        					<input type="text" placeholder="手机" value="" name="zc_usermobile"/>
+	                        				</td>
+	                        			</tr>
+	                        			<tr>
+	                        				<td>
+	                        					<input type="text" placeholder="图片验证码" value="" name="zc_img_yzm" style="width: 60%;"/>
+	                        					<a href="#" class="floatright fontcolor_999">
+	                        						<img src="img/login/yzm_xc.png" name="yzm"  />
+	                        					</a>
+	                        				</td>                     				
+	                        			</tr>
+	                        			<tr>
+	                        				<td>
+	                        					<input type="password" placeholder="短信验证码" value="" name="zc_sms_yzm" style="width: 70%;"/>
+	                        					<a href="#" class="floatright fontcolor_999">获取验证码&nbsp;&nbsp;</a>
+	                        				</td>                     				
+	                        			</tr>
+	                        			<tr>
+	                        				<td>
+	                        					<input type="text" placeholder="姓名" value="" name="zc_username"/>
+	                        				</td>
+	                        			</tr>
+	                        			<tr>
+	                        				<td>
+	                        					<input type="password" placeholder="密码6-18位" value="" name="zc_userpasswd"/>
+	                        				</td>
+	                        			</tr>
+	                        		</table>                      		
+	                        	</form>
+	                        	<input type="submit" value="注册" class="login_btn" name="register_btn"/>
+	                        </div> 
+	                   </div> 
+	                </div> 
+	            </div>  
+        	</div>
+   </div>        
+</div>
+
+<!--<div id="window"></div>-->
+<div class="overlay hide"></div>
+<div class="overlay-transparent hide"></div>
+<div id="jason-bind-cellphone-layer" class="xc-signUp-layer boundPhone xc-layer hide">
+    <div class="xc-layer-body relative">
+        <p class="title">绑定手机</p>
+        <div class="text">
+            为了保障你的账号安全，请绑定手机。<br>
+                    </div>
+        <div class="xc-regist">
+            <p class="xc-error-tips"></p>
+            <ul>
+                <li>
+                    <input type="text" placeholder="手机" class="bind-account" maxlength="11"/>
+                    <span class="clear"></span>
+                </li>
+                <li>
+                    <input type="text" placeholder="图片验证码" class="bind-pic-code" maxlength="4"/>
+                    <span class="clear pos"></span>
+                    <div class="yz-pic">
+                        <img src="../account/authCode/-code_type=bind_phone&random=1804291039.png" tppabs="http://www.xiucai.com/account/authCode/?code_type=bind_phone&random=1804291039" alt="验证码" width="95" height="34" onclick="this.src='http://www.xiucai.com/account/authCode/?code_type=bind_phone&random='+ Math.random();" />
+                    </div>
+                </li>
+                <li>
+                    <input type="text" placeholder="短信验证码" class="bind-sms-code" maxlength="6"/>
+                    <div class="get-code disabled">获取验证码</div>
+                </li>
+                <li class="pwd hide">
+                    <input type="password" placeholder="密码6~18位" maxlength="16" class="bind-pwd"/>
+                    <em class="eyes"></em>
+                </li>
+            </ul>
+            <input type="button" value="绑定" class="login-button jason-bind-btn"/>
+        </div>
+    </div>
+</div>
+<!--[if IE]>
+<script>
+    $(".xc-regist ul input").placeholder({isUseSpan:true,onInput:true});
+</script>
+<![endif]-->
+<script>
+    var wait = 60;
+    var bindType = "";
+    var bind_cellphone = "../user/bind_cellphone"/*tpa=http://www.xiucai.com/user/bind_cellphone*/;
+    var phone_bind_valid_code = "../user/phone_bind_valid_code"/*tpa=http://www.xiucai.com/user/phone_bind_valid_code*/;
+
+    
+    $(function(){
+        //输入手机号码格式正确点亮短信验证码按钮
+        var _selector = $("#jason-bind-cellphone-layer");
+        $("#jason-bind-cellphone-layer .bind-account").on("input propertychange", function () {
+            var _val = $(this).val();
+            if (/^\d+$/.test(_val) && _val.length < 11 || _val == "") {
+                _selector.find(".get-code").addClass('disabled');
+                _selector.find(".xc-error-tips").css('visibility', 'hidden');
+                return;
+            }
+            if (checkMobile(_val)) {
+                _selector.find(".get-code").removeClass('disabled');
+                _selector.find(".xc-error-tips").html("");
+                _selector.find(".xc-error-tips").css('visibility', 'hidden');
+            }else{
+                _selector.find(".get-code").addClass('disabled');
+                _selector.find(".xc-error-tips").css('visibility', 'visible');
+                _selector.find(".xc-error-tips").html("手机号码格式有误");
+            }
+        });
+
+        //获取短信验证码
+        var isSubmitBindValidCode = false;
+        $("#jason-bind-cellphone-layer .get-code").click(function(){
+            if($(this).hasClass('disabled')) return false;
+            var bindAccount = _selector.find(".bind-account").val();
+            var bindPicCode = _selector.find(".bind-pic-code").val();
+            if($.trim(bindAccount) == ""){
+                _selector.find(".xc-error-tips").css('visibility', 'visible');
+                _selector.find(".xc-error-tips").html("请输入手机号");
+                return false;
+            }else{
+                if (checkMobile(bindAccount)) {
+                    _selector.find(".xc-error-tips").html("");
+                }else{
+                    _selector.find(".xc-error-tips").css('visibility', 'visible');
+                    _selector.find(".xc-error-tips").html("手机号码格式有误");
+                    return false;
+                }
+            }
+
+            if($.trim(bindPicCode) == ''){
+                _selector.find(".xc-error-tips").css('visibility', 'visible');
+                _selector.find(".xc-error-tips").html("请输入图片验证码");
+                return false;
+            }else if(bindPicCode.length != 4){
+                _selector.find(".xc-error-tips").css('visibility', 'visible');
+                _selector.find(".xc-error-tips").html("请输入正确图片验证码格式");
+                return false;
+            }
+
+            _selector.find(".xc-error-tips").css('visibility', 'hidden');
+            _selector.find(".xc-error-tips").html("");
+
+            if (!isSubmitBindValidCode) {
+                isSubmitBindValidCode = true;
+                $.ajax({
+                    type: "POST",
+                    url: phone_bind_valid_code,
+                    data: {
+                        cellphone: bindAccount,
+                        sms_login_code: bindPicCode ,
+                        bindType: "",
+                        verifyType: 'common'
+                    },
+                    success: function(result){
+                        if (result.code == 1){
+                            time();
+                            _selector.find("img").trigger("click");
+                            _selector.find(".xc-error-tips").html("");
+                            _selector.find(".xc-error-tips").css('visibility', 'hidden');
+
+                            if(result.needShowPwd == true){
+                                _selector.find(".pwd").removeClass("hide");
+                            }
+                        }else if(result.code == 2){
+                            _selector.find(".xc-error-tips").css('visibility', 'visible');
+                            _selector.find(".xc-error-tips").html(result.msg);
+                        }
+                        isSubmitBindValidCode = false;
+                    }
+                });
+            }
+
+            function time() {
+                o = _selector.find(".get-code");
+                if (wait == 0) {
+                    o.removeAttr("disabled");
+                    o.removeClass("disabled");
+                    o.html("获取验证码");
+                    wait = 60;
+                } else {
+                    o.attr("disabled","disabled");
+                    o.addClass("disabled");
+                    o.html(wait+"秒后可重发");
+                    wait--;
+
+                    setTimeout(function() {
+                        time();
+                    }, 1000)
+                }
+            }
+        });
+
+        //点击绑定按钮
+        var isSubmitBindMobile = false;
+        $("#jason-bind-cellphone-layer .jason-bind-btn").on("click", function(){
+            var bindPwd = "";
+            var bindAccount = _selector.find(".bind-account").val();
+            var bindSmsCode = _selector.find(".bind-sms-code").val();
+            if($.trim(bindAccount) == ""){
+                _selector.find(".xc-error-tips").css('visibility', 'visible');
+                _selector.find(".xc-error-tips").html("请输入手机号");
+                return false;
+            }else{
+                if (checkMobile(bindAccount)) {
+                    _selector.find(".xc-error-tips").html("");
+                }else{
+                    _selector.find(".xc-error-tips").css('visibility', 'visible');
+                    _selector.find(".xc-error-tips").html("手机号码格式有误");
+                    return false;
+                }
+            }
+
+            if($.trim(bindSmsCode) == ""){
+                _selector.find(".xc-error-tips").css('visibility', 'visible');
+                _selector.find(".xc-error-tips").html("请输入短信验证码");
+                return false;
+            }else if(bindSmsCode.length != 6){
+                _selector.find(".xc-error-tips").css('visibility', 'visible');
+                _selector.find(".xc-error-tips").html("短信验证码格式不正确");
+                return false;
+            }
+
+            //密码验证
+            if(!_selector.find(".pwd").hasClass("hide")){
+                bindPwd = _selector.find(".bind-pwd").val();
+                if($.trim(bindPwd) == ""){
+                    _selector.find(".xc-error-tips").css('visibility', 'visible');
+                    _selector.find(".xc-error-tips").html("请输入密码");
+                    return false;
+                }else{
+                    if (isHaveSpaces(bindPwd)) {
+                        _selector.find(".xc-error-tips").css('visibility', 'visible');
+                        _selector.find(".xc-error-tips").html("密码不能包含空格!");
+                        return false;
+                    } else {
+                        if (bindPwd.length < 6 || bindPwd.length > 18) {
+                            _selector.find(".xc-error-tips").css('visibility', 'visible');
+                            _selector.find(".xc-error-tips").html("密码要求6~18位!");
+                            return false;
+                        }
+                    }
+                }
+            }
+
+            _selector.find(".xc-error-tips").css('visibility', 'hidden');
+            _selector.find(".xc-error-tips").html("");
+
+            if (!isSubmitBindMobile) {
+                isSubmitBindMobile = true;
+                $.ajax({
+                    type: "POST",
+                    url: bind_cellphone,
+                    data: { cellphone: bindAccount, password: bindPwd, validCode: bindSmsCode, bindType:""},
+                    success: function(result){
+                        isSubmitBindMobile = false;
+                        if(result.code == 200){
+                            $(".overlay").hide();
+                            $(".xc-layer").hide();
+
+                            if(bindType == "qqreg" || bindType == "wechatreg")
+                                location.href = "../index.htm"/*tpa=http://www.xiucai.com/account/perfectInfo/*/;
+                            else
+                                window.location.reload();
+                        }else{
+                            _selector.find(".xc-error-tips").css('visibility', 'visible');
+                            _selector.find(".xc-error-tips").html(result.msg);
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>
+<!-- 未激活用户 begin -->
+<div id="is-activate-layer" class="dialog-board dialog-board-none-title hide">
+    <div class="dialog-board-bar">
+        <a href="javascript:;" class="close-dialog-board"></a>
+    </div>
+    <div class="dialog-board-content">
+        <div class="box-container">
+            <p id="del-community-tips" class="text-c-tips">您的账号暂未激活，请绑定手机或邮箱</p>
+            <div class="btn-col2 clearfix">
+                <a href="javascript:if(confirm('http://www.xiucai.com/?url=%2Fuser%2Faccount_safe%2F%23login  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ������, �����������, ����Ŀ����ֹͣ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.xiucai.com/?url=%2Fuser%2Faccount_safe%2F%23login#bindPhone'" tppabs="http://www.xiucai.com/user/account_safe/#bindPhone" class="fl globe-btn50" target="_blank">绑定手机</a>
+                <a href="javascript:if(confirm('http://www.xiucai.com/?url=%2Fuser%2Faccount_safe%2F%23login  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ������, �����������, ����Ŀ����ֹͣ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.xiucai.com/?url=%2Fuser%2Faccount_safe%2F%23login#bindEmail'" tppabs="http://www.xiucai.com/user/account_safe/#bindEmail" class="fr globe-btn50" target="_blank">绑定邮箱</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 未激活用户 end -->
+<div class="xc-layer xc-bound-phone-tips hide" id="needBindPhoneDiv">
+    <div class="xc-layer-header">
+        <div class="close-button" id="closeNeedBindPhoneDiv"></div>
+    </div>
+    <div class="xc-layer-body">
+        <h1>为了您的账号安全请先绑定手机</h1>
+        <a href="javascript:if(confirm('http://www.xiucai.com/?url=%2Fuser%2Faccount_safe%2F%23login  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ������, �����������, ����Ŀ����ֹͣ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.xiucai.com/?url=%2Fuser%2Faccount_safe%2F%23login#bindPhone'" tppabs="http://www.xiucai.com/user/account_safe/#bindPhone" target="_blank">去绑定</a>
+    </div>
+</div><!--首页底部快捷注册-->
+
+
+<script type="text/javascript" src="../../assets.xiucai.com/assets/js/registerBottom.js-v=1.10.1" tppabs="http://assets.xiucai.com/assets/js/registerBottom.js?v=1.10.1"></script>
+<script>
+    $(function () {
+        
+
+     
+       // $(".reward-tkm i,.reward-tkm em").on("click", function () {
+        //     $(this).parents(".reward-window").toggleClass("open");
+        // });
+
+        $('.closeBottomRegRewardCode').on("click", function () {
+            /*$('#bottomRegRewardCode').hide();
+            $('.overlay').hide();*/
+            window.location.reload();
+        });        
+    });
+</script>
+
+    <script type="text/javascript">
+        var ajax_load_url = "ajax_load/index.htm"/*tpa=http://www.xiucai.com/course/ajax_load/*/; //加载更多录播课程路由
+        var cateId = parseInt(0);
+        var cid =  parseInt(0);
+        var rows =12;
+        var loadInfo = {
+            courseType: 'course',
+            categoryId: '', //分类ID
+            tid: '',
+            sortBy: '', //排序方式
+            fee: '',
+            live: '',
+            hasMore: true, //是否有更多内容
+            isLoading: false, //加载更多状态
+            page: 2, //加载页码
+            limit: 12 //加载条数
+        };
+    </script>
+    <script type="text/javascript" src="../../assets.xiucai.com/assets/js/course.js-v=1.10.1" tppabs="http://assets.xiucai.com/assets/js/course.js?v=1.10.1"></script>
+        <script>
+            // $(window).scroll(function(){
+            //     var courseListTop=$(".course-list").offset().top,scrollTop=$(window).scrollTop(),orientation=$(".fixed-orientation");
+            //     if((scrollTop+50)>courseListTop&&orientation.length==0){
+            //         var filter=$(".filter-boxs .orientation").clone(true);
+            //         orientation=$('<div class="fixed-orientation"></div>').append(filter);
+            //         $("body").append(orientation);
+            //     }else if((scrollTop+50)<courseListTop&&orientation.length!=0){
+            //         orientation.remove();
+            //     }
+            // });
+            $(function(){
+                $(".orientation").on("click","a",function(){
+                    var _this=$(this);
+                    if(!_this.hasClass("check")){
+                        _this.parents("dl").find(".check").removeClass("check");
+                        _this.addClass("check");
+                    }
+                });
+                $(".positions").on("click","a",function(){
+                    var _this=$(this),_all=$("http://www.xiucai.com/course/.orientation .all").find(".check");
+                    if(!!_all.length){//如果方向选择为全部
+                        var _type=_this.data("type");
+                        $(".orientation a").removeClass("check");
+                        $(".orientation a[data-type="+_type+"]").addClass("check");
+                        //在此更新分类信息
+                    }
+                    if(!!_this.parent("li").length){//点击子类
+                        _this.parents("dl").find(".all .check").removeClass("check");
+                        var selected=_this.parents("ul").find(".check").length;
+                        if(selected!=1){//必须选择一个子分类
+                            _this.toggleClass("check");
+                        }else{
+                            _this.addClass("check");
+                        }
+                    }else{//点击方向的全部按钮
+                        _this.parents("dl").find(".check").removeClass("check");
+                        _this.addClass("check");
+                    }
+                });
+
+                $(".hot-new-tab").on("click","a",function(){
+                    var _this=$(this),_parent=_this.parent();
+                    //var oldClass= _parent.data("type"),
+                            curClass=_this.data("type");
+                    //_parent.removeClass(oldClass).addClass(curClass).data("type",curClass);
+                    var current = window.location.href;
+                    if(current.indexOf("?") > -1){
+                        var filter = '&';
+                    }else{
+                        var filter = '?';
+                    }
+                    if(current.indexOf("sort=") > -1){
+                        if(curClass == 'new'){
+                            window.location.href=current.replace("sort=hot", "sort=new");
+                            return false;
+                        }else if(curClass == 'hot'){
+                            window.location.href=current.replace("sort=new", "sort=hot");
+                            return false;
+                        }
+                    }else{
+                        window.location.href=window.location.href+filter+'sort='+curClass;
+                        return false;
+                    }
+                    alert(window.location.href);
+                });
+            });
+
+            var fee = '';
+            var live = '';
+            var current = window.location.href;
+            if(current.indexOf("?") > -1){
+                var filter = '&';
+            }else{
+                var filter = '?';
+            }
+            // 筛选
+            $(".filter").on("change","input[type=checkbox]",function(){
+                if($(this).parents("label").hasClass('on')==false){
+                    if(current.indexOf("fee=") > -1){
+                        if(fee == '3'){
+                            window.location.href=current.replace("fee="+fee, "fee=1");
+                        }else{
+                            window.location.href=current.replace("fee="+fee, "fee=3");
+                        }
+                        return false;
+                    }else{
+                        window.location.href=window.location.href+filter+'fee=1';
+                    }
+                }else{
+                    window.location.href=current.replace("fee="+fee, "fee=3");
+                    return false;
+                }
+
+            });
+            /*$(".dynamic-filtrate").click(function(event) {
+                $(this).toggleClass("dynamic-filtrate-show");
+            });
+            $("#dynamic-filtrate-fee li a").click(function(event) {
+                var id = $(this).attr('id');
+                if(current.indexOf("fee=") > -1){
+                    window.location.href=current.replace("fee="+fee, "fee="+id);
+                    return false;
+                }else{
+                    if(id != 3){
+                        window.location.href=window.location.href+filter+'fee='+id;
+                        return false;
+                    }
+                }
+            });
+
+            $("#dynamic-filtrate-live li a").click(function(event) {
+                var id = $(this).attr('id');
+                if(current.indexOf("live=") > -1){
+                    window.location.href=current.replace("live="+live, "live="+id);
+                    return false;
+                }else{
+                    if(id != 3){
+                        window.location.href=window.location.href+filter+'live='+id;
+                        return false;
+                    }
+                }
+            });*/
+
+            $(".filter").on("mouseleave",'.dynamic-filtrate-show',function(){
+                $(this).removeClass("dynamic-filtrate-show");
+            });
+
+            //更多分类js加载
+            $(".small .positions-more").on("click", function () {
+                $(this).parents(".small").removeClass("small");
+                $(this).remove();
+            });
+        </script>
+<script language="JavaScript" type="text/javascript">
+    randomQQ();
+    $(window).scroll(fixedPosition);
+    $(window).resize(fixedPosition);
+    function fixedPosition(){
+        var s_left = $(window).scrollLeft();
+        $(".fixed-head").css("left",~s_left+1);
+    }
+</script>
+</body>
+</html>

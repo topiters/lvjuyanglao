@@ -1,0 +1,174 @@
+.registered-bottom{
+    width: 100%;
+    min-width: 1200px;
+    height: 168px;
+    background-color: #13151c;
+    background-color: rgba(19,21,28,.85);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
+.registered-bottom .content-box{
+    width: 1200px;
+    height: 168px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.registered-bottom .content-box .left{
+    width: 540px;
+    height: 168px;
+    float: left;
+    background: url("../img/kuaijie.png-v=5.2.png")/*tpa=http://assets.xiucai.com/assets/img/kuaijie.png?v=5.2*/ no-repeat 7px 2px;
+}
+.registered-bottom .content-box .right{
+    width: 650px;
+    height: 168px;
+    float: right;
+    position: relative;
+}
+.registered-bottom .right .input{
+    width: 260px;
+    float: left;
+    height: 168px;
+    margin-left: 74px;
+}
+.registered-bottom .right .input label{
+    display: block;
+    margin: 12px 0;
+    position: relative;
+}
+.registered-bottom .right .input label div{
+    padding-left: 16px !important;
+}
+.registered-bottom .right .input input{
+    display: block;
+    width: 205px;
+    padding: 7px 15px 7px 38px;
+    border-radius: 17px;
+    border: 1px solid #c1c1c1;
+    background: url("../img/icon/qy_vip_icon.png")/*tpa=http://assets.xiucai.com/assets/img/icon/qy_vip_icon.png*/ no-repeat 7px -91px #ffffff;
+}
+.registered-bottom .right .input .phone{
+    background-position: 7px -220px;
+}
+.registered-bottom .right .input .yzm{
+    width: 85px;
+}
+.registered-bottom .right .input .change-ymz{
+    display: block;
+    width: 95px;
+    height: 32px;
+    float: right;
+    margin-right: 10px;
+}
+.registered-bottom .right .error-msg{
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    color: #fe3600;
+    padding-left: 12px;
+    margin-bottom: -12px;
+}
+.registered-bottom .right .sms{
+    position: relative;
+}
+.registered-bottom .right .input .get-code{
+    display: block;
+    min-width: 76px;
+    max-width: 130px;
+    height: 20px;
+    border-radius: 11px;
+    border: 1px solid #ff7745;
+    color: #FF7745;
+    line-height: 19px;
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    right: 6px;
+    top: 5px;
+    padding: 0 6px;
+}
+.registered-bottom .right .input .get-code.disabled{
+    border-color: #c1c1c1;
+    color: #c1c1c1;
+}
+.registered-bottom .right .submit-box{
+    width: 240px;
+    height: 168px;
+    float: right;
+    padding-left: 60px;
+}
+.registered-bottom .right .submit-box .register-btn{
+    display: block;
+    width: 180px;
+    height: 36px;
+    text-align: center;
+    line-height: 34px;
+    background-color: #FF7745;
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 18px;
+    margin-top: 55px;
+    margin-bottom: 13px;
+    text-decoration: none;
+}
+.registered-bottom .right .submit-box .register-btn:active{
+    background-color: #f76d3a;
+}
+.registered-bottom .right .submit-box .register-btn.no{
+    background-color: #c1c1c1;
+    color: #ffffff;
+}
+.registered-bottom .right .submit-box label{
+    color: #999999;
+    padding-left: 10px;
+}
+.registered-bottom .right .submit-box a{
+    color: #999999;
+    text-decoration: underline;
+}
+.registered-bottom .submit-box label a:hover{
+    color: #FF7745;
+}
+.registered-bottom .right .submit-box .icheckbox_minimal-orange{
+    margin-left: 4px;
+}
+.registered-bottom .registered-bottom-close{
+    display: block;
+    width: 21px;
+    height: 20px;
+    background: url("../img/close.png")/*tpa=http://assets.xiucai.com/assets/img/close.png*/ no-repeat;
+    position: absolute;
+    right: 35px;
+    top: 5px;
+    cursor: pointer;
+}
+.reg-bottom-new{
+    width: 100%;
+    min-width: 1200px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    height: 88px;
+    background: url("../img/bottom-reg.jpg")/*tpa=http://assets.xiucai.com/assets/img/bottom-reg.jpg*/ no-repeat center top;
+}
+.reg-bottom-new .reg-btn{
+    display: block;
+    width: 110px;
+    height: 34px;
+    border-radius: 3px;
+    background-color: #FF7745;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 34px;
+    position: absolute;
+    left: 50%;
+    margin-left: 270px;
+    top: 28px;
+}
+.reg-bottom-new .reg-btn:hover{
+    background-color: #fe652f;
+}
