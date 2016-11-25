@@ -15,7 +15,7 @@ class CourseAction extends BaseAction {
 	
 	public function  index(){
 		$mcourses = D('Home/Course');
-		$mareas = D('Home/Areas');
+		//$mareas = D('Home/Areas');
 		$mcoursesCat= D('Home/CourseCats');
 		//$mcommunitys = D('Home/Communitys');
 		$this->assign('msort',(int)I("msort",0));
@@ -52,10 +52,13 @@ class CourseAction extends BaseAction {
 		//var_dump($pages);
 		//$coursesNav = $rslist["coursesNav"];
 		$this->assign('pages',$pages);
-		//$c1=$c1Id ?$c1Id :11;
-		if($c1=11){
+	    $c1=$c1Id ?$c1Id :11;
+		if($c1){
 			
 		$c2cat=$mcoursesCat->queryByList($c1);
+		
+		
+		
 		$this->assign("c2cat",$c2cat);
 		
 		//var_dump($c2cat);
