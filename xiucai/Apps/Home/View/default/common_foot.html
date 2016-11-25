@@ -1,0 +1,406 @@
+
+
+
+
+
+
+ <script src="__PUBLIC__/js/common.js"></script>
+<script src="__PUBLIC__/plugins/lazyload/jquery.lazyload.min.js?v=1.9.1"></script>
+<script src="__PUBLIC__/plugins/layer/layer.min.js"></script>
+
+
+<script>
+$(function(){
+		$(".close_icon").click(function(){
+			//alert(0);
+			$(".login").css({"display":"none"});
+			$("body").css({"overflow":"auto"});
+			$("#allsccren").removeClass('allsccren');
+		});
+	});
+function login(){
+		$("#allsccren").addClass('allsccren');
+		$("body").css({"overflow":"hidden"});
+		$(".login").css({"display":"block"});
+		$("#all_login").css({"display":"block"});
+		$("#register_").css({"display":"none"});
+		
+	}
+	function zhuce(){
+		$("#allsccren").addClass('allsccren');
+		$("body").css({"overflow":"hidden"});
+		$(".login").css({"display":"block"});
+		$("#all_login").css({"display":"none"});
+		$("#register_").css({"display":"block"});
+	}
+	
+			
+function logout(){
+     var url="{:U('Home/Users/logout')}";
+	jQuery.post(url,{},function(rsp) {
+		location.reload();
+	});
+}	
+	function tiwen(){
+		$("#tiwen").removeClass('hide');
+	}
+	function tiwen_close(){
+		$("#tiwen").addClass('hide');
+	}
+</script>
+<script>
+	$(function(){
+		$("input[name='mobile_login']").click(function(){
+			//登录成功之后
+			//先让非导航的右边显示登录之后的样子
+			$("#feinav_dlzq").css({"display":"none"});
+			$("#feinav_dlzh").css({"display":"block"});//显示用户信息
+			//再让黑色导航的右边显示登录之后的样子
+			$(".head_dhzx").css({"display":"none"});
+			$("#user_nodl").css({"display":"none"});
+			$("#login_dl").css({"display":"block"});
+			
+	var loginName = $.trim($('#loginName').val());
+	var loginPwd = $.trim($('#loginPwd').val());
+	var chPhone = /^1[2-9]{1}[0-9]{9}$/;
+	var regemail = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+   //  alert(loginName);
+   
+   //判断是否手机号
+	 if($.isNumeric(loginName)){
+	    if(chPhone.test(loginName)){
+		checkl(loginName,loginPwd);
+		  //return true;
+	     }else{
+		 alert('不是有效的手机号');
+		 return false;
+		 } 
+	  
+	  
+	  }else{
+	   //是否邮箱
+	     if(loginName.indexOf("@")!=-1){
+				 if(regemail.test(loginName)){
+				 
+				 
+				  checkl(loginName,loginPwd);
+				 }else{
+				  alert('不是有效的邮箱');
+				 return false;
+				 }
+	  
+	     }else{
+	  
+	  
+	    alert('不是有效的手机号或邮箱');
+	    return false;
+	  
+	   }
+	 
+	 }
+	
+
+			
+			
+		function checkl(loginN,pawd){
+		
+		
+		
+   var loginurl="{:U('Home/Users/checkLogin')}";
+	$.post(loginurl,{loginName:loginN,loginPwd:pawd},function(data,textStatus){
+	     var  data=$.parseJSON(data);
+		if(data.status=='1'){
+		 WST.msg('登录成功...',{offset:'250px'});
+			//location.reload();
+		location.href=data.refer;
+		}else if(data.status=='-2'){
+			//$("#errmsg").html("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;登陆失败，账号或密码错误");
+			alert('登陆失败，账号或密码错误');
+		}
+	});
+				
+		}					
+			//
+		});
+	})
+	
+	
+	
+
+	
+function userreg(){	
+	
+	
+	 
+	/*if(!document.getElementById("protocol").checked){		
+		WST.msg('必须同意使用协议才允许注册!', {icon: 5});
+		return;
+	}
+	*/
+	
+	
+	var phone = $("#regPhone").val();
+	var chPhone = /^1[2-9]{1}[0-9]{9}$/;
+	 if(!chPhone.test(phone)){
+		alert('手机号不正确');
+		 return false;
+
+	 }
+	var uName=$('#uname').val();
+	if(uName.length<1){
+	
+	alert('用户名不能为空');
+		 return false;
+	}
+	var pawd=$('#reUserPwd').val();
+	if(pawd.length<6 ||pawd.length>18){
+	
+	   alert('用户密码不能为6~18位');
+		 return false;
+	
+	}
+	var  vcode=$('#ymz').val();
+	if(vcode.length<1){
+	 alert('用户验证码不为空');
+	 return false;
+	}
+  	var params = {};
+	params.loginPhone = $.trim($('#regPhone').val());//手机号
+	params.loginName = $.trim($('#uname').val());//姓名
+	params.reUserPwd = $.trim($('#reUserPwd').val());//密码
+	params.mverify = $.trim($('#ymz').val());//验证码
+	params.nameType = 3;
+	//params.userPass = $.trim($('#userPass').val());
+	// loginPhone loginName reUserPwd verify
+	//params.userTaste = $('#userTaste').val();
+	//params.userQQ = $.trim($('#userQQ').val());
+	//params.userPhone = $.trim($('#userPhone').val());
+	//params.mobileCode = $.trim($('#mobileCode').val());
+	//params.nameType = $("#nameType").val();
+	//params.protocol = document.getElementById("protocol").checked?1:0;	
+	
+	$.post(Think.U('Home/Users/toRegist'),params,function(data,textStatus){
+		var json = $.parseJSON(data);
+		if(json.status>0){
+		  WST.msg('注册成功...',{offset:'250px'});
+			location.reload();
+			  // alert('注册成功，正在跳转登录!'); 
+				//location.href=Think.U('Home/Index/index');
+   			
+		}else{
+			alert(json.msg);
+		}
+		getVerify();
+	});
+}	
+	
+</script>
+
+<div id="footer">
+    <div class="footer-context">
+    <div class="f-c-detail">
+        <div class="f-c-box">
+            <div class="footer-content clearfix">
+                <div class="footer-link clearfix">
+                    <dl>
+                        <dt>新手指南</dt>
+                        <dd><a href=""  target="_blank">如何注册</a></dd>
+                        <dd><a href=""  target="_blank">找回密码</a></dd>
+                        <dd><a href=""  target="_blank">APP下载</a></dd>
+                        <dd><a href=""  target="_blank">开通会员</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>听课指南</dt>
+                        <dd><a href="" target="_blank">如何听录播课</a></dd>
+                        <dd><a href="" target="_blank">如何听直播课</a></dd>
+                        <dd><a href="" target="_blank">课程类型说明</a></dd>
+                        <dd><a href="" target="_blank">用听课码听课</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>售后服务</dt>
+                        <dd><a href="" target="_blank">会员听课说明</a></dd>
+                        <dd><a href="" target="_blank">课程资料说明</a></dd>
+                        <dd><a href="" target="_blank">单课购买说明</a></dd>
+                        <dd><a href="" target="_blank">专题购买说明</a></dd>
+                        <dd><a href="" target="_blank">企业购买说明</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>秀财指南</dt>
+                        <dd><a href=""  target="_blank">讲师招募</a></dd>
+                        <dd><a href=""  target="_blank">联系我们</a></dd>
+                        <dd><a href=""  target="_blank">服务协议</a></dd>
+                        <dd><a href=""  target="_blank">意见反馈</a></dd>
+                        <dd><a href=""  target="_blank">帮助中心</a></dd>
+                    </dl>
+                </div>
+                <div class="footer-login-way">                   
+                    <div class="l-w-bottom">
+                        <p class="f18">客服：<b>021-51855362</b></p>
+                        <p>（周一至周五 8:30-17:30）</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="f-c-copyright">
+        <span>&copy;&nbsp;2016 上海达哈那网络科技有限公司</span><i>|</i><span>沪ICP备15048176号</span><i>|</i><span>友情链接：<a href="javascript:if(confirm(''))window.location=''"  target="_blank">高顿财经</a>
+		<a href="javascript:if(confirm(''))window.location=''"target="_blank">高顿网校</a><a href="javascript:if(confirm(''))window.location=''"  target="_blank">高顿财务培训</a></span>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(function(){
+        // 滚动下拉固定导航
+        $(window).scroll(function(){           
+            var $this=$(this);
+            var scrollTop=$(document).scrollTop();
+            var headTop=$(".idx-header").length!=0?($(".idx-nav").offset().top+$(".idx-nav").height()):$("#header").height();
+            var animateTop=$(".idx-header").length!=0?$(".idx-header").height():$("#header").height();
+
+            if(scrollTop > headTop || scrollTop>=$(document).height()-$(window).height()){ if(!$(".header-wrap").hasClass("fixed-head")){
+                    if($(".idx-header").length!=0){
+                        $(".header-wrap").find("#header").show();
+
+                        $(".header-wrap").addClass("fixed-head").css('top',-animateTop+'px');
+                        setTimeout(function(){$(".header-wrap").animate({top:0},300);},100);
+                    }              
+                }
+            }
+            else if(scrollTop < headTop || scrollTop==0){
+                if($(".header-wrap").hasClass("fixed-head")){
+                    if($(".idx-header").length!=0){
+                        $(".header-wrap").find("#header").hide();
+
+                        $(".header-wrap").removeClass("fixed-head");
+                        $(".header-wrap").css('top','');
+                    }                                     
+                }
+            }            
+        })
+
+
+        
+    })
+</script>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<include file="./Apps/Home/View/default/header_login.html" />
+
+
+
+
+<div id="tiwen" class="hide" style="width: 100%;height: 100%;position: fixed;top: 0;left: 0;background: rgba(0,0,0,0.5);z-index: 9999;">
+	 
+	<div id="ask-teacher" class="dialog-board ">
+		<div class="close_icon tiwen_close" style="cursor: pointer;" onclick="tiwen_close();"><img src="img/login/close_icon.png"/></div>
+	    <div class="dialog-board-bar">
+	        <h2 class="course-join-title">向导师提问</h2>
+	        <a href="javascript:;" class="close-dialog-board" id="close-ask-teacher"></a>
+	    </div>
+	    <div>
+	        <div class="box-container">
+	            <p class="row-label"><label>您的问题</label></p>
+	            <p class="ipt-border"><input id="thread_title" type="text" placeholder="请在这里描述您的问题" class="ipt100-text" /><b id="thread_title_b">0/30</b></p>
+	            <p class="row-label"><label>问题补充<em>（选填）</em></label></p>
+	            <script type="text/javascript">
+	             /*   var ue = UE.getEditor('thread_content_pop', {
+	                    autoHeight: false,
+	                    initialFrameWidth:554,
+	                    initialFrameHeight:90,
+	                    toolbars: [["insertunorderedlist","insertorderedlist","simpleupload","emotion","bold","italic","underline"]]
+	                });
+					*/
+	            </script>
+	            <div class="editor-wrap relative">
+	            	<script type="text/plain" id="myEditor" style="width:555px;height:240px;"></script>
+	            </div>
+	                        <div class="b-tips clearfix">
+	                                <div class="fl">导师回复将通过邮件提醒您，记得<a href="" target="_blank" class="link">绑定邮箱</a></div>
+	                                <input type="hidden" id="tutor_member_id">
+	                <a id="ask-guider" href="javascript:;" class="fr globe-btn50 globe-btn50-nobg" onclick="tiwen_close();">提问</a>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+</div>
+
+
+<div class="overlay hide"></div>
+<div class="overlay-transparent hide"></div>
+<div id="jason-bind-cellphone-layer" class="xc-signUp-layer boundPhone xc-layer hide">
+    <div class="xc-layer-body relative">
+        <p class="title">绑定手机</p>
+        <div class="text">
+            为了保障你的账号安全，请绑定手机。<br>
+                    </div>
+        <div class="xc-regist">
+            <p class="xc-error-tips"></p>
+            <ul>
+                <li>
+                    <input type="text" placeholder="手机" class="bind-account" maxlength="11"/>
+                    <span class="clear"></span>
+                </li>
+                <li>
+                    <input type="text" placeholder="图片验证码" class="bind-pic-code" maxlength="4"/>
+                    <span class="clear pos"></span>
+                    <div class="yz-pic">
+                        <img src=""  alt="验证码" width="95" height="34" onclick="this.src='http://www.xiucai.com/account/authCode/?code_type=bind_phone&random='+ Math.random();" />
+                    </div>
+                </li>
+                <li>
+                    <input type="text" placeholder="短信验证码" class="bind-sms-code" maxlength="6"/>
+                    <div class="get-code disabled">获取验证码</div>
+                </li>
+                <li class="pwd hide">
+                    <input type="password" placeholder="密码6~18位" maxlength="16" class="bind-pwd"/>
+                    <em class="eyes"></em>
+                </li>
+            </ul>
+            <input type="button" value="绑定" class="login-button jason-bind-btn"/>
+        </div>
+    </div>
+</div>
+
+<!-- 未激活用户 begin -->
+<div id="is-activate-layer" class="dialog-board dialog-board-none-title hide">
+    <div class="dialog-board-bar">
+        <a href="javascript:;" class="close-dialog-board"></a>
+    </div>
+    <div class="dialog-board-content">
+        <div class="box-container">
+            <p id="del-community-tips" class="text-c-tips">您的账号暂未激活，请绑定手机或邮箱</p>
+            <div class="btn-col2 clearfix">
+                <a href="javascript:if(confirm(' '))window.location=''" class="fl globe-btn50" target="_blank">绑定手机</a>
+                <a href="javascript:if(confirm(''))window.location=''" class="fr globe-btn50" target="_blank">绑定邮箱</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 未激活用户 end -->
+<div class="xc-layer xc-bound-phone-tips hide" id="needBindPhoneDiv">
+    <div class="xc-layer-header">
+        <div class="close-button" id="closeNeedBindPhoneDiv"></div>
+    </div>
+    <div class="xc-layer-body">
+        <h1>为了您的账号安全请先绑定手机</h1>
+        <a href="javascript:if(confirm(''))window.location=''" target="_blank">去绑定</a>
+    </div>
+</div>
+
+</body>
+    
+</html>

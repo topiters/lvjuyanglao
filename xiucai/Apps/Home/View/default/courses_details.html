@@ -1,0 +1,1004 @@
+
+
+<include file="./Apps/Home/View/default/common_head.html" />
+
+
+
+<script type="text/javascript">
+var WST = ThinkPHP = window.Think = {
+        "ROOT"   : "__ROOT__",
+        "APP"    : "__APP__",
+        "PUBLIC" : "__PUBLIC__",
+        "DEEP"   : "{:C('URL_PATHINFO_DEPR')}",
+        "MODEL"  : ["{:C('URL_MODEL')}", "{:C('URL_CASE_INSENSITIVE')}", "{:C('URL_HTML_SUFFIX')}"],
+        "VAR"    : ["{:C('VAR_MODULE')}", "{:C('VAR_CONTROLLER')}", "{:C('VAR_ACTION')}"],
+        "DOMAIN" : "{:WSTDomain()}",
+        "CITY_ID" : "{$currArea['areaId']}",
+        "CITY_NAME" : "{$currArea['areaName']}",
+        "DEFAULT_IMG": "{:WSTDomain()}/{$CONF['goodsImg']}",
+        "MALL_NAME" : "{$CONF['mallName']}",
+        "SMS_VERFY"  : "{$CONF['smsVerfy']}",
+        "PHONE_VERFY"  : "{$CONF['phoneVerfy']}",
+        "IS_LOGIN" :"{$WST_IS_LOGIN}"
+}
+    $(function() {
+    	$('.lazyImg').lazyload({ effect: "fadeIn",failurelimit : 10,threshold: 200,placeholder:WST.DEFAULT_IMG});
+    });
+</script>
+<script src="__PUBLIC__/js/think.js"></script>
+ <script type="text/javascript" charset="utf-8" src="__ROOT__/Apps/Home/View/default/js/common.js"></script>
+ <script type="text/javascript" charset="utf-8" src="__ROOT__/Apps/Home/View/default/js/userlogin.js"></script>
+ <script type="text/javascript" charset="utf-8" src="__ROOT__/Apps/Home/View/default/js/course.js"></script>
+<style>
+    	.user_comment{
+    		
+    	}
+    	.user_comment li{
+    		border-bottom: 1px solid #d8d8d8;
+    	}
+    	.user_comment .ul_user_comment{
+    		
+    	}
+    	.user_comment .ul_user_comment td{
+    		padding: 10px;
+    		box-sizing: border-box;
+    	}
+    	.user_comment .ul_user_comment td .ul_user_img{
+    		width: 60px;
+    		height: 60px;
+    		border-radius:  30px;
+    		overflow: hidden;
+    		
+    	}
+    	.user_comment .ul_user_comment td .ul_user_img img{
+    		width: 100%;
+    	}
+    	.user_comment .ul_user_comment .haoping_xing{
+    		font-size: 22px;
+    		color: #ff7b48;
+    	}
+    	.kc_zj{
+    		width: 50%;
+    		padding:10px;
+    		box-sizing:border-box;
+    	}
+    </style>
+	
+	
+	
+	<div id="main">
+    <div class="course-details">
+        <div class="navigate">
+            <p>
+                <a href="#">课程大厅</a>
+                &gt;
+                <a href="#">税务管理</a>
+                &gt;
+                <a href="#">税务筹划</a>
+                &gt;
+                <a href="javascript:;">建筑业营改增答疑专场</a>
+            </p>
+        </div>
+        <!--课程权限显示内容-->
+        <div class="course-video read-only">
+    <div class="cont-box" style="padding-top: 0;">
+        <p style="margin: 0;font-weight:normal;font-size: 18px;padding:19px 0 14px;color: rgb(51, 51, 51);text-align: left;">{$coursesDetails['courseName']}</p>
+        <div class="course5-3-top">
+            <div class="audience-share">
+                <div class="audience">
+                    <em>适合对象：</em>
+                    <span>{$coursesDetails['courseFor']}</span>
+                </div>
+                <div class="share">
+                    <span><i class="iconfont">&#xe653;</i>分享</span>
+                    <div class="wx-qq">
+                        <a href="javascript:" class="iconfont wx">&#xe61f;</a>
+                        <a href="javascript:if(confirm('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http%3A%2F%2Fwww.xiucai.com%2Fcourse%2F498%2F&site=&title=在秀财网发现一门不错的课<建筑业营改增答疑专场>，推荐！&pics=http://assets.xiucai.com/assets/uploads/pic/2016/0525/9015a966-9b48-b65c-45f9-683d0531a59b.jpg&summary=四大行业营改增刚颁布，纳税申报就要来临，您是否还没做好相应准备无所适从呢？房地产业相关：关于销售不动产，可以选择简易计税按5%计算，是不是也可以选择一般计税按11%计算？简易计税的怎样开票？在不动产所在地预缴后再在机构所在地主管税务机关申报？建筑业相关：建筑劳务公司营改增后如何取得抵扣发票？我们劳务公司只有人工费这一块，如果分包公司要求我公司提供11%的增值税发票那我公司的进项发票去哪里找？生活服务业相关：全面营改增后员工差旅费用能否抵扣？个人差旅酒店开发票是住宿餐饮在一起，但是只有住宿费能够抵扣，怎么处理？别急，我们设置了专场答疑会，“大咖”老师与您不见不散哦！…….  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http%3A%2F%2Fwww.xiucai.com%2Fcourse%2F498%2F&site=&title=在秀财网发现一门不错的课<建筑业营改增答疑专场>，推荐！&pics=http://assets.xiucai.com/assets/uploads/pic/2016/0525/9015a966-9b48-b65c-45f9-683d0531a59b.jpg&summary=四大行业营改增刚颁布，纳税申报就要来临，您是否还没做好相应准备无所适从呢？房地产业相关：关于销售不动产，可以选择简易计税按5%计算，是不是也可以选择一般计税按11%计算？简易计税的怎样开票？在不动产所在地预缴后再在机构所在地主管税务机关申报？建筑业相关：建筑劳务公司营改增后如何取得抵扣发票？我们劳务公司只有人工费这一块，如果分包公司要求我公司提供11%的增值税发票那我公司的进项发票去哪里找？生活服务业相关：全面营改增后员工差旅费用能否抵扣？个人差旅酒店开发票是住宿餐饮在一起，但是只有住宿费能够抵扣，怎么处理？别急，我们设置了专场答疑会，“大咖”老师与您不见不散哦！…….'" tppabs="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http%3A%2F%2Fwww.xiucai.com%2Fcourse%2F498%2F&site=&title=在秀财网发现一门不错的课<建筑业营改增答疑专场>，推荐！&pics=http://assets.xiucai.com/assets/uploads/pic/2016/0525/9015a966-9b48-b65c-45f9-683d0531a59b.jpg&summary=四大行业营改增刚颁布，纳税申报就要来临，您是否还没做好相应准备无所适从呢？房地产业相关：关于销售不动产，可以选择简易计税按5%计算，是不是也可以选择一般计税按11%计算？简易计税的怎样开票？在不动产所在地预缴后再在机构所在地主管税务机关申报？建筑业相关：建筑劳务公司营改增后如何取得抵扣发票？我们劳务公司只有人工费这一块，如果分包公司要求我公司提供11%的增值税发票那我公司的进项发票去哪里找？生活服务业相关：全面营改增后员工差旅费用能否抵扣？个人差旅酒店开发票是住宿餐饮在一起，但是只有住宿费能够抵扣，怎么处理？别急，我们设置了专场答疑会，“大咖”老师与您不见不散哦！……." class="iconfont qq" target="_blank">&#xe602;</a>
+                    </div>
+                </div>
+                <div class="customize">
+                	没找到课程，<a href="#"  target="_blank">点我快速定制</a>
+                </div>
+            </div>
+                            
+            <div class="course-info-box">
+                <div class="info-left" style="background-color: #000;">
+	                <div class="video_img"> 
+	                	<img src="__ROOT__/Apps/Home/View/default/img/course/course_xq_img.jpg " width="600" height="340" >
+	                    <div class="button-box">
+	                        <a href="#" class="dg course-chapter-view course_zj">课程章节</a>
+	                        <a href="#" class="st play-free-video free_st free-st" >免费试听</a>
+	                    </div>
+	                </div>
+                	<!--<iframe class="" id="play-free-iframe" frameborder="0" scrolling="0" style="width:100%;height: 100%;" src="movie.ogg">
+                		
+                	</iframe>-->
+                	<video class="video-free hide" src="__ROOT__/Apps/Home/View/default/css/movie.ogg" controls="controls" style="width: 100%;height: 100%;"></video>
+                </div>
+                <div class="info-center">
+                    <p><span>时长</span><em>{$coursesDetails['courseTime']}</em><span>分</span></p>
+                    <p><span>报名</span><em>{$coursesDetails['saleCount']}</em><span>人</span></p>
+					                    
+                    <p><span>难度</span> 
+					<eq   name="coursesDetails['courseDifficulty']"  value="1" >
+					
+					<i>初级</i>
+					</eq>
+					<eq   name="coursesDetails['courseDifficulty']"  value="2" >
+					
+					<i>中级级</i>
+					</eq>
+					<eq   name="coursesDetails['courseDifficulty']"  value="3" >
+					
+					<i>高级级</i>
+					</eq>
+					
+					</p>
+                </div>
+                <div class="info-right">
+                    <p class="title">课程简介</p>
+                    <div class="introduction">
+                       {$coursesDetails['courseIntro']}
+                    </div>
+                    <div class="vip_course">
+                    	<!--会员课程课程-->
+	                    <div class="level">
+	                        <p class="member">
+	                           <!-- <span>会员专享</span>-->
+	                            <span>￥{$coursesDetails['shopPrice']}</span>
+	                            <em class="use-live-course-code-btn">使用听课码</em>                                                                                        
+	                        </p>
+	                    </div>
+	                    <div class="btn-group-box">
+	                        <a href="javascript:;" class="btn-default lijibuy_btn"  onClick="addCart({$coursesDetails['courseId']},1,{$coursesDetails['courseAttrId']});" >立即购买</a>
+							
+	                        <a href="javascript:;" class="btn-default now-to-learn">会员免费看</a>
+	                    </div>
+                    </div>
+                    <div class="free_course hide">
+                    	<div class="level">
+	                        <p class="member">
+	                           <!-- <span>免费课</span>-->
+	                            <span>免费</span>                                                                                       
+	                        </p>
+	                    </div>
+	                    <div class="btn-group-box">
+	                        <a href="javascript:;" class="btn-default now-to-learn">立即学习</a>
+	                    </div>
+                    </div>
+                    <p class="vip-tips-msg"></p>
+                </div>
+            </div>
+        </div>
+        <ul class="course-tab">
+            <li class="details cur" id="course-detail-info-tab" data-trackEvent="" data-category="detail_descrption" data-action="detail_descrption" data-opt_label="detail_descrption" data-opt_value="课程详情">
+            	课程详情
+            </li>
+            <li class="course-evaluate" id="course-detail-evaluate-tab" data-trackEvent="" data-category="detail_evaluation" data-action="detail_evaluation" data-opt_label="detail_evaluation" data-opt_value="课程评价">
+            	课程评价
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="details-questions">
+    <div id="course-details-box" class="course-details-box jason-details-tab" style="display: block;">
+    	<div class="article">
+         {$coursesDetails['courseDesc']}
+        <div class="course-panel">
+            <h3 class="panel-title"><em></em>老师简介</h3>
+            <div class="panel-body">
+               
+                  
+
+                 {$coursesDetails['shopDetails']}
+
+				 
+            </div>
+        </div>
+    </div>
+    	<div class="aside">
+	    	<div class="quan-block quan-list3-block">
+	    		<h2><em></em>导师问答</h2>
+	    		<ul class="list-no-p">
+	                <li>
+		                <a href="turtor_info.html"  target="_blank" >
+		                    <div class="clearfix">
+		                        <div class="l-avatar block-head">
+		                            <img src="__ROOT__/Apps/Home/View/default/img/course/5a8cba2f-7666-dd13-edbd-15c539b3caba.jpg"  alt="" height="50" width="50">
+		                            <em><img src="__ROOT__/Apps/Home/View/default/img/course/tag-V.png-v=1.10.1.png"  alt="" title="认证导师" height="17" width="17" /></em>
+		                        </div>
+		                        <div class="r-info">
+		                            <p class="name">赵珈宜</p>
+		                            <p class="job">专业服务/教育/培训</p>
+		                        </div>
+		                    </div>
+		                    <div class="specializes">
+		                        <span><em></em><i>会计处理</i></span> 
+		                        <span><em></em><i>税务稽查</i></span> 
+		                        <span><em></em><i>税种及政策</i></span> 
+		                    </div>
+		                </a>
+		            </li>
+	                <li>
+		                <a href="turtor_info.html"  target="_blank" >
+		                    <div class="clearfix">
+		                        <div class="l-avatar block-head">
+		                            <img src="__ROOT__/Apps/Home/View/default/img/course/5a8cba2f-7666-dd13-edbd-15c539b3caba.jpg"  alt="" height="50" width="50">
+		                            <em><img src="__ROOT__/Apps/Home/View/default/img/course/tag-V.png-v=1.10.1.png" alt="" title="认证导师" height="17" width="17" /></em>
+		                        </div>
+		                        <div class="r-info">
+		                            <p class="name">马强</p>
+		                            <p class="job">专业服务/教育/培训</p>
+		                        </div>
+		                    </div>
+		                    <div class="specializes">
+		                        <span><em></em><i>会计处理</i></span>   
+		                        <span><em></em><i>税会差异</i></span>
+		                        <span><em></em><i>税务筹划</i></span> 
+		                    </div>
+		                 </a>
+		            </li>
+	                <li>
+		                <a href="turtor_info.html"  target="_blank" >
+		                    <div class="clearfix">
+		                        <div class="l-avatar block-head">
+		                            <img src="__ROOT__/Apps/Home/View/default/img/course/5a8cba2f-7666-dd13-edbd-15c539b3caba.jpg"  alt="" height="50" width="50">
+		                            <em><img src="__ROOT__/Apps/Home/View/default/img/course/tag-V.png-v=1.10.1.png" alt="" title="认证导师" height="17" width="17" /></em>
+		                        </div>
+		                        <div class="r-info">
+		                            <p class="name">黄佩</p>
+		                            <p class="job">服务业</p>
+		                        </div>
+		                    </div>
+		                    <div class="specializes">
+		                        <span><em></em><i>合并报表</i></span>  
+		                        <span><em></em><i>管理会计体</i></span>  
+		                        <span><em></em><i>财务管控</i></span>   
+		                    </div>
+		                </a>
+		            </li>
+	                <li>
+		                <a href="#" target="_blank" style="padding: 0" >
+		                    <img src="__ROOT__/Apps/Home/View/default/img/course/xgg.png-v=1.10.1.png"  width="278" height="145" style="vertical-align: middle">
+		                </a>
+		            </li>
+	            </ul>
+			</div> 
+	    </div>
+    </div>
+    <!--课程问答列表-->
+   
+    <!--课程评论列表-->
+    <div id="course-evaluate-box" class="course-questions-box jason-details-tab hide" style="display: none;">
+    <div class="article">
+        <div class="evaluate-bar ">
+        	<div class="evaluate-bar">
+			    <span class="eva-score"><em>100%</em><br>好评度</span>
+			    <span class="choose-eva">
+			        <em class="radio radio-chked" data-e-type="all"></em>
+			        <label class="label-m">全部评价（1）</label>
+			
+			        <em class="radio" data-e-type="good"></em>
+			        <label class="label-m">好评（1）</label>
+			
+			        <em class="radio" data-e-type="common"></em>
+			        <label class="label-m">中评（0）</label>
+			
+			        <em class="radio" data-e-type="bad"></em>
+			        <label class="label-m">差评（0）</label>
+			    </span>
+			</div>
+        </div>
+        <div class="evaluate-content">
+        	<ul class="user_comment">
+        		<li>
+        			<table class="ul_user_comment">
+        				<tr>
+        					<td rowspan="2">
+        						<div class="ul_user_img">
+        							<img src="__ROOT__/Apps/Home/View/default/img/688cfdfa-eabf-fb66-6e4d-9a02732a9c24.jpg" />
+        						</div>       						
+        					</td>
+        					<td class="haoping_xing">
+        						★★★★☆
+        					</td>
+        				</tr>
+        				<tr>
+        					<td>
+        						课程问答的时间长点比较好
+        					</td>
+        				</tr>
+        			</table>
+        		</li>
+        		
+        	</ul>
+        </div>
+    </div>
+    
+   <!-- <div class="evaluate-bar " style="display: block;">
+    	<div class="evaluate-bar">
+		    <span class="eva-score"><em>100%</em><br>好评度</span>
+		    <span class="choose-eva">
+		        <em class="radio radio-chked" data-e-type=""></em>
+		        <label class="label-m">全部评价（1）</label>
+		
+		        <em class="radio" data-e-type="good"></em>
+		        <label class="label-m">好评（1）</label>
+		
+		        <em class="radio" data-e-type="common"></em>
+		        <label class="label-m">中评（0）</label>
+		
+		        <em class="radio" data-e-type="bad"></em>
+		        <label class="label-m">差评（0）</label>
+		    </span>
+		</div>
+    </div>-->
+    
+    
+    
+    
+    
+        <div class="aside">
+            <div class="quan-block quan-list3-block">
+    		<h2><em></em>导师问答</h2>
+    		<ul class="list-no-p">
+                <li>
+	                <a href="../../tutor/1002/index.htm"  target="_blank" >
+	                    <div class="clearfix">
+	                        <div class="l-avatar block-head">
+	                            <img src="__ROOT__/Apps/Home/View/default/img/course/5a8cba2f-7666-dd13-edbd-15c539b3caba.jpg"  alt="" height="50" width="50">
+	                            <em><img src="__ROOT__/Apps/Home/View/default/img/course/tag-V.png-v=1.10.1.png" alt="" title="认证导师" height="17" width="17" /></em>
+	                        </div>
+	                        <div class="r-info">
+	                            <p class="name">黄佩</p>
+	                            <p class="job">服务业</p>
+	                        </div>
+	                    </div>
+	                    <div class="specializes">
+	                        <span><em></em><i>合并报表</i></span>  
+	                        <span><em></em><i>管理会计体</i></span>  
+	                        <span><em></em><i>财务管控</i></span>   
+	                    </div>
+	                </a>
+	            </li>
+                <li>
+	                <a href="../../tutor/1002/index.htm"  target="_blank" >
+	                    <div class="clearfix">
+	                        <div class="l-avatar block-head">
+	                            <img src="__ROOT__/Apps/Home/View/default/img/course/5a8cba2f-7666-dd13-edbd-15c539b3caba.jpg"  alt="" height="50" width="50">
+	                            <em><img src="__ROOT__/Apps/Home/View/default/img/course/tag-V.png-v=1.10.1.png" alt="" title="认证导师" height="17" width="17" /></em>
+	                        </div>
+	                        <div class="r-info">
+	                            <p class="name">黄佩</p>
+	                            <p class="job">服务业</p>
+	                        </div>
+	                    </div>
+	                    <div class="specializes">
+	                        <span><em></em><i>合并报表</i></span>  
+	                        <span><em></em><i>管理会计体</i></span>  
+	                        <span><em></em><i>财务管控</i></span>   
+	                    </div>
+	                </a>
+	            </li>
+                <li>
+	                <a href="../../tutor/1002/index.htm"  target="_blank" >
+	                    <div class="clearfix">
+	                        <div class="l-avatar block-head">
+	                            <img src="__ROOT__/Apps/Home/View/default/img/course/5a8cba2f-7666-dd13-edbd-15c539b3caba.jpg"  alt="" height="50" width="50">
+	                            <em><img src="__ROOT__/Apps/Home/View/default/img/course/tag-V.png-v=1.10.1.png" alt="" title="认证导师" height="17" width="17" /></em>
+	                        </div>
+	                        <div class="r-info">
+	                            <p class="name">黄佩</p>
+	                            <p class="job">服务业</p>
+	                        </div>
+	                    </div>
+	                    <div class="specializes">
+	                        <span><em></em><i>合并报表</i></span>  
+	                        <span><em></em><i>管理会计体</i></span>  
+	                        <span><em></em><i>财务管控</i></span>   
+	                    </div>
+	                </a>
+	            </li>
+                <li>
+	                <a href="#" target="_blank" style="padding: 0" >
+	                    <img src="__ROOT__/Apps/Home/View/default/img/course/xgg.png-v=1.10.1.png"  width="278" height="145" style="vertical-align: middle">
+	                </a>
+	            </li>
+            </ul>
+</div>    </div>
+    </div>            <!--课程导师问答列表-->
+            <div id="course-askTutor-box" class="course-questions-box jason-details-tab hide">
+    <div class="article">
+        <div class="evaluate-content"></div>
+    </div>
+        <div class="aside">
+                    <div class="quan-block quan-list3-block">
+    <h2><em></em>导师问答</h2>
+    <ul class="list-no-p">
+                                <li>
+                <a href="../../tutor/1016/index.htm" tppabs="http://www.xiucai.com/tutor/1016/" target="_blank" data-trackEvent="" data-category="detail_recommd_tutor" data-action="detail_recommd_tutor" data-opt_label="detail_recommd_tutor" data-opt_value="详情页导师问答">
+                    <div class="clearfix">
+                        <div class="l-avatar block-head">
+                            <img src="../../../assets.xiucai.com/assets/uploads/pic/2016/0215/5a8cba2f-7666-dd13-edbd-15c539b3caba.jpg" tppabs="http://assets.xiucai.com/assets/uploads/pic/2016/0215/5a8cba2f-7666-dd13-edbd-15c539b3caba.jpg" alt="" height="50" width="50">
+                            <em><img src="../../../assets.xiucai.com/assets/__ROOT__/Apps/Home/View/default/img/tag-V.png-v=1.10.1.png" tppabs="http://assets.xiucai.com/assets/__ROOT__/Apps/Home/View/default/img/tag-V.png?v=1.10.1" alt="" title="认证导师" height="17" width="17" /></em>
+                        </div>
+                        <div class="r-info">
+                            <p class="name">赵珈宜</p>
+                            <p class="job">专业服务/教育/培训</p>
+                        </div>
+                    </div>
+                                        <div class="specializes">
+                                                     <span><em></em><i>会计处理</i></span>                                                     <span><em></em><i>税务稽查</i></span>                                                     <span><em></em><i>税种及政策</i></span>                                                                                                                                                    </div>
+                                    </a>
+            </li>
+                        <li>
+                <a href="../../tutor/1033/index.htm" tppabs="http://www.xiucai.com/tutor/1033/" target="_blank" data-trackEvent="" data-category="detail_recommd_tutor" data-action="detail_recommd_tutor" data-opt_label="detail_recommd_tutor" data-opt_value="详情页导师问答">
+                    <div class="clearfix">
+                        <div class="l-avatar block-head">
+                            <img src="../../../assets.xiucai.com/assets/uploads/pic/2016/0804/5a9d751b-54f2-2820-77f6-b59cb8fec953.jpg" tppabs="http://assets.xiucai.com/assets/uploads/pic/2016/0804/5a9d751b-54f2-2820-77f6-b59cb8fec953.jpg" alt="" height="50" width="50">
+                            <em><img src="../../../assets.xiucai.com/assets/__ROOT__/Apps/Home/View/default/img/tag-V.png-v=1.10.1.png" tppabs="http://assets.xiucai.com/assets/__ROOT__/Apps/Home/View/default/img/tag-V.png?v=1.10.1" alt="" title="认证导师" height="17" width="17" /></em>
+                        </div>
+                        <div class="r-info">
+                            <p class="name">马强</p>
+                            <p class="job">专业服务/教育/培训</p>
+                        </div>
+                    </div>
+                                        <div class="specializes">
+                                                     <span><em></em><i>会计处理</i></span>                                                     <span><em></em><i>税会差异</i></span>                                                     <span><em></em><i>税务筹划</i></span>                                                                                                                                                    </div>
+                                    </a>
+            </li>
+                        <li>
+                <a href="../../tutor/1002/index.htm" tppabs="http://www.xiucai.com/tutor/1002/" target="_blank" data-trackEvent="" data-category="detail_recommd_tutor" data-action="detail_recommd_tutor" data-opt_label="detail_recommd_tutor" data-opt_value="详情页导师问答">
+                    <div class="clearfix">
+                        <div class="l-avatar block-head">
+                            <img src="../../../assets.xiucai.com/assets/uploads/pic/2016/0906/9b68a57b-454a-b7b1-05ea-8e44887a39fc.jpg" tppabs="http://assets.xiucai.com/assets/uploads/pic/2016/0906/9b68a57b-454a-b7b1-05ea-8e44887a39fc.jpg" alt="" height="50" width="50">
+                            <em><img src="../../../assets.xiucai.com/assets/__ROOT__/Apps/Home/View/default/img/tag-V.png-v=1.10.1.png" tppabs="http://assets.xiucai.com/assets/__ROOT__/Apps/Home/View/default/img/tag-V.png?v=1.10.1" alt="" title="认证导师" height="17" width="17" /></em>
+                        </div>
+                        <div class="r-info">
+                            <p class="name">黄佩</p>
+                            <p class="job">服务业</p>
+                        </div>
+                    </div>
+                                        <div class="specializes">
+                                                     <span><em></em><i>合并报表</i></span>                                                     <span><em></em><i>管理会计体</i></span>                                                     <span><em></em><i>财务管控</i></span>                                                                                                                                                                                                                                                            </div>
+                                    </a>
+            </li>
+                        <li>
+                <a href="../../tutor/index.htm" tppabs="http://www.xiucai.com/tutor/" target="_blank" style="padding: 0" data-trackEvent="" data-category="detail_recommd_tutor" data-action="detail_recommd_tutor" data-opt_label="detail_recommd_tutor" data-opt_value="详情页导师问答">
+                    <img src="../../../assets.xiucai.com/assets/__ROOT__/Apps/Home/View/default/img/xgg.png-v=1.10.1.png" tppabs="http://assets.xiucai.com/assets/__ROOT__/Apps/Home/View/default/img/xgg.png?v=1.10.1" width="278" height="145" style="vertical-align: middle">
+                </a>
+            </li>
+            </ul>
+</div>    </div>
+    </div>
+            <!--课程问学习资料-->
+            <div id="course-files-box" class="course-details-box jason-details-tab hide">
+    <div class="course-file-layer">
+                <div id="add-course-file-con-div" class="material-content hide">
+        </div>
+    </div>
+</div>
+        </div>
+                    <!--相关课程-->
+            <!-- 推荐的课程 begin -->
+    <div class="course-recommend-box">
+        <div class="recommend-course-title">
+            <!-- 录播课程显示：相关课程。直播课程显示：近期课程。 -->
+            <h4>相关课程：</h4>
+        </div>
+        <!-- 相关课程 begin -->
+        <div class="course-list">
+            <!-- 视频课程 begin -->
+            <div id="course-list-content">
+                <ul class="clearfix">
+				<volist   name="relatedCourse"   id="data"   offset="0"  length="4" >
+                    <li>
+					
+
+                        <a href="{:U('Home/course/getCourseDetails',array('courseId'=>$data['courseId']))}"  target="_blank" data-opt_value="相关课程">
+                            <div class="course-list-img">
+                                <img width="280" height="160" src="__ROOT__/{$data['courseImg']}" alt="{$data['courseName']} ">
+                            </div>
+                            <h5>
+                                <span>{$data['courseName']} </span>
+                            </h5>
+                            <div class="tips">
+							<eq  name="data['courseDifficulty']"   value="1">
+							
+                                <span>初级课程</span>
+								</eq>
+								<eq  name="data['courseDifficulty']"   value="2">
+							
+                                <span>中级课程</span>
+								</eq>
+								<eq  name="data['courseDifficulty']"   value="3">
+							
+                                <span>高级课程</span>
+								</eq>
+                                <em>|</em>
+                                <span>1134人已学</span>
+                            </div>
+                            <div class="cost">                                                                                                                                                   
+                                 <span class="l toll">会员免费看</span>                                                                                   
+                            </div>
+                        </a>
+                    </li>
+					
+					</volist>
+                   <!--  <li>
+                        <a href="../610/index.htm" target="_blank"  data-opt_value="相关课程">
+                            <div class="course-list-img">
+                                <img width="280" height="160" src="__ROOT__/Apps/Home/View/default/img/bd660b10-c0f1-d195-08b5-8778a600c062.jpg" alt=" 18个房地产、建筑业精选问题答疑汇总">
+                            </div>
+                            <h5>
+                                <span> 18个房地产、建筑业精选问题答疑汇总</span>
+                            </h5>
+                            <div class="tips">
+                                <span>中级课程</span>
+                                <em>|</em>
+                                <span>437人已学</span>
+                            </div>
+                            <div class="cost">
+                                <span class="l toll">会员免费看</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../530/index.htm" target="_blank"   data-opt_value="相关课程">
+                            <div class="course-list-img">
+                                <img width="280" height="160" src="__ROOT__/Apps/Home/View/default/img/bd660b10-c0f1-d195-08b5-8778a600c062.jpg" alt="有问必答之建筑业营改增答疑专场">
+                            </div>
+                            <h5>
+                                <span>有问必答之建筑业营改增答疑专场</span>
+                            </h5>
+                            <div class="tips">
+                                <span>初级课程</span>
+                                <em>|</em>
+                                <span>1123人已学</span>
+                            </div>
+                            <div class="cost">
+                                <span class="l toll">会员免费看</span>
+                            </div>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="../515/index.htm" target="_blank"  data-opt_value="相关课程">
+                            <div class="course-list-img">
+                                <img width="280" height="160" src="__ROOT__/Apps/Home/View/default/img/bd660b10-c0f1-d195-08b5-8778a600c062.jpg" alt="外贸企业发生退运后的综合实务处">
+                            </div>
+                            <h5>
+                                <span>外贸企业发生退运后的综合实务处</span>
+                            </h5>
+                            <div class="tips">
+                                <span>中级课程</span>
+                                <em>|</em>
+                                <span>308人已学</span>
+                            </div>
+                            <div class="cost">
+                                <span class="l toll">会员免费看</span>
+                            </div>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+        <!-- 相关课程 end -->
+    </div>
+<!-- 推荐的课程 end -->
+                </div>
+        <!-- 开通会员提醒弹窗 begin -->
+<div id="live-open-vip-layer" class="dialog-board dialog-board-class-code live-detail-layer hide">
+    <div class="dialog-board-bar">
+        <h2 class="course-join-title">开通课程</h2>
+        <a href="javascript:;" class="close-dialog-board"></a>
+    </div>
+    <div class="dialog-board-content">
+        <div class="box-container">
+            <p class="text-c-tips course-join-title">本课程为会员专享，开通会员即可报名听课</p>
+            <div class="btn-single clearfix">
+                <a class="login-btn" href="../../vip/index.htm" tppabs="http://www.xiucai.com/vip/" target="_blank">开通会员</a>
+                <a href="javascript:;" class="link-open use-live-course-code-btn">
+                    使用<span>&nbsp;听课码&nbsp;</span>开通课程
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 开通会员提醒弹窗 end -->
+
+<!-- 没有权限下载弹框 begin -->
+<div id="no-authority-download-layer" class="dialog-board dialog-board-window dialog-board-modal live-detail-layer hide">
+    <div class="dialog-board-bar">
+        <a href="javascript:;" class="close-dialog-board"></a>
+    </div>
+    <br>
+    <div class="common-class-code">
+        <p>您还没有开通会员专享，暂无权限下载</p>
+        <p class="link-go not-all-link">
+            兑换和赠送的会员暂不享受
+        </p><br>
+        <p class="open-course">
+            <a href="../../vip/index.htm" tppabs="http://www.xiucai.com/vip/" target="_blank" class="tingkema-submit-btn">开通会员</a>
+        </p>
+    </div>
+</div>
+<!-- 绑定弹框 end -->
+
+<!-- 下载次数提示弹框 begin -->
+<div id="download-times-remind-layer" class="dialog-board dialog-board-window dialog-board-modal live-detail-layer hide">
+    <div class="dialog-board-bar">
+        <a href="javascript:;" class="close-dialog-board"></a>
+    </div>
+    <div class="common-class-code" style="padding: 7px 25px 0px 25px">
+        <p class="link-go not-all-link">
+            您现有<span class="no-open down-time-tips">5</span>次下载机会，本次下载将消耗您1次下载机会，确定下载吗？
+        </p>
+        <p class="open-course a-btn-col2">
+            <a href="javascript:;" target="_blank" class="tingkema-submit-btn">下载</a>
+            <a href="javascript:;" class="tingkema-cancel-btn tingkema-cancel-btn1">取消</a>
+        </p>
+    </div>
+</div>
+<!-- 下载次数提示弹框 end -->
+
+<!-- 下载次数用完提示弹框 begin -->
+<div id="download-times-out-layer" class="dialog-board dialog-board-window dialog-board-modal live-detail-layer hide">
+    <div class="dialog-board-bar">
+        <a href="javascript:;" class="close-dialog-board"></a>
+    </div>
+    <div class="common-class-code" style="padding: 7px 25px 0px 25px">
+        <p class="link-go not-all-link">
+            (>_<) 您本月的会员下载次数已用完
+        </p><br>
+        <p class="open-course a-btn-col2">
+            <a href="javascript:if(confirm('http://www.xiucai.com/?url=%2Fvip%2Fbuy%2F%23login  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ������, �����������, ����Ŀ����ֹͣ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.xiucai.com/?url=%2Fvip%2Fbuy%2F%23login'" tppabs="http://www.xiucai.com/vip/buy/" target="_blank" class="tingkema-submit-btn">开通会员</a>
+            <a href="javascript:;" class="tingkema-cancel-btn tingkema-cancel-btn2">不下了</a>
+        </p>
+    </div>
+</div>
+<!-- 下载次数用完提示弹框 end -->
+
+<!-- 开通课程听课券 begin -->
+<div id="live-code-ticket-layer" class="tingkema dialog-board dialog-board-window dialog-board-modal live-detail-layer hide">
+    <div class="dialog-board-bar">
+        <a href="javascript:;" class="close-dialog-board"></a>
+    </div>
+    <div class="dialog-board-content">
+        <div class="common-class-code">
+            <div class="choose">
+                <div data-value="0" class="selected clearfix"><span></span><div>使用已经兑换的听课码</div></div>
+                <div data-value="1" class="h60 clearfix">
+                    <span></span>
+                    <div>输入秀财赠予的听课码</div>
+                    <div id="ipt-group2" class="ipt-group hide">
+                        <input type="text" maxlength="4"  />
+                        <input type="text" maxlength="4"  />
+                        <input type="text" maxlength="4"  />
+                        <input type="text" maxlength="4"  />
+                        <p class="tips course-code-error-info"></p>
+                    </div>
+                </div>
+            </div>
+            <p class="open-course">
+                <a href="javascript:;" class="tingkema-submit-btn use-course-code-ticket opening2">开通课程</a>
+            </p>
+            <p class="link-go not-all-link">没有听课码？<a href="javascript:" class="no-open not-open-course-code">去做任务兑换</a></p>
+        </div>
+    </div>
+</div>
+<!-- 开通课程听课券 end -->
+
+<!-- 直播课听课码开通课程弹层 start -->
+<div id="live-course-code-layer" class="dialog-board dialog-board-window dialog-board-modal live-detail-layer hide">
+    <div class="dialog-board-bar">
+        <a href="javascript:;" class="close-dialog-board"></a>
+    </div>
+    <div class="common-class-code">
+        <p>输入秀财赠予的听课码</p>
+        <div id="ipt-group1" class="ipt-group">
+            <input id="1" type="text"  />
+            <input id="2" type="text"  />
+            <input id="3" type="text"  />
+            <input id="4" type="text"  />
+            <p class="tips course-code-error-info"></p>
+        </div>
+        <p class="open-course">
+            <a href="javascript:;" class="tingkema-submit-btn course-code-confirm opening1">开通课程</a>
+        </p>
+        <p class="link-go not-all-link">没有听课码？
+            <a href="../../task/mall/index.htm" tppabs="http://www.xiucai.com/task/mall/" class="no-open not-open-course-code" target="_blank">去做任务兑换</a>
+        </p>
+    </div>
+</div>
+<!-- 直播课听课码开通课程弹层 start -->
+
+<!-- 直播课程预约成功课前提醒卡 begin -->
+<div id="join-live-course-success-layer" class="dialog-board dialog-board-window live-detail-layer hide">
+    <div class="dialog-board-bar">
+                <h2 class="layer-title">预约成功</h2>
+                <a href="javascript:" class="close-dialog-board"></a>
+    </div>
+
+        <div class="dialog-board-content" style="height: 376px;">
+        <div class="bmk-box">
+            <p>课前问老师：</p>
+            <textarea class="bmk-lssue" placeholder="老师将在直播课中优先解答你的问题" id="issue"></textarea>
+
+            <p>课前提醒：</p>
+            <div class="bmk-contact">
+                <p class="bmk-phone hide" data-status="have" data-type="phone">
+                    <span class="check on"></span>
+                    <span>短信：</span>
+                    <span class="text"></span>
+                    <span class="edit"></span>
+                </p>
+                <p class="bmk-phone edit" data-status="not" data-type="phone">
+                    <span class="check"></span>
+                    <span class="inputs hide">
+                        <input type="text" id="phone" placeholder="请输入手机" maxlength="11"/>
+                        <i class="error"></i>
+                    </span>
+                    <span class="bmk-tips">手机短信提醒</span>
+                </p>
+                <p class="bmk-email hide" data-status="have" data-type="email">
+                    <span class="check on"></span>
+                    <span>邮件：</span>
+                    <span class="text"></span>
+                    <span class="edit"></span>
+                </p>
+                <p class="bmk-email edit" data-status="not" data-type="email">
+                    <span class="check"></span>
+                    <span class="inputs hide">
+                        <input type="text" id="email" placeholder="请输入邮箱" maxlength="50"/>
+                        <i class="error"></i>
+                    </span>
+                    <span class="bmk-tips">邮件信息提醒</span>
+                </p>
+                                <input type="hidden" value="0,0" id="flag"/>
+                            </div>
+            <a href="javascript:" class="submit-btn">确认预约</a>
+            <a href="javascript:" class="submit-btn noclick hide ok"><span>即将进入直播间，检测是否可用（<em>4</em>）</span></a>
+            <p class="bottom"><a href="javascript:" class="no hide">不用了</a></p>
+        </div>
+    </div>
+    </div>
+<!-- 直播课程预约成功课前提醒卡 end -->
+
+<!-- wx分享 -->
+<div class="wx-qrcode">
+    <i class="wx-close"></i>
+    <span id="wx-code"></span>
+    <p>扫一扫，分享到微信</p>
+</div>
+
+<!-- 课程大纲-->
+
+<!-- 下载课程资料次数提示框 begin -->
+<div id="downC-course-file-layer" class="dialog-board dialog-board-none-title hide">
+    <div class="dialog-board-bar">
+        <a href="javascript:;" class="close-dialog-board"></a>
+    </div>
+    <div class="dialog-board-content">
+        <div class="box-container">
+            <p id="downC-community-tips" class="text-c-tips"></p>
+            <div class="btn-col2 clearfix">
+                <a id="downC-community-btn" href="javascript:;" target="_blank" class="fl globe-btn50">确认</a>
+                <a id="downC-community-cancel" href="javascript:;" class="fr globe-btn50 globe-btn50-nobg">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 下载课程资料次数提示框 end -->        <!-- 帖子着色 begin -->
+<div id="colorful-community-layer" class="dialog-board dialog-board-none-title hide">
+    <div class="dialog-board-bar">
+                <a href="javascript:;" class="close-dialog-board"></a>
+    </div>
+    <div class="dialog-board-content">
+        <div class="box-container">
+            <div class="select-choose clearfix">
+                <label class="fl">选择颜色：</label>
+                <div class="color-filtrate">
+                    <div class="filter-box">默认<i class="triangle6-red color-gray"></i></div>
+                    <ul>
+                        <li data-color="" class="defalut">默认</li>
+                        <li data-color="#fd6440" class="color-orange">橙色</li>
+                        <li data-color="#2897c5" class="color-blue">蓝色</li>
+                        <li data-color="#996600" class="color-brown">棕色</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-col2 clearfix">
+                <a id="colorful-community-btn" href="javascript:;" class="fl globe-btn50">确认</a>
+                <a id="colorful-community-cancel" href="javascript:;" class="fr globe-btn50 globe-btn50-nobg">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 帖子着色 end -->
+
+<!-- 删除帖子 begin -->
+<div id="del-community-layer" class="dialog-board dialog-board-none-title hide">
+    <div class="dialog-board-bar">
+                <a href="javascript:;" class="close-dialog-board"></a>
+    </div>
+    <div class="dialog-board-content">
+        <div class="box-container">
+            <p id="del-community-tips" class="text-c-tips">确认删除此帖吗？</p>
+            <div class="btn-col2 clearfix">
+                <a id="del-community-btn" href="javascript:;" class="fl globe-btn50">确认</a>
+                <a id="del-community-cancel" href="javascript:;" class="fr globe-btn50 globe-btn50-nobg">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 删除帖子 end -->
+
+<!-- 退出帖子 begin -->
+<div id="option-community-confirm-layer" class="dialog-board dialog-board-none-title hide">
+    <div class="dialog-board-bar">
+                <a href="javascript:;" class="close-dialog-board"></a>
+    </div>
+    <div class="dialog-board-content">
+        <div class="box-container">
+            <p id="option-community-confirm-tips" class="text-c-tips">确认退出该圈子吗？</p>
+            <div class="btn-col2 clearfix">
+                <a id="out-circle-confirm-btn" href="javascript:;" class="fl globe-btn50 hide">确认</a>
+                <a id="down-thread-confirm-btn" href="javascript:;" class="fl globe-btn50 hide">确认</a>
+                <a id="lock-thread-confirm-btn" href="javascript:;" class="fl globe-btn50 hide">确认</a>
+                <a id="delete-reply-confirm-btn" href="javascript:;" class="fl globe-btn50 hide">确认</a>
+                <a id="cancel-option-community" href="javascript:;" class="fr globe-btn50 globe-btn50-nobg">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 退出帖子 end -->
+
+<!-- 帖子操作 begin -->
+<div id="option-community-layer" class="dialog-board dialog-board-none-title hide">
+    <div class="dialog-board-bar">
+                <a href="javascript:;" class="close-dialog-board"></a>
+    </div>
+    <div class="dialog-board-content">
+        <div class="box-container">
+            <p id="option-community-tips" class="text-c-tips">操作成功</p>
+            <div class="btn-single">
+                <a id="option-community-btn" href="javascript:;" class="globe-btn50">确认</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 帖子操作 end -->
+
+<!-- 回帖加入圈子提醒 begin -->
+<div id="reply-thread-remind-layer" class="dialog-board dialog-board-window dialog-board-red hide">
+    <div class="dialog-board-bar">
+        <h2>回帖提醒</h2>
+        <a href="javascript:;" class="close-dialog-board"></a>
+    </div>
+    <div class="dialog-board-content">
+        <div class="box-container">
+            <p class="text-c-tips">对这个话题感兴趣？加入圈子关注更多话题</p>
+            <div class="btn-single">
+                <a id="reply-thread-remind-btn" href="javascript:;" class="globe-btn50">加入圈子</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 回帖加入圈子提醒 end -->
+
+<!-- 下载帖子附件扣除圈币提醒 begin -->
+<div id="down-thread-file-coin-layer" class="dialog-board dialog-board-window dialog-board-red hide">
+    <div class="dialog-board-bar">
+        <h2>下载提醒</h2>
+        <a href="javascript:;" class="close-dialog-board"></a>
+    </div>
+    <div class="dialog-board-content">
+        <div class="box-container">
+            <p id="down-thread-file-coin-tips" class="text-c-tips"></p>
+            <div class="btn-col2 clearfix">
+                <a id="down-thread-file-coin-btn" href="javascript:;" class="fl globe-btn50" target="_blank">确认</a>
+                <a id="down-thread-file-coin-cancel" href="javascript:;" class="fr globe-btn50 globe-btn50-nobg">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 下载帖子附件扣除圈币提醒 end -->        <!-- 添加购物车 -->
+<div id="add-to-cart-layer" class="dialog-board dialog-board-m hide">
+    <div class="dialog-board-bar">
+        <a href="javascript:;" class="close-dialog-board"></a>
+    </div>
+    <div class="c-text-btn">
+        <p class="txt-tips">课程已经成功加入购物车！</p>
+        <div class="btn-col2 clearfix">
+            <a class="fr globe-btn50 cart-to-buy" href="../../-url=-cart--login.htm" tppabs="http://www.xiucai.com/cart/" target="_blank">去结算</a>
+            <a href="javascript:;" class="fl globe-btn50 globe-btn50-nobg cart-to-buy">继续浏览</a>
+        </div>
+    </div>
+</div>            <div id="add-course-file-layer"></div>
+    <div class="overlay-transparent hide"></div>
+</div>
+<script>
+	$(function(){
+		$(".close_icon").click(function(){
+			//alert(0);
+			$(".login").css({"display":"none"});
+			$(".login").removeClass("kc_zj");
+			$("body").css({"overflow":"auto"});
+			$("#allsccren").removeClass('allsccren');
+		});
+	});
+	function login(){
+		$("#allsccren").addClass('allsccren');
+		$("body").css({"overflow":"hidden"});
+		$(".login").css({"display":"block"});
+		$("#all_login").css({"display":"block"});
+		$("#register_").css({"display":"none"});
+		$("#chapterList").css({"display":"none"});
+		
+	}
+	function zhuce(){
+		$("#allsccren").addClass('allsccren');
+		$("body").css({"overflow":"hidden"});
+		$(".login").css({"display":"block"});
+		$("#all_login").css({"display":"none"});
+		$("#chapterList").css({"display":"none"});
+		$("#register_").css({"display":"block"});
+	}
+	function course_zj(){
+		$("#allsccren").addClass('allsccren');
+		$("body").css({"overflow":"hidden"});
+		$(".login").css({"display":"block"});
+		$(".login").addClass("kc_zj");
+		$("#all_login").css({"display":"none"});
+		$("#chapterList").css({"display":"block"});
+		$("#register_").css({"display":"none"});
+	}
+</script>
+<script>
+	$(function(){
+		$("input[name='mobile_login']").click(function(){
+			//登录成功之后
+			//先让非导航的右边显示登录之后的样子
+			$("#feinav_dlzq").css({"display":"none"});
+			$("#feinav_dlzh").css({"display":"block"});//显示用户信息
+			//再让黑色导航的右边显示登录之后的样子
+			$(".head_dhzx").css({"display":"none"});
+			$("#user_nodl").css({"display":"none"});
+			$("#login_dl").css({"display":"block"});
+			//
+		});
+		
+		//点课程详情
+		$("#course-detail-info-tab ").click(function(){
+			$(this).addClass("cur");
+			$(this).siblings().removeClass("cur");
+			$("#course-details-box").css({"display":"block"});
+			$("#course-evaluate-box").css({"display":"none"});
+		});
+		//点击课程评价
+		$("#course-detail-evaluate-tab ").click(function(){
+			$(this).addClass("cur");
+			$(this).siblings().removeClass("cur");
+			$("#course-details-box").css({"display":"none"});
+			$("#course-evaluate-box").css({"display":"block"});
+		});
+		
+		//点击课程章节
+		$(".course_zj").click(function(){
+			course_zj();
+		});		
+		
+	});
+</script>
+<script>
+	$(function(){
+		$(".free-st").click(function(){
+			$(".video_img").addClass('hide');
+			$(".video-free").removeClass('hide');
+		});
+	})
+</script>
+  <include file="./Apps/Home/View/default/common_foot.html" />
+  
+  
+  

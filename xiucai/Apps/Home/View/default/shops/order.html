@@ -1,0 +1,523 @@
+<include file="./Apps/Home/View/default/common_head.html" />
+ <style>
+    	.laoshi_tx{
+    		padding: 10px 0;
+    	}	 	
+		.con4 .btn{
+		     width: 50%;
+		     height: 30px;
+		     line-height:30px;
+		     text-align: center;
+		     background: #ff8860;
+		     display: block;
+		     font-size: 14px;
+		     border-radius: 5px;
+		     margin: 20px auto 0;
+		     display: block;
+		     color: #fff;
+		}
+		.upload{
+		     position: relative;
+		}
+		.upload_pic{
+		     display: block;
+		     width: 100%;
+		     height: 30px;
+		     position: absolute;
+		     left: 0;
+		     top: 0;
+		     opacity: 0;
+		     border-radius: 5px;
+		}
+		#cvs{
+			border-radius: 45px;
+			display: block;
+			margin: 0 auto;
+			z-index: 9555;
+		}
+		.laoshiinfotable{
+			width: 80%;
+			text-align: left;
+		}
+		.laoshiinfotable td{
+			padding: 5px;
+		}
+		.laoshiinfotable td:first-child{
+			font-size: 18px;
+			text-align: right;
+			width: 100px;
+		}
+		.laoshiinfotable input[type='text']{
+			width: 100%;
+			padding: 8px 10px ;
+			box-sizing: border-box;
+			border: 1px solid #ccc;
+		}
+		.laoshiinfotable input[type='radio']{
+			width: 15px;
+			height: 15px;
+			margin-right: 5px;
+		}
+		.laoshiinfotable select{
+			padding: 8px 10px;
+			width: 100%;
+		}
+		.shanchang>div{
+			float: left;
+		}
+		.shanchang input[type='checkbox']{
+			width: 15px;
+			height: 15px;
+			margin-right: 5px;
+			margin-top: 6px;
+		}
+		.shanchang span{
+			display: inline-block;
+			margin-right: 15px;
+		}
+		.shanchang .neirongxianshi{
+			max-width: 300px;
+			width: 70%;
+			min-height: 65px;
+			height: auto;
+			float: left;
+			border: 1px solid #ccc;
+			color: #0ff;
+		}
+		.shanchang .neirongxianshi>span{
+			display: block;
+			padding: 5px 10px;
+			margin: 10px;
+			position: relative;			
+			word-wrap: break-word;
+			color: #000;
+			border: 1px solid #d8d8d8;
+		}
+		.shanchang .neirongxianshi>span>span{
+			display: inline-block;
+			width: 15px;
+			height: 15;
+			position: absolute;
+			right: -10px;
+			top: -15px;
+			display: none;
+			color: #f00;
+		}
+		.shanchang .neirongxianshi>span:hover span{
+			display: inline-block;
+			cursor: pointer;
+		}
+		.shanchang .shuru-right{
+			width: 30%;	
+			float: right;
+		}
+		.shanchang .shuru-right input[type='button']{
+			border-style: none;
+			padding: 5px 20px;
+			display: block;
+			margin: 10px auto;
+			background: #ff8860;
+			color: #fff;
+			border-radius: 5px;
+		}
+		.jianjietext{
+			width: 100%;
+			padding: 10px;
+			box-sizing: border-box;
+			min-height:100px;
+			max-width: 534px;
+		}
+		.tijiaobtn{
+			border-style: none;
+			padding: 8px 50px;
+			color: #fff;
+			border-radius: 5px;
+			background: #ff8860;
+			display: block;
+			margin: 0 auto;
+		}
+		#uploadvideo{cursor: pointer;}
+		.up_progress{
+			width: 95%;
+			margin: 0 auto;
+		}
+		.up_progress table{
+			width: 100%;
+		}
+		.up_progress table thead{
+			color: #424242;
+		}
+		.up_progress table td{
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		.up_progress table td:first-child{
+			width: 150px;
+		}
+		.up_progress table tbody{
+			font-size:16px;
+			color: #737373;
+		}
+		.up_progress table textarea,.up_progress table input,.up_progress table select{
+			width: 70%;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		.up_progress_img{
+			width: 74.5%;
+			border: 1px solid #b5b5b5;
+			border-radius: 5px;
+			position: relative;
+			display: inline-block;
+			float: left;
+			padding: 10px;
+			margin: 15px 0 13px 0;
+			box-sizing: border-box;
+		}
+		.up_progress_img>div{
+			background: -moz-linear-gradient(left, #fdac91 0%, #ff8860 100%); 
+			background: -webkit-gradient(linear, left left, left right, color-stop(0%,#fdac91), color-stop(100%,#ff8860)); 
+			background: -webkit-linear-gradient(left, #fdac91 0%,#ff8860 100%); 
+			background: -o-linear-gradient(left, #fdac91 0%,#ff8860 100%);
+		    background: -ms-linear-gradient(left, #fdac91 0%,#ff8860 100%);
+		    background: linear-gradient(to right, #fdac91 0%,#ff8860 100%);
+			width: 100%;
+			height: 20px;
+		}
+		.info_progress{
+			margin: 20px 0 13px 0;
+			float: left;
+			width: 20%;					
+		}
+		.info_progress>span{
+			padding: 5px 20px;
+		}
+		.info_progress>span:first-child{
+			font-size: 20px;
+			color: #a4a4a4;
+			
+		}
+		.info_progress span a{
+			color: #3f9cfc;
+		}
+		.info_M{
+			width: 74.5%;
+			text-align: right;
+			color: #a4a4a4;
+		}
+		.fb_video{
+			/*display: block;*/
+			float: left;
+			width: 120px !important;
+			padding: 10px 35px !important;
+			border-style: none;
+			margin-right: 10%;
+			background: #FF8860;
+			border-radius: 6px;
+			color: #fff;
+		}
+		
+		.uploadvideo{
+			padding: 8px 40px;
+			border-radius: 6px;
+			background: #FF8860;
+			color: #fff;
+		}
+		
+    </style>
+    <script>
+    	$(function(){
+    		$(".ulli-item li").click(function(){
+    			var aitem = $(this).attr('data-href');
+    			$(this).children('a').addClass('curr');
+    			$(this).children('div').addClass('vertical');
+    			$(this).siblings().children('a,div').removeClass('curr').removeClass('vertical');
+    			$(aitem).removeClass('hide');
+    			$(aitem).siblings().addClass('hide');
+    		});		
+    		//点击取消订单的时候获取该订单的id   		
+    		$(".dingdantabletd .quxiaodd").click(function(){
+    			var dataorderid = $(this).parent().parent().attr('data-order-id');
+    			$(".overlay").removeClass('hide');
+    			$(".cancel-order-layer").removeClass('hide');
+    			
+    			$(".cancel-order-btn").click(function(){
+	    			$(".overlay").addClass('hide');
+	    			$(".cancel-order-layer").addClass('hide');
+	    			$("#order-status-"+dataorderid+"  .pay-txt").text('订单已取消');
+	    			$('#order-option-'+dataorderid).html('--');
+	    		});
+    		});
+    		$(".close-dialog-board,.not-cancel-order").click(function(){
+    			$(".overlay").addClass('hide');
+    			$(".cancel-order-layer").addClass('hide');
+    		});    
+    		
+    		//点击上传视频
+    		$("#uploadvideo").click(function(){
+    			$('.ulliitem2_1').addClass('hide');
+    			$('.ulliitem2_2').removeClass('hide');
+    		});
+    		$(".fb_video_fanhui").click(function(){
+    			$('.ulliitem2_2').addClass('hide');
+    			$('.ulliitem2_1').removeClass('hide');
+    		});
+    		
+    		//点击上传视频
+    		$("#videofile").click(function(){
+    			//var videofile = $(this).files[0];
+    			//alert(videofile);
+    		});
+    		//点击发布视频(获取视频信息)
+    		$('#fabuvideo').click(function(){
+    			var videobiaoti = $("#videobiaoti").val();//标题
+    			var courseexpress = $("#courseexpress").val();//课程简介
+    			var typetext = $("#typetext").val();// 分类
+    			var videofile = $("#videofile").files[0];
+    			//alert(videofile);
+    			//var videofile = $("#videofile").val();//视频文件
+    		});
+    		
+    	})
+    </script>
+
+<div id="main">
+    <div class="major">
+        <div class="container clearfix">
+            <!-- 右侧内容 begin -->
+            <div class="r about_content">              
+           
+				<div id="ulli-item3" class="self_block_none ">
+					<div class="my-order wodedingdan_content">
+                        <form id="searchForm" action="" method="get" name="searchForm">
+                            <table class="order-tablet operate-tablet">
+                                <colgroup>
+                                    <col width="15%">
+                                    <col width="44%">
+                                    <col width="13%">
+                                    <col width="13%">
+                                    <col width="15%">
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <td class="align-l">订单信息</td>
+                                    <td class="col-l-p">&nbsp;</td>
+                                    <td>订单金额（元）</td>
+                                    <td>操作</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                        
+                        <table class="order-tablet tablet-b order-pr0 dingdantabletd">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="44%">
+                                <col width="13%">
+                                <col width="13%">
+                                <col width="15%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                            		<td colspan="5" class="align-l col-bg">
+                                        <span>
+                                        	下单时间：<em>2016-10-10 10:41:38</em>
+                                        </span>
+                                        <span>
+                                        	订单编号：<em>1476078729</em>
+                                        </span>
+                                        <span>
+                                        	课程数：<em>1门</em>                                                                                                       
+                                        </span>
+                                        <span style="float: right;">购买者</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-l">
+                                    	<a href="/course/248/" target="_blank">
+                                    		<img src="img/5f14963c-b049-2b89-e5ce-202ee850c666.jpg" height="68" width="120" alt=""/>
+                                    	</a>
+                                    </td>
+                                    <td class="align-l valign-t col-l-p pl-20">
+                                        <a href="/course/248/" class="c-title" target="_blank">
+                                        	企业会计准则解释第7号（三）
+                                        </a>
+                                    </td>
+                                    <td rowspan="1" class="col-font"><b>￥49.00</b></td>
+                                    <td rowspan="1" id="order-status-1476078729">
+                                        <p class="a-gap">
+                                            <span class="pay-txt">
+                                                                                                等待付款                                                                                                                                                                                      
+                                            </span>
+                                        </p>
+                                        <p class="a-gap">
+                                        	<a href="#e" class="order-detail">订单详情</a>
+                                        </p>
+                                    </td>
+                                    <td rowspan="1" class="l-td-p" data-order-id="1476078729" id="order-option-1476078729">                                       
+                                        <a href="user_center.html" target="_blank">
+                                        	<div style="width: 80px;height: 80px;margin: 0 auto;border: 1px solid #000;border-radius: 40px;overflow: hidden;">
+	                                        	<img style="width: 100%;" src="img/688cfdfa-eabf-fb66-6e4d-9a02732a9c24.jpg" />
+	                                        </div>
+                                        </a>
+                                       
+                                    </td>
+                                </tr>                                                                                                                                  
+                            </tbody>
+                        </table>                           
+                    	<table class="order-tablet tablet-b order-pr0 dingdantabletd">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="44%">
+                                <col width="13%">
+                                <col width="13%">
+                                <col width="15%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                            		<td colspan="5" class="align-l col-bg">
+                                        <span>
+                                        	下单时间：<em>2016-10-10 10:41:38</em>
+                                        </span>
+                                        <span>
+                                        	订单编号：<em>1476078730</em>
+                                        </span>
+                                        <span>
+                                        	课程数：<em>1门</em>                                                                                                       
+                                        </span>
+                                        <span style="float: right;">购买者</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-l">
+                                    	<a href="/course/248/" target="_blank">
+                                    		<img src="img/5f14963c-b049-2b89-e5ce-202ee850c666.jpg" height="68" width="120" alt=""/>
+                                    	</a>
+                                    </td>
+                                    <td class="align-l valign-t col-l-p pl-20">
+                                        <a href="/course/248/" class="c-title" target="_blank">
+                                        	企业会计准则解释第7号（三）
+                                        </a>
+                                    </td>
+                                    <td rowspan="1" class="col-font"><b>￥49.00</b></td>
+                                    <td rowspan="1" id="order-status-1476078730">
+                                        <p class="a-gap">
+                                            <span class="pay-txt">
+                                                                                                等待付款                                                                                                                                                                                      
+                                            </span>
+                                        </p>
+                                        <p class="a-gap">
+                                        	<a href="#e" class="order-detail">订单详情</a>
+                                        </p>
+                                    </td>
+                                    <td rowspan="1" class="l-td-p" data-order-id="1476078730" id="order-option-1476078730">                                       
+                                        <a href="user_center.html" target="_blank">
+                                        	<div style="width: 80px;height: 80px;margin: 0 auto;border: 1px solid #000;border-radius: 40px;overflow: hidden;">
+	                                        	<img style="width: 100%;" src="img/688cfdfa-eabf-fb66-6e4d-9a02732a9c24.jpg" />
+	                                        </div>
+                                        </a>
+                                       
+                                    </td>
+                                </tr>                                                                                                                                  
+                            </tbody>
+                        </table>                           
+                    
+					</div>
+				</div>
+			
+            </div>
+            <!-- 左侧列表 begin -->
+            <div class="course-sidebar">
+                <div class="course-sidebar-type">
+                	<div class="quan-block quan-hp-block">			       
+				        <form id="member_editor_form" name="member_editor" action="" enctype="multipart/form-data" method="post" onsubmit="return true;">
+				        <a href="javascript:;" class="user-head" style="border-radius: 50%;overflow: hidden;">
+				            <span class="head90-mask" style="border: 0;"></span>
+				            <img  id="avatar" src="__ROOT__/Apps/Home/View/default/images/caiduoduo.png" height="90" width="90">
+				            <div class="head-mask head-mask90"></div>
+				            <div id="avatarProfileUpload"></div>
+				            <input type="hidden" name="avatar" id="head_pic" value="/assets/img/caiduoduo.png"/>
+				            <input type="hidden" name="avatar_large" id="head_pic_large" value="/assets/img/caiduoduo.png"/>
+				        </a>
+				        </form>
+				        
+				        <div class="hp-user-zone" id="personal-info-div">
+				            <p class="user-name">
+				                <a href="/vip/" target="_blank" class="vip" title="">
+				                	<img src="__ROOT__/{$shopInfo['shop']['shopImg']}" width="16" height="12" alt="会员特权" border="0">
+				                </a>
+				                <strong id="nickname-span">{$shopInfo['shop']['shopName']}</strong>				               
+				            </p> 
+				            <div class="laoshi_tx">
+		                		<div class="con4">
+									<canvas id="cvs" width="0" height="0" class="hide"></canvas>
+									<span class="btn upload" style="margin: 0 auto;">上传头像<input type="file" class="upload_pic" id="upload"/></span>
+								</div>
+		                		<input type="file" value="修改头像" class="upload_pic tximg-x" id="upload" />
+		                	</div>
+				            <!-- 用户等级展示 -->
+				           <!--  <div class="user-level-display border-b-e6 clearfix">
+				                <p class="clearfix">
+				                    <a href="/help/6/#q27" target="_blank" title="" class="fl">
+				                        <span class="tag-qb">
+				                        	<img src="http://assets.xiucai.com/assets/img/quan/qb.png?v=1.10.5" alt="圈币" height="14" width="19">
+				                        	5
+				                        </span>
+				                    </a>
+				                    <span class="fr r-wrap"><a href="/help/6/#q28" target="_blank" class="" title="">
+				                    <span class="tag-level tag-level-LV1">
+				                    <i>LV1</i></span></a></span>
+				                </p>
+				            </div> -->
+				          
+				        </div>
+				    </div>
+                	
+                    <ul class="ulli-item">                    	
+                        <li class="course-category course-category-more" >
+                            <a class="course-category-link " href="{:U('Home/Shops/index')}" >
+                            	个人资料
+                            </a>
+                            <div class=""></div>
+                        </li>
+                        <li class="course-category course-category-more" >
+                            <a class="course-category-link " href="{:U('Home/Shops/course')}">
+                            	我的课程
+                            </a>
+                            <div class=""></div>
+                        </li>
+                        <li class="course-category course-category-more   "         >
+                            <a class="course-category-link    curr" href="{:U('Home/Shops/order')}">
+                            	我的订单
+                            </a>
+                            <div class="vertical"></div>
+                        </li>
+                        <li class="course-category course-category-more"    >
+                            <a class="course-category-link" href="{:U('Home/Shops/follow')}">
+                            	我的粉丝
+                            </a>
+                            <div class=""></div>
+                        </li>
+                        <li class="course-category course-category-more" >
+                            <a class="course-category-link" href="{:U('Home/Shops/ask')}">
+                            	我的问答
+                            </a>
+                            <div class=""></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 左侧列表 end -->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<include file="./Apps/Home/View/default/common_foot.html" />

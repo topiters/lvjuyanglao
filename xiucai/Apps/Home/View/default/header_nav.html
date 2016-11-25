@@ -1,0 +1,85 @@
+
+<div class="header-wrap " >
+    <div id="header" class="hide">
+   		<div class="container">
+        	<div class="nav clearfix">
+	           	<a href="index.htm"  title="首页" class="logo" >
+	           		<img src="__ROOT__/Apps/Home/View/default/img/logo_.png" />
+	           	</a>
+	            <a href="javascript:" class="nav-menu-btn"><i class="iconfont">&#xe67b;</i></a>
+	            <ul class="nav-item">
+	                <li><a class="notCard font-color-white" href="{:U('home/index/index')}" >首页</a></li>
+	                <li class="parent-nav-item">
+	                    <a href="{:U('home/course/index')}" >课程 </a>
+	                    <ul class="second-nav-item">
+	                        <li><a href="{:U('home/course/index')}" target="_blank">课程大厅</a></li>
+	                        <li><a href="{:U('home/specialcourse/index')}" >专题课程</a></li>
+	                        <li><a href="{:U('home/mycourse/index')}">我的课程</a></li>
+	                    </ul>
+	                </li>
+	                <li>
+	                	<a href="{:U('home/livecast/index')}"  >直播间</a>
+	                </li>
+	                <li class="beta">
+	                	<a href="{:U('home/specialist/index')}" >专家问答</a>
+	                </li>
+	                <li class="parent-nav-item">
+	                    <a href="{:U('home/forum/index')}" >财税论坛 </a>
+	                    <ul class="second-nav-item">
+	                        <li>
+	                        	<a href="{:U('home/forum/index')}" >圈子首页</a></li>
+	                        <li class="none-border">
+	                        	<a href="{:U('home/forum/myindex')}">我的圈子</a></li>
+	                    </ul>
+	                </li>
+	                <li>
+	                	<a href="{:U('home/users/open_member')}">开通会员</a>
+	                </li>
+	                <li>
+	                    <a href="{:U('home/app/index')}" >APP</a>
+	                </li>
+					<li>
+	                    <a href="{:U('home/offline/index')}" >线下</a>
+	                </li>
+	            </ul>
+	            <!-- 用户未登录状态 -->
+				<if condition="!$WST_USER['userId']">
+	           <div class="login-block" id="user_nodl" style="border: #fff;">
+	                <a href="javascript:;" id="a-login"  class="a-login" onclick="login();">登录</a>
+	                <a href="javascript:;" id="a-register" class="a-register" onclick="zhuce();">注册</a>
+	           </div>	
+			   </if>
+	           <!--用户已登录状态-->
+	           <!--<div class="login-block" id="login_dl" style="border: 1px solid #f00;height: 35px;">
+	                <div class="model_login">
+	                	<span>1</span>
+	                	<span>1</span>
+	                	<span>1</span>
+	                </div>
+	           </div>-->
+	             <PHP>if(session('WST_USER.userId')>0){</PHP>
+	            <div class="change-entrance head_dhzx" >
+	            	<a href="javascript:logout();"  title="退出" ><i></i></a>
+	            </div>
+	            <div class="login-block login_zh" id="login_dl" style="display: block;">
+	            	<ul>
+	            		<!-- <li><a href="#"><i class="iconfont">&#xe615;</i></a></li>
+	            		<li><a href="#"><i class="iconfont">&#xe69c;</i></a></li>
+	            		<li><a href="#"><i class="iconfont">&#xe9c5;</i></a></li> -->
+	            		<li><a href="#"><i class="iconfont">&#xe625;</i></a></li>
+	            		<li><a href="{:U('Home/Users/index')}"><div><img src="__ROOT__/Apps/Home/View/default/img/login/touxaing.png" /></div></a></li>
+	            	</ul>
+	            </div>
+	            <PHP>}</PHP>
+	            <div class="search-block search-block-active search-block-focus">
+	                <div class="search-form clearfix">
+	                    <input type="button" class="fl search-btn" id="search_button"/>
+	                    <input type="text" class="fl search_content_input" id="search_content" name="search_content" placeholder="找到你想要的课程或帖子" maxlength="15"/>
+	                </div>
+	
+	                <!-- 关键字搜索面板 默认隐藏 -->
+	                <div class="search-board search-result-board" id="topSearchContent"></div>
+	                <input id="search_from" type="hidden" value="course">
+	            </div>
+	        </div>
+	

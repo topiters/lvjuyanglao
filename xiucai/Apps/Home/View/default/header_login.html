@@ -1,0 +1,160 @@
+
+<div id="allsccren">
+ 	<div class="login" style="display: none;border-radius: 6px;margin:15% auto;z-index: 9999;"> 
+        <div class="close_icon" style="cursor: pointer;"><img src="__ROOT__/Apps/Home/View/default/img/login/close_icon.png"/></div>
+        <div id="all_login"style="display: none;">       		       	
+            	<div class="header"> 
+	                <div class="switch" id="switch">
+	                    <a class="switch_btn_focus" id="switch_qlogin" href="javascript:void(0);" tabindex="7">普通登录</a> 
+	                    <a class="switch_btn" id="switch_login" href="javascript:void(0);" tabindex="8">短信登录</a>
+	                    <div class="switch_bottom" id="switch_bottom" style="position: absolute; width: 64px; left: 0px;"></div> 
+	                </div> 
+	            </div> 
+            	<div class="web_qr_login" id="web_qr_login" style="display: block;"> 
+	                <!--登录--> 
+	                <div class="web_login" id="web_login"> 
+	                    <div class="login-box"> 
+	                        <div class="login_form"> 
+	                        	<form action="" method="">
+	                        		<table class="login_table">
+	                        			<tr>
+	                        				<td>
+	                        					<input type="text"   id="loginName" placeholder="手机/邮箱" value="" name="username"/>
+	                        				</td>
+	                        			</tr>
+	                        			<tr>
+	                        				<td>
+	                        					<input type="password"   id="loginPwd" placeholder="密码" value="" name="passwd" style="width: 70%;"/>
+	                        					<a href="#" class="floatright fontcolor_999">忘记密码？</a>
+	                        				</td>                     				
+	                        			</tr>
+	                        		</table>                      		
+	                        	</form>
+	                        	<input type="submit" value="登录" class="login_btn" name="mobile_login"/>
+	                        	<div class="login_bottom">
+	                        		<font color="#999">新用户？</font><a href="#" onclick="zhuce();">快速注册</a>
+	                        		<div class="floatright">
+	                        			<font color="#999" class="floatleft">一键登录&nbsp;&nbsp;</font>
+	                        			<a href="#">
+	                        				<img src="__ROOT__/Apps/Home/View/default/img/login/weixin.png" />
+	                        			</a>
+	                        			<a href="#">
+	                        				<img src="__ROOT__/Apps/Home/View/default/img/login/qq.png" />
+	                        			</a>                     			                       			
+	                        		</div>
+	                        		
+	                        	</div>
+	                        </div> 
+	                    </div> 
+	                </div> 
+	                <!--登录end--> 
+	            </div> 
+           		<!--短信登录--> 
+            	<div class="qlogin" id="qlogin" style="display: none; "> 
+	                <div class="web_login">
+	                	 <div class="login-box"> 
+	                        <div class="login_form"> 
+	                        	<form action="" method="">
+	                        		<table class="login_table">
+	                        			<tr>
+	                        				<td>
+	                        					<input type="text" placeholder="手机" value="" name="usermobile"/>
+	                        				</td>
+	                        			</tr>
+	                        			<tr>
+	                        				<td>
+	                        					<input type="text" placeholder="图片验证码" value="" name="img_yzm" style="width: 60%;"/>
+	                        					<a href="#" class="floatright fontcolor_999">
+	                        						<img src="__ROOT__/Apps/Home/View/default/img/login/yzm_xc.png" name="yzm"  />
+	                        					</a>
+	                        				</td>                     				
+	                        			</tr>
+	                        			<tr>
+	                        				<td>
+	                        					<input type="password" placeholder="手机验证码" value="" name="mobile_yzm" style="width: 70%;"/>
+	                        					<a href="#" class="floatright fontcolor_999">获取验证码&nbsp;&nbsp;</a>
+	                        				</td>                     				
+	                        			</tr>
+	                        		</table>                      		
+	                        	</form>
+	                        	<input type="submit" value="登录" class="login_btn" name="sms_login"/>
+	                        </div> 
+	                   </div> 
+	                </div> 
+	            </div> 
+            	<!--短信登录end-->               
+        	</div> 
+        <div id="register_">
+        		<div class="web_qr_login"  > 
+	                <div class="web_login">
+	                	 <div class="login-box"> 
+	                        <div class="login_form"> 
+	                        	<div class="zhuce_top">
+	                        		<font>注册</font>
+	                        		<span class="floatright">已有账号，<font onclick="login();">去登录</font></span>
+	                        	</div>
+	                        	   <form action="{:U('Home/Users/toRegist')}" method="post">
+	                        		<table class="login_table">
+	                        			<tr>                    <!-- loginPhone loginName reUserPwd verify -->
+	                        				<td>
+	                        					<input type="text" placeholder="手机"   value=""   id="regPhone" name="loginPhone"/>
+	                        				</td>
+	                        			</tr>
+	                        			<tr>
+	                        				<td>
+	                        					<input type="text" placeholder="图片验证码"    id="ymz"   value="" name="mverify" style="width: 60%;"/>
+	                        					<a href="#" class="floatright fontcolor_999">     
+	                        						<img class="verifyImg"  src="/index.php?m=Home&c=Users&a=getVerify&rnd=math.random()" name="yzm"    onclick="this.src='/index.php?m=Home&c=Users&a=getVerify&rnd='+ Math.random();" />
+	                        					
+												   
+												
+												
+												</a>
+	                        				</td>                     				
+	                        			</tr>
+	                        			<tr>
+	                        				<td>
+	                        					<input type="password" placeholder="短信验证码" value="" name="zc_sms_yzm" style="width: 70%;"/>
+	                        					<a href="#" class="floatright fontcolor_999">获取验证码&nbsp;&nbsp;</a>
+	                        				</td>                     				
+	                        			</tr>
+	                        			<tr>
+	                        				<td>
+	                        					<input type="text" placeholder="姓名" value=""    id="uname"  name="loginName"/>
+	                        				</td>
+	                        			</tr>
+	                        			<tr>                     
+	                        				<td>
+	                        					<input type="password"    placeholder="密码6-18位" value=""   id="reUserPwd"  name="reUserPwd"/>
+	                        				</td>
+	                        			</tr>
+	                        		</table>    
+									   <input type="button" value="注册"   onClick="userreg()" class="login_btn" name="register_btn"/>
+	                        	</form>
+	                        	
+	                        </div> 
+	                   </div> 
+	                </div> 
+	            </div>  
+        	</div>
+			
+	<!-- 	<div  id="chapterList" style="float: left;">
+		    <div class="dialog-board-bar">
+		        <h2>课程章节</h2>
+		        <a href="javascript:;" class="close-dialog-board"></a>
+		    </div>
+		    <div class="dialog-board-list">
+		        <ul class="course-outline">
+		            <li class="even" >1. 营改增后企业的应对措施</li>
+		            <li>2. 营改增后混合销售的应对</li>
+		            <li class="even" >3. 营改增后挂靠企业的营改增涉税风险防范</li>
+		            <li>4. 建筑企业与劳务派遣的税务风险</li>
+		        </ul>
+		    </div>
+		</div>
+			 -->
+			
+			
+			
+   </div>        
+</div>

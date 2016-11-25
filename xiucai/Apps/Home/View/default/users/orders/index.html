@@ -1,0 +1,936 @@
+
+
+
+<include file="./Apps/Home/View/default/common_head.html" />
+<style>
+	.self_fangke{
+		width: 50px;
+		height: 50px;
+		border-radius: 25px;
+		overflow: hidden;		
+	}
+	.self_fangke img{
+		width: 100%;
+	}
+</style>
+<script>
+	$(function(){
+		$(".self_select a").click(function(){
+			var a_index=$(this).index();
+			$(".self_block_none").children('div').eq(a_index).show();
+			$(".self_block_none").children('div').eq(a_index).siblings().hide();
+			$(this).addClass('curr');
+			$(this).children(".classify-line").removeClass('hide');
+			$(this).siblings().removeClass('curr');
+			$(this).siblings().children(".classify-line").addClass('hide');
+		});
+		$(".wode_quanzi li").click(function(){
+			var li_idnex=$(this).index();
+			var content='';
+			$(this).parent().parent().next().children('.wodequanzi_content').children('div').eq(li_idnex).removeClass('hide');
+			
+			$(this).parent().parent().next().children('.wodequanzi_content').children('div').eq(li_idnex).html();
+			$(this).parent().parent().next().children('.wodequanzi_content').children('div').eq(li_idnex).siblings().addClass('hide');
+			$(this).addClass('cur');
+			$(this).siblings().removeClass('cur');
+			/*$(".wodequanzi_content")*/
+		});
+		$(".wodedingdan li").click(function(){
+			$(this).addClass('cur');
+			$(this).siblings().removeClass('cur');
+			/*$(".wodequanzi_content")*/
+		});
+	})
+</script>
+<script src="__PUBLIC__/js/think.js"></script>
+
+
+<div id="main">
+     <div class="major">
+    <div class="container clearfix">
+    <div class="right-wrapper">
+    	
+        <div class="content">
+            <div>
+                <div class="course-tools">
+                    <div class="course-navigation self_select">
+						<a class="classify curr" href="javascript:;">
+						    我的课程
+						    <div class="classify-line "> </div>
+						</a>
+						<a class="classify " href="#">
+						    我的问答
+						    <div class="classify-line  hide"> </div>
+						</a>
+						<a class="classify " href="#">
+						    我的班级
+						    <div class="classify-line hide"> </div>
+						</a>
+						<a class="classify " href="#">
+						    我的圈子
+						    <div class="classify-line hide"> </div>
+						</a>
+						<!--<a class="classify "href="#">
+						    我的听课码
+						    <div class="classify-line hide"> </div>
+						</a>-->
+						<a class="classify " href="#">
+						    我的订单
+						    <div class="classify-line hide"> </div>
+						</a>
+						<a class="classify "href="#">
+						    好友动态
+						    <div class="classify-line hide"> </div>
+						</a>                        
+                    </div>
+                </div>
+                <div class="self_block_none">
+                	<div id="my_kc" class="">
+						<!--<div class="hp-nav-large">
+					        <ul class="clearfix">
+							    <li class="cur">
+							    	<a href="#">学习记录</a>
+							    </li>
+							    <li >
+							    	<a href="#">已购买</a>
+							    </li>
+							</ul>
+					        <div class="my-course-type">
+					            <a href="/user/" class="cur">录播</a>
+					            <em>|</em>
+					            <a href="/user/live/">直播</a>
+					        </div>
+					
+					        <span class="i-del-course" id="my-course-del"></span>
+					        <input type="hidden" id="isLoadingDel" value="2">
+					        <span class="finished-delete">完成</span>
+					    </div>-->
+					    <div class="course-list" style="padding-left: 15px;box-sizing: border-box;">
+					        <!-- 我的课程 begin -->
+					        <div >
+					            <ul class="clearfix"  style="width: 900px;">
+					                <div id="myCourseListDiv">
+					                    <li>
+											<span class="i-close-del hide" inventory-id="411844"></span>
+											<a href="" target="_blank">
+											    <div class="course-list-img">
+											        <img width="280" height="160" src="http://assets.xiucai.com/assets/uploads/pic/2016/0122/0905843c-d588-649a-915d-978654cd671a.jpg" alt="第1课  建立高效的建表思维">
+											    </div>
+											    <h5>
+											        <span>第1课  建立高效的建表思维</span>
+											    </h5>
+											    <div class="intro clearfix">
+										            <p>打开一张Excel表格，你知道为什么默认出现3张Sheet吗？平时…</p>
+										            <span class="l">1节视频课程</span>
+										            <span class="r">时长0小时10分钟</span>
+										        </div>
+											    <div class="tips tips-schedule clearfix">
+										            <span class="l">初级课程</span>
+										            <em class="l">|</em>
+										            <span class="l">60828人已学</span>
+										            <span class="r">已学<em>0%</em></span>
+										        </div>
+											    <div class="schedule-bar">
+											        <div style="width:0%;"></div>
+											    </div>
+											    <div class="course-free"></div>
+											    <div class="cost">
+								                    <span class="l free">免费</span>
+								                </div>
+											</a>
+										</li>
+										<li>
+										    <span class="i-close-del hide" inventory-id="411846"></span>
+										    <a href="http://www.xiucai.com/course/128/" target="_blank">
+										        <div class="course-list-img">
+										            <img width="280" height="160" src="http://assets.xiucai.com/assets/uploads/pic/2015/0730/aac31864-70e1-334d-669e-99b0bcba24c2.jpg" alt="EXCEL数据透视表与财务数据分类汇总">
+										        </div>
+										        <h5>
+										            <span>EXCEL数据透视表与财务数据分类汇总</span>
+										        </h5>
+										        <div class="intro clearfix">
+									                <p>利用EXCEL的数据透视表功能，可以轻松实现对数据的分类汇总，这比用筛…</p>
+									                <span class="l">7节视频课程</span>
+									                <span class="r">时长2小时4分钟</span>
+									            </div>
+									            <div class="tips tips-schedule clearfix">
+									                <span class="l">高级课程</span>
+									                <em class="l">|</em>
+									                <span class="l">20547人已学</span>
+									                <span class="r">已学<em>0%</em></span>
+									            </div>
+										        <div class="schedule-bar">
+										            <div style="width:0%;"></div>
+										        </div>
+										        <div class="cost"></div>
+										    </a>
+										</li>
+										<li>
+										    <span class="i-close-del hide" inventory-id="411845"></span>
+										    <a href="http://www.xiucai.com/course/147/" target="_blank">
+										        <div class="course-list-img">
+										            <img width="280" height="160" src="http://assets.xiucai.com/assets/uploads/pic/2015/0730/2b642fde-a8b6-f65b-0822-be1c8ee601a7.jpg" alt="EXCEL高级财务函数的功能&amp;应用">
+										        </div>
+										        <h5>
+										            <span>EXCEL高级财务函数的功能&amp;应用</span>
+										        </h5>
+									            <div class="intro clearfix">
+									                <p>财务人员需要每天面对大量数据和信息，EXCEL作为帮助财务人员进行数据…</p>
+									                <span class="l">6节视频课程</span>
+									                <span class="r">时长2小时25分钟</span>
+									            </div>
+									            <div class="tips tips-schedule clearfix">
+									                <span class="l">高级课程</span>
+									                <em class="l">|</em>
+									                <span class="l">38677人已学</span>
+									                <span class="r">已学<em>0%</em></span>
+									            </div>
+										        <div class="schedule-bar">
+										            <div style="width:0%;"></div>
+										        </div>
+										        <div class="cost"></div>
+										    </a>
+										</li>								                               
+					                </div>
+					                <li class="none-dynamic">
+										<a href="course.html" target="_blank">
+										    <div class="course-list-img">
+										        <img width="280" height="160" src="__ROOT__/Apps/Home/View/default/img/self_/add-class.jpg" />
+										    </div>
+										    <div class="add-more">添加更多课程</div>
+										</a>
+									</li>                             
+					            </ul>
+					        </div>
+					        <!-- 我的课程 end -->
+					        <!--没有内容的时候 start  如果数据为0条则显示此处-->
+					        <div class="no-class hide">
+                                <img src="__ROOT__/Apps/Home/View/default/img/self_/null.png" height="170" width="500">
+                                <p>啊喔！我没有看到任何内容，<a href="/live/" target="_blank" class="link-text">快去选课</a></p>
+                            </div>
+					        <!--没有内容的时候end-->
+					    </div> 
+					</div>
+					<div id="my_wd" class="hide">
+						<!-- 我的问答 begin -->
+						
+						 <div class="my-qa-list">
+							<div class="null">
+					            <h5>您还没有提过任何问题</h5>
+					            <h3>导师问答，用专业态度，为您解惑</h3>
+					            <div class="quan-block">
+					                <div class="slider-three">
+					                    <div class="slider-show">
+					                        <ul>
+					                            <li>
+					                                <div class="relative">
+					                                    <a href="javascript:;" class="globe-btn50 globe-btn50-nobg questioning" tutor-id="1013">向Ta提问</a>
+					                                    <a href="turtor_info.html" class="block-head avatar-80" target="_blank">
+					                                        <img src="__ROOT__/Apps/Home/View/default/img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" alt="">
+					                                        <em>
+					                                        	<img src="__ROOT__/Apps/Home/View/default/img/tag-V.png-v=1.10.1.png" alt="" title="认证导师" />
+					                                        </em>
+					                                    </a>
+					                                    <p>
+					                                    	<a href="turtor_info.html" target="_blank">李燕翔</a>
+					                                    </p>
+					                                    <p>专业服务/教育/培训</p>
+					                                    <!-- 限制三条 -->
+					                                    <p class="specializes">
+					                                        <span><em></em><i>成本管理</i></span>                                                                                                            
+					                                        <span><em></em><i>绩效管理</i></span>                                                                                                            <span><em></em><i>财务分析</i></span>                                                                                                                                                                                                               
+					                                    </p>
+					                                </div>
+					                            </li>
+					                            <li>
+					                                <div class="relative">
+					                                    <a href="javascript:;" class="globe-btn50 globe-btn50-nobg questioning" tutor-id="1033">向Ta提问</a>
+					                                    <a href="turtor_info.html" class="block-head avatar-80" target="_blank">
+					                                        <img src="__ROOT__/Apps/Home/View/default/img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" alt="">
+					                                        <em>
+					                                        	<img src="__ROOT__/Apps/Home/View/default/img/tag-V.png-v=1.10.1.png" alt="" title="认证导师" />
+					                                        </em>
+					                                    </a>
+					                                    <p><a href="turtor_info.html" target="_blank">马强</a></p>
+					                                    <p>专业服务/教育/培训</p>
+					                                    <!-- 限制三条 -->
+					                                    <p class="specializes">
+					                                        <span><em></em><i>会计处理</i></span>    
+					                                        <span><em></em><i>税会差异</i></span>  
+					                                        <span><em></em><i>税务筹划</i></span>  
+					                                    </p>
+					                                </div>
+					                            </li>
+					                            <li>
+					                                <div class="relative">
+					                                    <a href="javascript:;" class="globe-btn50 globe-btn50-nobg questioning" tutor-id="1005">向Ta提问</a>
+					                                    <a href="turtor_info.html"class="block-head avatar-80" target="_blank">
+					                                        <img src="__ROOT__/Apps/Home/View/default/img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" alt="">
+					                                        <em>
+					                                        	<img src="__ROOT__/Apps/Home/View/default/img/tag-V.png-v=1.10.1.png" alt="" title="认证导师" />
+					                                        </em>
+					                                    </a>
+					                                    <p><a href="turtor_info.html" target="_blank">郭衍亮</a></p>
+					                                    <p>计算机/互联网/通信/电子</p>
+					                                    <!-- 限制三条 -->
+					                                    <p class="specializes">
+					                                        <span><em></em><i>Excel</i></span>   
+					                                    </p>
+					                                </div>
+					                            </li>
+					
+					                        </ul>
+					                        <div class="clear"></div>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>                                          
+																		
+					    <!-- 我的问答 end -->                  
+					</div>
+            		<div class="my-class null hide">
+                        <div class="icon"></div>
+                        <p>您还没有报名参与任何班级学习</p>
+                    </div>
+                	<div class="hide">
+                		<div class="hp-nav-large">
+						    <ul class="clearfix wode_quanzi">
+						        <li class="cur">
+						        	<a href="javascript:;">我的圈子动态</a>
+						        </li>
+						        <li >
+						        	<a href="#">我加入的圈子</a>
+						        </li>
+						        <li >
+						        	<a href="#">我的发帖</a>
+						        </li>
+						        <li >
+						        	<a href="#">我的回复</a>
+						        </li>
+						        <li >
+						        	<a href="#">回复我的</a>
+						        </li>
+						        <li >
+						        	<a href="#">我的收藏</a>
+						        </li>
+						    </ul>
+						</div>
+						
+						<div class="quan-post">
+	                        <div class="no-class wodequanzi_content" style="margin-top: 0;">
+	                        	<div class="">
+	                        		<!--<img src="__ROOT__/Apps/Home/View/default/img/null.png" height="170" width="500" style="margin-top:30px;"/>
+							    	<p>啊喔！我没有看到任何内容</p>-->
+							    	<div class="quan-post-item clearfix iten_quan" style="padding: 10px 0;margin-top: 0;">
+								        <div class="fl" style="float: left;">
+								            <a href="http://www.xiucai.com/user/318438/" class="block-head common-avatar" target="_blank">
+								            	<img src="http://assets.xiucai.com/assets/__ROOT__/Apps/Home/View/default/img/caiduoduo.png?v=1.10.5" height="65" width="65">
+								            </a>
+								        </div>
+								        <div class="r-content" style="float: left;text-align: left;height: auto;line-height: normal;">
+								            <a href="#e" class="quan-post-title" target="_blank">
+								                <!-- 标题30个字符 -->
+								                <h2>5343543</h2>
+								            </a>
+								            <span class="quan-post-tag"></span>
+								            <p class="quan-post-detail" style="padding: 0;">5635353</p>
+								            <div class="quan-post-info">
+								                <div class="">
+								                    <span class="toppic-type">税务圈</span>
+								                    <span class="devide-line"></span>                         
+								                    <span class="post-data">阅读<i>3</i></span>
+								                    <span class="post-data">回复<i>0</i></span>
+								                    <span class="devide-line"></span>                                          
+								                    <a href="#e" class="user" target="_blank">到汉多少次了</a>
+								                    <span class="post-time">于5分钟前</span>
+								                    <span class="post-type">发布</span>
+								                </div>
+								            </div>
+								        </div>
+								    </div>
+								    <div class="quan-post-item clearfix iten_quan" style="padding: 10px 0;margin-top: 0;">
+								        <div class="fl" style="float: left;">
+								            <a href="#e" class="block-head common-avatar" target="_blank">
+								            	<img src="__ROOT__/Apps/Home/View/default/img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" height="65" width="65">
+								            </a>								            
+								        </div>
+								        <div class="r-content" style="float: left;text-align: left;height: auto;line-height: normal;">
+								            <a href="#e" class="quan-post-title" target="_blank">
+								                <!-- 标题30个字符 -->
+								                <h2>5343543</h2>
+								            </a>
+								            <span class="quan-post-tag"></span>
+								            <p class="quan-post-detail" style="padding: 0;">
+								            	秀财说的直播课一直是秀财网的大热门，包括po主在内很多小伙伴都很喜欢，听大牛分享经验，
+								            	答疑解惑，每周二、四的晚上（有时有调整），如果没有别的事，都会去秀财说听一听。当然，
+								            	因为直播的原因，有时正好有事或者加班就错过了，还好秀财网事后会作为会员课重新上传。另外，
+								            	还有精华笔记的整理，几乎涵盖了课程的主要内容，一遍听课一遍看笔记，真的非常充实。【如何看？】
+								            	秀财说的直播课回看是会员权益，开通会员就能观看咯~【加入会员】咨询客服QQ:2852263842电话:021-51855362
+								            	查看会员权益下面是我整理的已有笔记和课程，会定期更新：第63期《关于股权激励和技术出资的重大优惠政策解析》
+								            	笔记回看第62期《工作效率与绩效的双重提升——财务精益管理》笔记回看第61期《困境中扭亏为盈——看财务分析如何助
+								            	力决策》笔记回看第60期《华为如何做财务集中管理》笔记回看第59期《财务人跨界必须掌握的思路与技巧》笔记回看
+								            	第58期《中小企业财务经理如何定位自己的角色》笔记回看第57期《小安谈初心：从500强财务总监到明星讲师》笔记回
+								            	看第56期《案例分析——制造型企业废料内审实务攻略》笔记回看第55期《从”削减”的角度看销售费用的管控》笔记回看第
+								            	54期《财务总监自述：我如何带领财务部门向管理会计转型》笔记回看第53期《团队管理之从面试环节看如何“选”人》笔
+								            	记回看第52期《财务团队如何创建学习型组织》笔记回看第51期《构建结构性思维，像咨询师一样的去思考与表达》笔记
+								            	回看第50期《如何利用预算工具，将年净利润从7千万升到2亿？》笔记回看第49期《财务人员说“不”的艺术》笔记回看第4
+								            	8期《从“合伙舞弊”看企业内控管理》笔记回看第47期《财务如何挖掘数据智慧（下）》笔记回看第46期《怎样对海外子公
+								            	司实施内控？——内控经验分享》笔记回看第45期《怎样降低坏账损失？——教你如何开展应收账款保理》笔记回看第44期《小
+								            	企业赊销管理实战》笔记回看第43期《财务如何挖掘数据智慧（上）》笔记回看第42期《牛人自述：一个Excel达人是怎样炼            	
+								            	成的》笔记回看第41期《阿米巴管理的新探究（上）:微型利润中心的观点》笔记回看第40期《客户审核中的常见问题及解决方
+								            	案》笔记回看第9期《财务人员的职业发展与晋升智慧》笔记回看第8期《财会职场白金岗位探秘：FP&amp;amp;A岗位》笔记回看
+								            	第7期《财务人员应对审计时的心态、立场》笔记回看第6期《研发费用加计扣除》笔记回看第5期《财务职场情商修炼与跨部门
+								            	矛盾》笔记回看第4期《看《琅琊榜》学年终绩效反馈》笔记回看第3期《福利费涉税宝典之——年终福利》笔记回看第2期《福利
+								            	费涉税宝典之——衣食住行》笔记回看第1期《初级财务经理如何站稳脚跟》笔记回看还想要什么资源的，可以在下面回复哈~~
+								           
+								            </p>
+								            <div class="quan-post-info">
+								                <div class="">
+								                    <span class="toppic-type">税务圈</span>
+								                    <span class="devide-line"></span>                         
+								                    <span class="post-data">阅读<i>3</i></span>
+								                    <span class="post-data">回复<i>0</i></span>
+								                    <span class="devide-line"></span>                                          
+								                    <a href="#e" class="user" target="_blank">到汉多少次了</a>
+								                    <span class="post-time">于5分钟前</span>
+								                    <span class="post-type">发布</span>
+								                </div>
+								            </div>
+								        </div>
+								    </div>
+	                        	</div>	
+	                        	<div class="hide">
+	                        		<ul class="quan-name clearfix">
+                                        <li>
+	                                        <a href="http://club.xiucai.com/quan/sw/" target="_blank">
+	                                            <span class="iconfont icon-tax_planning" ></span>
+	                                            <div class="quan-intro">
+	                                                <p>税务圈</p>
+	                                            </div>
+	                                        </a>
+	                                    </li>
+                                        <li>
+	                                        <a href="http://club.xiucai.com/quan/cw/" target="_blank">
+	                                            <span class="iconfont icon-accounting" ></span>
+	                                            <div class="quan-intro">
+	                                                <p>财务圈</p>
+	                                            </div>
+	                                        </a>
+	                                    </li>
+                                    </ul>
+	                        	</div>	
+	                        	<div class="hide">
+	                        		<!--<img src="__ROOT__/Apps/Home/View/default/img/null.png" height="170" width="500"/>
+							    	<p>啊喔！我没有看到任何内容3</p>-->
+							    	<div class="quan-post-item clearfix iten_quan" style="padding: 10px 0;margin-top: 0;">
+								        <div class="fl" style="float: left;">
+								            <a href="http://www.xiucai.com/user/318438/" class="block-head common-avatar" target="_blank">
+								            	<img src="http://assets.xiucai.com/assets/__ROOT__/Apps/Home/View/default/img/caiduoduo.png?v=1.10.5" height="65" width="65">
+								            </a>
+								        </div>
+								        <div class="r-content" style="float: left;text-align: left;height: auto;line-height: normal;">
+								            <a href="#e" class="quan-post-title" target="_blank">
+								                <!-- 标题30个字符 -->
+								                <h2>5343543</h2>
+								            </a>
+								            <span class="quan-post-tag"></span>
+								            <p class="quan-post-detail" style="padding: 0;">5635353</p>
+								            <div class="quan-post-info">
+								                <div class="">
+								                    <span class="toppic-type">税务圈</span>
+								                    <span class="devide-line"></span>                         
+								                    <span class="post-data">阅读<i>3</i></span>
+								                    <span class="post-data">回复<i>0</i></span>
+								                    <span class="devide-line"></span>                                          
+								                    <a href="#e" class="user" target="_blank">到汉多少次了</a>
+								                    <span class="post-time">于5分钟前</span>
+								                    <span class="post-type">发布</span>
+								                </div>
+								            </div>
+								        </div>
+								    </div>
+								    <div class="quan-post-item clearfix iten_quan" style="padding: 10px 0;margin-top: 0;">
+								        <div class="fl" style="float: left;">
+								            <a href="http://www.xiucai.com/user/318438/" class="block-head common-avatar" target="_blank">
+								            	<img src="http://assets.xiucai.com/assets/__ROOT__/Apps/Home/View/default/img/caiduoduo.png?v=1.10.5" height="65" width="65">
+								            </a>
+								        </div>
+								        <div class="r-content" style="float: left;text-align: left;height: auto;line-height: normal;">
+								            <a href="#e" class="quan-post-title" target="_blank">
+								                <!-- 标题30个字符 -->
+								                <h2>5343543</h2>
+								            </a>
+								            <span class="quan-post-tag"></span>
+								            <p class="quan-post-detail" style="padding: 0;">5635353</p>
+								            <div class="quan-post-info">
+								                <div class="">
+								                    <span class="toppic-type">税务圈</span>
+								                    <span class="devide-line"></span>                         
+								                    <span class="post-data">阅读<i>3</i></span>
+								                    <span class="post-data">回复<i>0</i></span>
+								                    <span class="devide-line"></span>                                          
+								                    <a href="#e" class="user" target="_blank">到汉多少次了</a>
+								                    <span class="post-time">于5分钟前</span>
+								                    <span class="post-type">发布</span>
+								                </div>
+								            </div>
+								        </div>
+								    </div>
+	                        	
+	                        	</div>	
+	                        	<div class="hide">
+	                        		<!--<img src="__ROOT__/Apps/Home/View/default/img/null.png" height="170" width="500"/>
+							    	<p>啊喔！我没有看到任何内容4</p>-->
+							    	 <div class="quan-post-item quan-my-reply clearfix" style="text-align: left;padding: 10px 0;">
+						                <div class="hp-col3">
+								            <div class="hp-col3-row1">
+								                <span class="reply-txt">回复</span>
+								                <a href="http://www.xiucai.com/user/318438/" target="_blank">到汉多少次了</a>：111     
+								            </div>
+								            <div class="hp-col3-row2">
+								                <span class="fl-replyed">
+								                	来自：
+								                	<a href="http://www.xiucai.com/user/thread/gofloor/?threadId=1476342326&amp;replyId=129397" target="_blank">666</a>
+								                </span>								                
+								                <span class="date">2016-10-13 10:03:27</span>
+								            </div>
+								        </div>
+						    		</div>
+						    		<div class="quan-post-item quan-my-reply clearfix" style="text-align: left;padding: 10px 0;">
+						                <div class="hp-col3">
+								            <div class="hp-col3-row1">
+								                <span class="reply-txt">回复</span>
+								                <a href="http://www.xiucai.com/user/318438/" target="_blank">到汉多少次了</a>：111     
+								            </div>
+								            <div class="hp-col3-row2">
+								                <span class="fl-replyed">
+								                	来自：
+								                	<a href="http://www.xiucai.com/user/thread/gofloor/?threadId=1476342326&amp;replyId=129397" target="_blank">666</a>
+								                </span>								                
+								                <span class="date">2016-10-13 10:03:27</span>
+								            </div>
+								        </div>
+						    		</div>
+	                        	</div>	
+	                        	<div class="hide">
+	                        		<!--<img src="__ROOT__/Apps/Home/View/default/img/null.png" height="170" width="500"/>
+							    	<p>啊喔！我没有看到任何内容5</p>-->
+							    	 <div class="quan-post-item clearfix" style="padding: 10px 0;margin-top: 0;">
+									    <div class="fl" style="float: left;">
+									        <a href="#e" class="block-head common-avatar" target="_blank">
+									        	<img src="http://assets.xiucai.com/assets/__ROOT__/Apps/Home/View/default/img/caiduoduo.png?v=1.10.5" height="65" width="65">
+									        </a>
+									    </div>
+									    <div class="r-content hp-col3" style="float: left;text-align: left;height: auto;line-height: normal;">
+									        <p class="hp-col3-row1" style="padding: 10px 0;">
+									            <a href="http://www.xiucai.com/user/318438/" target="_blank">到汉多少次了</a>
+									            <span class="reply-me">回复我：</span>111
+									        </p>
+									        <p class="hp-col3-row2" style="text-align: left;padding: 10px 0;margin-top:0;">
+									            <span class="fl-replyed">回复我的帖子：
+									            	<a href="http://www.xiucai.com/user/thread/gofloor/?threadId=1476342326&amp;replyId=129397" target="_blank">666</a>
+									            </span>									            
+									            <span class="date">2016-10-13 10:03:27</span>
+									        </p>									
+									    </div>
+									</div>
+	                        	</div>	
+	                        	<div class="hide">
+	                        		<!--<img src="__ROOT__/Apps/Home/View/default/img/null.png" height="170" width="500"/>
+							    	<p>啊喔！我没有看到任何内容6</p>-->
+							    	<div class="quan-post-item clearfix iten_quan" style="padding: 10px 0;margin-top: 0;">
+								        <div class="fl" style="float: left;">
+								            <!--<a href="http://www.xiucai.com/user/318438/" class="block-head common-avatar" target="_blank">
+								            	<img src="http://assets.xiucai.com/assets/__ROOT__/Apps/Home/View/default/img/caiduoduo.png?v=1.10.5" height="65" width="65">
+								            </a>-->
+								            <div class="f1"  style="float: left;">
+										        <img width="140" height="80" src="http://assets.xiucai.com/assets/uploads/pic/2016/0122/0905843c-d588-649a-915d-978654cd671a.jpg" alt="第1课  建立高效的建表思维">
+										    </div>
+								        </div>
+								        <div class="r-content" style="float: left;text-align: left;height: auto;width: auto;line-height: normal;">
+								            <a href="#e" class="quan-post-title" target="_blank">
+								                <!-- 标题30个字符 -->
+								                <h2>存货跌价准备实战宝典</h2>
+								            </a>
+								            <span class="quan-post-tag"></span>
+								            <p class="quan-post-detail" style="padding: 0;font-size: 13px;padding-top: 30px;">
+								            	参会价格：2800元/人   VIP会员参会价格：2100元/人
+								            </p>							            
+								        </div>
+								        <div class="" style="float: right;">
+								        	<input type="button" value="立即报名" name="" style="background: #ff9a41;border-style: none;display: inline-block;margin: 20px 0 0 10px;font-size: 13px;padding:5px 10px;box-sizing: border-box;border-radius: 4px;color: #fff;" />
+								        	<input type="button" value="帮别人报名" name="" style="background: #ff9a41;border-style: none;display: inline-block;margin: 20px 0 0 10px;font-size: 13px;padding:5px 10px;box-sizing: border-box;border-radius: 4px;color: #fff;" />
+								        
+								        </div>
+								    </div>
+								    <div class="quan-post-item clearfix iten_quan" style="padding: 10px 0;margin-top: 0;">
+								        <div class="fl" style="float: left;">
+								            <div class="f1"  style="float: left;">
+										        <img width="140" height="80" src="http://assets.xiucai.com/assets/uploads/pic/2016/0122/0905843c-d588-649a-915d-978654cd671a.jpg" alt="第1课  建立高效的建表思维">
+										    </div>
+								        </div>
+								        <div class="r-content" style="float: left;text-align: left;height: auto;width: auto;line-height: normal;">
+								            <a href="#e" class="quan-post-title" target="_blank">
+								                <!-- 标题30个字符 -->
+								                <h2>存货跌价准备实战宝典</h2>
+								            </a>
+								            <span class="quan-post-tag"></span>
+								            <p class="quan-post-detail" style="padding: 0;font-size: 13px;padding-top: 30px;">
+								            	参会价格：2800元/人   VIP会员参会价格：2100元/人
+								            </p>							            
+								        </div>
+								        <div class="" style="float: right;">
+								        	<input type="button" value="立即报名" name="" style="background: #ff9a41;border-style: none;display: inline-block;margin: 20px 0 0 10px;font-size: 13px;padding:5px 10px;box-sizing: border-box;border-radius: 4px;color: #fff;" />
+								        	<input type="button" value="帮别人报名" name="" style="background: #ff9a41;border-style: none;display: inline-block;margin: 20px 0 0 10px;font-size: 13px;padding:5px 10px;box-sizing: border-box;border-radius: 4px;color: #fff;" />
+								        
+								        </div>
+								    </div>
+							    </div>	
+							</div>    
+						</div>
+                	</div>
+                	<div class="hide">
+                		<!--<div class="hp-nav-large wodedingdan">
+                            <ul class="clearfix">
+                                <li class="cur">
+                                	<a href="#">课程订单</a>
+                                </li>
+                                <li class="">
+                                	<a href="#">会员订单</a>
+                                </li>
+                            </ul>
+                        </div>-->
+                          <!-- 课程订单 订单列表 begin -->
+                        <div class="my-order wodedingdan_content">
+                            <form id="searchForm" action="" method="get" name="searchForm">
+                                <table class="order-tablet operate-tablet">
+                                    <colgroup>
+                                        <col width="15%">
+                                        <col width="44%">
+                                        <col width="13%">
+                                        <col width="13%">
+                                        <col width="15%">
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <td class="align-l">订单信息</td>
+                                        <td class="col-l-p">&nbsp;</td>
+                                        <td>订单金额（元）</td>
+                                        <td>操作</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                            <table class="order-tablet tablet-b order-pr0">
+                                <colgroup>
+                                    <col width="15%">
+                                    <col width="44%">
+                                    <col width="13%">
+                                    <col width="13%">
+                                    <col width="15%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                		<td colspan="5" class="align-l col-bg">
+                                            <span>
+                                            	下单时间：<em>2016-10-10 10:41:38</em>
+                                            </span>
+                                            <span>
+                                            	订单编号：<em>1476078729</em>
+                                            </span>
+                                            <span>
+                                            	课程数：<em>1门</em>                                                                                                       
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-l">
+                                        	<a href="/course/248/" target="_blank">
+                                        		<img src="__ROOT__/Apps/Home/View/default/img/5f14963c-b049-2b89-e5ce-202ee850c666.jpg" height="68" width="120" alt=""/>
+                                        	</a>
+                                        </td>
+                                        <td class="align-l valign-t col-l-p pl-20">
+                                            <a href="/course/248/" class="c-title" target="_blank">
+                                            	企业会计准则解释第7号（三）
+                                            </a>
+                                        </td>
+                                        <td rowspan="1" class="col-font"><b>￥49.00</b></td>
+                                        <td rowspan="1" id="order-status-1476078729">
+                                            <p class="a-gap">
+                                                <span class="pay-txt">
+                                                                                                                 等待付款                                                                                                                                                                                      
+                                                </span>
+                                            </p>
+                                            <p class="a-gap">
+                                            	<a href="#e" class="order-detail">订单详情</a>
+                                            </p>
+                                        </td>
+                                        <td rowspan="1" class="l-td-p" data-order-id="1476078729" id="order-option-1476078729">
+                                            <p><span class="pay-limit">剩余1小时16分</span></p>
+                                            <a href="tijiaodd.html" class="globe-btn50 globe-btn50-ss" target="_blank">立即支付</a>
+                                            <p class="cancel-order course-order">
+                                                <a href="javascript:;" class="order-status">取消订单</a>
+                                            </p>                                                                                                                                                                  
+                                        </td>
+                                    </tr>                                                                                                                                  
+                                </tbody>
+                            </table>                           
+                        </div>
+                	</div>
+                	<div class="hide">
+                		<div class="quan-post-item clearfix iten_quan" style="padding: 10px;margin-top: 0;">
+					        <div class="fl" style="float: left;">
+					            <a href="#e" class="block-head common-avatar" target="_blank">
+					            	<img src="__ROOT__/Apps/Home/View/default/img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" height="65" width="65">
+					            </a>								            
+					        </div>
+					        <div class="r-content" style="float: left;text-align: left;height: auto;line-height: normal;">
+					            <a href="#e" class="quan-post-title" target="_blank">
+					                <!-- 标题30个字符 -->
+					                <h2>5343543</h2>
+					            </a>
+					            <span class="quan-post-tag"></span>
+					            <p class="quan-post-detail" style="padding: 0;">
+					            	秀财说的直播课一直是秀财网的大热门，包括po主在内很多小伙伴都很喜欢，听大牛分享经验，
+					            	答疑解惑，每周二、四的晚上（有时有调整），如果没有别的事，都会去秀财说听一听。当然，
+					            	因为直播的原因，有时正好有事或者加班就错过了，还好秀财网事后会作为会员课重新上传。另外，
+					           
+					            </p>
+					            <div class="quan-post-info">
+					                <div class="">
+					                    <span class="toppic-type">税务圈</span>
+					                    <span class="devide-line"></span>                         
+					                    <span class="post-data">阅读<i>3</i></span>
+					                    <span class="post-data">回复<i>0</i></span>
+					                    <span class="devide-line"></span>                                          
+					                    <a href="#e" class="user" target="_blank">到汉多少次了</a>
+					                    <span class="post-time">于5分钟前</span>
+					                    <span class="post-type">发布</span>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+                	
+					    <div class="quan-post-item clearfix iten_quan" style="padding: 10px;margin-top: 0;">
+					        <div class="fl" style="float: left;">
+					            <a href="#e" class="block-head common-avatar" target="_blank">
+					            	<img src="__ROOT__/Apps/Home/View/default/img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" height="65" width="65">
+					            </a>								            
+					        </div>
+					        <div class="r-content" style="float: left;text-align: left;height: auto;line-height: normal;">
+					            <a href="#e" class="quan-post-title" target="_blank">
+					                <!-- 标题30个字符 -->
+					                <h2>5343543</h2>
+					            </a>
+					            <span class="quan-post-tag"></span>
+					            <p class="quan-post-detail" style="padding: 0;">
+					            	秀财说的直播课一直是秀财网的大热门，包括po主在内很多小伙伴都很喜欢，听大牛分享经验，
+					            	答疑解惑，每周二、四的晚上（有时有调整），如果没有别的事，都会去秀财说听一听。当然，
+					            	因为直播的原因，有时正好有事或者加班就错过了，还好秀财网事后会作为会员课重新上传。另外，
+					            	还有精华笔记的整理，几乎涵盖了课程的主要内容，一遍听课一遍看笔记，真的非常充实。【如何看？】
+					            	秀财说的直播课回看是会员权益，开通会员就能观看咯~【加入会员】咨询客服QQ:2852263842电话:021-51855362
+					            	查看会员权益下面是我整理的已有笔记和课程，会定期更新：第63期《关于股权激励和技术出资的重大优惠政策解析》
+					            	笔记回看第62期《工作效率与绩效的双重提升——财务精益管理》笔记回看第61期《困境中扭亏为盈——看财务分析如何助
+					            	力决策》笔记回看第60期《华为如何做财务集中管理》笔记回看第59期《财务人跨界必须掌握的思路与技巧》笔记回看
+					            	第58期《中小企业财务经理如何定位自己的角色》笔记回看第57期《小安谈初心：从500强财务总监到明星讲师》笔记回
+					            	看第56期《案例分析——制造型企业废料内审实务攻略》笔记回看第55期《从”削减”的角度看销售费用的管控》笔记回看第
+					            	54期《财务总监自述：我如何带领财务部门向管理会计转型》笔记回看第53期《团队管理之从面试环节看如何“选”人》笔
+					            	记回看第52期《财务团队如何创建学习型组织》笔记回看第51期《构建结构性思维，像咨询师一样的去思考与表达》笔记
+					            	回看第50期《如何利用预算工具，将年净利润从7千万升到2亿？》笔记回看第49期《财务人员说“不”的艺术》笔记回看第4
+					            	8期《从“合伙舞弊”看企业内控管理》笔记回看第47期《财务如何挖掘数据智慧（下）》笔记回看第46期《怎样对海外子公
+					            	司实施内控？——内控经验分享》笔记回看第45期《怎样降低坏账损失？——教你如何开展应收账款保理》笔记回看第44期《小
+					            	企业赊销管理实战》笔记回看第43期《财务如何挖掘数据智慧（上）》笔记回看第42期《牛人自述：一个Excel达人是怎样炼            	
+					            	成的》笔记回看第41期《阿米巴管理的新探究（上）:微型利润中心的观点》笔记回看第40期《客户审核中的常见问题及解决方
+					            	案》笔记回看第9期《财务人员的职业发展与晋升智慧》笔记回看第8期《财会职场白金岗位探秘：FP&amp;amp;A岗位》笔记回看
+					            	第7期《财务人员应对审计时的心态、立场》笔记回看第6期《研发费用加计扣除》笔记回看第5期《财务职场情商修炼与跨部门
+					            	矛盾》笔记回看第4期《看《琅琊榜》学年终绩效反馈》笔记回看第3期《福利费涉税宝典之——年终福利》笔记回看第2期《福利
+					            	费涉税宝典之——衣食住行》笔记回看第1期《初级财务经理如何站稳脚跟》笔记回看还想要什么资源的，可以在下面回复哈~~
+					           
+					            </p>
+					            <div class="quan-post-info">
+					                <div class="">
+					                    <span class="toppic-type">税务圈</span>
+					                    <span class="devide-line"></span>                         
+					                    <span class="post-data">阅读<i>3</i></span>
+					                    <span class="post-data">回复<i>0</i></span>
+					                    <span class="devide-line"></span>                                          
+					                    <a href="#e" class="user" target="_blank">到汉多少次了</a>
+					                    <span class="post-time">于5分钟前</span>
+					                    <span class="post-type">发布</span>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+                	
+                	</div>
+           		</div>
+				
+            </div>
+		</div>
+	</div>
+    <script language="JavaScript" type="text/javascript">
+	    var session_name = "xiucai";
+	    var session_id = "5e9dqqtnc3vgojr30sdqdsshj0";
+	    var uploadUrl = "/assets/uploadify/upload.php?member_id=318438";
+	</script>
+<div class="hp-side-bar">
+    <div class="quan-block quan-hp-block">
+        <div class="edit-info"><a href="" class="globe-btn50">账号设置</a></div>
+        <form id="member_editor_form" name="member_editor" action="" enctype="multipart/form-data" method="post" onsubmit="return true;">
+        <a href="javascript:;" class="user-head">
+            <span class="head90-mask"></span>
+            <img id="avatar" src="/Apps/Home/View/default/img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" height="90" width="90">
+            <div class="head-mask head-mask90"></div>
+                        <div id="avatarProfileUpload"></div>
+            <input type="hidden" name="avatar" id="head_pic" value="/assets/__ROOT__/Apps/Home/View/default/img/caiduoduo.png"/>
+            <input type="hidden" name="avatar_large" id="head_pic_large" value="/assets/__ROOT__/Apps/Home/View/default/img/caiduoduo.png"/>
+          <!--   <input type="hidden" id="img" name="img" />
+            <input type="hidden" id="x" name="x" value="0" />
+            <input type="hidden" id="y" name="y" value="0" />
+            <input type="hidden" id="w" name="w" value="200" />
+            <input type="hidden" id="h" name="h" value="200" />
+            <input type="hidden" id="member_id" name="member_id" value="318438" /> -->
+        </a>
+        </form>
+        <div class="hp-user-zone" id="personal-info-div">
+            <p class="user-name">
+                <a href="/vip/" target="_blank" class="vip" title="了解秀财会员"><img src="http://assets.xiucai.com/assets/__ROOT__/Apps/Home/View/default/img/vip.png" width="16" height="12" alt="会员特权" border="0"></a>
+                <strong id="nickname-span">{$WST_USER['loginName']}</strong>
+            </p>
+            <!-- 用户等级展示 -->
+            <div class="user-level-display border-b-e6 clearfix">
+                <p class="clearfix">
+                    <a href="/help/6/#q27" target="_blank" title="了解秀财圈币" class="fl">
+                        <span class="tag-qb"><img src="http://assets.xiucai.com/assets/__ROOT__/Apps/Home/View/default/img/quan/qb.png?v=1.10.5" alt="圈币" height="14" width="19">5</span>
+                    </a>
+                    <span class="fr r-wrap"><a href="/help/6/#q28" target="_blank" class="" title="了解经验值等级">
+					<if condition='$WST_USER["userRank"]["rankName"] neq ""'>({$WST_USER["userRank"]['rankName']})
+                    <span class="tag-level tag-level-LV1">
+                    <i>LV1</i>
+					</span>
+					</a>
+					</if>
+					</span>
+                </p>
+                            </div>
+            <div class="hp-user-info">
+                <div class="info-item">
+                    <!-- 显示15个字 -->
+                    <i class="company"></i>
+                    <span id="company-span">把几个途径阳光</span>
+                </div>
+                <div class="info-item">
+                    <i class="industry"></i><span id="bussiness_name-span">制药/医疗</span>
+                </div>
+                <div class="info-item">
+                    <i class="position"></i><span id="position-span">税务专员</span>
+                </div>
+          </div>
+        </div>
+
+        <!-- 点击编辑显示 默认hide -->
+        <div class="hp-user-zone hide" id="personal-info-edit">
+
+        </div>
+
+        <ul class="hp-user-show clearfix">
+            <li>课程：3</li>
+            <li>发帖：0</li>
+            <li>收藏：0</li>
+            <li>回帖：0</li>
+            <li>关注：0</li>
+            <li>粉丝：0</li>
+        </ul>
+    </div>
+            <div class="quan-block quan-title-block">
+                <h2 class="relative"><em></em>获取圈币<a href="http://www.xiucai.com/task/" target="_blank" class="link-more">查看更多 &raquo;</a></h2>
+                <div class="hp-task-show">
+                    <p class="task-undo clearfix">
+                        <span class="fl"><strong>绑定邮箱</strong></span>
+                        <span class="fr">奖：<span class="dark-red">1圈币</span></span>
+                    </p>
+                    <p class="task-describe">任务描述：进入安全中心绑定邮箱账号，并且登录邮箱激活<a href="http://www.xiucai.com/task/" target="_blank" class="link-text">去做任务 &raquo;</a></p>
+                </div>
+            </div>
+            <div class="quan-block quan-title-block">
+        		<h2 class="relative"><em></em>近期直播<a href="" target="_blank" class="link-more">查看更多 &raquo;</a></h2>
+        		<div class="live-slider">
+		            <div class="bd">
+		                <ul class="clearfix">
+		                    <li>
+		                        <a href="/live/655/" target="_blank">
+		                            <img src="http://assets.xiucai.com/assets/uploads/pic/2016/0111/e58b3252-ac54-6439-3bfe-457e7b4431b2.jpg" width="224" height="128">
+		                            <div class="quan-course">
+		                                <p class="quan-course-title">非居民企业税收政策分析之投资所得处理</p>
+		                                <p class="quan-course-date">10月10日<span>14:00~15:00</span></p>
+		                            </div>
+		                        </a>
+		                    </li>
+		                    <li>
+		                        <a href="/live/660/" target="_blank">
+		                            <img src="http://assets.xiucai.com/assets/uploads/pic/2016/0928/9dfa803c-cc32-5cd1-1d02-42d77f32ebc1.jpg" width="224" height="128">
+		                            <div class="quan-course">
+		                                <p class="quan-course-title">关于股权激励和技术出资的重大优惠政策解析</p>
+		                                <p class="quan-course-date">10月11日<span>14:00~15:00</span></p>
+		                            </div>
+		                        </a>
+		                    </li>
+		                    <li>
+		                        <a href="/live/657/" target="_blank">
+		                            <img src="http://assets.xiucai.com/assets/uploads/pic/2016/0930/12007425-1f59-6501-4048-8061b6ee4154.jpg" width="224" height="128">
+		                            <div class="quan-course">
+		                                <p class="quan-course-title">财税战略之如何建立防控风险的税务管理体系</p>
+		                                <p class="quan-course-date">10月12日<span>14:00~15:00</span></p>
+		                            </div>
+		                        </a>
+		                    </li>
+		                </ul>
+		            </div>
+		            <div class="hd">
+		                <ul>
+		                    <li></li>
+		                    <li></li>
+		                    <li></li>
+		                </ul>
+		            </div>
+	        	</div>
+    		</div>
+    		<div class="quan-block quan-title-block">
+                <h2 class="relative">
+                	<em></em>最近访客
+                </h2>
+                <div class="hp-task-show">
+                	<div class="self_fangke">
+                		<img src="__ROOT__/Apps/Home/View/default/img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" />
+                	</div>
+                </div>
+            </div>
+        </div>
+<!--头像弹层-->
+<div class="pop_bg hide" id="pop_bg">
+    <div class="img_bg" style="margin:10px 0 0 10px;">
+        <img id="target" border="0" src=""/>
+    </div>
+    <a href="javascript:;" id="avatar_submit" class="con globe-btn50">确定</a>
+    <a href="javascript:;" class="res globe-btn50 globe-btn50-nobg">取消</a>
+</div><div id="layer_bg" style=" background-color: #666666;"></div>
+    </div>
+    </div>
+    <div class="dialog-board dialog-board-class-code hide" id="vip_out_day" style=" position: fixed;">
+    <div class="dialog-board-bar">
+        <h2>开通课程</h2>
+        <a href="javascript:;" class="close-dialog-board" id="close_vip_out_day"></a>
+    </div>
+    <div class="dialog-board-content">
+        <div class="box-container">
+            <p class="text-c-tips">本课程为会员专享，开通会员即可报名听课</p>
+            <div class="btn-col2 clearfix">
+                <a href="javascript:;" id="view_course" target="_blank" class="fl common-all-btn long-blue-btn">查看课程</a>
+                <a href="http://www.xiucai.com/vip/buy/" target="_blank" class="fr common-all-btn long-blue-btn">开通会员</a>
+            </div>
+        </div>
+    </div>
+</div></div>
+
+  <include file="./Apps/Home/View/default/common_foot.html" />

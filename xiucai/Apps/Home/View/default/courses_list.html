@@ -1,0 +1,255 @@
+
+
+<include file="./Apps/Home/View/default/common_head.html" />
+<script src="__PUBLIC__/js/think.js"></script>
+<div id="main">
+    <div class="course-list-box">
+        <div class="filter-boxs clearfix">
+    		<dl class="orientation"   id="wst-areas">
+		        <dt>类别：</dt>
+		        <dt class="all">
+		        	<a   <if condition="$c1Id eq 0" >     class="check" </if>   data="0"   onClick="queryGoods(this,1);"    >全部</a>
+		        </dt>
+		        <dd>
+		            <ul   >
+					<volist name=":WSTGoodsCats()"  key="k1"   id="vo1"   offset="0"   length="6">
+		                <li>
+							<a          <if condition="$vo1['catId'] eq $c1Id" >  class="check"  style="background:#4196FF;" </if>     data="{$vo1['catId']}"    id="cat_{$vo1['catId']}"  onClick="queryGoods(this,1);"   > {$vo1["catName"]}</a>
+		                 
+		                </li>
+					</volist>	
+						
+		     
+		            </ul>
+		        </dd>
+		    </dl>
+        	<dl class="positions" id="course_profess" >
+		        <dt >专业：</dt>
+		        <dt class="all">
+		        	<a     <if condition="$c2Id eq 0" >     class="check" </if>   data="0"   onClick="queryGoods(this,3);"    >全部</a>
+		        </dt>
+		        <dd class="course_zt"> 
+                   
+				   
+				   
+                    <ul>
+					
+				
+				   
+				     <volist    name="c2cat"   id="vol2">
+				          <li>
+						    
+                        	     <a    <if condition="$vol2['catId']  eq  $c2Id " >  class="check"  style="background:#4196FF;" </if>   data="{$vol2['catId']}"   onClick="queryGoods(this,3);"   > {$vol2["catName"]}</a>
+                        </li>
+				   
+				   </volist>
+			
+                     
+                    </ul>
+        		</dd>
+    		</dl>
+	        <dl  id="course_price" >
+		        <dt>价格：</dt>
+		        <dt class="all">
+		        	<a href="#"  <if condition="$is_free eq 0" >     class="check" </if>   data="0"   onClick="queryGoods(this,4);"  >全部</a>
+		        </dt>
+		        <dd>
+		            <ul  >
+		               <li><a      <if condition="$is_free eq 1" >    class="check"  style="background:#4196FF;" </if>     data="1"   onClick="queryGoods(this,4);"  >会员课</a></li>
+		               <li><a     <if condition="$is_free eq 2" >   class="check"   style="background:#4196FF;" </if>     data="2"   onClick="queryGoods(this,4);"  >免费课</a></li>
+		            </ul>
+		        </dd>
+		    </dl>
+			<div   id="course_type">
+		    <dl>
+		        <dt>类型：</dt>
+		        <dt class="all">
+		        	<a href="#" <if condition="$is_live eq 0" >     class="check" </if>   data="0"   onClick="queryGoods(this,5);" >全部</a>
+		        </dt>
+		        <dd>
+		            <ul>
+		                <li><a    <if condition="$is_live eq 1" >     class="check"   style="background:#4196FF;" </if>     data="1"   onClick="queryGoods(this,5);"  >录播课</a></li>
+		                <li><a    <if condition="$is_live eq 2" >     class="check"   style="background:#4196FF;" </if>     data="2"   onClick="queryGoods(this,5);"  >直播课</a></li>
+		            </ul>
+		        </dd>
+		    </dl>
+			</div>
+		</div>
+		
+		<div class="bgc">
+		    <div class="filter">
+		        <span class="first">排序：</span>
+		        <div class="hot-new-tab"   >
+		            <a href="javascript:"  <if condition="$is_new eq 1">  class="order_check_1"  style="background:#4196FF;"</if>    data="13"    onclick="queryGoods(this,6);"  >最新</a>
+		           
+				   <a href="javascript:"   <if condition="$is_hot eq 1">  class="order_check_2"  style="background:#4196FF;"</if>     data="14"   onclick="queryGoods(this,7);">最热</a>
+		        </div>
+		        <div class="inlet">
+		            <div class="bg"></div>
+		            <div class="txt">
+		                <a href=""  target="_blank"></a>
+		            </div>
+		        </div>
+		        <a href=""   class="zt"></a>		                
+		    </div>
+		</div>
+    </div>
+    <div class="course-list course-list-new">
+    	<div id="course-list-content">
+    		<ul class="clearfix">
+			<volist name="pages['root']" key="key" id="course">
+                <li>
+                	<a href="{:U('Home/course/getCourseDetails/',array('courseId'=>$course['courseId']))}"   target="_blank">
+	                    <div class="course-list-img">
+	                        <img width="280" height="160" src="__ROOT__/{$course['courseThums']}"   alt="{$course['courseName']}" />
+	                    </div>
+	                    <h5>
+	                        <span>{$course['courseName']}</span>
+	                    </h5>
+                        <div class="tips clearfix">
+		                    <span class="l">2016年09月19日</span>
+	                        <span class="l null-width"></span>
+	                        <span class="l">14:00~15:00</span><em class="l">|</em><span class="l">415人预约</span>
+	                    </div>
+                        <div class="course-play "></div>
+                        <span class="course-free"></span>
+                        <div class="cost">
+                            <span class="l free">免费</span>
+                        </div>
+                	</a>
+            	</li>
+				</volist>
+            </ul>
+    		<div style="width: 100%;height: 80px;text-align: center;box-sizing: border-box;">
+    			<div class="page_course"  id="wst-page-items" >
+    			
+    			</div>
+    		</div>   	
+    	</div>
+    </div>
+    </div>
+  <script src="__PUBLIC__/plugins/layer/layer.min.js"></script>
+  
+  
+  <script>
+	
+	function queryGoods(obj,mark){
+	
+	//alert(mark);
+	var params = [];
+	var c1Id,c2Id,c3Id,msort,is_free,is_live,is_new,is_hot;
+	keyWords = $.trim($("#keyword").val());
+	msort = 1;
+	if(mark==1){
+		   c1Id = $(obj).attr("data")?$(obj).attr("data"):'';
+		 // alert(c1Id);
+		//communityId = $("#wst-communitys").find(".searched").attr("data");
+		//brandId = $("#wst-brand").find(".searched").attr("data");
+		//prices = $("#wst-price").find(".searched").attr("data");
+	}else if(mark==2){
+		//areaId3 = $("#wst-areas").find(".searched").attr("data");
+	//	brandId = $("#wst-brand").find(".searched").attr("data");
+		//prices = $("#wst-price").find(".searched").attr("data");
+	//	communityId = $(obj).attr("data");
+	}else if(mark==3){
+	//alert(c1Id);
+	    c1Id = $("#wst-areas").find(".check").attr("data");
+	    c2Id=$(obj).attr("data")?$(obj).attr("data"):'';
+		
+		//communityId = $("#wst-communitys").find(".searched").attr("data");
+		//brandId = $(obj).attr("data");
+		//prices = $("#wst-price").find(".searched").attr("data");
+	}else if(mark==4){
+	      c1Id = $("#wst-areas").find(".check").attr("data");
+		  c2Id = $("#course_profess").find(".check").attr("data");
+		  is_free = $(obj).attr("data")?$(obj).attr("data"):'';
+		  is_live=$("#course_type").find(".check").attr("data"); 
+		// alert(is_free);
+		//communityId = $("#wst-communitys").find(".searched").attr("data");
+		//brandId = $("#wst-brand").find(".searched").attr("data");
+		//prices = $(obj).attr("data");	
+	}else if(mark==5){
+	
+	      c1Id = $("#wst-areas").find(".check").attr("data");
+		  c2Id = $("#course_profess").find(".check").attr("data");
+		  is_free=$("#course_price").find(".check").attr("data");
+		//  alert(is_free);
+	      is_live=$(obj).attr("data")?$(obj).attr("data"):'';      
+	
+	}else if(mark==6){
+	       c1Id = $("#wst-areas").find(".check").attr("data");
+		   c2Id = $("#course_profess").find(".check").attr("data");
+		  is_free=$("#course_price").find(".check").attr("data");
+	      is_live=$("#course_type").find(".check").attr("data"); 
+		 // is_hot=$(".hot-new-tab").find(".order_check_2").attr("data")?$(".hot-new-tab").find(".order_check_2").attr("data"):'';
+		// alert( is_hot);
+	      is_new=$(obj).attr("data")?$(obj).attr("data"):'';
+	      
+	
+	}else if(mark==7){
+	
+	      c1Id = $("#wst-areas").find(".check").attr("data");
+		  c2Id = $("#course_profess").find(".check").attr("data");
+		  is_free=$("#course_price").find(".check").attr("data");
+	      is_live=$("#course_type").find(".check").attr("data"); 
+	     // is_new=$(".hot-new-tab").find(".order_check_1").attr("data")?$(".hot-new-tab").find(".order_check_1").attr("data"):'';
+	      is_hot=$(obj).attr("data")?$(obj).attr("data"):'';
+	   // alert( is_new);
+	}
+	else{
+		
+		//msort = $('#msort').val();
+		//params.push("msort="+((msort=='0')?1:0));
+		//params.push("mark="+mark);
+	}
+	if(keyWords!="")params.push("keyWords="+keyWords);
+	if(c1Id && c1Id!='0')params.push("c1Id="+c1Id);
+	if(c2Id && c2Id!='0')params.push("c2Id="+c2Id);
+	if(c3Id && c3Id!='0')params.push("c3Id="+c3Id);
+	if(is_free && is_free!='0')params.push("is_free="+is_free);
+	if(is_live && is_live!='0')params.push("is_live="+is_live);
+	if(is_new && is_new!='0')params.push("is_new="+is_new);
+	if(is_hot && is_hot!='0')params.push("is_hot="+is_hot);
+	
+	//if(areaId3 && areaId3!='0')params.push("areaId3="+areaId3);
+	//if(communityId && communityId!='0')params.push("communityId="+communityId);
+	//if(brandId && brandId!='0')params.push("brandId="+brandId);
+	//if(prices)params.push("prices="+prices);
+	window.location = "{:U('Home/course/index')}"+"&"+params.join('&');
+}
+
+	<if condition="$pages['totalPage'] gt 1">
+	
+	laypage({
+	    cont: 'wst-page-items',
+	    pages: {$pages["totalPage"]}, //总页数
+	    skip: true, //是否开启跳页
+	    skin: '#e23e3d',
+	    groups: 10, //连续显示分页数
+	    curr: function(){ //通过url获取当前页，也可以同上（pages）方式获取
+	        var page = location.search.match(/pcurr=(\d+)/);
+			//alert(page);
+	       // return page ? page[1] : 1;
+	    }(), 
+	    jump: function(e, first){ //触发分页后的回调
+	        
+			
+			if(!first){ //一定要加此判断，否则初始时会无限刷新
+      location.href = '?m=Home&c=course&a=index&page='+e.curr;
+     }
+			/*if(!first){ //一定要加此判断，否则初始时会无限刷新
+	        	var nuewurl = WST.splitURL("pcurr");
+	        	var ulist = nuewurl.split("?");
+	        	if(ulist.length>1){
+	        		location.href = nuewurl+'&pcurr='+e.curr;
+	        	}else{
+	        		location.href = '?pcurr='+e.curr;
+	        	}
+	            
+	        }*/
+	    }
+	});
+	</if>
+	
+	</script>
+  <include file="./Apps/Home/View/default/common_foot.html" />

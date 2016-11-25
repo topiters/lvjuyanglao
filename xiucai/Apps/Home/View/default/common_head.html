@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no" />
+    <meta property="qc:admins" content="271536151160153116375711747716765216160454" />
+    <meta name="keywords" content="秀财网,秀财,秀才网,财税圈,财务培训,财务在线学习,财务视频,财务网络教育,会计培训,会计视频,会计学习,税务课程,税务培训,税务教程,企业会计培训"/>
+    <meta name="description" content="秀财网是上海达哈那网络科技有限公司旗下在线教育网站，专注于高端财税领域提供在线互动课程和社区圈子交流。具有独家特色的课程且皆由业界权威教师授课；社区圈子里不仅提供内容干货，感受财税知识的同时，并发现交流之美"/>
+    <meta itemprop="image" content="http://assets.xiucai.com/assets/__ROOT__/Apps/Home/View/default/img/logo-hide.png?v=1.10.1" />
+    <title>导师问答首页</title>
+    
+    <link type="text/css" href="__ROOT__/Apps/Home/View/default/css/base.css-v=1.10.1.css"  rel="stylesheet"/>
+    <link rel="stylesheet" href="__ROOT__/Apps/Home/View/default/iconfont/iconfont.css-v=1.10.1.css"/>
+    <link type="text/css" href="__ROOT__/Apps/Home/View/default/css/common.css-v=1.10.1.css" rel="stylesheet"/>
+    <link type="text/css" href="__ROOT__/Apps/Home/View/default/css/style.css-v=1.10.1.css" rel="stylesheet"/>
+    <link type="text/css" href="__ROOT__/Apps/Home/View/default/css/minimal.css-v=1.10.1.css"rel="stylesheet"/>
+    <link type="text/css" href="__ROOT__/Apps/Home/View/default/css/ui-dialog.css-v=1.10.1.css" rel="stylesheet"/>
+    <link type="text/css" href="__ROOT__/Apps/Home/View/default/css/bottom-register.css-v=1.10.1.css" rel="stylesheet" />
+    <link type="text/css" href="__ROOT__/Apps/Home/View/default/css/quaner.css-v=1.10.1.css"   rel="stylesheet"/>
+<link type="text/css" href="__ROOT__/Apps/Home/View/default/css/course.css-v=1.10.1.css"   rel="stylesheet"/>	
+    <link type="text/css" href="__ROOT__/Apps/Home/View/default/iconfont/iconfont.css" rel="stylesheet" />
+    <link type="text/css" href="__ROOT__/Apps/Home/View/default/css/login2.css" rel="stylesheet" /> 
+    <link type="text/css" href="__ROOT__/Apps/Home/View/default/css/style.css" rel="stylesheet" />   
+    <link type="text/css" href="__ROOT__/Apps/Home/View/default/css/qa-index.css-v=1.10.1.css"  rel="stylesheet" />
+	 <link type="text/css" href="__ROOT__/Apps/Home/View/default/css/jquery.flipster.css" rel="stylesheet" />   
+   
+	<link type="text/css" href="__ROOT__/Apps/Home/View/default/css/activePage.css"  rel="stylesheet" />
+	 <link type="text/css" href="__ROOT__/Apps/Home/View/default/css/buy.css-v=1.10.1.css" rel="stylesheet" />
+	
+	<link href="__ROOT__/Apps/Home/View/default/css/ueditor/umeditor.css" type="text/css" rel="stylesheet">
+	 <script src="__ROOT__/Apps/Home/View/default/js/jquery-1.9.0.js"></script>
+	 <script type="text/javascript" src="__ROOT__/Apps/Home/View/default/js/common4.0.js"></script> 
+	 
+	  <!-------------------顶部菜单结束js---------->
+	  <script src="__PUBLIC__/js/common.js"></script>
+	  <script type="text/javascript">
+    var WST = ThinkPHP = window.Think = {
+        "ROOT"   : "__ROOT__",
+        "APP"    : "__APP__",
+        "PUBLIC" : "__PUBLIC__",
+        "DEEP"   : "{:C('URL_PATHINFO_DEPR')}",
+        "MODEL"  : ["{:C('URL_MODEL')}", "{:C('URL_CASE_INSENSITIVE')}", "{:C('URL_HTML_SUFFIX')}"],
+        "VAR"    : ["{:C('VAR_MODULE')}", "{:C('VAR_CONTROLLER')}", "{:C('VAR_ACTION')}"],
+        "DOMAIN" : "{:WSTDomain()}",
+       // "CITY_ID" : "{$currArea['areaId']}",
+      //  "CITY_NAME" : "{$currArea['areaName']}",
+        "DEFAULT_IMG": "{:WSTDomain()}/{$CONF['goodsImg']}",
+        "MALL_NAME" : "{$CONF['mallName']}",
+        "SMS_VERFY"  : "{$CONF['smsVerfy']}",
+        "PHONE_VERFY"  : "{$CONF['phoneVerfy']}",
+        "IS_LOGIN" :"{$WST_IS_LOGIN}"
+}
+    /*$(function() {
+    	$('.lazyImg').lazyload({ effect: "fadeIn",failurelimit : 10,threshold: 200,placeholder:WST.DEFAULT_IMG});
+    });
+	*/
+</script>  
+	  <script src="__PUBLIC__/js/think.js"></script>
+    
+	
+<style>
+    .bound-phone-tips{
+        position: absolute !important;
+        top: 50px;
+        z-index: 2;
+    }
+</style>
+   
+</head>
+<body>
+        <div class="h50"></div>
+        <div class="header-wrap  fixed-head" >
+	    	<div id="header" >
+		   		<div class="container">
+		        	<div class="nav clearfix">
+			           	<a href="index.htm"  title="首页" class="logo" >
+			           		<img src="__ROOT__/Apps/Home/View/default/img/logo_.png" />
+			           	</a>
+			            <a href="javascript:" class="nav-menu-btn"><i class="iconfont">&#xe67b;</i></a>
+			            <ul class="nav-item">
+			                <li><a class="notCard font-color-white" href="{:U('home/index/index')}" >首页</a></li>
+			                <li class="parent-nav-item">
+			                    <a href="{:U('home/course/index')}" >课程 </a>
+			                    <ul class="second-nav-item">
+			                        <li><a href="{:U('home/course/index')}" >课程大厅</a></li>
+			                        <li><a href="{:U('home/specialcourse/index')}" >专题课程</a></li>
+			                        <li><a href="{:U('home/mycourse/index')}">我的课程</a></li>
+			                    </ul>
+			                </li>
+			                <li>
+			                	<a href="{:U('home/livecast/index')}"  >直播间</a>
+			                </li>
+			                <li class="beta">
+			                	<a href="{:U('home/specialist/index')}" >专家问答</a>
+			                </li>
+			                <li class="parent-nav-item">
+			                    <a href="{:U('home/forum/index')}" >财税论坛 </a>
+			                    <ul class="second-nav-item">
+			                        <li>
+			                        	<a href="{:U('home/forum/index')}" >圈子首页</a></li>
+			                        <li class="none-border">
+			                        	<a href="{:U('home/forum/myindex')}">我的圈子</a></li>
+			                    </ul>
+			                </li>
+			                <li>
+			                	<a href="{:U('home/users/open_member')}">开通会员</a>
+			                </li>
+			                <li>
+			                    <a href="{:U('home/app/index')}" >APP</a>
+			                </li>
+			                <li>
+			                    <a href="{:U('home/offline/index')}" >线下</a>
+			                </li>
+			            </ul>
+			            <!-- 用户未登录状态 -->
+
+                        <if condition="!$WST_USER['userId']">						
+			            <div id="wei_denglu">
+			            	<div class="login-block " id="user_nodl" style="border: #fff;">
+				                <a href="javascript:;" id="a-login"  class="a-login" onclick="login();">登录</a>
+				                <a href="javascript:;" id="a-register" class="a-register" onclick="zhuce();">注册</a>
+				            </div>	
+				            <div class="change-entrance head_dhzx" >
+				            	<a href="task/mall/index.htm"  title="兑换中心" ><i></i></a>
+				            </div>
+			            </div>
+			             </if>
+			            <!-- -->
+			           	<!--用户已登录状态-->
+						<if condition="$WST_USER['userId'] gt 0">
+			            <div class="login-block logined  clearfix login_zh_ " style="height: 36px;">
+    						<ul>
+    							<!-- <li><a href="#"><i class="iconfont">&#xe615;</i></a></li>
+			            		<li><a href="#"><i class="iconfont">&#xe69c;</i></a></li>
+			            		<li><a href="#"><i class="iconfont">&#xe9c5;</i></a></li> -->
+			            		<li><a href="javascript:logout();"><i class="iconfont">&#xe625;</i></a></li>	
+                				<li class="user-head_ user " style="height: 100%;padding: 0 10px 0 0;">
+						            <a  href="{:U('Home/Users/index')}" class="user-head notCard" style="padding:0;height: 10px;">
+						               <img src="__ROOT__/Apps/Home/View/default/img/login/touxaing.png" style="margin-top:0 ;"/>
+						                <b></b>  
+						            </a>
+						            <div class="user-nav-list user_info " style="top:35px;right: 0px;">
+						                <div class="top-info">
+						                    <div class="clearfix mt-6">
+						                        <a class="card-avatar fl" href="#">
+						                        	<img width="63" height="63" alt="" src="http://assets.xiucai.com/assets/__ROOT__/Apps/Home/View/default/img/caiduoduo.png?v=1.10.5">
+						                        </a>
+						                        <div class="card-user">
+						                            <p>
+						                            	<a class="user-name" href="#">到汉多少次了</a>
+						                            	<a title="了解秀财会员" class="vip" target="_blank" href="/vip/">
+						                            		<img width="20" height="14" border="0" alt="会员特权" src="http://assets.xiucai.com/assets/__ROOT__/Apps/Home/View/default/img/vip.png?v=1.10.5">
+						                            	</a>
+						                            </p>
+						                            <ol class="user-level" style="width: 100%; text-align: center;">
+						                                <li style="width: 33.3%;">
+						                                    <span class="time-left">会员还剩<em>2</em>天</span>                                   
+						                                </li>
+						                                <li>
+						                                	<a class="currency" title="了解秀财圈币" target="_blank" href="#">
+						                                		<img width="19" height="14" alt="圈币" src="http://assets.xiucai.com/assets/__ROOT__/Apps/Home/View/default/img/quan/qb.png?v=1.10.5"><span>5</span>
+						                                	</a>
+						                                </li>
+						                                <li>
+						                                    <a title="了解经验值等级" class="" target="_blank" href="#">
+											                    <span class="tag-level tag-level-LV1">
+											                    <i>LV1</i></span>
+						                                    </a>
+						                                </li>
+						                            </ol>                                                                                                                                                                                                                                                       
+						                        </div>
+						                    </div>
+						                    <a class="exchange" href="#" style="position: absolute;right: 6px;top: 10px;">兑换中心</a>
+						                </div>
+						                <div class="recent">
+						                    <a href="#">
+						                    	<i class="iconfont"></i>
+						                    	<span>企业如何建立和完善成本核算制度</span>
+						                    </a>
+						                </div>
+						                <div class="user-link-boxer" style="height: 80px;">
+						                    <ul class="user-link-to clearfix">
+						                        <li>
+						                        	<a href="#"><i class="iconfont"></i>我的课程</a>
+						                        </li>
+						                        <li>
+						                        	<a href="#"><i class="iconfont"></i>我的问答</a>
+						                        </li>
+						                        <li>
+						                        	<a href="#"><i class="iconfont"></i>购物车</a>
+						                        </li>
+						                        <li>
+						                        	<a href="#"><i class="iconfont"></i>我的订单</a>
+						                        </li>
+						                        <li>
+						                        	<href="#"><i class="iconfont msg"></i>我的消息<em>2</em></a>
+						                        </li>
+						                        <li>
+						                        	<a href="#"><i class="iconfont"></i>我的圈子</a>
+						                        </li>
+						                    </ul>
+						                </div>
+							            <div class="user-board-b clearfix" style="height: auto;">
+						                    <a onclick="exit();" class="fr" href="#">退出</a>
+						                    <a class="fl" href="http://www.xiucai.com/user/set_pass/">
+						                    <i class="iconfont"></i>账号设置<em>（修改密码）</em></a>
+						                </div>
+						            </div>
+						        </li>
+						    </ul>
+						</div>	
+                       </if>						
+			            <div class="search-block search-block-active search-block-focus">
+			                <div class="search-form clearfix">
+			                    <input type="button" class="fl search-btn" id="search_button"/>
+			                    <input type="text" class="fl search_content_input" id="search_content" name="search_content" placeholder="找到你想要的课程或帖子" maxlength="15"/>
+			                </div>
+			
+			                <!-- 关键字搜索面板 默认隐藏 -->
+			                <div class="search-board search-result-board" id="topSearchContent"></div>
+			                <input id="search_from" type="hidden" value="course">
+			            </div>
+			        </div>
+		        	<div class="drop-down-menu">
+			            <div class="pd">
+						
+						 <div class="down-menu-row">
+					<volist name=":WSTGoodsCats()" key="k1"   id="vo1"   offset="0"   length="3">
+	                    <div class="classify-nav">
+	                        <p class="title"><em></em>{$vo1["catName"]}</p>
+							
+							<volist name="vo1['catChildren']" key="k1" id="vo2"   offset="0"   length="4">
+							
+	                        <dl>
+	                            <dt>
+	                            	<a href="{:U('Home/course/index',array('c1Id'=>$vo1['catId']))}" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">{$vo2["catName"]}</a>
+	                            </dt>
+	                            <dd>
+								<volist name="vo2['catChildren']" key="k1" id="vo3"   offset="0"   length="4">
+	                                <a href="{:U('Home/course/index',array('c1Id'=>$vo1['catId'],'c2Id'=>$vo2['catId']))}"   target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">{$vo3["catName"]}</a>
+	                                </volist>
+							
+							  </dd>
+	                        </dl>
+							
+							</volist>
+	                    
+	                    </div>
+						</volist>
+	                   
+	                </div>
+					
+					
+	                <div class="down-menu-row">
+					    <volist name=":WSTGoodsCats()" key="k1"   id="vo1"   offset="3"   length="3">
+	                    <div class="classify-nav">
+	                        <p class="title"><em></em>{$vo1["catName"]}</p>
+							
+							<volist name="vo1['catChildren']" key="k1" id="vo2"   offset="0"   length="4">
+							
+	                        <dl>
+	                            <dt>
+	                            	<a href="{:U('Home/course/index',array('c1Id'=>$vo1['catId']))}" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">{$vo2["catName"]}</a>
+	                            </dt>
+	                            <dd>
+								<volist name="vo2['catChildren']" key="k1" id="vo3"   offset="0"   length="4">
+	                                <a href="{:U('Home/course/index',array('c1Id'=>$vo1['catId'],'c2Id'=>$vo2['catId']))}"   target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">{$vo3["catName"]}</a>
+	                                </volist>
+									
+								<!-- 	<a href="zt/ygzsc/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">建筑业</a>
+	                                <a href="course/zt/shygz/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">生活服务业</a>
+	                                <a href="zt/ygzsc/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">金融业</a>
+	                           -->
+							  </dd>
+	                        </dl>
+							
+							</volist>
+	                    
+	                    </div>
+						</volist>
+	            	
+					
+	                </div>
+			             
+			            </div>
+		        	</div>   	
+		   		</div>
+			</div>		
+		</div>       
+	
+  

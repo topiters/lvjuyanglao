@@ -1,0 +1,153 @@
+<!DOCTYPE >
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="favicon.ico"/>
+<title>首页 - {$CONF['mallTitle']}</title>
+<meta name="keywords" content="{$CONF['mallKeywords']}" />
+<meta name="description" content="{$CONF['mallDesc']}" />
+<link rel="stylesheet" href="__ROOT__/Apps/Home/View/default/css/common.css" />
+
+    <link type="text/css" href="__ROOT__/Apps/Home/View/default/css/base.css-v=1.10.1.css"  rel="stylesheet"/>
+    <link rel="stylesheet" href="__ROOT__/Apps/Home/View/default/iconfont/iconfont.css-v=1.10.1.css"/>
+    <link type="text/css" href="__ROOT__/Apps/Home/View/default/css/common.css-v=1.10.1.css" rel="stylesheet"/>
+    <link type="text/css" href="__ROOT__/Apps/Home/View/default/css/style.css-v=1.10.1.css" rel="stylesheet"/>
+    <link type="text/css" href="__ROOT__/Apps/Home/View/default/css/minimal.css-v=1.10.1.css"rel="stylesheet"/>
+    <link type="text/css" href="__ROOT__/Apps/Home/View/default/css/ui-dialog.css-v=1.10.1.css" rel="stylesheet"/>
+    <link type="text/css" href="__ROOT__/Apps/Home/View/default/css/bottom-register.css-v=1.10.1.css" rel="stylesheet" />
+    <link type="text/css" href="__ROOT__/Apps/Home/View/default/iconfont/iconfont.css" rel="stylesheet" /><!---->
+    <link type="text/css" href="__ROOT__/Apps/Home/View/default/css/login2.css" rel="stylesheet" />
+  
+    <script type="text/javascript" src="__ROOT__/Apps/Home/View/default/js/jquery-1.9.0.js"></script> 
+	 <!-------------------顶部菜单js---------->
+	 <script type="text/javascript" src="__ROOT__/Apps/Home/View/default/js/common4.0.js"></script> 
+<script type="text/javascript">
+var WST = ThinkPHP = window.Think = {
+        "ROOT"   : "__ROOT__",
+        "APP"    : "__APP__",
+        "PUBLIC" : "__PUBLIC__",
+        "DEEP"   : "{:C('URL_PATHINFO_DEPR')}",
+        "MODEL"  : ["{:C('URL_MODEL')}", "{:C('URL_CASE_INSENSITIVE')}", "{:C('URL_HTML_SUFFIX')}"],
+        "VAR"    : ["{:C('VAR_MODULE')}", "{:C('VAR_CONTROLLER')}", "{:C('VAR_ACTION')}"],
+        "DOMAIN" : "{:WSTDomain()}",
+       // "CITY_ID" : "{$currArea['areaId']}",
+      //  "CITY_NAME" : "{$currArea['areaName']}",
+        "DEFAULT_IMG": "{:WSTDomain()}/{$CONF['goodsImg']}",
+        "MALL_NAME" : "{$CONF['mallName']}",
+        "SMS_VERFY"  : "{$CONF['smsVerfy']}",
+        "PHONE_VERFY"  : "{$CONF['phoneVerfy']}",
+        "IS_LOGIN" :"{$WST_IS_LOGIN}"
+}
+    /*$(function() {
+    	$('.lazyImg').lazyload({ effect: "fadeIn",failurelimit : 10,threshold: 200,placeholder:WST.DEFAULT_IMG});
+    });
+	*/
+</script>
+	  <!-------------------顶部菜单结束js---------->
+	<script src="__PUBLIC__/js/think.js"></script>
+      
+</head>
+
+<style>
+.close_icon{
+	z-index: 8888;
+}
+.model_login span{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #fff;
+}
+</style>
+<script>
+	$(function(){
+		$(".close_icon").click(function(){
+			//alert(0);
+			$(".login").css({"display":"none"});
+			$("body").css({"overflow":"auto"});
+			$("#allsccren").removeClass('allsccren');
+		});
+	});
+	function login(){
+		$("#allsccren").addClass('allsccren');
+		$("body").css({"overflow":"hidden"});
+		$(".login").css({"display":"block"});
+		$("#all_login").css({"display":"block"});
+		$("#register_").css({"display":"none"});
+		
+	}
+	function zhuce(){
+		$("#allsccren").addClass('allsccren');
+		$("body").css({"overflow":"hidden"});
+		$(".login").css({"display":"block"});
+		$("#all_login").css({"display":"none"});
+		$("#register_").css({"display":"block"});
+	}
+	
+			
+function logout(){
+     var url="{:U('Home/Users/logout')}";
+	jQuery.post(url,{},function(rsp) {
+		location.reload();
+	});
+}	
+
+	
+	
+</script>
+<script type="text/javascript">
+    // 导航下拉菜单
+    jQuery(function(){
+        $.fn.hoverDelay = function(options){
+            var defaults = {
+                hoverDuring: 200,
+                outDuring: 200,
+                hoverEvent: function(){
+                    $.noop();
+                },
+                outEvent: function(){
+                    $.noop();
+                }
+            };
+            var sets = $.extend(defaults,options || {});
+            var hoverTimer, outTimer;
+            return $(this).each(function(){
+                $(this).hover(function(){
+                    clearTimeout(outTimer);
+                    hoverTimer = setTimeout(sets.hoverEvent, sets.hoverDuring);
+                },function(){
+                    clearTimeout(hoverTimer);
+                    outTimer = setTimeout(sets.outEvent, sets.outDuring);
+                });
+            });
+        }
+    });
+</script>
+<script type="text/javascript">
+
+   // 导航下拉菜单
+    $(function(){
+       
+        $('.nav-item > li').each(function(){
+            var that=$(this);
+            that.hoverDelay({
+                hoverEvent: function(){
+                    if(that.find("ul").hasClass('second-nav-item')){
+                        that.children('a').addClass('focus');
+                    }
+                    $('.second-nav-item',that).addClass("pop-up");
+                },
+                outEvent: function(){
+                    $('.second-nav-item',that).removeClass("pop-up");
+                    that.children('a').removeClass('focus');
+                }
+            })
+        })
+		})
+	</script>	
+		
+<body>
+
+
+   

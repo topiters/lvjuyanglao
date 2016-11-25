@@ -1,0 +1,112 @@
+.lijibuy_btn{
+	border: 1px solid #ff773d;
+    background-color: #fff !important;
+	color: #FF773D !important;
+	margin-right: 10px;
+	height: 41px !important;
+}
+.page_course{
+	
+}
+.page_course_a{
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	text-align: center;
+	line-height: 40px;
+	margin: 20px 15px 0 0;
+	border: 1px solid #d8d8d8;
+	border-radius: 20px;
+	color: #999;	
+	font-size: 14px;
+}
+.page_active{
+	border: 1px solid #ff773d;
+	border-radius: 20px;
+	color: #ff773d;	
+}
+.login_zh_{
+   	height: 20px;
+}
+.login_zh_>ul>li{
+	padding: 0;
+	height: 20px;
+	width: 33px;
+}
+
+.nav_left{
+		width: 25%;
+		float: left;
+		box-sizing: border-box;
+	}
+	.nav_left ul{
+		width: 100%;
+		float: left;
+	}
+	.nav_left img{
+		width: 100%;
+		height: auto;
+	}
+	.nav_left ul li{
+		border-left: 10px solid #fff;
+		padding: 20px 15px;
+		box-sizing: border-box;
+		border-bottom: 1px solid #d8d8d8;
+		cursor: pointer;
+	}
+	.nav_left_li{
+		border-left: 10px solid #ffebd9 !important;
+	}
+	.xianxia_right{
+		float: left;
+		width: 72%;
+	}
+	.xianxia_right .xianxia_top{
+		float: left;
+		padding-left: 25px;
+		box-sizing: border-box;
+		width: 96%;
+		margin-left: 20px;
+		border-bottom: 1px solid #D8D8D8;
+	}
+	.xianxia_right .xianxia_top ul li{
+		float: left;
+		padding: 19px 33px;
+		margin-right: 25px;
+		box-sizing: border-box;
+		cursor: pointer;
+	}
+	.xianxia_top_selected{
+		border-bottom: 3px solid #FF7545;
+		color: #FF7545;
+	}
+	.xianxia_content{
+		margin-top: 10px;
+		float: left;
+		width: 100%;
+		padding: 14px 25px;
+		margin-right: 25px;
+		box-sizing: border-box;
+	}
+	.xianxia_content .select_xianxia select{
+		padding: 8px 15px;
+		margin-right: 15px;
+	}
+	.xianxia_content .select_xianxia{
+		margin-bottom: 20px;
+	}
+	.data_list_xianxia{
+		/*border: 1px solid #000;*/
+	}
+	.data_list_xianxia ul li{
+		border: 1px solid #D8D8D8;
+		margin-bottom: 15px;
+		box-sizing: border-box;
+	}
+	.data_list_xianxia ul li table td{
+		padding: 10px;
+		box-sizing: border-box;
+	}
+	.data_list_xianxia ul li table td font{
+		color: #c2c2c2;
+	}

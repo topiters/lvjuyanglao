@@ -1,0 +1,476 @@
+   <!------------------头部css、js引入开始------------->
+	<include file="./Apps/Home/View/default/header_top.html" />
+	 <!------------------头部css、js引入结束------------->
+	  <!------------------头部菜单开始------------->
+	<include file="./Apps/Home/View/default/header_common.html" />
+	
+	 <!------------------头部菜单开始------------->
+	 
+
+	 <!------------------导航课程分类开始------------->
+	  <include file="./Apps/Home/View/default/header_nav_cat.html" />
+	  <!------------------导航课程分类开始------------->
+	  
+	    <!------------------导航开始------------->
+    <include file="./Apps/Home/View/default/header_nav_common.html" />
+	   <!------------------导航结束------------->
+	  <!------------------首页主区域开始------------->
+<div id="main">
+    <script>document.body.style.backgroundColor='#fff';</script>
+    <div class="slider relative">
+        <!-- slide轮播图 begin-->
+        <div id="slideBox" class="slideBox">
+            <div class="hd">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    <li style="background-color:#31a2e3;">
+                        <a href="#"   target="_blank"  class="hit-count" data-id="149">
+                            <img src="__ROOT__/Apps/Home/View/default/img/c83166c3-3219-9907-701b-1e89f4e3bb45.jpg" alt=" "/>
+                        </a>
+                    </li>
+                    <li style="background-color:#6ed4c9;">
+                        <a href="#"  target="_blank"  class="hit-count" data-id="148">
+                            <img src="__ROOT__/Apps/Home/View/default/img/c83166c3-3219-9907-701b-1e89f4e3bb45.jpg" alt=" "/>
+                        </a>
+                    </li>
+                    <li style="background-color:#6e5a68;">
+                        <a href="#"  target="_blank"  class="hit-count" data-id="118">
+                            <img src="__ROOT__/Apps/Home/View/default/img/c83166c3-3219-9907-701b-1e89f4e3bb45.jpg"   alt="  "/>
+                        </a>
+                    </li>
+                    <li style="background-color:#1f7696;">
+                        <a href="#"  target="_blank"  class="hit-count" data-id="110">
+                            <img src="__ROOT__/Apps/Home/View/default/img/c83166c3-3219-9907-701b-1e89f4e3bb45.jpg"  alt=" "/>
+                        </a>
+                    </li>
+                    <li style="background-color:#1b1b1b;">
+                        <a href="#"  target="_blank"  class="hit-count" data-id="100">
+                            <img src="__ROOT__/Apps/Home/View/default/img/c83166c3-3219-9907-701b-1e89f4e3bb45.jpg"   alt=" "/>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <a href="javascript:" class="prev"></a>
+            <a href="javascript:" class="next"></a>
+        </div>
+        <!-- slide轮播图 end-->
+        <div class="slide-img">
+            <div class="category-index">
+			
+			
+			    <volist name=":WSTGoodsCats()" key="k1"   id="vo1">
+                <dl>
+                    <dt><span>{$vo1["catName"]}</span><i class="iconfont">&#xe612;</i></dt>
+					
+                    <dd>
+					<volist name="vo1['catChildren']" key="k1" id="vo2"   offset="0"   length="3">
+                        <a href="{:U('Home/course/index',array('c1Id'=>$vo1['catId']))}"   target="_blank">{$vo2["catName"]}</a>、
+                        </volist>
+					
+                    </dd>
+                    <dd class="nav-item ">
+                        <p class="title">{$vo1["catName"]}</p>
+                        <ul> 
+						<volist name="vo1['catChildren']" key="k1" id="vo2"   offset="0"   length="3">
+                            <li>
+                                <div class="item-left"><a href="{:U('Home/course/index',array('c1Id'=>$vo1['catId']))}" target="_blank">{$vo2["catName"]}</a></div>
+                                <div class="item-right">
+								<volist name="vo2['catChildren']" key="k1" id="vo3"   offset="0"   length="4">
+                                    <a href="{:U('Home/course/index',array('c1Id'=>$vo1['catId'],'c2Id'=>$vo2['catId']))}" tppabs="http://www.xiucai.com/course/zt/fcygz/" target="_blank">{$vo3["catName"]}</a>
+                                
+									 </volist>
+                                </div>
+                            </li>
+							 </volist>
+							
+							
+                                 
+                        </ul>
+                    </dd>
+                </dl>
+				
+				 </volist>
+            
+            </div>
+            <!-- 直播课区域 begin -->
+            <!-- 直播课最少显示三个，最多显示五个 -->
+         
+        </div>
+    </div>
+    <div class="spread">
+        <ul>
+            <li>
+            	<a href="tutor/index.htm"   data-trackEvent="" data-category="homepage_ad" data-action="homepage_ad_left_click" data-opt_label="homepage_ad_left" data-opt_value="首页左侧广告" target="_blank">
+            		<img src="__ROOT__/Apps/Home/View/default/img/spread1.jpg-v=1.10.1.jpg"   />
+            	</a>
+            </li>
+            <li>
+            	<a href="tutor/index.htm"   data-trackEvent="" data-category="homepage_ad" data-action="homepage_ad_left_click" data-opt_label="homepage_ad_left" data-opt_value="首页左侧广告" target="_blank">
+            		<img src="__ROOT__/Apps/Home/View/default/img/spread1.jpg-v=1.10.1.jpg"   />
+            	</a>
+            </li>
+            <li>
+            	<a href="tutor/index.htm"   data-trackEvent="" data-category="homepage_ad" data-action="homepage_ad_left_click" data-opt_label="homepage_ad_left" data-opt_value="首页左侧广告" target="_blank">
+            		<img src="__ROOT__/Apps/Home/View/default/img/spread1.jpg-v=1.10.1.jpg"   />
+            	</a>
+            </li>
+        </ul>
+    </div>
+    <div class="daily-new-courses">
+        <div class="container">  
+        	<div class="course-list-title">
+                <span>限时<em>特惠</em></span>活动截止日期：8月17号
+                <a href="course/index.htm"   class="link-more">查看更多&raquo;</a>
+            </div>
+            <div id="news-course" class="">
+                <div class="show-zone course-list">
+                    <ul class="clearfix">
+                        <li id="li_703">
+                            <a href="course/703/index.htm"  target="_blank">
+                                <div class="course-list-img">
+                                    <img width="280" height="160" src="__ROOT__/Apps/Home/View/default/img/34ba92d4-a5b6-2f77-dffa-d9a524212a1f.jpg"  alt=" ">                 
+                                </div>
+                                <div class="tips">
+                                    <span class="toll">￥9.9</span>
+                                    <em></em>
+                                    <span class="text-line-through">￥20.00</span>
+                                    <span class="floatright">1142人已学</span>
+                                </div>                              
+                            </a>
+                        </li>
+
+                        <li id="li_702">
+                            <a href="course/703/index.htm"  target="_blank">
+                                <div class="course-list-img">
+                                    <img width="280" height="160" src="__ROOT__/Apps/Home/View/default/img/34ba92d4-a5b6-2f77-dffa-d9a524212a1f.jpg"  alt=" ">                 
+                                </div>
+                                <div class="tips">
+                                    <span class="toll">￥9.9</span>
+                                    <em></em>
+                                    <span class="text-line-through">￥20.00</span>
+                                    <span class="floatright">1142人已学</span>
+                                </div>                              
+                            </a>
+                        </li>
+
+                        <li id="li_701">
+                            <a href="course/703/index.htm"  target="_blank">
+                                <div class="course-list-img">
+                                    <img width="280" height="160" src="__ROOT__/Apps/Home/View/default/img/34ba92d4-a5b6-2f77-dffa-d9a524212a1f.jpg"  alt=" ">                 
+                                </div>
+                                <div class="tips">
+                                    <span class="toll">￥9.9</span>
+                                    <em></em>
+                                    <span class="text-line-through">￥20.00</span>
+                                    <span class="floatright">1142人已学</span>
+                                </div>                              
+                            </a>
+                        </li>
+
+                        <li id="li_700">
+                            <a href="course/703/index.htm"  target="_blank">
+                                <div class="course-list-img">
+                                    <img width="280" height="160" src="__ROOT__/Apps/Home/View/default/img/34ba92d4-a5b6-2f77-dffa-d9a524212a1f.jpg"  alt=" ">                 
+                                </div>
+                                <div class="tips">
+                                    <span class="toll">￥9.9</span>
+                                    <em></em>
+                                    <span class="text-line-through">￥20.00</span>
+                                    <span class="floatright">1142人已学</span>
+                                </div>                              
+                            </a>
+                        </li>
+
+                     </ul>
+                </div>
+            </div>
+        	<div class="course-list-title">
+                <span>最新<em>新课</em></span>好课天天有
+                <a href="course/index.htm"  class="link-more">查看更多&raquo;</a>
+            </div>
+            <div id="news-course" class="">
+                <div class="show-zone course-list">
+                    <ul class="clearfix">
+                        <li id="li_703">
+                            <a href="course/703/index.htm" tppabs="http://www.xiucai.com/course/703/" target="_blank">
+                                <div class="course-list-img">
+                                    <img width="280" height="160" src="__ROOT__/Apps/Home/View/default/img/34ba92d4-a5b6-2f77-dffa-d9a524212a1f.jpg"   alt="预算考核之KPI制定与目标责任书">                 
+                                </div>
+                                <h5>
+                                    <span>预算考核之KPI制定与目标责任书</span>
+                                </h5>
+                                <div class="tips">
+                                    <span>中级课程</span>
+                                    <em>|</em>
+                                    <span>126人已学</span>
+                                </div>                              
+                                <div class="cost">
+                                     <span class="l toll">会员免费看</span>                                                                                                                                                     
+                                </div>
+                            </a>
+                        </li>
+
+                        <li id="li_702">
+                            <a href="course/702/index.htm" tppabs="http://www.xiucai.com/course/702/" target="_blank">
+                                <div class="course-list-img">
+                                    <img width="280" height="160" src="__ROOT__/Apps/Home/View/default/img/34ba92d4-a5b6-2f77-dffa-d9a524212a1f.jpg"   alt="预算考核之KPI制定与目标责任书">                 
+                                </div>
+                                <h5>
+                                    <span>第10课  动态透视图VS传统图表优劣</span>
+                                </h5>
+                                <div class="tips">
+                                    <span>初级课程</span>
+                                    <em>|</em>
+                                    <span>134人已学</span>
+                                </div>
+                                <div class="cost">
+                                    <span class="l toll">会员免费看</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li id="li_701">
+                            <a href="course/701/index.htm"  target="_blank">
+                                <div class="course-list-img">
+                                    <img width="280" height="160" src="__ROOT__/Apps/Home/View/default/img/34ba92d4-a5b6-2f77-dffa-d9a524212a1f.jpg"   alt="预算考核之KPI制定与目标责任书">                 
+                                </div>
+                                <h5>
+                                    <span>第9课  透视表的条件格式高级应用</span>
+                                </h5>
+                                <div class="tips">
+                                    <span>初级课程</span>
+                                    <em>|</em>
+                                    <span>130人已学</span>
+                                </div>
+                                <div class="cost">
+                                    <span class="l toll">会员免费看</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li id="li_700">
+                            <a href="course/700/index.htm" target="_blank">
+                                <div class="course-list-img">
+                                    <img width="280" height="160" src="__ROOT__/Apps/Home/View/default/img/34ba92d4-a5b6-2f77-dffa-d9a524212a1f.jpg"   alt="预算考核之KPI制定与目标责任书">                 
+                                </div>
+                                <h5>
+                                    <span>财务人跨界必须掌握的思路与技巧</span>
+                                </h5>
+                                <div class="tips">
+                                    <span>高级课程</span>
+                                    <em>|</em>
+                                    <span>466人已学</span>
+                                </div>
+                                <div class="cost">
+                                    <span class="l toll">会员免费看</span>
+                                </div>
+                            </a>
+                        </li>
+
+                     </ul>
+                </div>
+            </div>
+            <div class="course-list-title relative">
+                <span>推荐<em>专题</em></span>打包学习，快速成长
+                <a href="course/zt/index.htm"   class="link-more">查看更多&raquo;</a>
+            </div>
+            <div class="subject-list clearfix">
+                <div class="devaluation">
+                    <a href="course/zt/mzsfsd/index.htm"   target="_blank">
+                        <img src="__ROOT__/Apps/Home/View/default/img/01a5b1f3-29a2-4e5d-bfb8-3336bd8f84b5.jpg"  alt=" " width="588" height="330"/>
+                    </a>
+                </div>
+                <ul class="clearfix">
+                    <li>
+                        <a href="course/zt/xykz/index.htm"  target="_blank">
+                            <div class="subject-wrap relative">
+                                <img src="__ROOT__/Apps/Home/View/default/img/bd660b10-c0f1-d195-08b5-8778a600c062.jpg"   alt="Excel效率加速器——函数在财务工作中的应用">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="course/zt/xykz/index.htm"  target="_blank">
+                            <div class="subject-wrap relative">
+                                <img src="__ROOT__/Apps/Home/View/default/img/bd660b10-c0f1-d195-08b5-8778a600c062.jpg"   alt="Excel效率加速器——函数在财务工作中的应用">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="course/zt/xykz/index.htm"  target="_blank">
+                            <div class="subject-wrap relative">
+                                <img src="__ROOT__/Apps/Home/View/default/img/bd660b10-c0f1-d195-08b5-8778a600c062.jpg"   alt="Excel效率加速器——函数在财务工作中的应用">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="course/zt/ysgl/index.htm" target="_blank">
+                            <div class="subject-wrap relative">
+                                <img src="__ROOT__/Apps/Home/View/default/img/bd660b10-c0f1-d195-08b5-8778a600c062.jpg"   alt=" ">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="class-zone">
+        <div class="container">
+            <div class="course-content course-new-content">
+                <div class="index-course clearfix">
+                    <div class="course-l   course-l-swgl  ">
+                        <a href="course/cate/75/index.htm"  >
+                            <p class="title">财务管理</p>
+                            <p class="describe">财务职业成长之路</p>
+                            <p class="linkmore">查看全部<em></em></p>
+                            <img src="__ROOT__/Apps/Home/View/default/img/idx-course-p4.png-v=1.10.1.png"   alt="" width="260" height="341">   
+                        </a>
+                        <i class="r-triangle   r-swgl-triangle  "></i>
+                    </div>
+                    <div class="course-r">
+                        <div class="course-list course-list-new">
+                            <div>
+                                <ul class="clearfix">
+                                    <li>
+                                        <a href="course/692/index.htm"  target="_blank">
+                                            <div class="course-list-img">
+                                                <img width="280" height="160" src="__ROOT__/Apps/Home/View/default/img/caijing.jpg"   alt="案例分享——制造型企业废料内审实务攻略" class="lazy" />
+                                            </div>
+                                            <h5>
+                                                <span>案例分享——制造型企业废料内审实务攻略</span>
+                                            </h5>
+                                            <div class="tips">
+                                                <span>中级课程</span>
+                                                <em>|</em>
+                                                <span>740人已学</span>
+                                            </div>
+                                            <div class="cost">
+                                                <span class="l toll">会员免费看</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="course/625/index.htm" target="_blank">
+                                            <div class="course-list-img">
+                                                <img width="280" height="160" src="__ROOT__/Apps/Home/View/default/img/caijing.jpg"   alt="案例分享——制造型企业废料内审实务攻略" class="lazy" />
+                                            </div>
+                                            <h5>
+                                                <span>怎样降低坏账损失？——教你如何开展应收账款保理</span>
+                                            </h5>
+                                            <div class="tips">
+                                                <span>中级课程</span>
+                                                <em>|</em>
+                                                <span>750人已学</span>
+                                            </div>
+                                            <div class="cost">
+                                                <span class="l toll">会员免费看</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="course/692/index.htm"  target="_blank">
+                                            <div class="course-list-img">
+                                                <img width="280" height="160" src="__ROOT__/Apps/Home/View/default/img/caijing.jpg"  alt="案例分享——制造型企业废料内审实务攻略" class="lazy" />
+                                            </div>
+                                            <h5>
+                                                <span>案例分享——制造型企业废料内审实务攻略</span>
+                                            </h5>
+                                            <div class="tips">
+                                                <span>中级课程</span>
+                                                <em>|</em>
+                                                <span>740人已学</span>
+                                            </div>
+                                            <div class="cost">
+                                                <span class="l toll">会员免费看</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="course/692/index.htm" target="_blank">
+                                            <div class="course-list-img">
+                                                <img width="280" height="160" src="__ROOT__/Apps/Home/View/default/img/caijing.jpg"   alt="案例分享——制造型企业废料内审实务攻略" class="lazy" />
+                                            </div>
+                                            <h5>
+                                                <span>案例分享——制造型企业废料内审实务攻略</span>
+                                            </h5>
+                                            <div class="tips">
+                                                <span>中级课程</span>
+                                                <em>|</em>
+                                                <span>740人已学</span>
+                                            </div>
+                                            <div class="cost">
+                                                <span class="l toll">会员免费看</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="course/692/index.htm" target="_blank">
+                                            <div class="course-list-img">
+                                                <img width="280" height="160" src="__ROOT__/Apps/Home/View/default/img/caijing.jpg"   alt="案例分享——制造型企业废料内审实务攻略" class="lazy" />
+                                            </div>
+                                            <h5>
+                                                <span>案例分享——制造型企业废料内审实务攻略</span>
+                                            </h5>
+                                            <div class="tips">
+                                                <span>中级课程</span>
+                                                <em>|</em>
+                                                <span>740人已学</span>
+                                            </div>
+                                            <div class="cost">
+                                                <span class="l toll">会员免费看</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="course/692/index.htm"  target="_blank">
+                                            <div class="course-list-img">
+                                                <img width="280" height="160" src="__ROOT__/Apps/Home/View/default/img/caijing.jpg"   alt="案例分享——制造型企业废料内审实务攻略" class="lazy" />
+                                            </div>
+                                            <h5>
+                                                <span>案例分享——制造型企业废料内审实务攻略</span>
+                                            </h5>
+                                            <div class="tips">
+                                                <span>中级课程</span>
+                                                <em>|</em>
+                                                <span>740人已学</span>
+                                            </div>
+                                            <div class="cost">
+                                                <span class="l toll">会员免费看</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>           
+            </div>
+        </div>
+    </div>
+    <div class="dialog-board dialog-board-window hide" id="weekOfflineDiv">
+        <div class="dialog-board-bar">
+            <h2>课程暂未上线</h2>
+            <a href="javascript:;" class="close-dialog-board" id="weekOfflineDivClose"></a>
+        </div>
+        <div class="dialog-board-content">
+            <div class="box-container">
+                <p class="text-c-tips hide" id="weekOfflineMsg_1">该课程还未上线，添加至我的课程？</p>
+                <p class="text-c-tips hide" id="weekOfflineMsg_2">课程尚未开始，该课已添加到您的课程列表</p>
+                <div class="btn-single">
+                    <input type="button" value="确定" class="login-btn" id="addMyCourse">
+                    <input type="button" value="确定" class="login-btn hide" id="weekOfflineDivCloseBtn">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <include file="./Apps/Home/View/default/common_foot.html" />

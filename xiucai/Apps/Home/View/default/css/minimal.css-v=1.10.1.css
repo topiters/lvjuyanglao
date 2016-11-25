@@ -1,0 +1,119 @@
+/* iCheck plugin Minimal skin, black
+----------------------------------- */
+.icheckbox_minimal, .icheckbox_minimal_red, .icheckbox_minimal-green, .icheckbox_minimal-blue, .icheckbox_minimal-aero, .icheckbox_minimal-grey, .icheckbox_minimal-orange, .icheckbox_minimal-yellow, .icheckbox_minimal-pink, .icheckbox_minimal-purple, .iradio_minimal, .iradio_minimal-red, .iradio_minimal-green, .iradio_minimal-blue, .iradio_minimal-aero, .iradio_minimal-grey, .iradio_minimal-orange, .iradio_minimal-yellow, .iradio_minimal-pink, .iradio_minimal-purple {
+	*position: absolute;
+}
+
+
+.icheckbox_minimal,
+.iradio_minimal {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 17px;
+    height: 19px;
+    background: url("minimal.png-v=1.4.png")/*tpa=http://assets.xiucai.com/assets/checkboxcss/minimal.png?v=1.4*/ no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.icheckbox_minimal {
+    background-position: 0 0;
+}
+    .icheckbox_minimal.hover {
+        background-position: -20px 0;
+    }
+    .icheckbox_minimal.checked {
+        background-position: -40px 0;
+    }
+    .icheckbox_minimal.disabled {
+        background-position: -60px 0;
+        cursor: default;
+    }
+    .icheckbox_minimal.checked.disabled {
+        background-position: -80px 0;
+    }
+
+.iradio_minimal {
+    background-position: -100px 0;
+}
+    .iradio_minimal.hover {
+        background-position: -120px 0;
+    }
+    .iradio_minimal.checked {
+        background-position: -140px 0;
+    }
+    .iradio_minimal.disabled {
+        background-position: -160px 0;
+        cursor: default;
+    }
+    .iradio_minimal.checked.disabled {
+        background-position: -180px 0;
+    }
+
+.icheckbox_minimal_red{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    background: url("red-minimal.png-v=1.4.png")/*tpa=http://assets.xiucai.com/assets/checkboxcss/red-minimal.png?v=1.4*/ no-repeat;
+    border: none;
+    cursor: pointer;
+}
+.icheckbox_minimal_red {
+    background-position: 0 0;
+}
+.icheckbox_minimal_red.hover {
+    background-position: 0 0;
+}
+.icheckbox_minimal_red.checked {
+    background-position: -68px 0;
+}
+
+.icheckbox_minimal-blue{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    background: url("blue-minimal.png-v=1.4.png")/*tpa=http://assets.xiucai.com/assets/checkboxcss/blue-minimal.png?v=1.4*/ no-repeat;
+    border: none;
+    cursor: pointer;
+}
+.icheckbox_minimal-blue {
+    background-position: 0 0;
+}
+.icheckbox_minimal-blue.hover {
+    background-position: 0 0;
+}
+.icheckbox_minimal-blue.checked {
+    background-position: -68px 0;
+}
+.icheckbox_minimal-orange{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background: url("../img/cart_/orange.png")/*tpa=http://assets.xiucai.com/assets/checkboxcss/orange.png*//*tpa=http://assets.xiucai.com/assets/checkboxcss/orange.png*/ no-repeat -61px -9px;
+    border: none;
+    cursor: pointer;
+}
+.icheckbox_minimal-orange.checked{
+    background-position: -11px -9px;
+}
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+    .icheckbox_minimal,
+    .iradio_minimal {
+        background-image: url("minimal@2x.png-v=1.4.png")/*tpa=http://assets.xiucai.com/assets/checkboxcss/minimal@2x.png?v=1.4*/;
+        -webkit-background-size: 200px 20px;
+        background-size: 200px 20px;
+    }
+}

@@ -1,0 +1,66 @@
+<div class="drop-down-menu">
+	            <div class="pd">
+				
+	                <div class="down-menu-row">
+					<volist name=":WSTGoodsCats()" key="k1"   id="vo1"   offset="0"   length="3">
+	                    <div class="classify-nav">
+	                        <p class="title"><em></em>{$vo1["catName"]}</p>
+							
+							<volist name="vo1['catChildren']" key="k1" id="vo2"   offset="0"   length="4">
+							
+	                        <dl>
+	                            <dt>
+	                            	<a href="{:U('Home/course/index',array('c1Id'=>$vo1['catId']))}" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">{$vo2["catName"]}</a>
+	                            </dt>
+	                            <dd>
+								<volist name="vo2['catChildren']" key="k1" id="vo3"   offset="0"   length="4">
+	                                <a href="{:U('Home/course/index',array('c1Id'=>$vo1['catId'],'c2Id'=>$vo2['catId']))}"   target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">{$vo3["catName"]}</a>
+	                                </volist>
+							
+							  </dd>
+	                        </dl>
+							
+							</volist>
+	                    
+	                    </div>
+						</volist>
+	                   
+	                </div>
+					
+					
+	                <div class="down-menu-row">
+					    <volist name=":WSTGoodsCats()" key="k1"   id="vo1"   offset="3"   length="3">
+	                    <div class="classify-nav">
+	                        <p class="title"><em></em>{$vo1["catName"]}</p>
+							
+							<volist name="vo1['catChildren']" key="k1" id="vo2"   offset="0"   length="4">
+							
+	                        <dl>
+	                            <dt>
+	                            	<a href="{:U('Home/course/index',array('c1Id'=>$vo1['catId']))}" target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">{$vo2["catName"]}</a>
+	                            </dt>
+	                            <dd>
+								<volist name="vo2['catChildren']" key="k1" id="vo3"   offset="0"   length="4">
+	                                <a href="{:U('Home/course/index',array('c1Id'=>$vo1['catId'],'c2Id'=>$vo2['catId']))}"   target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">{$vo3["catName"]}</a>
+	                                </volist>
+									
+								<!-- 	<a href="zt/ygzsc/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">建筑业</a>
+	                                <a href="course/zt/shygz/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">生活服务业</a>
+	                                <a href="zt/ygzsc/index.htm"  target="_blank" data-trackEvent="" data-category="navigation_course_category" data-action="navigation_course_category_hot" data-opt_label="navigation_course_category_hot" data-opt_value="导航课程分类">金融业</a>
+	                           -->
+							  </dd>
+	                        </dl>
+							
+							</volist>
+	                    
+	                    </div>
+						</volist>
+	            	
+					
+	                </div>
+	            </div>
+        	</div>   	
+   		</div>
+	</div>		
+</div>
+

@@ -1,0 +1,188 @@
+
+
+<include file="./Apps/Home/View/default/common_head.html" />
+
+
+
+<div id="main">
+    <div class="container shopping-cart cart-box cart_container1  "     style="display:none;">
+        <div class="cart-header">
+            <span class="title">购物车</span><span class="small">快速购买，开启在线学习之旅</span>
+        </div>
+        <div class="cart-body">
+            <div class="cart-table">
+                <div class="cart-table-header">
+                    <div class="cart-table-col">                  	                   	               	
+                    	<input type="checkbox" id="select-all"   class="select-all" >
+                    	<label for="select-all" class="label-fr">全选</label>
+                    </div>
+                    <div class="cart-table-col pic-txt">课程信息</div>
+                    <div class="cart-table-col">数量</div>
+                    <div class="cart-table-col">单价（元）</div>
+                    <div class="cart-table-col">小计（元）</div>
+                    <div class="cart-table-col">有效期</div>
+                    <div class="cart-table-col">操作</div>
+                </div>
+                <div class="cart-table-body">
+				<volist    name="cartInfo['cartcourse'][4]['shopcourse']"   id="vo"   >
+                    <div class="cart-table-row" data-price="{$vo.shopPrice}" data-original-price="{$vo.shopPrice}" data-id="3166" data-product-id="{$vo.courseId}">
+                        <div class="cart-table-col">
+                            <label><input type="checkbox" name="checkcart" id="checkcart1"></label>
+                        </div>
+                        <div class="cart-table-col pic-txt">
+                            <span>
+                            	<em class="tag-discount">有优惠</em>
+                            	<span>此课程打包到专题购买，即可享受超值优惠</span>
+	                            <a href="zhuanti_kc_list.html" target="_blank">去看看>></a>
+                            </span>                           
+                            <a href="shuiwuguanli_chouhua.html" target="_blank" class="pic">
+                            	<img src="__ROOT__/{$vo.courseThums}" height="68" width="120" alt="">
+                            </a>
+                            <div class="txt">
+                                <a href="" target="_blank" class="c-title">{$vo.courseName}</a>
+                            </div>
+                        </div>
+                        <div class="cart-table-col"><span class="course-number">{$vo.cnt}</span></div>
+                        <div class="cart-table-col">￥{$vo.shopPrice}</div>
+                        <div class="cart-table-col xiaojib"><b class="xiaoji">￥{$vo.shopPrice}</b></div>
+                        <div class="cart-table-col">365天</div>
+                        <div class="cart-table-col">
+                            <a href="javascript:" class="del">删除</a>
+                            <div class="deleted hide">删除成功</div>
+                        </div>
+                    </div>
+					
+					</volist>
+                   <!--  <div class="cart-table-row" data-price="49.00" data-original-price="49.00" data-id="3166" data-product-id="104">
+                        <div class="cart-table-col">
+                            <label><input type="checkbox" name="checkcart" id="checkcart2"></label>
+                        </div>
+                        <div class="cart-table-col pic-txt">
+                            <span>
+                            	<em class="tag-discount">有优惠</em>
+                            	<span>此课程打包到专题购买，即可享受超值优惠</span>
+	                            <a href="zhuanti_kc_list.html" target="_blank">去看看>></a>
+                            </span>                           
+	                            <a href="shuiwuguanli_chouhua.html" target="_blank" class="pic">
+	                            	<img src="img/cart_/cart_img.jpg" height="68" width="120" alt="">
+	                            </a>
+                            <div class="txt">
+                                <a href="" target="_blank" class="c-title">企业会计准则解释第7号（三）</a>
+                            </div>
+                        </div>
+                        <div class="cart-table-col"><span class="course-number">1</span></div>
+                        <div class="cart-table-col">￥49.00</div>
+                        <div class="cart-table-col xiaojib"><b class="xiaoji">￥49.00</b></div>
+                        <div class="cart-table-col">365天</div>
+                        <div class="cart-table-col">
+                            <a href="javascript:" class="del">删除</a>
+                            <div class="deleted hide">删除成功</div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="cart-table-footer">
+                    <div class="left">
+                        <input type="checkbox" id="select-all-2" class="select-all" ><label for="select-all-2">全选</label>
+                    </div>
+                    <div class="left">
+                        <a href="javascript:" class="c-title del">删除</a>
+                    </div>
+                    <div class="right">
+                        <a href="javascript:" class="btn-default"   style="  <if condition="count($cartInfo['cartcourse']) lt 1">display: none;</if> "   onclick="javascript:goToPay();"  >去结算</a>
+                        <span class="count">已选<em id="checkedcourse">{$cartInfo['cartcourse'][4]['totalCnt']}</em>门课程  总价：<b id="zongjia">￥{$cartInfo['totalMoney']}</b>&nbsp;<i></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dialog-board dialog-board-m hide" id="confirmDeleteDiv">
+        <div class="dialog-board-bar">
+            <a href="javascript:;" class="close-dialog-board closeConfirmDeleteDiv"></a>
+        </div>
+        <div class="c-text-btn">
+            <p class="txt-tips">删除后将不再享受专题优惠价格<br/>确定吗？</p>
+            <div class="btn-col2 clearfix">
+                <a class="fr globe-btn50 deleted">删除</a>
+                <a href="javascript:;" class="fl globe-btn50 globe-btn50-nobg closeConfirmDeleteDiv">取消</a>
+            </div>
+        </div>
+    </div>
+    <div class="container shopping-cart cart-box order-page cart_container2 "   style="display:block;">
+	    <div class="cart-header">
+	        <span class="title">确认订单</span>
+	        <ul class="buy-step">
+	            <li class="first selected">1、确认订单</li>
+	            <li class="second">2、支付订单</li>
+	            <li class="end">3、支付成功</li>
+	        </ul>
+	    </div>
+	    <div class="cart-body">
+	        <div class="order-table-div">
+	            <div class="order-table-header">
+	                <div class="order-table-col">课程信息</div>
+	                <div class="order-table-col">数量</div>
+	                <div class="order-table-col">小计（元）</div>
+	                <div class="order-table-col">有效期</div>
+	            </div>
+	            <div class="order-table-body">
+				<volist    name="catcourse[4]['shopcourse']"   id="data" >
+	                <div class="order-table-row">
+	                    <div class="order-table-col">
+						
+	                        <a href="{:U('home/course/getCourseDetails',array('courseId'=>$data['courseId']))}" class="pic">
+	                        	<img src="__ROOT__/{$data['courseThums']}" height="68" width="120" alt="{$data['courseName']}">
+	                        </a>
+	                        <div class="txt">
+	                            <a href="{:U('home/course/getCourseDetails',array('courseId'=>$data['courseId']))}" target="_blank" class="c-title">{$data['courseName']}</a>
+	                            <p></p>
+	                        </div>
+	                    </div>
+	                    <div class="order-table-col"><b>{$data['cnt']}</b></div>
+	                    <div class="order-table-col "><b>￥{$data['shopPrice']}</b></div>
+	                    <div class="order-table-col">365天</div>
+	                </div>
+					
+					</volist>
+	                <div class="order-table-footer">
+	                    <div class="order-table-row">
+	                        <div class="right">
+	                            <a href="{:U('home/cart/toCart')}" class="back-cart">返回购物车修改</a>
+	                        </div>
+	                    </div>
+	                    <div class="order-table-row">
+	                        <div class="left">
+	                            <div class="member-link">
+	                                <a target="_blank" href="{:U('home/users/open_member')}" >
+	                                	<span>开通会员</span> 
+	                                	即刻畅享全部优质课程、知识技能和岗位特训专题  >>
+	                                </a>
+	                            </div>                                                                                                          
+	                        </div>
+	                        <div class="right">
+	                            <a href="javascript:;" class="btn-default" id="submit-order" onClick="javascript:submitOrder();"   >提交订单</a>
+	                            <span class="count">已选<em>{$totalCnt}</em>门课程  订单总额：<b>￥{$gtotalMoney}</span>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>  
+</div>
+
+
+
+
+
+
+
+
+
+
+  
+      
+ <script src="__ROOT__/Apps/Home/View/default/js/orders.js"></script>
+
+
+
+  <include file="./Apps/Home/View/default/common_foot.html" />

@@ -1,0 +1,85 @@
+
+
+<include file="./Apps/Home/View/default/common_head.html" />
+
+
+
+<div id="main">
+            <div class="container shopping-cart none-bg">
+        <div class="order-status-block">
+            <div class="o-s-top clearfix">
+                <div class="g-col"><img src="http://assets.xiucai.com/assets/img/icon/success-icon2.png?v=1.10.5" height="30" widht="30" alt=""></div>
+                <div class="g-col">
+                    <p class="tips-l">订单提交成功，请您在 <span class="color-orange">72小时</span> 内完成支付，否则订单将自动取消</p>
+                    <p>订单号：1476078729</p>
+                </div>
+                <div class="g-col g-col-r">
+                    <p class="tips-l">应付金额：<span class="color-orange">¥49.00</span></p>
+                                        <p><span class="drop-down">订单详情<i class="triangle-down t-gray-10"></i></span></p>
+                                    </div>
+            </div>
+                        <ul class="o-s-detail">
+                <li class="summary">课程数：1 门</li>
+                                <li>企业会计准则解释第7号（三）<span class="price">1*¥49.00</span></li>
+                                                </ul>
+                    </div>
+
+        <div class="order-way-block">
+            <p class="title">选择支付方式：</p>
+            <div>
+                <ul class="right-choose pay-way-l clearfix" type="pay_bank">
+                    <li class="cur" value="default"><img src="http://assets.xiucai.com/assets/img/pay/zfb.jpg?v=1.10.5" alt="支付宝" height="25" width="75"></li>
+                    <li value="wx"><img src="http://assets.xiucai.com/assets/img/pay/wx.jpg?v=1.10.5" alt="微信" height="30" width="102"></li>
+                                        <input type="hidden" id="pay_bank" value="default">
+                </ul>
+            </div>
+            <p class="o-w-btn">
+            	<a href="javascript:;" class="globe-btn50 globe-btn-h40" id="pay" target="_blank">立即支付</a>
+            </p>
+            <div class="o-w-pro">
+                <p>支付常见问题：</p>
+                <ul>
+                    <li>1、无法支付，可能因为网络不稳定、无法连接等——请检查您的网络</li>
+                    <li>2、支付不成功，可能因为超出支付额度、余额不足等——请更换支付方式重新支付</li>
+                    <li>3、其他不确定问题请联系秀财网官方客服寻求帮助</li>
+                </ul>
+                <p>客服热线：021-51855362</p>
+            </div>
+        </div>
+    </div>
+    <div class="dialog-board dialog-board-m hide" id="payCallbackDiv">
+        <div class="dialog-board-bar">
+            <a class="close-dialog-board closePayCallbackDiv"></a>
+        </div>
+        
+        <div class="c-text-btn">
+            <p class="txt-tips">请您在新打开的支付平台页面进行支付<br>完成支付后请选择</p>
+            <div class="btn-col2 clearfix">
+                <a class="fr globe-btn50" id="paySuccess">支付成功</a>
+                <a class="fl globe-btn50 globe-btn50-nobg closePayCallbackDiv">重新支付</a>
+            </div>
+        </div>
+            
+    </div>
+    <div class="dialog-board dialog-board-m hide" id="noPayCallbackDiv">
+        <div class="dialog-board-bar">
+            <a class="close-dialog-board closePayCallbackDiv"></a>
+        </div>
+
+        <div class="c-text-btn">
+            <p class="txt-tips">
+                很抱歉，您的订单未能支付成功！<br>
+                建议您查询支付宝/微信账户进一步核实，<br>或拨打客服电话021-51855362
+            </p>
+            <div class="btn-single-s">
+                <a class="globe-btn50 closePayCallbackDiv">确定</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+ <script src="__ROOT__/Apps/Home/View/default/js/cartpaylist.js"></script>
+
+
+
+  <include file="./Apps/Home/View/default/common_foot.html" />

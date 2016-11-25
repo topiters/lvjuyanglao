@@ -1,0 +1,887 @@
+<include file="./Apps/Home/View/default/common_head.html" />
+ <style>
+    	.laoshi_tx{
+    		padding: 10px 0;
+    	}	 	
+		.con4 .btn{
+		     width: 50%;
+		     height: 30px;
+		     line-height:30px;
+		     text-align: center;
+		     background: #ff8860;
+		     display: block;
+		     font-size: 14px;
+		     border-radius: 5px;
+		     margin: 20px auto 0;
+		     display: block;
+		     color: #fff;
+		}
+		.upload{
+		     position: relative;
+		}
+		.upload_pic{
+		     display: block;
+		     width: 100%;
+		     height: 30px;
+		     position: absolute;
+		     left: 0;
+		     top: 0;
+		     opacity: 0;
+		     border-radius: 5px;
+		}
+		#cvs{
+			border-radius: 45px;
+			display: block;
+			margin: 0 auto;
+			z-index: 9555;
+		}
+		.laoshiinfotable{
+			width: 80%;
+			text-align: left;
+		}
+		.laoshiinfotable td{
+			padding: 5px;
+		}
+		.laoshiinfotable td:first-child{
+			font-size: 18px;
+			text-align: right;
+			width: 100px;
+		}
+		.laoshiinfotable input[type='text']{
+			width: 100%;
+			padding: 8px 10px ;
+			box-sizing: border-box;
+			border: 1px solid #ccc;
+		}
+		.laoshiinfotable input[type='radio']{
+			width: 15px;
+			height: 15px;
+			margin-right: 5px;
+		}
+		.laoshiinfotable select{
+			padding: 8px 10px;
+			width: 100%;
+		}
+		.shanchang>div{
+			float: left;
+		}
+		.shanchang input[type='checkbox']{
+			width: 15px;
+			height: 15px;
+			margin-right: 5px;
+			margin-top: 6px;
+		}
+		.shanchang span{
+			display: inline-block;
+			margin-right: 15px;
+		}
+		.shanchang .neirongxianshi{
+			max-width: 300px;
+			width: 70%;
+			min-height: 65px;
+			height: auto;
+			float: left;
+			border: 1px solid #ccc;
+			color: #0ff;
+		}
+		.shanchang .neirongxianshi>span{
+			display: block;
+			padding: 5px 10px;
+			margin: 10px;
+			position: relative;			
+			word-wrap: break-word;
+			color: #000;
+			border: 1px solid #d8d8d8;
+		}
+		.shanchang .neirongxianshi>span>span{
+			display: inline-block;
+			width: 15px;
+			height: 15;
+			position: absolute;
+			right: -10px;
+			top: -15px;
+			display: none;
+			color: #f00;
+		}
+		.shanchang .neirongxianshi>span:hover span{
+			display: inline-block;
+			cursor: pointer;
+		}
+		.shanchang .shuru-right{
+			width: 30%;	
+			float: right;
+		}
+		.shanchang .shuru-right input[type='button']{
+			border-style: none;
+			padding: 5px 20px;
+			display: block;
+			margin: 10px auto;
+			background: #ff8860;
+			color: #fff;
+			border-radius: 5px;
+		}
+		.jianjietext{
+			width: 100%;
+			padding: 10px;
+			box-sizing: border-box;
+			min-height:100px;
+			max-width: 534px;
+		}
+		.tijiaobtn{
+			border-style: none;
+			padding: 8px 50px;
+			color: #fff;
+			border-radius: 5px;
+			background: #ff8860;
+			display: block;
+			margin: 0 auto;
+		}
+		#uploadvideo{cursor: pointer;}
+		.up_progress{
+			width: 95%;
+			margin: 0 auto;
+		}
+		.up_progress table{
+			width: 100%;
+		}
+		.up_progress table thead{
+			color: #424242;
+		}
+		.up_progress table td{
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		.up_progress table td:first-child{
+			width: 150px;
+		}
+		.up_progress table tbody{
+			font-size:16px;
+			color: #737373;
+		}
+		.up_progress table textarea,.up_progress table input,.up_progress table select{
+			width: 70%;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		.up_progress_img{
+			width: 74.5%;
+			border: 1px solid #b5b5b5;
+			border-radius: 5px;
+			position: relative;
+			display: inline-block;
+			float: left;
+			padding: 10px;
+			margin: 15px 0 13px 0;
+			box-sizing: border-box;
+		}
+		.up_progress_img>div{
+			background: -moz-linear-gradient(left, #fdac91 0%, #ff8860 100%); 
+			background: -webkit-gradient(linear, left left, left right, color-stop(0%,#fdac91), color-stop(100%,#ff8860)); 
+			background: -webkit-linear-gradient(left, #fdac91 0%,#ff8860 100%); 
+			background: -o-linear-gradient(left, #fdac91 0%,#ff8860 100%);
+		    background: -ms-linear-gradient(left, #fdac91 0%,#ff8860 100%);
+		    background: linear-gradient(to right, #fdac91 0%,#ff8860 100%);
+			width: 100%;
+			height: 20px;
+		}
+		.info_progress{
+			margin: 20px 0 13px 0;
+			float: left;
+			width: 20%;					
+		}
+		.info_progress>span{
+			padding: 5px 20px;
+		}
+		.info_progress>span:first-child{
+			font-size: 20px;
+			color: #a4a4a4;
+			
+		}
+		.info_progress span a{
+			color: #3f9cfc;
+		}
+		.info_M{
+			width: 74.5%;
+			text-align: right;
+			color: #a4a4a4;
+		}
+		.fb_video{
+			/*display: block;*/
+			float: left;
+			width: 120px !important;
+			padding: 10px 35px !important;
+			border-style: none;
+			margin-right: 10%;
+			background: #FF8860;
+			border-radius: 6px;
+			color: #fff;
+		}
+		
+		.uploadvideo{
+			padding: 8px 40px;
+			border-radius: 6px;
+			background: #FF8860;
+			color: #fff;
+		}
+		
+    </style>
+    <script>
+    	$(function(){
+    		$(".ulli-item li").click(function(){
+    			//var aitem = $(this).attr('data-href');
+    			$(this).children('a').addClass('curr');
+    			$(this).children('div').addClass('vertical');
+    			$(this).siblings().children('a,div').removeClass('curr').removeClass('vertical');
+    			/$(aitem).removeClass('hide');
+    			//$(aitem).siblings().addClass('hide');
+    		});		
+    		//点击取消订单的时候获取该订单的id   		
+    		$(".dingdantabletd .quxiaodd").click(function(){
+    			var dataorderid = $(this).parent().parent().attr('data-order-id');
+    			$(".overlay").removeClass('hide');
+    			$(".cancel-order-layer").removeClass('hide');
+    			
+    			$(".cancel-order-btn").click(function(){
+	    			$(".overlay").addClass('hide');
+	    			$(".cancel-order-layer").addClass('hide');
+	    			$("#order-status-"+dataorderid+"  .pay-txt").text('订单已取消');
+	    			$('#order-option-'+dataorderid).html('--');
+	    		});
+    		});
+    		$(".close-dialog-board,.not-cancel-order").click(function(){
+    			$(".overlay").addClass('hide');
+    			$(".cancel-order-layer").addClass('hide');
+    		});    
+    		
+    		//点击上传视频
+    		$("#uploadvideo").click(function(){
+    			$('.ulliitem2_1').addClass('hide');
+    			$('.ulliitem2_2').removeClass('hide');
+    		});
+    		$(".fb_video_fanhui").click(function(){
+    			$('.ulliitem2_2').addClass('hide');
+    			$('.ulliitem2_1').removeClass('hide');
+    		});
+    		
+    		//点击上传视频
+    		$("#videofile").click(function(){
+    			//var videofile = $(this).files[0];
+    			//alert(videofile);
+    		});
+    		//点击发布视频(获取视频信息)
+    		$('#fabuvideo').click(function(){
+    			var videobiaoti = $("#videobiaoti").val();//标题
+    			var courseexpress = $("#courseexpress").val();//课程简介
+    			var typetext = $("#typetext").val();// 分类
+    			var videofile = $("#videofile").files[0];
+    			//alert(videofile);
+    			//var videofile = $("#videofile").val();//视频文件
+    		});
+    		
+    	})
+    </script>
+
+<div id="main">
+    <div class="major">
+        <div class="container clearfix">
+            <!-- 右侧内容 begin -->
+            <div class="r about_content">              
+                <div class="about_feedback" id="ulli-item1">
+                	<form action="{:U('home/shops/toEdit')}" method="post" name="">
+                		<table class="laoshiinfotable">
+	                    	<tr>
+	                    		<td>姓名：</td>
+	                    		<td><input type="text" class="" name="shopName" placeholder="请输入姓名" value="{$shopInfo['shop']['shopName']}"/></td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>性别：</td>
+								
+								
+	                    		<td>
+								
+								
+	                    			<input type="radio" value="1"    name="sex"        <eq   name="WST_USER['userSex']"   value="1" >   checked </eq>        />男
+	                    			
+									
+									<input type="radio" value="0"    name="sex"          <eq   name="WST_USER['userSex']"   value="0" >   checked </eq>       />女
+	                    		</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>行业：</td>
+	                    		<td>
+	                    			<select name="shopIndustry">
+	                    				<option value="1"   <eq   name="shopInfo['shop']['shopIndustry']"   value="1" >  selected </eq>   >制药/医疗</option>
+	                    				<option value="2"   <eq   name="shopInfo['shop']['shopIndustry']"   value="2" >  selected </eq> >金融/银行/保险</option>
+										<option value="3"   <eq   name="shopInfo['shop']['shopIndustry']"   value="3" >  selected </eq> >房地产/建筑</option>
+										<option value="4"   <eq   name="shopInfo['shop']['shopIndustry']"   value="4" >  selected </eq> >计算机/互联网/通信/电子</option>
+										<option value="5"  <eq     name="shopInfo['shop']['shopIndustry']"   value="5" >  selected </eq> >物流/运输</option>
+										<option value="6"   <eq   name="shopInfo['shop']['shopIndustry']"   value="6" >  selected </eq> >服务业</option>
+										<option value="7"   <eq   name="shopInfo['shop']['shopIndustry']"   value="7" >  selected </eq> >贸易/批发/零售/租赁</option>
+										<option value="8"  <eq   name="shopInfo['shop']['shopIndustry']"   value="8" >  selected </eq> >专业服务/教育/培训</option>
+										<option value="9"   <eq   name="shopInfo['shop']['shopIndustry']"   value="9" >  selected </eq> >制药/医疗</option>
+										<option value="10"  <eq   name="shopInfo['shop']['shopIndustry']"   value="10" >  selected </eq>  >广告/媒体</option>
+										<option value="11"   <eq   name="shopInfo['shop']['shopIndustry']"   value="11" >  selected </eq> >能源/原材料</option>
+										<option value="12"   <eq   name="shopInfo['shop']['shopIndustry']"   value="12" >  selected </eq> >政府/非盈利/其他</option>
+										<option value="13"   <eq   name="shopInfo['shop']['shopIndustry']"   value="13" >  selected </eq> >生产/加工/制造</option>
+										<option value="14"   <eq   name="shopInfo['shop']['shopIndustry']"   value="14" >  selected </eq> >农/林/牧/渔</option>
+	                    			</select>
+	                    		</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>擅长：</td>
+	                    		<td class="shanchang">
+	                    		
+	                    			<div class="shuru-left"   style="width:500px;" >
+	                    				<input type="text" name="shopGoodat" id="shanchangtext" value="{$shopInfo['shop']['shopGoodat']}" placeholder="擅长"/>
+	                    				
+	                    			</div>
+	                    		</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td>简介：</td>
+	                    		<td class="jianjie">
+	                    			<textarea name="shopDetails" class="jianjietext">   {$shopInfo['shop']['shopDetails']}</textarea>
+	                    		</td>
+	                    	</tr>
+	                    	<tr>
+	                    		<td colspan="2">
+	                    			<input type="submit" value="提交" class="tijiaobtn" name="" />
+	                    		</td>
+	                    	</tr>
+	                    </table> 
+                	</form>                                                    
+                </div>
+                <div class="course-list hide" id="ulli-item2" style="padding-left: 15px;box-sizing: border-box;">
+					
+					<div class="ulliitem2_1">
+						<div id="uploadvideo" style="padding: 10px 0;">点击此处上传课程视频</div>
+						<ul class="clearfix"  style="width: auto;">
+			                <div id="myCourseListDiv">
+			                    <li>
+									<span class="i-close-del hide" inventory-id="411844"></span>
+									<a href="http://www.xiucai.com/course/288/" target="_blank">
+									    <div class="course-list-img">
+									        <img width="280" height="160" src="img/01a5b1f3-29a2-4e5d-bfb8-3336bd8f84b5.jpg" alt="第1课  建立高效的建表思维">
+									    </div>
+									    <h5>
+									        <span>第1课  建立高效的建表思维</span>
+									    </h5>
+									    <div class="intro clearfix">
+								            <p>打开一张Excel表格，你知道为什么默认出现3张Sheet吗？平时…</p>
+								            <span class="l">1节视频课程</span>
+								            <span class="r">时长0小时10分钟</span>
+								        </div>
+									    <div class="tips tips-schedule clearfix">
+								            <span class="l">初级课程</span>
+								            <em class="l">|</em>
+								            <span class="l">60828人已学</span>
+								            <span class="r">已学<em>0%</em></span>
+								        </div>
+									    <div class="schedule-bar">
+									        <div style="width:0%;"></div>
+									    </div>
+									    <div class="course-free"></div>
+									    <div class="cost">
+						                    <span class="l free">免费</span>
+						                </div>
+									</a>
+								</li>
+								<li>
+								    <span class="i-close-del hide" inventory-id="411846"></span>
+								    <a href="http://www.xiucai.com/course/128/" target="_blank">
+								        <div class="course-list-img">
+								            <img width="280" height="160" src="http://assets.xiucai.com/assets/uploads/pic/2015/0730/aac31864-70e1-334d-669e-99b0bcba24c2.jpg" alt="EXCEL数据透视表与财务数据分类汇总">
+								        </div>
+								        <h5>
+								            <span>EXCEL数据透视表与财务数据分类汇总</span>
+								        </h5>
+								        <div class="intro clearfix">
+							                <p>利用EXCEL的数据透视表功能，可以轻松实现对数据的分类汇总，这比用筛…</p>
+							                <span class="l">7节视频课程</span>
+							                <span class="r">时长2小时4分钟</span>
+							            </div>
+							            <div class="tips tips-schedule clearfix">
+							                <span class="l">高级课程</span>
+							                <em class="l">|</em>
+							                <span class="l">20547人已学</span>
+							                <span class="r">已学<em>0%</em></span>
+							            </div>
+								        <div class="schedule-bar">
+								            <div style="width:0%;"></div>
+								        </div>
+								        <div class="cost"></div>
+								    </a>
+								</li>
+								<li>
+								    <span class="i-close-del hide" inventory-id="411845"></span>
+								    <a href="http://www.xiucai.com/course/147/" target="_blank">
+								        <div class="course-list-img">
+								            <img width="280" height="160" src="http://assets.xiucai.com/assets/uploads/pic/2015/0730/2b642fde-a8b6-f65b-0822-be1c8ee601a7.jpg" alt="EXCEL高级财务函数的功能&amp;应用">
+								        </div>
+								        <h5>
+								            <span>EXCEL高级财务函数的功能&amp;应用</span>
+								        </h5>
+							            <div class="intro clearfix">
+							                <p>财务人员需要每天面对大量数据和信息，EXCEL作为帮助财务人员进行数据…</p>
+							                <span class="l">6节视频课程</span>
+							                <span class="r">时长2小时25分钟</span>
+							            </div>
+							            <div class="tips tips-schedule clearfix">
+							                <span class="l">高级课程</span>
+							                <em class="l">|</em>
+							                <span class="l">38677人已学</span>
+							                <span class="r">已学<em>0%</em></span>
+							            </div>
+								        <div class="schedule-bar">
+								            <div style="width:0%;"></div>
+								        </div>
+								        <div class="cost"></div>
+								    </a>
+								</li>								                               
+			               </div>	                                          
+			            </ul>  			           
+					</div>					
+					<div class="up_progress ulliitem2_2 hide">
+		            	<div class="up_progress_img" >
+		            		<div></div>	            		
+		            	</div>
+		            	<div class="info_progress">
+		            		<span >100%</span>
+		            		<span >
+		            			<a href="#e">
+		            				取消上传
+		            			</a>
+		            		</span>
+		            	</div>
+		            	<div class="info_M">
+		            		小于500M
+		            	</div>
+		            	<form action="" method="" name="">
+		            		<table>
+			            		<thead>
+			            			<tr>
+			            				<td><h2>视频信息</h2></td>
+			            			</tr>
+			            		</thead>
+			            		<tbody>
+			            			<tr>
+			            				<td>标题</td>
+			            				<td>
+			            					<input type="text" value="" id="videobiaoti"/>
+			            				</td>
+			            			</tr>
+			            			<tr>
+			            				<td>课程详情</td>
+			            				<td>
+			            					<textarea value="" id="courseexpress"></textarea>
+			            				</td>
+			            			</tr>
+			            			<tr>
+			            				<td>分类</td>
+			            				<td>
+			            					<select name="" id="typetext">
+			            						<option value="-1">请选择视频分类</option>
+			            						<option value="">学习视频</option>
+			            						<option value="">学习视频</option>
+			            					</select>
+			            				</td>
+			            			</tr>
+			            			<tr>
+			            				<td>上传视频</td>
+			            				<td>		            			
+											<span class="btn upload uploadvideo">上传视频<input type="file" class="upload_pic" id="videofile"/></span>
+			            				</td>
+			            			</tr>
+			            			<tr>
+			            				<td>老师简介</td>
+			            				<td>
+			            					<textarea value="" id="turtorexpress"></textarea>
+			            				</td>
+			            			</tr>
+			            			<tr>
+			            				<td></td>
+			            				<td>
+			            					<input type="submit" value="发布" id="fabuvideo" name="" class="fb_video" />	   
+											<input type="button" value="返回" name="" class="fb_video fb_video_fanhui" />	   	           
+			            				</td>
+			            			</tr>
+			            		</tbody>
+			            	</table>	            
+		            	</form>
+					 </div>
+        
+                </div>  
+				<div id="ulli-item3" class="self_block_none hide">
+					<div class="my-order wodedingdan_content">
+                        <form id="searchForm" action="" method="get" name="searchForm">
+                            <table class="order-tablet operate-tablet">
+                                <colgroup>
+                                    <col width="15%">
+                                    <col width="44%">
+                                    <col width="13%">
+                                    <col width="13%">
+                                    <col width="15%">
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <td class="align-l">订单信息</td>
+                                    <td class="col-l-p">&nbsp;</td>
+                                    <td>订单金额（元）</td>
+                                    <td>操作</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                        
+                        <table class="order-tablet tablet-b order-pr0 dingdantabletd">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="44%">
+                                <col width="13%">
+                                <col width="13%">
+                                <col width="15%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                            		<td colspan="5" class="align-l col-bg">
+                                        <span>
+                                        	下单时间：<em>2016-10-10 10:41:38</em>
+                                        </span>
+                                        <span>
+                                        	订单编号：<em>1476078729</em>
+                                        </span>
+                                        <span>
+                                        	课程数：<em>1门</em>                                                                                                       
+                                        </span>
+                                        <span style="float: right;">购买者</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-l">
+                                    	<a href="/course/248/" target="_blank">
+                                    		<img src="img/5f14963c-b049-2b89-e5ce-202ee850c666.jpg" height="68" width="120" alt=""/>
+                                    	</a>
+                                    </td>
+                                    <td class="align-l valign-t col-l-p pl-20">
+                                        <a href="/course/248/" class="c-title" target="_blank">
+                                        	企业会计准则解释第7号（三）
+                                        </a>
+                                    </td>
+                                    <td rowspan="1" class="col-font"><b>￥49.00</b></td>
+                                    <td rowspan="1" id="order-status-1476078729">
+                                        <p class="a-gap">
+                                            <span class="pay-txt">
+                                                                                                等待付款                                                                                                                                                                                      
+                                            </span>
+                                        </p>
+                                        <p class="a-gap">
+                                        	<a href="#e" class="order-detail">订单详情</a>
+                                        </p>
+                                    </td>
+                                    <td rowspan="1" class="l-td-p" data-order-id="1476078729" id="order-option-1476078729">                                       
+                                        <a href="user_center.html" target="_blank">
+                                        	<div style="width: 80px;height: 80px;margin: 0 auto;border: 1px solid #000;border-radius: 40px;overflow: hidden;">
+	                                        	<img style="width: 100%;" src="img/688cfdfa-eabf-fb66-6e4d-9a02732a9c24.jpg" />
+	                                        </div>
+                                        </a>
+                                       
+                                    </td>
+                                </tr>                                                                                                                                  
+                            </tbody>
+                        </table>                           
+                    	<table class="order-tablet tablet-b order-pr0 dingdantabletd">
+                            <colgroup>
+                                <col width="15%">
+                                <col width="44%">
+                                <col width="13%">
+                                <col width="13%">
+                                <col width="15%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                            		<td colspan="5" class="align-l col-bg">
+                                        <span>
+                                        	下单时间：<em>2016-10-10 10:41:38</em>
+                                        </span>
+                                        <span>
+                                        	订单编号：<em>1476078730</em>
+                                        </span>
+                                        <span>
+                                        	课程数：<em>1门</em>                                                                                                       
+                                        </span>
+                                        <span style="float: right;">购买者</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="align-l">
+                                    	<a href="/course/248/" target="_blank">
+                                    		<img src="img/5f14963c-b049-2b89-e5ce-202ee850c666.jpg" height="68" width="120" alt=""/>
+                                    	</a>
+                                    </td>
+                                    <td class="align-l valign-t col-l-p pl-20">
+                                        <a href="/course/248/" class="c-title" target="_blank">
+                                        	企业会计准则解释第7号（三）
+                                        </a>
+                                    </td>
+                                    <td rowspan="1" class="col-font"><b>￥49.00</b></td>
+                                    <td rowspan="1" id="order-status-1476078730">
+                                        <p class="a-gap">
+                                            <span class="pay-txt">
+                                                                                                等待付款                                                                                                                                                                                      
+                                            </span>
+                                        </p>
+                                        <p class="a-gap">
+                                        	<a href="#e" class="order-detail">订单详情</a>
+                                        </p>
+                                    </td>
+                                    <td rowspan="1" class="l-td-p" data-order-id="1476078730" id="order-option-1476078730">                                       
+                                        <a href="user_center.html" target="_blank">
+                                        	<div style="width: 80px;height: 80px;margin: 0 auto;border: 1px solid #000;border-radius: 40px;overflow: hidden;">
+	                                        	<img style="width: 100%;" src="img/688cfdfa-eabf-fb66-6e4d-9a02732a9c24.jpg" />
+	                                        </div>
+                                        </a>
+                                       
+                                    </td>
+                                </tr>                                                                                                                                  
+                            </tbody>
+                        </table>                           
+                    
+					</div>
+				</div>
+				<div id="ulli-item4" class="hide">
+					<div class="toppic-bar concern-friends-box clearfix " >
+				        <div class="left-img">
+				        	<a href="user_center.html">
+				        		<img src="img/caiduoduo.png-v=1.10.1.png" height="80" width="80" class="all-border-radius">
+				        	</a>
+				        </div>
+				        <div class="toppic-intro friends-intro">
+				            <p class="toppic-title"> 杨国政</p>
+				            <p class="font-small">生产/加工/制造</p>
+				        </div>
+		            </div>
+				</div>
+				<div id="ulli-item5" class="hide">
+					<div class="instructor-main clearfix">
+						<div class="quan-main">
+							<div class="module qa">
+								<div class="module-body bd">
+			                        <div>
+			                            <div class="answer-list">
+			                                <dl>
+			                                    <dt>
+			                                        <a href="#"  class="photo" target="_blank">
+			                                        	<img src="img/caiduoduo.png-v=1.10.1.png"  />
+			                                        </a>
+			                                        <a href="" class="title" target="_blank">从预缴增值税中抵减应纳税额，会计分录</a>
+			                                    </dt>
+			                                    <dd>
+			                                        <a href="index.htm" class="photo">
+			                                        	<img src="img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" />
+			                                        </a>
+			                                        <p class="answer">
+			                                       		 你好，问题已知悉！这个其实是要各公司具体的情况而定的，对科目的定义不同，就有不同的处理！如果用应交税费－应交增值税这个二级科目的余额借贷方来表示留抵金额的话，那么，贵司这种情况是应交税费－应交增值税月底科目余额是借方300.证明该科目是有留抵税金300.当然，如果你们公司规定以应交税费－未交增值税 为记录是否有留抵税额… 
+			                                       		 <a href="javascript:if(confirm('http://club.xiucai.com/quan/thread/1473663744/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://club.xiucai.com/quan/thread/1473663744/'"  target="_blank">
+			                                       		 	详情>>
+			                                       		 	
+			                                       		 </a>             
+			                                        </p>
+			                                    </dd>
+			                                </dl>
+			                                <dl>
+			                                    <dt>
+			                                        <a href="../../user/257560/index.htm" class="photo" target="_blank">
+			                                        	<img src="img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" />
+			                                        </a>
+			                                        <a href=""  class="title" target="_blank">关于缴纳增值税</a>
+			                                    </dt>
+			                                    <dd>
+			                                        <a href="index.htm"  class="photo">
+			                                        	<img src="img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" />
+			                                        </a>
+			                                        <p class="answer">
+			                                      	  你好，来信已知悉！你所提及的这两项服务内容属于现代服务中的商务辅助服务，属于此次营改增的范畴，必须要确认收入及销售金额；判定是否属于 主营业务内容，这个要跟贵司的营业范围相结合。从你的描述上来看，两者都是可以当作主营业务收入来确定。详见财务[2016]36号文商关于务辅助服务的描述。商务辅助服务，包括企业管理服务、经纪… 
+			                                      	  <a href="javascript:if(confirm('http://club.xiucai.com/quan/thread/1473437615/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://club.xiucai.com/quan/thread/1473437615/'"  target="_blank">
+			                                      	  	详情>>
+			                                      	  </a>                                                 
+			                                        </p>
+			                                    </dd>
+			                                </dl>
+			                                <dl>
+			                                    <dt>
+			                                        <a href="../../user/304367/index.htm"  class="photo" target="_blank">
+			                                        	<img src="img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" />
+			                                        </a>
+			                                        <a href=""  class="title" target="_blank">您好老师，我想请教关于增值税销项小于进项的问题</a>
+			                                    </dt>
+			                                    <dd>
+			                                        <a href="index.htm" class="photo">
+			                                        	<img src="img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" />
+			                                        </a>
+			                                        <p class="answer">
+			                                           	 预缴税费的会计分录：借：应交税费-应交增值税-已交税金 522.52       应交税费-城建税    36.58       应交税费-印花税    8.5贷：银行存款。 566.6 计提当月税金借：应收账款/银行存款   29000贷：主营业务收入  26126.13        应交税费-应交增值税-销项税额…
+			                                           	 <a href=""  target="_blank">
+			                                           	 	详情>>
+			                                           	 </a>                                                  
+			                                        </p>
+			                                    </dd>
+			                                </dl>
+			                                <dl>
+			                                    <dt>
+			                                        <a href="../../user/246193/index.htm"  class="photo" target="_blank">
+			                                        	<img src="img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" />
+			                                        </a>
+			                                        <a href=""  class="title" target="_blank">清算缴税</a>
+			                                    </dt>
+			                                    <dd>
+			                                        <a href="index.htm" class="photo">
+			                                        	<img src="img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" />
+			                                        </a>
+			                                        <p class="answer">
+			                                        	你好！建议分步骤去核算，这样思路会清晰些。一、设定科目，核算清算损益在普通清算中，一般下设清算费用、清算损益两个科目，用以核算清算期间所发生的费用与损益。清算费用：专用于核算企业清算期间的各项费用成本。包括：清算机构成员的工资报酬、公告费用、咨询费用和办公费用、诉讼费用及清算过程中必须支付的其他的清算费用。这些费用从现…
+			                                        	<a href="" target="_blank">
+			                                        		详情>>
+			                                        	</a>     
+			                                        </p>
+			                                    </dd>
+			                                    </dl>
+			                                    <dl>
+			                                        <dt>
+			                                            <a href="../../user/311488/index.htm"  class="photo" target="_blank">
+			                                            	<img src="img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" />
+			                                            </a>
+			                                            <a href=""  class="title" target="_blank">增值税问题：</a>
+			                                        </dt>
+			                                        <dd>
+			                                            <a href="index.htm" class="photo">
+			                                            	<img src="img/turtor/5242c1db-3d93-a0e7-cd21-53953a79f2f4.jpg" />
+			                                            </a>
+			                                            <p class="answer">
+			                                            	年底结账，可以结转归零 
+			                                            </p>
+			                                        </dd>
+			                                    </dl>
+			                                </div>
+			                            <div style="width: 100%;height: 80px;text-align: center;box-sizing: border-box;">
+							    			<div class="page_course" >
+							    				<a href="#e" class="page_course_a">首页</a>
+							    				<a href="#e" class="page_course_a">＜</a>
+							    				<a href="#e" class="page_course_a">1</a>
+							    				<a href="#e" class="page_course_a">2</a>
+							    				<a href="#e" class="page_course_a">3</a>
+							    				<a href="#e" class="page_course_a">4</a>
+							    				<a href="#e" class="page_course_a">5</a>
+							    				<a href="#e" class="page_course_a">6</a>
+							    				<a href="#e" class="page_course_a">7</a>
+							    				<a href="#e" class="page_course_a">8</a>
+							    				<a href="#e" class="page_course_a">9</a>
+							    				<a href="#e" class="page_course_a">10</a>
+							    				<a href="#e" class="page_course_a">＞</a>
+							    				<a href="#e" class="page_course_a">尾页</a>
+							    			</div>
+							    		</div> 
+			                        </div>
+			                    </div>
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
+             
+            </div>
+            <!-- 左侧列表 begin -->
+            <div class="course-sidebar">
+                <div class="course-sidebar-type">
+                	<div class="quan-block quan-hp-block">			       
+				        <form id="member_editor_form" name="member_editor" action="" enctype="multipart/form-data" method="post" onsubmit="return true;">
+				        <a href="javascript:;" class="user-head" style="border-radius: 50%;overflow: hidden;">
+				            <span class="head90-mask" style="border: 0;"></span>
+				            <img  id="avatar" src="__ROOT__/Apps/Home/View/default/images/caiduoduo.png" height="90" width="90">
+				            <div class="head-mask head-mask90"></div>
+				            <div id="avatarProfileUpload"></div>
+				            <input type="hidden" name="avatar" id="head_pic" value="/assets/img/caiduoduo.png"/>
+				            <input type="hidden" name="avatar_large" id="head_pic_large" value="/assets/img/caiduoduo.png"/>
+				        </a>
+				        </form>
+				        
+				        <div class="hp-user-zone" id="personal-info-div">
+				            <p class="user-name">
+				                <a href="/vip/" target="_blank" class="vip" title="">
+				                	<img src="__ROOT__/{$shopInfo['shop']['shopImg']}" width="16" height="12" alt="会员特权" border="0">
+				                </a>
+				                <strong id="nickname-span">{$shopInfo['shop']['shopName']}</strong>				               
+				            </p> 
+				            <div class="laoshi_tx">
+		                		<div class="con4">
+									<canvas id="cvs" width="0" height="0" class="hide"></canvas>
+									<span class="btn upload" style="margin: 0 auto;">上传头像<input type="file" class="upload_pic" id="upload"/></span>
+								</div>
+		                		<input type="file" value="修改头像" class="upload_pic tximg-x" id="upload" />
+		                	</div>
+				            <!-- 用户等级展示 -->
+				           <!--  <div class="user-level-display border-b-e6 clearfix">
+				                <p class="clearfix">
+				                    <a href="/help/6/#q27" target="_blank" title="" class="fl">
+				                        <span class="tag-qb">
+				                        	<img src="http://assets.xiucai.com/assets/img/quan/qb.png?v=1.10.5" alt="圈币" height="14" width="19">
+				                        	5
+				                        </span>
+				                    </a>
+				                    <span class="fr r-wrap"><a href="/help/6/#q28" target="_blank" class="" title="">
+				                    <span class="tag-level tag-level-LV1">
+				                    <i>LV1</i></span></a></span>
+				                </p>
+				            </div> -->
+				          
+				        </div>
+				    </div>
+                	
+                    <ul class="ulli-item">                    	
+                        <li class="course-category course-category-more" data-href="#ulli-item1">
+                            <a class="course-category-link curr" href="#r" >
+                            	个人资料
+                            </a>
+                            <div class="vertical"></div>
+                        </li>
+                        <li class="course-category course-category-more" data-href="#ulli-item2">
+                            <a class="course-category-link " href="{:U('Home/Shops/course')}">
+                            	我的课程
+                            </a>
+                            <div class=""></div>
+                        </li>
+                        <li class="course-category course-category-more" data-href="#ulli-item3">
+                            <a class="course-category-link" href="{:U('Home/Shops/order')}">
+                            	我的订单
+                            </a>
+                            <div class=""></div>
+                        </li>
+                        <li class="course-category course-category-more" data-href="#ulli-item4">
+                            <a class="course-category-link" href="{:U('Home/Shops/follow')}">
+                            	我的粉丝
+                            </a>
+                            <div class=""></div>
+                        </li>
+                        <li class="course-category course-category-more" data-href="#ulli-item5">
+                            <a class="course-category-link" href="{:U('Home/Shops/ask')}">
+                            	我的问答
+                            </a>
+                            <div class=""></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 左侧列表 end -->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<include file="./Apps/Home/View/default/common_foot.html" />

@@ -1,0 +1,101 @@
+
+
+<div id="idx" class="idx-header">
+    <div class="idx-top">
+        <div class="container">
+            <div class="nav nav-t clearfix">
+                <a href="index.htm"   title="首页" class="logo" >
+                	<img src="__ROOT__/Apps/Home/View/default/img/logo_.png" style="max-width: 169px;"/>
+                </a>
+                <div class="idx-search-block">
+                    <div class="idx-search-form clearfix">
+                        <input type="button" class="fr search-btn" id="search_button_index" value="搜索"/>
+                        <span class="fl"></span>
+                        <input type="text" class="fl search_content_input" id="search_content_index" placeholder="搜索你想要的" maxlength="15"/>
+                    </div>
+                    <!-- 关键字搜索面板 默认隐藏 -->
+                    <div class="search-board search-result-board" id="topSearchContent">
+
+                    </div>
+                    <input id="search_from" type="hidden" value="course">
+                </div>
+                <!-- 用户未登录状态 -->
+				<if condition="!$WST_USER['userId']">
+                <div class="login-block" id="feinav_dlzq"  style="position: relative;height: 62px;padding-top: 18px;float: right;margin-right: 10%;">
+                    <a href="javascript:;" id="a-login"  class="a-login"  onclick="login();">登录</a>
+                    <a href="javascript:;" id="a-register" class="a-register" onclick="zhuce();">注册</a>
+                    <input type="button" value="发布视频" class="index_btn" style="position: absolute;bottom: -10px;"/>
+                </div>
+				</if>
+                <!--用户已登录状态-->
+				<if condition="$WST_USER['userId'] gt 0">
+                <div class="login-block" id="feinav_dlzh" style="position: relative;height: 72px;float: right;margin-right: 10%;width: 100px;display:block;">
+                    <a href="{:U('Home/Users/index')}" style="width:93px;display: block;margin: 0 auto;overflow: hidden;">
+				   <img src="__ROOT__/Apps/Home/View/default/img/login/touxaing.png" style=""/><span  style="width:30px;height:30px;line-height:30px;"> {$WST_USER['userName']}
+				   </span> 
+                    	
+                    </a>
+					<PHP>if(session('WST_USER.loginTarget')==0){</PHP>
+                    <a href="{:U('Home/Shops/index')}"  class="index_btn" style="position: absolute;bottom: -10px;">发布视频</a>
+					<PHP>}else{</PHP>
+			    <a href="{:U('Home/Shops/toOpenShop')}" rel="nofollow">我要认证教师</a>
+			     <PHP>}</PHP>
+                </div>
+                </if>
+                <div class="change-entrance" style="padding-bottom: 0;position: relative;">
+                	<a href="javascript:logout();" title="退出;"><i></i></a>   
+                	<a href="task/mall/index.htm" title="发布视频"><i class="icon iconfont" style="position: absolute;bottom:0;padding: 0px;font-size: 23px;">&#xe62c;</i></a>   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hot-search-fixed">
+        <p>热门：
+            <a href="" target="_blank">营改增</a>
+            <a href="" target="_blank">Excel</a>
+            <a href="" target="_blank">预算管理</a>
+            <a href="" target="_blank">沟通能力</a>
+            <a href="javascript:if(confirm(''))window.location=''"  target="_blank">财务创造价值</a>
+        </p>
+    </div>
+    <div class="idx-nav">
+        <div class="container">
+            <div class="nav nav-b clearfix">
+                <a href="" class="fl course-classify"><em></em>课程分类</a>
+                <ul class="nav-item">
+                    <li><a class="notCard" href="{:U('home/index/index')}" >首页</a></li>
+                    <li class="parent-nav-item">
+                        <a href="{:U('home/course/index')}">课程 </a>
+                        <ul class="second-nav-item">
+                            <li><a href="{:U('home/course/index')}" >课程大厅</a></li>
+                            <li><a href="{:U('home/specialcourse/index')}">专题课程</a></li>
+                            <li><a href="{:U('home/mycourse/index')}" >我的课程</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{:U('home/livecast/index')}" >直播</a></li>
+                    <li class="beta"><a href="{:U('home/specialist/index')}">导师问答<em></em></a></li>
+                    <li class="parent-nav-item">
+                        <a href="{:U('home/forum/index')}" >财税圈 </a>
+                        <ul class="second-nav-item">
+                            <li><a href="{:U('home/forum/index')}" >圈子首页</a></li>
+                            <li class="none-border"><a href="{:U('home/forum/myindex')}">我的圈子</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{:U('home/users/open_member')}" >开通会员</a></li>
+                    <li>
+                        <a href="{:U('home/app/index')}" >APP</a>
+                        <ul class="second-nav-item row-nav">
+                            <li><img src="__ROOT__/Apps/Home/View/default/img/appIntro/qrcode.png-v=1.10.1.png"  height="130" width="130"></li>
+                            <li class="r-load">
+                                <p>扫一扫下载秀财APP</p>
+                                <!--<a href="javascript:if(confirm('https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1051177745&mt=8  ?'))window.location='https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1051177745&mt=8'"  class="app-down"></a>
+                                <a href="javascript:if(confirm('http://assets.xiucai.com/assets/uploads/file/2016/0701/527ed4ea-d805-af28-6792-29b74853db9e.apk  ?'))window.location='http://assets.xiucai.com/assets/uploads/file/2016/0701/527ed4ea-d805-af28-6792-29b74853db9e.apk'"   class="app-down android"></a>
+                           -->
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
